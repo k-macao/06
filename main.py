@@ -5,7 +5,7 @@
 流程：
   1. 排查 53 个 KOL 存活状态（90天内有更新）
   2. 抓取活跃名单最近 3 条内容（RSS + HTML + Mock 中文）
-  3. AI 多空分析（启发式引擎）
+  3. AI 多空分析（DeepSeek LLM 优先，回退启发式）
   4. 生成像素风 HTML 战报
   5. 推送 PushPlus
 """
@@ -16,6 +16,7 @@ from datetime import datetime
 
 from src.fetcher import scan_kols
 from src.analyzer import analyze_kol_items, global_battle_stats
+from src.deepseek_analyzer import analyze_with_deepseek_or_fallback, get_deepseek_key
 from src.report_generator import generate_report
 from src.pushplus import send_report
 from src.config import OUTPUT_DIR
@@ -34,13 +35,20 @@ def run(push: bool = True, token: str = None):
     if inactive_kols:
         print("💤 沉寂名单：", ", ".join([k["name"] for k in inactive_kols]))
 
-    # 2+3. 分析
-    print("\n[2/4] 🧠 AI 多空分析中（每 KOL 3 条）...")
+    # 2+3. 分析 - 优先 DeepSeek
+    has_ds = bool(get_deepseek_key())
+    engine_name = "DeepSeek + 启发式" if has_ds else "启发式（未检测到 DEEPSEEK_API_KEY）"
+    print(f"\n[2/4] 🧠 AI 多空分析中（每 KOL 3 条）... 引擎: {engine_name}")
+    if has_ds:
+        print(f"   🔑 DeepSeek Key: {get_deepseek_key()[:8]}*** 已就绪，逐KOL调用 LLM")
     all_enriched = []
     all_analyzed_for_stats = {}
     for kol in active_kols:
         items = enriched_map[kol["id"]]
-        analyzed_items, agg = analyze_kol_items(kol, items)
+        if has_ds:
+            analyzed_items, agg = analyze_with_deepseek_or_fallback(kol, items)
+        else:
+            analyzed_items, agg = analyze_kol_items(kol, items)
         all_enriched.append({
             "kol": kol,
             "items": analyzed_items,
@@ -48,7 +56,8 @@ def run(push: bool = True, token: str = None):
         })
         all_analyzed_for_stats[kol["id"]] = {"items": analyzed_items}
         # 打印简要
-        print(f"  #{kol['id']:02d} {kol['name']:20s} → {agg['kol_sentiment']} ({agg['battle_text']})  avg_conf={agg['avg_confidence']}%")
+        eng = analyzed_items[0].get("engine","heuristic") if analyzed_items else "heuristic"
+        print(f"  #{kol['id']:02d} {kol['name']:20s} → {agg['kol_sentiment']} ({agg['battle_text']})  avg_conf={agg['avg_confidence']}% [{eng}]")
 
     stats = global_battle_stats(all_analyzed_for_stats)
     print(f"\n⚔️ 全市场战况：🐂 {stats['bull']} ({stats['bull_ratio']}%) vs 🐻 {stats['bear']} ({stats['bear_ratio']}%) vs ⚖️ {stats['neutral']} ({stats['neutral_ratio']}%) → 主导: {stats['dominant']}")
@@ -71,7 +80,8 @@ def run(push: bool = True, token: str = None):
             "active_count": len(active_kols),
             "inactive_count": len(inactive_kols),
             "total": len(active_kols)+len(inactive_kols),
-            "stats": stats
+            "stats": stats,
+            "engine": engine_name
         },
         "active_kols": [
             {
@@ -90,7 +100,7 @@ def run(push: bool = True, token: str = None):
     if push:
         print("\n[4/4] 📨 推送 PushPlus...")
         title = f"🐙像素战场·KOL多空战报 {report_date} | 存活{len(active_kols)}/{len(active_kols)+len(inactive_kols)} 主导:{stats['dominant']}"
-        summary = f"存活{len(active_kols)}家 · 🐂{stats['bull']} vs 🐻{stats['bear']} | 平均战斗力{stats['avg_power']}"
+        summary = f"存活{len(active_kols)}家 · 🐂{stats['bull']} vs 🐻{stats['bear']} | {engine_name} | 平均战斗力{stats['avg_power']}"
         res = send_report(str(html_path), title, token=token, summary=summary)
         print(f"PushPlus 结果: {res}")
     else:
