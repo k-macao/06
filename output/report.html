@@ -1,0 +1,3989 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球财经金融 KOL 精选名单 · 多空全景战报 - 章鱼 AI·全景分析</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0f1e;
+    --panel:#1a1a2e;
+    --panel2:#16213e;
+    --yellow:#ffe066;
+    --pink:#ff6b9d;
+    --cyan:#00e5ff;
+    --green:#00ff88;
+    --red:#ff3b30;
+    --blue:#0080ff;
+    --border:#fff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#fff;
+    font-family:'Noto Sans SC', sans-serif;
+    overflow-x:hidden;
+  }
+  /* 像素网格背景 */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size:32px 32px;
+    pointer-events:none;
+    z-index:-1;
+  }
+  /* 扫描线 */
+  body::after{
+    content:"";
+    position:fixed;inset:0;
+    background:repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(255,255,255,0.03) 3px);
+    pointer-events:none;z-index:999;
+  }
+  .container{max-width:1200px;margin:0 auto;padding:18px 16px 40px}
+  /* 像素边框通用 */
+  .pixel-border{
+    border:4px solid #fff;
+    box-shadow:
+      0 0 0 4px #000,
+      6px 6px 0 #000,
+      inset 0 0 0 2px rgba(255,255,255,0.2);
+    position:relative;
+  }
+  .pixel-border::before{
+    content:"";position:absolute;inset:4px;
+    border:2px dashed rgba(255,255,255,0.15);pointer-events:none;
+  }
+  /* 顶部标题 */
+  .header{
+    background:linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding:22px 18px;
+    text-align:center;
+    margin-bottom:18px;
+  }
+  .header h1{
+    margin:0;
+    font-family:'Press Start 2P', monospace;
+    font-size:13px;
+    line-height:1.8;
+    letter-spacing:1px;
+    color:var(--yellow);
+    text-shadow:3px 3px 0 #000, 0 0 12px rgba(255,224,102,0.6);
+    word-break:break-all;
+  }
+  .header .subtitle{
+    margin-top:12px;
+    font-size:12px;
+    color:var(--cyan);
+    letter-spacing:2px;
+    font-family:'Press Start 2P', monospace;
+  }
+  .header .meta{
+    margin-top:14px;
+    display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
+    font-size:11px;
+  }
+  .meta-badge{
+    background:#000;
+    border:2px solid #fff;
+    padding:6px 10px;
+    font-family:'Press Start 2P', monospace;
+    font-size:7px;
+    box-shadow:3px 3px 0 #000;
+  }
+  .meta-badge.yellow{border-color:var(--yellow);color:var(--yellow)}
+  .meta-badge.cyan{border-color:var(--cyan);color:var(--cyan)}
+  .meta-badge.pink{border-color:var(--pink);color:var(--pink)}
+  .meta-badge.green{border-color:var(--green);color:var(--green)}
+
+  /* 多空战场 */
+  .battlefield{
+    background:#000;
+    padding:16px;
+    margin-bottom:18px;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:14px;
+    align-items:center;
+  }
+  @media (max-width:768px){
+    .battlefield{grid-template-columns:1fr; text-align:center}
+  }
+  .fighter{
+    background:var(--panel);
+    padding:14px;
+    text-align:center;
+  }
+  .fighter.bull{border-left:6px solid var(--red)}
+  .fighter.bear{border-left:6px solid var(--blue)}
+  .fighter .icon{font-size:36px;filter:drop-shadow(3px 3px 0 #000)}
+  .fighter .label{
+    font-family:'Press Start 2P', monospace;
+    font-size:8px;
+    margin:8px 0 6px;
+    letter-spacing:1px;
+  }
+  .fighter.bull .label{color:var(--red)}
+  .fighter.bear .label{color:var(--blue)}
+  .fighter .count{
+    font-size:28px;font-weight:900;line-height:1;
+    text-shadow:2px 2px 0 #000;
+  }
+  .fighter.bull .count{color:var(--red)}
+  .fighter.bear .count{color:var(--blue)}
+  .fighter .sub{font-size:9px;opacity:0.7;margin-top:4px;font-family:'Press Start 2P', monospace}
+  .vs{
+    text-align:center;
+    font-family:'Press Start 2P', monospace;
+    font-size:18px;
+    color:var(--yellow);
+    text-shadow:3px 3px 0 #000;
+    animation:pulse 1.2s infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+  .battle-stats{
+    grid-column:1 / -1;
+    margin-top:8px;
+  }
+  .health-row{display:flex;align-items:center;gap:8px;margin:8px 0}
+  .health-label{
+    width:70px;
+    font-family:'Press Start 2P', monospace;
+    font-size:7px;
+    text-align:right;
+  }
+  .health-bar{
+    flex:1;height:18px;
+    background:#222;
+    border:2px solid #fff;
+    display:flex;
+    overflow:hidden;
+    box-shadow:inset 2px 2px 0 rgba(0,0,0,0.5);
+  }
+  .health-fill{
+    height:100%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Press Start 2P', monospace;
+    font-size:6px;
+    color:#000;
+    font-weight:bold;
+    transition:width 1s ease;
+    text-shadow:none;
+  }
+  .health-fill.bull{background:linear-gradient(90deg, #ff3b30, #ff6b6b);box-shadow:inset 0 -3px 0 rgba(0,0,0,0.3)}
+  .health-fill.bear{background:linear-gradient(90deg, #0080ff, #00e5ff);box-shadow:inset 0 -3px 0 rgba(0,0,0,0.3)}
+  .health-fill.neutral{background:linear-gradient(90deg, #888, #bbb)}
+
+  /* 筛选条 */
+  .filter-bar{
+    display:flex;gap:8px;flex-wrap:wrap;
+    margin-bottom:14px;
+    justify-content:center;
+  }
+  .filter-btn{
+    background:#000;color:#fff;
+    border:2px solid #fff;
+    padding:8px 14px;
+    font-family:'Press Start 2P', monospace;
+    font-size:7px;
+    cursor:pointer;
+    box-shadow:3px 3px 0 #000;
+  }
+  .filter-btn.active{background:var(--yellow);color:#000;border-color:#000}
+  .filter-btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 #000}
+
+  /* KOL 卡片网格 */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));
+    gap:16px;
+  }
+  @media (max-width:420px){
+    .grid{grid-template-columns:1fr}
+  }
+  .kol-card{
+    background:var(--panel);
+    padding:14px;
+    display:flex;flex-direction:column;
+    gap:10px;
+    transition:transform 0.15s;
+  }
+  .kol-card:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 #000}
+  .kol-head{
+    display:flex;gap:10px;align-items:center;
+    border-bottom:2px dashed rgba(255,255,255,0.2);
+    padding-bottom:10px;
+  }
+  .avatar{
+    width:52px;height:52px;
+    background:#000;
+    border:3px solid #fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;
+    flex-shrink:0;
+    image-rendering:pixelated;
+    box-shadow:3px 3px 0 #000;
+  }
+  .kol-info{flex:1;min-width:0}
+  .kol-name{
+    font-weight:900;font-size:13px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    display:flex;align-items:center;gap:6px;
+  }
+  .kol-name .id-badge{
+    background:var(--yellow);color:#000;
+    font-family:'Press Start 2P', monospace;
+    font-size:7px;
+    padding:2px 5px;
+    border:2px solid #000;
+  }
+  .kol-meta{
+    font-size:10px;opacity:0.75;margin-top:2px;
+    display:flex;gap:6px;flex-wrap:wrap;
+  }
+  .platform-tag{
+    background:#000;
+    border:1px solid var(--cyan);
+    color:var(--cyan);
+    padding:1px 6px;
+    font-family:'Press Start 2P', monospace;
+    font-size:6px;
+  }
+  .fans-tag{
+    background:var(--pink);color:#000;
+    padding:1px 6px;
+    font-weight:900;
+    font-size:10px;
+    border:1px solid #fff;
+  }
+  .sentiment-badge{
+    font-family:'Press Start 2P', monospace;
+    font-size:7px;
+    padding:6px 8px;
+    border:2px solid #fff;
+    text-align:center;
+    box-shadow:2px 2px 0 #000;
+    flex-shrink:0;
+  }
+  .sentiment-badge.bull{background:var(--red);color:#fff}
+  .sentiment-badge.bear{background:var(--blue);color:#fff}
+  .sentiment-badge.neutral{background:#888;color:#fff}
+  .sentiment-badge .small{font-size:5px;display:block;margin-top:2px;opacity:0.9}
+
+  .item-list{display:flex;flex-direction:column;gap:8px}
+  .item{
+    background:#000;
+    border:2px solid #333;
+    padding:10px;
+    position:relative;
+  }
+  .item::before{
+    content:"▶";
+    position:absolute;left:6px;top:10px;
+    font-size:7px;color:var(--yellow);
+  }
+  .item{padding-left:18px}
+  .item-title{
+    font-size:11px;font-weight:900;
+    line-height:1.4;
+    color:#fff;
+  }
+  .item-summary{
+    font-size:10px;opacity:0.8;
+    margin-top:4px;line-height:1.5;
+    color:#ccc;
+  }
+  .item-footer{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-top:8px;gap:8px;flex-wrap:wrap;
+  }
+  .item-date{
+    font-family:'Press Start 2P', monospace;
+    font-size:6px;
+    background:#222;
+    border:1px solid #555;
+    padding:3px 6px;
+    color:var(--cyan);
+  }
+  .mini-badge{
+    font-family:'Press Start 2P', monospace;
+    font-size:6px;
+    padding:3px 6px;
+    border:2px solid #fff;
+    box-shadow:1px 1px 0 #000;
+  }
+  .mini-badge.bull{background:var(--red);color:#fff}
+  .mini-badge.bear{background:var(--blue);color:#fff}
+  .mini-badge.neutral{background:#666;color:#fff}
+  .reason{
+    margin-top:6px;
+    background:#111;
+    border-left:3px solid var(--yellow);
+    padding:6px 8px;
+    font-size:10px;
+    line-height:1.5;
+    color:#ffe066;
+  }
+  .advice{
+    margin-top:4px;
+    font-size:10px;
+    color:var(--green);
+    font-weight:700;
+  }
+  .power-row{
+    display:flex;align-items:center;gap:6px;margin-top:6px;
+  }
+  .power-label{font-family:'Press Start 2P', monospace;font-size:6px;opacity:0.7}
+  .power-bar{
+    flex:1;height:8px;background:#222;border:1px solid #fff;
+    overflow:hidden;
+  }
+  .power-fill{height:100%}
+  .power-fill.bull{background:var(--red)}
+  .power-fill.bear{background:var(--blue)}
+  .power-fill.neutral{background:#888}
+  .power-num{font-family:'Press Start 2P', monospace;font-size:6px;min-width:30px}
+
+  /* 页脚 */
+  .footer{
+    margin-top:22px;
+    text-align:center;
+    padding:16px;
+    background:#000;
+    font-family:'Press Start 2P', monospace;
+    font-size:6px;
+    line-height:1.8;
+    color:#888;
+  }
+  .footer .highlight{color:var(--yellow)}
+  .legend{
+    display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+    margin-top:10px;
+  }
+  .legend-item{
+    display:flex;align-items:center;gap:6px;
+    font-family:'Press Start 2P', monospace;
+    font-size:6px;
+  }
+  .legend-dot{width:10px;height:10px;border:2px solid #fff;box-shadow:1px 1px 0 #000}
+  .legend-dot.bull{background:var(--red)}
+  .legend-dot.bear{background:var(--blue)}
+  .legend-dot.neutral{background:#888}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- HEADER -->
+  <div class="header pixel-border">
+    <h1>⚔️ 全球财经金融 KOL 精选名单 ⚔️<br>多空全景战报 · 像素战场版</h1>
+    <div class="subtitle">PIXEL BATTLEFIELD EDITION // BULL VS BEAR</div>
+    <div class="meta">
+      <div class="meta-badge yellow">📅 2026年08月07日</div>
+      <div class="meta-badge cyan">👾 45 / 53 存活</div>
+      <div class="meta-badge pink">⚡ 135 条内容参战</div>
+      <div class="meta-badge green">🐙 章鱼 AI·全景分析</div>
+    </div>
+  </div>
+
+  <!-- PIXEL BANNER -->
+  <div class="pixel-border" style="padding:0;overflow:hidden;margin-bottom:18px;background:#000">
+    <img src="pixel_battle.png" alt="BULL VS BEAR PIXEL BATTLE" style="width:100%;height:auto;display:block;image-rendering:pixelated;border-bottom:4px solid #fff">
+    <div style="background:linear-gradient(90deg,#ff3b30 0%,#ffe066 25%,#00e5ff 50%,#ffe066 75%,#0080ff 100%);height:6px"></div>
+    <div style="text-align:center;padding:8px;background:#000;font-family:'Press Start 2P', monospace;font-size:7px;color:var(--yellow);letter-spacing:1px">▶ ARCADE MODE // INSERT COIN TO CONTINUE ▶ 多空对决 · 像素战场已就绪</div>
+  </div>
+
+  <!-- BATTLEFIELD -->
+  <div class="battlefield pixel-border">
+    <div class="fighter bull pixel-border">
+      <div class="icon">🐂</div>
+      <div class="label">BULL ARMY 多头军团</div>
+      <div class="count">22</div>
+      <div class="sub">16% 火力</div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="fighter bear pixel-border">
+      <div class="icon">🐻</div>
+      <div class="label">BEAR ARMY 空头军团</div>
+      <div class="count">33</div>
+      <div class="sub">24% 火力</div>
+    </div>
+    <div class="battle-stats">
+      <div class="health-row">
+        <div class="health-label" style="color:var(--red)">BULL</div>
+        <div class="health-bar"><div class="health-fill bull" style="width:16%">16%</div></div>
+      </div>
+      <div class="health-row">
+        <div class="health-label" style="color:var(--blue)">BEAR</div>
+        <div class="health-bar"><div class="health-fill bear" style="width:24%">24%</div></div>
+      </div>
+      <div class="health-row">
+        <div class="health-label" style="color:#aaa">NEUTRAL</div>
+        <div class="health-bar"><div class="health-fill neutral" style="width:60%">60%</div></div>
+      </div>
+      <div style="text-align:center;margin-top:10px;font-family:'Press Start 2P', monospace;font-size:7px;color:var(--yellow)">
+        ▶ 当前战场主导：<span style="color:#fff;background:#0080ff;padding:2px 6px;border:2px solid #fff">空头</span> · 平均战斗力 58 ▶
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterKOL('all')">♟ ALL 全部</button>
+    <button class="filter-btn" onclick="filterKOL('bull')">🐂 多头</button>
+    <button class="filter-btn" onclick="filterKOL('bear')">🐻 空头</button>
+    <button class="filter-btn" onclick="filterKOL('neutral')">⚖️ 中性</button>
+    <button class="filter-btn" onclick="filterKOL('cn')">🇨🇳 中文</button>
+    <button class="filter-btn" onclick="filterKOL('en')">🇺🇸 英文</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="kolGrid">
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#01</span> Graham Stephan</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">个人理财/房地产</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 400W+</span>
+            <span style="font-size:9px;opacity:0.6">极简生活理财与定投策略大师</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡56 | 65%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">美联储突然转向？2026年降息押注与房贷利率崩跌前夜</div>
+          <div class="item-summary">美联储官员放鸽，Graham 分析房贷利率跌破6%对刚需买家的抄底窗口，并警告高杠杆投资者的流动性风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge neutral">中性 61%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@GrahamStephan?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">我为什么还在定投VOO：标普500估值泡沫下的生存指南</div>
+          <div class="item-summary">用数据回测 2000 与 2008 崩盘期的定投收益，强调现金流与低费率 ETF 的防御价值。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bear">空头 82%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@GrahamStephan?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">月入1万如何一年存下6万：极简生活的残酷实操</div>
+          <div class="item-summary">拆解日常开销、信用卡返现与副业收入，给出可复制的存钱清单。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 54%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@GrahamStephan?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#02</span> Andrei Jikh</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">股息投资/理财技巧</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 200W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重股息复利与被动收入分析</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡60 | 60%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">37万亿美债重置已启动！普通人必做的3件事</div>
+          <div class="item-summary">详解美国债务货币化与美元信用裂缝，建议配置比特币、黄金与股息资产的三角防御。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 52%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@AndreiJikh?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">股息贵族崩了？我清仓了这只20年分红股</div>
+          <div class="item-summary">复盘 3M 与 Walgreens 暴跌，强调股息可持续性审查框架。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:64%"></div></div>
+            <span class="power-num">64</span>
+            <span class="mini-badge bear">空头 72%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@AndreiJikh?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">信用卡0利率套利还能玩吗？2026年实测</div>
+          <div class="item-summary">实测 Chase 与 Amex 余额转移，结合信用分影响给出操作红线。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@AndreiJikh?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#03</span> Humphrey Yang</div>
+          <div class="kol-meta">
+            <span class="platform-tag">TikTok/YT</span>
+            <span>英文</span>
+            <span style="opacity:0.6">金融科普/税务</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 300W+</span>
+            <span style="font-size:9px;opacity:0.6">极其擅长用视觉化方式解释金融概念</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡52 | 59%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">用一张图看懂期权：5年级版 Call/Put 科普</div>
+          <div class="item-summary">用买奶茶券类比期权，拆解时间价值与行权价选择。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:51%"></div></div>
+            <span class="power-num">51</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@humphreytalks?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">15条提前退休路径大排名：时薪10万刀多久能FIRE？</div>
+          <div class="item-summary">对比房地产、指数基金、副业等路径，给出3年到30年的时间表。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 61%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@humphreytalks?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">比特币2026还值得买吗？我的仓位与止损线</div>
+          <div class="item-summary">回顾减半周期，结合ETF资金流入判断牛熊分界。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:47%"></div></div>
+            <span class="power-num">47</span>
+            <span class="mini-badge neutral">中性 62%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@humphreytalks?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#04</span> The Plain Bagel</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">投资教育/金融分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 100W+</span>
+            <span style="font-size:9px;opacity:0.6">CFA持证人，风格冷静、客观、专业</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">1多 vs 1空 vs 1中性</span>
+          <span class="small">⚡62 | 72%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">杠杆ETF是财富加速器还是绞肉机？</div>
+          <div class="item-summary">用数学推导每日重置的损耗，证明长期持有 3x ETF 的隐形税。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:71%"></div></div>
+            <span class="power-num">71</span>
+            <span class="mini-badge bull">多头 83%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 2 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@ThePlainBagel?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">BlackRock与Vanguard真的控制全世界吗？</div>
+          <div class="item-summary">拆解被动基金的投票权与所有权迷思，还原真实影响力边界。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:53%"></div></div>
+            <span class="power-num">53</span>
+            <span class="mini-badge neutral">中性 61%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@ThePlainBagel?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">量化紧缩QT：美联储缩表如何抽干你的流动性</div>
+          <div class="item-summary">解释国债到期与银行准备金的关系，推演对股市估值的影响。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:62%"></div></div>
+            <span class="power-num">62</span>
+            <span class="mini-badge bear">空头 72%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@ThePlainBagel?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#05</span> Patrick Boyle</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">对冲基金/金融史</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 60W+</span>
+            <span style="font-size:9px;opacity:0.6">资深基金经理，带幽默感的深度金融分析</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 2空 vs 1中性</span>
+          <span class="small">⚡58 | 67%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">散户的末日狂欢：Meme股与伪大师的泡沫史</div>
+          <div class="item-summary">回顾南海泡沫到GameStop，讽刺网红荐股的话术陷阱。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:62%"></div></div>
+            <span class="power-num">62</span>
+            <span class="mini-badge bear">空头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“散户的末日狂欢：Meme股与…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@PBoyle?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">对冲基金如何做空你的信仰？</div>
+          <div class="item-summary">揭秘融券、CDS与波动率交易的阴暗面，带英式幽默。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:60%"></div></div>
+            <span class="power-num">60</span>
+            <span class="mini-badge bear">空头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@PBoyle?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么每次危机都一样？金融史的诅咒循环</div>
+          <div class="item-summary">对比1929与2008，指出监管套利永不眠。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@PBoyle?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#06</span> Meet Kevin</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">美股/房地产/宏观</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 190W+</span>
+            <span style="font-size:9px;opacity:0.6">每日高频更新美股动向与宏观政策</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          轻度偏多
+          <span class="small">1多 vs 0空 vs 2中性</span>
+          <span class="small">⚡62 | 64%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">突发：CPI爆表！美股盘前崩跌，我的操作</div>
+          <div class="item-summary">CPI超预期0.4%，Kevin 直播解读对冲策略，呼吁现金为王。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:76%"></div></div>
+            <span class="power-num">76</span>
+            <span class="mini-badge bull">多头 78%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题释放积极信号（“突发：CPI爆表！美股盘前崩…”），基本面或资金面出现边际改善，资金有做多动能。</div>
+          <div class="advice">🎯 策略：趋势未坏，回调即机会</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@MeetKevin?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">加州房产税提案通过？房东的噩梦来了</div>
+          <div class="item-summary">分析Prop 13改革对租金与房价的连锁冲击。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:53%"></div></div>
+            <span class="power-num">53</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@MeetKevin?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">特斯拉Q2交付暴雷：Elon 还能讲故事吗？</div>
+          <div class="item-summary">拆解交付量与毛利率，给出 $180 支撑位判断。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@MeetKevin?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#07</span> Joseph Carlson</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">股息增长投资</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 30W+</span>
+            <span style="font-size:9px;opacity:0.6">专注长期持有优质公司的股息组合</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          多头阵营
+          <span class="small">2多 vs 0空 vs 1中性</span>
+          <span class="small">⚡61 | 72%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">股息增长组合7月调仓：我卖掉了这只30年分红王</div>
+          <div class="item-summary">审查 Johnson & Johnson 现金流覆盖率，下调预期后止盈。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:73%"></div></div>
+            <span class="power-num">73</span>
+            <span class="mini-badge bull">多头 81%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 2 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：趋势未坏，回调即机会</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@JosephCarlsonShow?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">被动收入月入5000刀的真相：需要多少本金？</div>
+          <div class="item-summary">用 4% 法则倒推 150 万本金门槛，提示股息陷阱。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:44%"></div></div>
+            <span class="power-num">44</span>
+            <span class="mini-badge neutral">中性 64%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@JosephCarlsonShow?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么我只买能涨股息的公司？</div>
+          <div class="item-summary">对比高股息与股息增长的长期总回报，倡导质量优先。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bull">多头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@JosephCarlsonShow?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#08</span> Sven Carlin</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">价值投资/深度研报</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 25W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重基本面分析与内在价值计算</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">1多 vs 2空 vs 0中性</span>
+          <span class="small">⚡68 | 76%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">AI泡沫的终局：价值投资者的最后防线</div>
+          <div class="item-summary">用 DC­F 重算英伟达与微软，警告估值偏离内在价值 60%。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:74%"></div></div>
+            <span class="power-num">74</span>
+            <span class="mini-badge bear">空头 81%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@Value-Investing?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">这家被抛弃的欧洲银行，隐含回报率 25%？</div>
+          <div class="item-summary">深度研报：拨备覆盖率与账面价值折扣的错杀机会。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:73%"></div></div>
+            <span class="power-num">73</span>
+            <span class="mini-badge bull">多头 76%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@Value-Investing?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">通胀真的死了吗？大宗商品周期的危险信号</div>
+          <div class="item-summary">分析铜油库存与货币增速，提示滞胀卷土重来。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:59%"></div></div>
+            <span class="power-num">59</span>
+            <span class="mini-badge bear">空头 72%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“通胀真的死了吗？大宗商品周期…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@Value-Investing?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#09</span> Mark Tilbury</div>
+          <div class="kol-meta">
+            <span class="platform-tag">TikTok/YT</span>
+            <span>英文</span>
+            <span style="opacity:0.6">财富管理/创业理财</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 700W+</span>
+            <span style="font-size:9px;opacity:0.6">针对年轻人的财富思维与实操建议</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡53 | 58%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">19岁开始投资 vs 30岁：复利差了整整 100万</div>
+          <div class="item-summary">用 7% 年化演示晚 10 年的代价，号召年轻人立刻开户。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@MarkTilbury?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">我如何用3家小生意滚到800万英镑</div>
+          <div class="item-summary">复盘洗车、房产与 YouTube 的资本叠加路径。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@MarkTilbury?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">别再存钱了，先买资产！穷人与富人的分水岭</div>
+          <div class="item-summary">对比储蓄与资产负债表思维，鼓励现金流资产。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@MarkTilbury?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#10</span> Jeremy Lefebvre</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">股票投资/个股分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 70W+</span>
+            <span style="font-size:9px;opacity:0.6">专注成长股与个人投资组合分享</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">1多 vs 1空 vs 1中性</span>
+          <span class="small">⚡64 | 68%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">Palantir 财报炸裂：AI 故事还能涨多久？</div>
+          <div class="item-summary">拆解政府订单与商业化拐点，给出持有与止盈区间。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:74%"></div></div>
+            <span class="power-num">74</span>
+            <span class="mini-badge bull">多头 77%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@FinancialEducation?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">我的重仓股暴跌40%：复盘与教训</div>
+          <div class="item-summary">坦承 CrowdStrike 持仓失误，强调分散与仓位管理。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:66%"></div></div>
+            <span class="power-num">66</span>
+            <span class="mini-badge bear">空头 71%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@FinancialEducation?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">成长股 vs 价值股：2026下半场押哪边？</div>
+          <div class="item-summary">对比利率敏感度与盈利增速，给出 60/40 配置。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@FinancialEducation?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#11</span> Ben Felix</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">指数基金/资产配置</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 50W+</span>
+            <span style="font-size:9px;opacity:0.6">基于学术研究的投资建议，理性派代表</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡49 | 55%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">学术研究证明：95%的选股者跑不赢指数</div>
+          <div class="item-summary">引用 SPIVA 与 Fama-French，论证低费率全球分散的威力。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:52%"></div></div>
+            <span class="power-num">52</span>
+            <span class="mini-badge neutral">中性 52%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@BenFelixCSI?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么你不该听财经新闻做投资？</div>
+          <div class="item-summary">用噪声与信号理论解释媒体对收益的破坏。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:44%"></div></div>
+            <span class="power-num">44</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@BenFelixCSI?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">最优资产配置：30岁、50岁该怎么配？</div>
+          <div class="item-summary">基于生命周期模型给出股债比例与再平衡纪律。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:51%"></div></div>
+            <span class="power-num">51</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@BenFelixCSI?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#12</span> Erika Kullberg</div>
+          <div class="kol-meta">
+            <span class="platform-tag">IG/TikTok</span>
+            <span>英文</span>
+            <span style="opacity:0.6">金融法律/理财技巧</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 500W+</span>
+            <span style="font-size:9px;opacity:0.6">专注利用法律协议和规则节省开支</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡49 | 57%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">航空公司拒赔？这条法律让你白拿1000刀</div>
+          <div class="item-summary">解读美欧航班延误赔偿条款，手把手教索赔话术。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.tiktok.com/@erikakullberg?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">别再为这5个费用买单：律师教你省2万</div>
+          <div class="item-summary">拆解租约、健身房与订阅陷阱的法律漏洞。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:47%"></div></div>
+            <span class="power-num">47</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.tiktok.com/@erikakullberg?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">学生贷款减免新政：符合条件的3类人</div>
+          <div class="item-summary">梳理拜登新计划与申请截止，提示材料清单。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.tiktok.com/@erikakullberg?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#13</span> Vivien Tu</div>
+          <div class="kol-meta">
+            <span class="platform-tag">TikTok/IG</span>
+            <span>英文</span>
+            <span style="opacity:0.6">个人理财/职场金融</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 200W+</span>
+            <span style="font-size:9px;opacity:0.6">Your Rich BFF，女性理财视角</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 2空 vs 1中性</span>
+          <span class="small">⚡61 | 69%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">华尔街前交易员坦白：女性理财的5个坑</div>
+          <div class="item-summary">揭示收入差距与风险厌恶，教你谈薪与定投。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bear">空头 75%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.tiktok.com/@yourrichbff?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">月薪5000也能理财：我的50/30/20实操</div>
+          <div class="item-summary">演示自动转账与高息储蓄的懒人组合。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:52%"></div></div>
+            <span class="power-num">52</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.tiktok.com/@yourrichbff?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么你该先还高息债再投资？</div>
+          <div class="item-summary">对比 7% 债务与 8% 预期收益，强调无风险回报。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:64%"></div></div>
+            <span class="power-num">64</span>
+            <span class="mini-badge bear">空头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.tiktok.com/@yourrichbff?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#14</span> Jaspreet Singh</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">宏观经济/理财心态</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 160W+</span>
+            <span style="font-size:9px;opacity:0.6">Minority Mindset创始人，专注金融认知</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡55 | 63%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">穷人思维 vs 富人思维：1个转变让你多赚10倍</div>
+          <div class="item-summary">Minority Mindset 核心：从消费者到生产者视角。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@MinorityMindset?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">美联储印钞的隐形税：谁在偷走你的购买力？</div>
+          <div class="item-summary">解释通胀是穷人税，呼吁持有生产性资产。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，1 多 vs 1 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@MinorityMindset?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">2026年最危险的投资：你正在买的这个东西</div>
+          <div class="item-summary">点名长期债券与僵尸企业，警告利率风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:66%"></div></div>
+            <span class="power-num">66</span>
+            <span class="mini-badge bear">空头 78%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@MinorityMindset?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#15</span> Investing with Rose</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">投资入门/ETF</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 60W+</span>
+            <span style="font-size:9px;opacity:0.6">专注女性及新手的投资启蒙</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          轻度偏多
+          <span class="small">1多 vs 0空 vs 2中性</span>
+          <span class="small">⚡57 | 64%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">零基础买ETF：3只基金搞定全球配置</div>
+          <div class="item-summary">推荐 VT + BND + VNQ 的一站式懒人组合。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:70%"></div></div>
+            <span class="power-num">70</span>
+            <span class="mini-badge bull">多头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：趋势未坏，回调即机会</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@InvestingwithRose?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">女生投资第一课：别怕，你比想象中更懂钱</div>
+          <div class="item-summary">用咖啡价类比复利，消除入门恐惧。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@InvestingwithRose?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">股息ETF vs 成长ETF：新手该怎么选？</div>
+          <div class="item-summary">对比 SCHD 与 VUG 的波动与现金流差异。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:46%"></div></div>
+            <span class="power-num">46</span>
+            <span class="mini-badge neutral">中性 61%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@InvestingwithRose?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#16</span> ClearValue Tax</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">税务/宏观政策</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 150W+</span>
+            <span style="font-size:9px;opacity:0.6">专注于美国税法、经济补贴及宏观趋势</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡53 | 58%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">2026新税法：这4个抵扣让中产多退5000刀</div>
+          <div class="item-summary">详解 SALT 上限、子女抵免与清洁能源补贴。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 59%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@clearvaluetax9382?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">IRS 审计率飙升：这5类人最危险</div>
+          <div class="item-summary">盘点加密货币、现金生意与高扣除申报的红旗。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge neutral">中性 59%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@clearvaluetax9382?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">小企业主必看：QBI 20% 抵扣还能薅多久？</div>
+          <div class="item-summary">推演日落条款与转换 S-Corp 的节税窗口。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:48%"></div></div>
+            <span class="power-num">48</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@clearvaluetax9382?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#17</span> Everything Money</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">股票估值/软件实操</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 20W+</span>
+            <span style="font-size:9px;opacity:0.6">推广八柱投资法，侧重财务报表分析</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡58 | 65%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">八柱分析法实战：这只股票被高估了40%？</div>
+          <div class="item-summary">用软件跑毛利率、债务与估值八项打分，亮红灯。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:46%"></div></div>
+            <span class="power-num">46</span>
+            <span class="mini-badge neutral">中性 63%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@EverythingMoney?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">财报藏雷：3个数字识破利润操纵</div>
+          <div class="item-summary">演示应收账款与库存周转的异常信号。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge neutral">中性 52%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@EverythingMoney?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">何时卖出？我的8分制止盈纪律</div>
+          <div class="item-summary">低于 6 分即清仓，回测胜率与回撤控制。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:72%"></div></div>
+            <span class="power-num">72</span>
+            <span class="mini-badge bear">空头 82%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@EverythingMoney?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#18</span> New Money</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">投资大咖分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 70W+</span>
+            <span style="font-size:9px;opacity:0.6">深度分析巴菲特、芒格等大佬的投资逻辑</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          轻度偏多
+          <span class="small">1多 vs 0空 vs 2中性</span>
+          <span class="small">⚡56 | 62%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">巴菲特2026股东信：现金3000亿在等什么？</div>
+          <div class="item-summary">解读为何股神宁可持有国债也不追高。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:72%"></div></div>
+            <span class="power-num">72</span>
+            <span class="mini-badge bull">多头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：趋势未坏，回调即机会</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@NewMoney?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">芒格的最后忠告：别碰你不懂的生意</div>
+          <div class="item-summary">用喜诗糖果与比亚迪案例诠释能力圈。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:48%"></div></div>
+            <span class="power-num">48</span>
+            <span class="mini-badge neutral">中性 52%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@NewMoney?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">段永平 vs 芒格：中美价值投资的异同</div>
+          <div class="item-summary">对比集中与分散的哲学，提炼可复制心法。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:49%"></div></div>
+            <span class="power-num">49</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@NewMoney?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#19</span> Financial Education</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">股票实战</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 70W+</span>
+            <span style="font-size:9px;opacity:0.6">实时分享买卖交易操作与持仓逻辑</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡54 | 62%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">我刚卖了特斯拉：持仓逻辑全复盘</div>
+          <div class="item-summary">止盈 30% 后转向现金，等待 150 支撑。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:46%"></div></div>
+            <span class="power-num">46</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@FinancialEducation?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">这只AI小盘股，我重仓的理由</div>
+          <div class="item-summary">展示仓位 25% 的高 conviction，下注算力赛道。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@FinancialEducation?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">跟单有风险：为什么别抄我的作业？</div>
+          <div class="item-summary">强调个人风险承受与时间 horizon 差异。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:61%"></div></div>
+            <span class="power-num">61</span>
+            <span class="mini-badge bear">空头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“跟单有风险：为什么别抄我的作…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@FinancialEducation?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#20</span> Brian Feroldi</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">股票测评/财报解读</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 5W+</span>
+            <span style="font-size:9px;opacity:0.6">擅长用打分表评估公司商业模式</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          轻度偏多
+          <span class="small">1多 vs 0空 vs 2中性</span>
+          <span class="small">⚡57 | 66%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">打分表测评：Shopify 商业模式能打几分？</div>
+          <div class="item-summary">从护城河、定价权到创始人，给出 7.5/10。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:48%"></div></div>
+            <span class="power-num">48</span>
+            <span class="mini-badge neutral">中性 67%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@BrianFeroldiYT?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">财报拆解：这家SaaS为何永远不赚钱？</div>
+          <div class="item-summary">揭示 SBC 稀释与客户流失的真相。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@BrianFeroldiYT?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">10年10倍股的共同基因</div>
+          <div class="item-summary">总结高毛利、轻资产与复利增长的三要素。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:71%"></div></div>
+            <span class="power-num">71</span>
+            <span class="mini-badge bull">多头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@BrianFeroldiYT?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#21</span> 贝拉聊财金</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">美股/宏观分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 40W+</span>
+            <span style="font-size:9px;opacity:0.6">深度美股个股分析，逻辑严密</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">1多 vs 1空 vs 1中性</span>
+          <span class="small">⚡63 | 68%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">AI超级碗与万亿宣言！机构史诗级抛售潮来了？</div>
+          <div class="item-summary">英伟达GTC后的产业链推演，提示机构借利好出货的风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:69%"></div></div>
+            <span class="power-num">69</span>
+            <span class="mini-badge bear">空头 75%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@user-bella-finance?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">中美顶级金融暗战：这个周末发生了什么</div>
+          <div class="item-summary">拆解中美利差与外资流动，判断港股与中概的短线反弹窗口。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:64%"></div></div>
+            <span class="power-num">64</span>
+            <span class="mini-badge bull">多头 75%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：趋势未坏，回调即机会</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@user-bella-finance?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">美股七巨头财报周：谁在裸泳一目了然</div>
+          <div class="item-summary">对比云、广告与硬件毛利，给出强弱排序与调仓建议。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@user-bella-finance?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#22</span> 阳光财经</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">股票实战/趋势</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 30W+</span>
+            <span style="font-size:9px;opacity:0.6">擅长技术面与基本面结合分析</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡53 | 59%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">上证 vs 纳指：技术面背离的生死抉择</div>
+          <div class="item-summary">用 MACD 与成交量分析双市场节奏，提示轮动。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 52%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@阳光财经?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">黄金分割+筹码峰：A股反弹目标位在哪？</div>
+          <div class="item-summary">测算 3200 点压力与下方 2850 支撑。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 63%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@阳光财经?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">北向资金连续流出：外资在怕什么？</div>
+          <div class="item-summary">关联汇率与美债利率，判断企稳信号。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:51%"></div></div>
+            <span class="power-num">51</span>
+            <span class="mini-badge neutral">中性 62%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@阳光财经?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#23</span> 小翠时政财经</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">宏观经济/金融时事</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 20W+</span>
+            <span style="font-size:9px;opacity:0.6">深度拆解中国及全球经济数据</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 3空 vs 0中性</span>
+          <span class="small">⚡68 | 78%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">社融暴跌背后：居民为什么不敢借钱了？</div>
+          <div class="item-summary">拆解7月社融与M1数据，揭示资产负债表衰退迹象。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:70%"></div></div>
+            <span class="power-num">70</span>
+            <span class="mini-badge bear">空头 83%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“社融暴跌背后：居民为什么不敢…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@cui_news?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">地方城投展期潮：谁在为土地财政买单？</div>
+          <div class="item-summary">追踪城投债展期案例，评估银行坏账风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:74%"></div></div>
+            <span class="power-num">74</span>
+            <span class="mini-badge bear">空头 78%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“地方城投展期潮：谁在为土地财…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@cui_news?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">人民币破7.3：央行工具箱还有多少子弹？</div>
+          <div class="item-summary">分析中间价与离岸空头博弈，预测汇率底线。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:62%"></div></div>
+            <span class="power-num">62</span>
+            <span class="mini-badge bear">空头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@cui_news?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#25</span> 老李财经</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">美股/个股研报</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 15W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重科技股与半导体板块深度调研</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          轻度偏多
+          <span class="small">1多 vs 0空 vs 2中性</span>
+          <span class="small">⚡61 | 66%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">半导体寒冬还是拐点？台积电财报给答案</div>
+          <div class="item-summary">拆解 3nm 产能利用率与 AI 订单能见度。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:53%"></div></div>
+            <span class="power-num">53</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@老李财经?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">英伟达 vs AMD：谁能吃到AI芯片第二波？</div>
+          <div class="item-summary">对比 CUDA 生态与性价比，押注供应链。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge neutral">中性 67%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@老李财经?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">美股科技股估值回落30%：抄底还是接飞刀？</div>
+          <div class="item-summary">用 PEG 与现金流折现给出安全边际。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:73%"></div></div>
+            <span class="power-num">73</span>
+            <span class="mini-badge bull">多头 77%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@老李财经?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#26</span> 瑞威金融</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">外汇/黄金/实战</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 10W+</span>
+            <span style="font-size:9px;opacity:0.6">专注日内交易技巧与宏观走势推演</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          多头阵营
+          <span class="small">3多 vs 0空 vs 0中性</span>
+          <span class="small">⚡68 | 74%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">黄金日线三连阳：1980美元能否突破？</div>
+          <div class="item-summary">结合非农与实际利率，推演多空分水岭。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bull">多头 71%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题释放积极信号（“黄金日线三连阳：1980美元…”），基本面或资金面出现边际改善，资金有做多动能。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@瑞威金融?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">外汇日内秘籍：伦敦开盘15分钟定胜负</div>
+          <div class="item-summary">分享突破与假突破的过滤技巧。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bull">多头 77%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@瑞威金融?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">原油暴涨10%：地缘溢价还是需求复苏？</div>
+          <div class="item-summary">分析 OPEC+ 减产与库存去化博弈。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:69%"></div></div>
+            <span class="power-num">69</span>
+            <span class="mini-badge bull">多头 76%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@瑞威金融?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#29</span> 零总投资</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">港美股交易/心态</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 8W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重交易员心理与短线技术指标</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          多头阵营
+          <span class="small">2多 vs 1空 vs 0中性</span>
+          <span class="small">⚡67 | 74%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">交易员的噩梦：为什么你总在高点买入？</div>
+          <div class="item-summary">揭示 FOMO 与锚定效应，教你预设止损。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bull">多头 75%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@零总投资?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">港股打板心得：3个指标过滤假突破</div>
+          <div class="item-summary">用成交量、换手与板块联动提高胜率。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bull">多头 76%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。</div>
+          <div class="advice">🎯 策略：趋势未坏，回调即机会</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@零总投资?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">从爆仓到翻身：我的资金管理铁律</div>
+          <div class="item-summary">固定 1% 风险敞口，活下来才有资格赚钱。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bear">空头 71%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@零总投资?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#30</span> 孙老师财经</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">宏观走势/大宗商品</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 15W+</span>
+            <span style="font-size:9px;opacity:0.6">对黄金、石油及美联储政策有独到见解</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">1多 vs 1空 vs 1中性</span>
+          <span class="small">⚡60 | 68%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">黄金新高后暴跌5%：牛市结束了吗？</div>
+          <div class="item-summary">对比 1980 与 2011 顶部形态，判断回调是洗盘。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:64%"></div></div>
+            <span class="power-num">64</span>
+            <span class="mini-badge bull">多头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题释放积极信号（“黄金新高后暴跌5%：牛市结束…”），基本面或资金面出现边际改善，资金有做多动能。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@孙老师财经?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">美联储点阵图藏玄机：今年还能降几次？</div>
+          <div class="item-summary">解读票委分歧与通胀粘性，给出利率路径。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:63%"></div></div>
+            <span class="power-num">63</span>
+            <span class="mini-badge bear">空头 71%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@孙老师财经?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">石油美元松动：人民币结算能走多远？</div>
+          <div class="item-summary">追踪沙特与中俄能源协议的地缘冲击。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:53%"></div></div>
+            <span class="power-num">53</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@孙老师财经?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#31</span> 美股投资网</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">股票新闻/量化</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 10W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重盘前新闻汇总与技术面突破提醒</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          多头阵营
+          <span class="small">2多 vs 0空 vs 1中性</span>
+          <span class="small">⚡59 | 66%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">盘前必读：七巨头期权异动与大单揭秘</div>
+          <div class="item-summary">扫描 Unusual Options Activity，提示方向选择。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 52%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@美股投资网?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">量化信号：标普500站上200日均线意味着什么？</div>
+          <div class="item-summary">回测 50 年突破后的 6 个月收益分布。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bull">多头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@美股投资网?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">今夜非农：预期 18 万，前瞻与交易预案</div>
+          <div class="item-summary">给出数据超预期与不及预期的两套剧本。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:66%"></div></div>
+            <span class="power-num">66</span>
+            <span class="mini-badge bull">多头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@美股投资网?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#32</span> 逻辑财金</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">经济数据/深度分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 12W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重从数据底层逻辑解析金融现象</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡54 | 64%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">CPI 3.2% 背后：哪些分项在说谎？</div>
+          <div class="item-summary">拆解住房、能源与核心服务的权重扭曲。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@逻辑财金?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">M2增速转正：钱真的流向实体了吗？</div>
+          <div class="item-summary">追踪社融与存款搬家，揭示空转风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:63%"></div></div>
+            <span class="power-num">63</span>
+            <span class="mini-badge bear">空头 75%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“M2增速转正：钱真的流向实体…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@逻辑财金?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">从库存周期看A股：现在处于什么位置？</div>
+          <div class="item-summary">用 PMI 与产成品库存定位周期拐点。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 62%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@逻辑财金?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#34</span> 美股说</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">美股基本面</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 5W+</span>
+            <span style="font-size:9px;opacity:0.6">擅长财报拆解与竞争格局分析</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡57 | 63%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">财报拆解：Meta 广告帝国还能涨多久？</div>
+          <div class="item-summary">分析 Reels 变现与 Reality Labs 烧钱的平衡。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:48%"></div></div>
+            <span class="power-num">48</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@美股说?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">竞争格局：特斯拉 vs 理想 vs 蔚来</div>
+          <div class="item-summary">对比交付、毛利与现金流，给出排序。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@美股说?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么我看空这只明星股？</div>
+          <div class="item-summary">揭示高估值与增速放缓的剪刀差。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bear">空头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@美股说?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#35</span> Kelvin Learns Investing</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文/中</span>
+            <span style="opacity:0.6">理财/FIRE运动</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 10W+</span>
+            <span style="font-size:9px;opacity:0.6">侧重通过投资实现财务自由的路径</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡53 | 58%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">FIRE实战：30岁攒够100万需要多少年？</div>
+          <div class="item-summary">用 50% 储蓄率演示 12 年路径，含新加坡案例。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:55%"></div></div>
+            <span class="power-num">55</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@KelvinLearnsInvesting?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">指数基金 vs 买房：年轻人的第一桶金怎么选？</div>
+          <div class="item-summary">对比流动性与杠杆，给出混合策略。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:55%"></div></div>
+            <span class="power-num">55</span>
+            <span class="mini-badge neutral">中性 65%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@KelvinLearnsInvesting?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">副业增收的3条跑道：我如何月入多1万</div>
+          <div class="item-summary">分享内容创作与咨询变现的可复制路径。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:49%"></div></div>
+            <span class="power-num">49</span>
+            <span class="mini-badge neutral">中性 53%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@KelvinLearnsInvesting?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#36</span> The Swedish Investor</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">投资书单/大咖总结</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 80W+</span>
+            <span style="font-size:9px;opacity:0.6">极高效率总结经典投资书籍核心思想</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡55 | 57%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">《穷查理宝典》10句精华：芒格的终极智慧</div>
+          <div class="item-summary">提炼多学科思维与逆向思考的核心。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:55%"></div></div>
+            <span class="power-num">55</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@TheSwedishInvestor?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">《原则》精读：达利欧的投资圣经</div>
+          <div class="item-summary">总结极度透明与可信度加权的组织智慧。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@TheSwedishInvestor?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">《随机漫步》：为什么你跑不赢市场？</div>
+          <div class="item-summary">用醉汉走路类比有效市场假说。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:55%"></div></div>
+            <span class="power-num">55</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@TheSwedishInvestor?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#37</span> Preston Pysh</div>
+          <div class="kol-meta">
+            <span class="platform-tag">Reddit/YT</span>
+            <span>英文</span>
+            <span style="opacity:0.6">宏观/估值分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 15W+</span>
+            <span style="font-size:9px;opacity:0.6">擅长复杂金融公式简化与宏观周期判断</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡56 | 60%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">比特币估值模型：S2F 还有效吗？</div>
+          <div class="item-summary">结合存量流量与链上成本，测算公允区间。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@PrestonPysh?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">美联储缩表 vs 财政放水：谁在决定流动性？</div>
+          <div class="item-summary">拆解 TGA 与逆回购的水位博弈。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，1 多 vs 1 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@PrestonPysh?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">如何给一家不赚钱的AI公司估值？</div>
+          <div class="item-summary">用 PS 与 TAM 推演终局市占率。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:55%"></div></div>
+            <span class="power-num">55</span>
+            <span class="mini-badge neutral">中性 64%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@PrestonPysh?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#38</span> PensionCraft</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">退休规划/投资组合</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 20W+</span>
+            <span style="font-size:9px;opacity:0.6">专注长期稳健资产配置方案</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 2空 vs 1中性</span>
+          <span class="small">⚡65 | 71%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">退休组合回测：60/40 还能用吗？</div>
+          <div class="item-summary">回测 1970-2026，引入黄金与短债的改良版。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@PensionCraft?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">英国养老金危机启示：LDI 的死亡螺旋</div>
+          <div class="item-summary">复盘 2022  gilt 崩盘，警示杠杆风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:75%"></div></div>
+            <span class="power-num">75</span>
+            <span class="mini-badge bear">空头 84%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@PensionCraft?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">通胀挂钩债券：退休者的隐形盾牌</div>
+          <div class="item-summary">对比 TIPS 与 nominal 债的真实收益。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bear">空头 72%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@PensionCraft?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#39</span> Ramin Nakisa</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">战略资产配置</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 20W+</span>
+            <span style="font-size:9px;opacity:0.6">前投行研究员，侧重多资产类别相关性研究</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 3空 vs 0中性</span>
+          <span class="small">⚡64 | 72%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">多资产相关性崩了？股债为何同跌</div>
+          <div class="item-summary">解释通胀 regime 下相关性翻转，应对策略。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:63%"></div></div>
+            <span class="power-num">63</span>
+            <span class="mini-badge bear">空头 74%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@PensionCraft?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">战略配置：如何用3个ETF覆盖全球？</div>
+          <div class="item-summary">用因子分散降低尾部风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bear">空头 72%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“战略配置：如何用3个ETF覆…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@PensionCraft?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">退休提款率：4% 法则已死？</div>
+          <div class="item-summary">结合高估值与长寿风险，给出动态提款表。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:62%"></div></div>
+            <span class="power-num">62</span>
+            <span class="mini-badge bear">空头 71%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@PensionCraft?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#40</span> Financial Diet</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">理财生活方式</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 90W+</span>
+            <span style="font-size:9px;opacity:0.6">专注女性理财思维与预算管理</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡49 | 59%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">月薪3000的预算美学：如何体面地穷</div>
+          <div class="item-summary">分享信封预算法与快乐消费清单。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:52%"></div></div>
+            <span class="power-num">52</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@TheFinancialDiet?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么你总存不下钱？3个心理陷阱</div>
+          <div class="item-summary">揭示生活方式膨胀与社交比较。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:43%"></div></div>
+            <span class="power-num">43</span>
+            <span class="mini-badge neutral">中性 64%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@TheFinancialDiet?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">副业焦虑：不上进还是被割韭菜？</div>
+          <div class="item-summary">批判 hustle culture，倡导可持续。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:52%"></div></div>
+            <span class="power-num">52</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@TheFinancialDiet?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#41</span> Maverick of Wall Street</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">美股研判/空头视角</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 20W+</span>
+            <span style="font-size:9px;opacity:0.6">擅长从技术指标与宏观泡沫角度预警风险</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 2空 vs 1中性</span>
+          <span class="small">⚡60 | 75%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">标普500 泡沫警报：席勒PE已超1929</div>
+          <div class="item-summary">对比历次顶部估值，警告均值回归。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:66%"></div></div>
+            <span class="power-num">66</span>
+            <span class="mini-badge bear">空头 78%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@MaverickofWallStreet?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">技术面顶背离：纳指的最后疯狂？</div>
+          <div class="item-summary">用 RSI 与成交量揭示动能衰竭。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:42%"></div></div>
+            <span class="power-num">42</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@MaverickofWallStreet?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">做空指南：如何用期权对冲崩盘风险</div>
+          <div class="item-summary">演示保护性看跌与价差策略。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:74%"></div></div>
+            <span class="power-num">74</span>
+            <span class="mini-badge bear">空头 90%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@MaverickofWallStreet?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#43</span> Cameron Stewart</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">现金流折现分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 5W+</span>
+            <span style="font-size:9px;opacity:0.6">坚持用 DCF 模型对每家公司进行估值</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡47 | 55%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">DCF实战：给英伟达算个公允价</div>
+          <div class="item-summary">假设 20% 增速 5 年，贴现率 10% 得出 $720。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:49%"></div></div>
+            <span class="power-num">49</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@CameronStewartCFA?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么DCF是唯一诚实的估值法？</div>
+          <div class="item-summary">对比 PE 的操纵空间，强调现金为王。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:45%"></div></div>
+            <span class="power-num">45</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@CameronStewartCFA?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">手把手：用10-K算自由现金流</div>
+          <div class="item-summary">从经营现金流扣除维持性资本开支。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:47%"></div></div>
+            <span class="power-num">47</span>
+            <span class="mini-badge neutral">中性 53%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@CameronStewartCFA?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#44</span> Fast Graphs (Chuck Carnevale)</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">估值工具分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 10W+</span>
+            <span style="font-size:9px;opacity:0.6">专注估值回归与基本面图形化分析</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡52 | 55%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">估值回归：这只股息王被错杀了30%</div>
+          <div class="item-summary">用 FAST Graphs 展示历史 PE 通道与预期。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:47%"></div></div>
+            <span class="power-num">47</span>
+            <span class="mini-badge neutral">中性 53%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@FASTgraphs?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">图形化财报：3秒看懂一家公司</div>
+          <div class="item-summary">蓝橙线揭示盈利与估值的背离。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:53%"></div></div>
+            <span class="power-num">53</span>
+            <span class="mini-badge neutral">中性 53%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@FASTgraphs?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">为什么我从不追高？</div>
+          <div class="item-summary">用 15% 年化预期筛选低估标的。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge neutral">中性 61%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@FASTgraphs?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#48</span> Money Coach Nick</div>
+          <div class="kol-meta">
+            <span class="platform-tag">IG</span>
+            <span>英文</span>
+            <span style="opacity:0.6">每日金融技巧</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 10W+</span>
+            <span style="font-size:9px;opacity:0.6">极其简练的每日个人理财 Checklist</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">0多 vs 0空 vs 3中性</span>
+          <span class="small">⚡51 | 56%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">每日1分钟：今天的理财微行动</div>
+          <div class="item-summary">自动转 10 刀到高息账户，积少成多。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:51%"></div></div>
+            <span class="power-num">51</span>
+            <span class="mini-badge neutral">中性 58%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.instagram.com/moneycoachnick?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">3个App帮你年省2000刀</div>
+          <div class="item-summary">对比返现与比价工具的实测。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:52%"></div></div>
+            <span class="power-num">52</span>
+            <span class="mini-badge neutral">中性 57%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.instagram.com/moneycoachnick?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">别再为银行付费：免费账户清单</div>
+          <div class="item-summary">罗列零费用与高 APY 的替代。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:51%"></div></div>
+            <span class="power-num">51</span>
+            <span class="mini-badge neutral">中性 53%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.instagram.com/moneycoachnick?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#49</span> TradingView (Top Authors)</div>
+          <div class="kol-meta">
+            <span class="platform-tag">TradingView</span>
+            <span>英文</span>
+            <span style="opacity:0.6">技术分析</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ N/A</span>
+            <span style="font-size:9px;opacity:0.6">选取平台内排名靠前的个人交易员分析师</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">1多 vs 1空 vs 1中性</span>
+          <span class="small">⚡61 | 70%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">BTC 4小时头肩顶：6万关口保卫战</div>
+          <div class="item-summary">多名 Top 作者共识看空，目标 5.2 万。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:57%"></div></div>
+            <span class="power-num">57</span>
+            <span class="mini-badge bear">空头 69%</span>
+          </div>
+          <div class="reason">🧠 AI研判：文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。</div>
+          <div class="advice">🎯 策略：空仓观望，勿接飞刀</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://cn.tradingview.com/top-authors/?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">黄金周线突破：2000美元只是起点？</div>
+          <div class="item-summary">技术派看多2000-2200箱体突破。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:72%"></div></div>
+            <span class="power-num">72</span>
+            <span class="mini-badge bull">多头 84%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题释放积极信号（“黄金周线突破：2000美元只…”），基本面或资金面出现边际改善，资金有做多动能。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://cn.tradingview.com/top-authors/?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">标普500 期权墙：5700 是多空决战线</div>
+          <div class="item-summary">用 gamma 敞口测算最大痛点。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:56%"></div></div>
+            <span class="power-num">56</span>
+            <span class="mini-badge neutral">中性 59%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://cn.tradingview.com/top-authors/?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="en">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#50</span> Real Vision (Individual Guest Analysts)</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>英文</span>
+            <span style="opacity:0.6">深度宏观</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 60W+</span>
+            <span style="font-size:9px;opacity:0.6">虽然是频道，但其核心由独立分析师轮流担纲</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          轻度偏空
+          <span class="small">0多 vs 1空 vs 2中性</span>
+          <span class="small">⚡60 | 66%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">Raoul Pal：流动性海啸将至，All in 加密？</div>
+          <div class="item-summary">讲述债务货币化与指数级科技的叠加。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：高抛低吸，区间操作</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@RealVisionFinance?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">Druckenmiller：我为何重仓做空长债？</div>
+          <div class="item-summary">押注财政赤字与通胀二次抬头。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:68%"></div></div>
+            <span class="power-num">68</span>
+            <span class="mini-badge bear">空头 83%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“Druckenmiller：…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@RealVisionFinance?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">中美脱钩：地缘重构下的大宗商品新秩序</div>
+          <div class="item-summary">圆桌讨论铜、锂与稀土的定价权转移。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:54%"></div></div>
+            <span class="power-num">54</span>
+            <span class="mini-badge neutral">中性 60%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@RealVisionFinance?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="neutral" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👾</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#51</span> 老厉害财经</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">财经评论/宏观</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 10W+</span>
+            <span style="font-size:9px;opacity:0.6">犀利点评财经热点，深受散户喜爱</span>
+          </div>
+        </div>
+        <div class="sentiment-badge neutral">
+          均衡拉锯
+          <span class="small">1多 vs 1空 vs 1中性</span>
+          <span class="small">⚡60 | 70%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">A股3000点保卫战：谁在砸盘谁在护盘？</div>
+          <div class="item-summary">点名量化与外资流向，犀利吐槽。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:46%"></div></div>
+            <span class="power-num">46</span>
+            <span class="mini-badge neutral">中性 56%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@老厉害财经?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">割韭菜新套路：增发+减持的完美收割</div>
+          <div class="item-summary">拆解定增折价与清仓式减持。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:72%"></div></div>
+            <span class="power-num">72</span>
+            <span class="mini-badge bear">空头 83%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@老厉害财经?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">牛市不言顶？这次不一样的5个幻觉</div>
+          <div class="item-summary">讽刺激情喊单，呼吁敬畏。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:62%"></div></div>
+            <span class="power-num">62</span>
+            <span class="mini-badge bull">多头 73%</span>
+          </div>
+          <div class="reason">🧠 AI研判：作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。</div>
+          <div class="advice">🎯 策略：持有为主，关注量能是否跟随</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@老厉害财经?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bull" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">🤖</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#52</span> inves talk</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">美股/投资访谈</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 5W+</span>
+            <span style="font-size:9px;opacity:0.6">深度访谈投资大咖，解读市场逻辑</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bull">
+          轻度偏多
+          <span class="small">1多 vs 0空 vs 2中性</span>
+          <span class="small">⚡57 | 64%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">对话段永平：什么叫敢重仓的便宜？</div>
+          <div class="item-summary">访谈实录：只买懂的，敢下重手的逻辑。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:55%"></div></div>
+            <span class="power-num">55</span>
+            <span class="mini-badge neutral">中性 55%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@investalk?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">对话半导体老兵：国产替代真能成吗？</div>
+          <div class="item-summary">拆解设备与材料卡脖子环节。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:51%"></div></div>
+            <span class="power-num">51</span>
+            <span class="mini-badge neutral">中性 66%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。</div>
+          <div class="advice">🎯 策略：等待方向明朗再重仓</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@investalk?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">对话抄底王：如何在恐慌中扣扳机？</div>
+          <div class="item-summary">分享仓位与心理建设的反人性训练。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bull" style="width:67%"></div></div>
+            <span class="power-num">67</span>
+            <span class="mini-badge bull">多头 71%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题释放积极信号（“对话抄底王：如何在恐慌中扣扳…”），基本面或资金面出现边际改善，资金有做多动能。</div>
+          <div class="advice">🎯 策略：逢低分批建仓，设8%止损</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@investalk?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="kol-card pixel-border" data-sentiment="bear" data-lang="cn">
+      <div class="kol-head">
+        <div class="avatar">👽</div>
+        <div class="kol-info">
+          <div class="kol-name"><span class="id-badge">#53</span> 硬核刘大</div>
+          <div class="kol-meta">
+            <span class="platform-tag">YouTube</span>
+            <span>中文</span>
+            <span style="opacity:0.6">海外配置/币圈</span>
+          </div>
+          <div class="kol-meta" style="margin-top:3px">
+            <span class="fans-tag">♥ 8W+</span>
+            <span style="font-size:9px;opacity:0.6">资深投资者，专注海外资产与加密实操</span>
+          </div>
+        </div>
+        <div class="sentiment-badge bear">
+          空头阵营
+          <span class="small">0多 vs 2空 vs 1中性</span>
+          <span class="small">⚡55 | 67%</span>
+        </div>
+      </div>
+
+      <div class="item-list">
+        
+        <div class="item">
+          <div class="item-title">香港账户全攻略：2026年还能开哪家？</div>
+          <div class="item-summary">实测 5 家银行开户门槛与冻结风险。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:58%"></div></div>
+            <span class="power-num">58</span>
+            <span class="mini-badge bear">空头 69%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“香港账户全攻略：2026年还…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：降低仓位，等待恐慌释放</div>
+          <div class="item-footer">
+            <span class="item-date">📅 08-05</span>
+            <a href="https://www.youtube.com/@laogeliu?v=mock0" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">USDT 换汇暗流：走资的灰色地带</div>
+          <div class="item-summary">揭示商户与冻卡风险，合规路径。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill bear" style="width:63%"></div></div>
+            <span class="power-num">63</span>
+            <span class="mini-badge bear">空头 70%</span>
+          </div>
+          <div class="reason">🧠 AI研判：标题直指风险（“USDT 换汇暗流：走资的灰…”），警示抛售或衰退压力，防御姿态明显。</div>
+          <div class="advice">🎯 策略：对冲为主，关注防御板块</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-31</span>
+            <a href="https://www.youtube.com/@laogeliu?v=mock1" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div class="item-title">新加坡家族办公室：100万刀够格吗？</div>
+          <div class="item-summary">对比13O与13U的税务与移民联动。</div>
+          <div class="power-row">
+            <span class="power-label">POW</span>
+            <div class="power-bar"><div class="power-fill neutral" style="width:45%"></div></div>
+            <span class="power-num">45</span>
+            <span class="mini-badge neutral">中性 63%</span>
+          </div>
+          <div class="reason">🧠 AI研判：内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。</div>
+          <div class="advice">🎯 策略：均衡配置，攻守兼备</div>
+          <div class="item-footer">
+            <span class="item-date">📅 07-24</span>
+            <a href="https://www.youtube.com/@laogeliu?v=mock2" target="_blank" style="font-family:'Press Start 2P', monospace;font-size:6px;color:var(--cyan);text-decoration:none;border:1px solid var(--cyan);padding:3px 6px;background:#000">▶ 观看原片</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="footer pixel-border">
+    <div>🐙 <span class="highlight">章鱼 AI·全景分析</span> · 像素战场出品 // PIXEL BATTLEFIELD</div>
+    <div style="margin-top:6px">数据来源：YouTube / TikTok / IG / Reddit / TradingView · 抓取时间：2026年08月07日 · 仅供研究，不构成投资建议</div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot bull"></div> 多头 BULL</div>
+      <div class="legend-item"><div class="legend-dot bear"></div> 空头 BEAR</div>
+      <div class="legend-item"><div class="legend-dot neutral"></div> 中性 NEUTRAL</div>
+    </div>
+    <div style="margin-top:10px;opacity:0.5">PRESS START TO CONTINUE  █</div>
+  </div>
+</div>
+
+<script>
+function filterKOL(type){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.kol-card').forEach(card=>{
+    let show = false;
+    if(type==='all') show=true;
+    else if(type==='bull' || type==='bear' || type==='neutral') show = card.dataset.sentiment===type;
+    else if(type==='cn') show = card.dataset.lang==='cn';
+    else if(type==='en') show = card.dataset.lang==='en';
+    card.style.display = show ? 'flex' : 'none';
+  });
+}
+// 8-bit 打字机彩蛋
+console.log("%c🐙 章鱼 AI·全景分析 %c 像素战场已加载", "background:#ffe066;color:#000;padding:4px 8px;font-weight:bold", "color:#00e5ff");
+</script>
+</body>
+</html>

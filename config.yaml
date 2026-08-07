@@ -1,0 +1,16 @@
+# 章鱼 AI·全景分析 配置
+# 填入你的 PushPlus token 后，main.py 会自动推送
+# 获取地址：http://www.pushplus.plus/push1.html
+
+pushplus_token: ""  # 留空则读取环境变量 PUSHPLUS_TOKEN
+# 可选：推送渠道 wechat / webhook / mail / cp
+pushplus_channel: "wechat"
+pushplus_template: "html"
+
+# 抓取配置
+active_threshold_days: 90
+request_timeout: 12
+
+# 报告配置
+author: "章鱼 AI·全景分析"
+report_title: "全球财经金融 KOL 精选名单 · 多空全景战报"

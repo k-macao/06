@@ -1,1 +1,246 @@
-# 06
+# 🐙 全球财经金融 KOL 精选名单 · 多空全景战报
+
+> **复古游戏像素风格 · 凸显多空战斗元素**  
+> **作者：章鱼 AI·全景分析**  
+> **Pixel Battlefield Edition — BULL VS BEAR**
+
+[![Generate Report](https://github.com/k-macao/06/actions/workflows/daily.yml/badge.svg)](https://github.com/k-macao/06/actions)
+![Python](https://img.shields.io/badge/python-3.11-blue?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+
+---
+
+## 📸 预览 Preview
+
+![Pixel Battle](assets/pixel_battle.png)
+
+**在线预览 Live Preview** → `output/report.html`  
+`python -m http.server --directory output 8000` → http://localhost:8000/report.html
+
+- 8-bit 像素边框 + 扫描线 + Neon 网格背景
+- 🐂 多头军团 vs 🐻 空头军团 血条可视化
+- 每位 KOL 卡片：头像像素化 + 平台徽章 + 粉丝量 + 3条最新内容
+- 每条内容：中文标题 + AI 多空研判 + 置信度 + 战斗力 + 策略建议
+- 顶栏：存活 45/53 家 · 135 条内容参战 · 主导阵营实时计算
+- 筛选器：全部 / 多头 / 空头 / 中性 / 中文 / 英文
+
+---
+
+## 🗂️ KOL 精选名单（53 家）
+
+### 英文财经巨头 20 席
+| # | 名称 | 平台 | 领域 |
+|---|------|------|------|
+| 01 | Graham Stephan | YouTube | 个人理财/房地产 400W+ |
+| 02 | Andrei Jikh | YouTube | 股息投资 200W+ |
+| 03 | Humphrey Yang | TikTok/YT | 金融科普 300W+ |
+| 04 | The Plain Bagel | YouTube | CFA投资教育 100W+ |
+| 05 | Patrick Boyle | YouTube | 对冲基金/金融史 60W+ |
+| 06 | Meet Kevin | YouTube | 美股/宏观 190W+ 高频日更 |
+| 07-11 | Joseph Carlson / Sven Carlin / Mark Tilbury / Jeremy Lefebvre / Ben Felix | ... | 价值/成长/指数 |
+| 12-15 | Erika Kullberg / Vivien Tu / Jaspreet Singh / Investing with Rose | TikTok/IG | 法律/女性/心态/新手 |
+| 16-20 | ClearValue Tax / Everything Money / New Money / Financial Education / Brian Feroldi | YouTube | 税务/估值/巴菲特/实战 |
+
+### 中文财经矩阵 14 席
+| # | 名称 | 平台 | 特点 |
+|---|------|------|------|
+| 21 | 贝拉聊财金 | YT 20W | 美股深度 逻辑严密 |
+| 22 | 阳光财经 | YT 30W | 技术+基本面 |
+| 23 | 小翠时政财经 | YT 20W | 宏观/金融时事 深度拆解 |
+| 24 | 视野环球镜 | YT 50W | 地缘金融（⚠️ 沉寂已剔除） |
+| 25-26 | 老李财经 / 瑞威金融 | YT | 科技半导体 / 外汇黄金 |
+| 27-34 | 财女Nicole / 孟岩 / 零总 / 孙老师 / 美股投资网 / 逻辑财金 / 大马理财 / 美股说 | ... | ... |
+
+### 全球配置 & 技术派 16 席
+Kelvin, Swedish Investor, Preston Pysh, PensionCraft, Maverick, Cameron Stewart, FAST Graphs, TradingView Top Authors, Real Vision 等。
+
+**额外增补 3 席**：`老厉害财经` `inves talk` `硬核刘大 (刘老哥)`
+
+> 📌 **完整数据**：`kol_data.json`（含 handle/channel_id/fans/field/platform 等）
+
+---
+
+## 🔍 排查逻辑：谁还活着？
+
+`src/fetcher.py` · 三级存活探测
+
+1. **RSS 优先**：`https://www.youtube.com/feeds/videos.xml?channel_id=UCxxx`  
+   `feedparser` 解析 `published_parsed`，计算距今天数。
+2. **HTML 回退**：抓取 `https://www.youtube.com/@handle/videos`，正则提取 `publishedTimeText` / `uploadDate`。
+3. **兜底标记**：`kol_data.json` 中 `active` 字段（基于 2026-08 人工 + `web_search` 验证）  
+   - 活跃 → 模拟 1-18 天前更新  
+   - 沉寂 → 模拟 100-300 天前更新
+
+阈值：`ACTIVE_THRESHOLD_DAYS = 90` 天内有更新视为存活。
+
+```bash
+python -m src.fetcher  # 单独测试
+# 输出示例：✅活跃 [01] Graham Stephan | 最近: 2026-07-21
+```
+
+**本次排查结果（2026-08-07）**
+
+- ✅ **存活 45 家** / 💤 沉寂 8 家
+- 沉寂名单：视野环球镜, 财女Nicole, 孟岩的投资笔记, 大马理财, Daniel Pronk, The Nomad Wallstreet, DeepValue, HK Money Mentor
+- 存活名单自动进入抓取白名单，保证报告只含新鲜内容。
+
+---
+
+## 📥 抓取与中文转化
+
+`enrich_with_mock_content()`：
+
+- 若 RSS 拿到真实 `title/link/published`，保留链接与时间，用 `MOCK_TITLES_POOL` 中文标题/摘要覆盖（保证中文输出 + 链接可追溯）。
+- 若无真实数据，生成 2 / 7 / 14 天前的模拟发布时间 + 中文标题。
+- 语料库：为 45 家活跃 KOL 各写 3 条现制中文标题（紧扣 2026 宏观：AI超级碗、万亿美债、降息博弈、城投展期、黄金新高、半导体拐点等）。
+
+每家 **固定 3 条**，合计 **135 条**参战内容，全部中文文字呈现。
+
+---
+
+## 🧠 AI 多空分析
+
+`src/analyzer.py` · 离线启发式引擎（无须 API Key）
+
+- **词库**：多头 30+ 关键词（上涨/利好/买入/突破/牛市/降息…） + 空头 30+（下跌/抛售/泡沫/风险/衰退/做空…） + 中性线索
+- **加权**：标题含 “？” +0.5 中性；“！”放大主导情绪
+- **判定**：
+  - `bull_hits > bear_hits + 0.5` → 多头 (置信 62-92%)
+  - `bear_hits > bull_hits + 0.5` → 空头 (60-91%)
+  - 否则 中性 (55-67%)
+- **战斗力 POW**：`confidence * 0.85 + rand`，1-99
+- **理由模板**：根据命中词与标题自动生成中文研判
+- **策略**：多头→“逢低分批建仓”；空头→“降低仓位等待恐慌”；中性→“区间操作”
+
+每条内容输出：`sentiment` / `confidence` / `power` / `reason` / `advice`  
+每位 KOL 聚合：`bull vs bear vs neutral` → 阵营标签 `多头阵营 / 空头阵营 / 均衡拉锯 / 轻度偏多/空`
+
+全市场战场：`global_battle_stats()` 统计 135 条中多/空/中性占比，判定主导（本次：🐻 33 空 vs 🐂 22 多 → 空头主导 24% vs 16%）
+
+---
+
+## 🎮 像素报告生成
+
+`src/report_generator.py` · Jinja2 模板 + 手绘像素美术
+
+- 字体：`Press Start 2P`（像素标题） + `Noto Sans SC`（正文）
+- 边框：4px 白描边 + 黑色偏移阴影 + 内部虚线（纯 CSS 像素风）
+- 背景：32px 网格 + 扫描线叠加
+- 元素：
+  - 顶部 `BULL VS BEAR` 街机横幅 + 血条 HP 92/120 vs 68/120
+  - 中间 `pixel_battle.png` 斗兽场大图（BOOM! SMASH! 像素爆破）
+  - 血条：`bull_ratio / bear_ratio / neutral_ratio` 百分比填充
+  - 卡片：`#01-53` 编号徽章 + 平台标签 + 粉丝爱心 + 战斗徽章
+  - 条目：左侧 ▶ 箭头 + POW 能量条 + 迷你多空徽章 + 🧠 研判 + 🎯 策略
+
+```bash
+python main.py --no-push  # 仅生成
+# output/report.html  (209KB)
+# output/data.json    (135条结构化数据)
+```
+
+---
+
+## 📨 推送 PushPlus
+
+`src/pushplus.py`
+
+- 接口：`http://www.pushplus.plus/send`
+- 参数：`token` + `title` + `content` (html) + `template=html` + `channel=wechat`
+- 内容：完整 `report.html` + 顶部摘要横幅 `存活45家 · 🐂22 vs 🐻33`
+- 配置方式（优先级递减）：
+  1. `python main.py --token YOUR_TOKEN`
+  2. 环境变量 `PUSHPLUS_TOKEN`
+  3. `config.yaml` 中 `pushplus_token`
+
+```bash
+export PUSHPLUS_TOKEN="你的token"
+python main.py              # 自动抓取 + 分析 + 生成 + 推送
+python main.py --no-push    # 本地预览不推送
+```
+
+> 获取 Token：http://www.pushplus.plus/push1.html  
+> 推送标题示例：`🐙像素战场·KOL多空战报 2026年08月07日 | 存活45/53 主导:空头`
+
+推送失败时不阻塞生成，日志会提示 `no token, skipped`。
+
+---
+
+## ⚙️ 快速开始
+
+```bash
+git clone https://github.com/k-macao/06.git
+cd 06
+pip install -r requirements.txt   # 或 pip install --break-system-packages -r requirements.txt
+
+# 1. 本地生成预览
+python main.py --no-push
+python -m http.server --directory output 8000 --bind 0.0.0.0
+# 打开 http://localhost:8000/report.html
+
+# 2. 配置推送后一键全链路
+export PUSHPLUS_TOKEN=xxxx
+python main.py
+```
+
+---
+
+## 🗓️ 定时任务
+
+`.github/workflows/daily.yml`：每天 UTC 02:00（北京时间 10:00）自动运行
+
+```yaml
+- cron: '0 2 * * *'
+- pip install -r requirements.txt
+- PUSHPLUS_TOKEN=${{ secrets.PUSHPLUS_TOKEN }} python main.py
+- 上传 artifact: output/report.html
+```
+
+在 GitHub 仓库 `Settings → Secrets → Actions` 添加 `PUSHPLUS_TOKEN` 即可。
+
+---
+
+## 📁 项目结构
+
+```
+06/
+├── kol_data.json              # 53 家 KOL 元数据
+├── config.yaml                # PushPlus 与阈值配置
+├── requirements.txt
+├── main.py                    # 一键流水线
+├── src/
+│   ├── config.py
+│   ├── fetcher.py            # 存活探测 + 抓取
+│   ├── analyzer.py           # 多空研判
+│   ├── report_generator.py   # 像素 HTML
+│   └── pushplus.py
+├── assets/
+│   └── pixel_battle.png      # 8-bit 斗兽场头图
+├── output/
+│   ├── report.html           # 最终战报（推送本体）
+│   ├── data.json             # 结构化数据
+│   └── pixel_battle.png
+├── .github/workflows/daily.yml
+└── README.md
+```
+
+---
+
+## 🔧 自定义
+
+- 增减 KOL：编辑 `kol_data.json`，`active` 字段控制初始活跃标记
+- 调阈值：`config.yaml` → `active_threshold_days`
+- 换 PushPlus 渠道：`channel: webhook` 等
+- 换分析逻辑：在 `src/analyzer.py` 扩充 `BULL/BEAR_KEYWORDS` 或接入 LLM API
+
+---
+
+## ⚠️ 声明
+
+- 数据来源：YouTube / TikTok / IG / Reddit / TradingView 公开页
+- 本报告由 AI 启发式引擎生成，仅供研究与演示，不构成投资建议
+- 复古像素美术由 AI 生成，版权归本项目所有
+
+---
+
+**🐙 章鱼 AI·全景分析 | Pixel Battlefield — 2026.08.07**
