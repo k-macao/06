@@ -1,0 +1,65 @@
+name: 🐙 像素战场 KOL 日报
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # 每天 UTC 02:00 (北京时间 10:00)
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'arena/**'
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 生成多空战报
+        env:
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_TOKEN: ${{ secrets.DEEPSEEK_TOKEN }}
+        run: |
+          echo "🐙 开始排查 53 家 KOL..."
+          if [ -n "$DEEPSEEK_API_KEY" ]; then echo "🔑 DeepSeek 已配置"; else echo "⚠️ 未配置 DeepSeek，将用启发式"; fi
+          python main.py || python main.py --no-push
+          ls -lh output/
+
+      - name: 上传战报 Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pixel-battle-report
+          path: |
+            output/report.html
+            output/data.json
+            output/pixel_battle.png
+          retention-days: 30
+
+      - name: 部署到 GitHub Pages (可选)
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
+
+      - name: 推送结果到分支
+        if: github.event_name == 'schedule'
+        run: |
+          git config user.name "octopus-ai"
+          git config user.email "octopus@arena.ai"
+          git add output/report.html output/data.json || true
+          git diff --staged --quiet || git commit -m "🐙 auto: 更新像素战场战报 $(date +%Y-%m-%d)" && git push || echo "无需推送或无权限"
