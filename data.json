@@ -2,8 +2,8 @@
   "meta": {
     "author": "章鱼 AI·全景分析",
     "title": "全球财经金融 KOL 精选名单 · 多空全景战报",
-    "date": "2026年08月07日",
-    "generated_at": "2026-08-07T23:58:36.222555",
+    "date": "2026年08月08日",
+    "generated_at": "2026-08-08T00:06:48.942732",
     "active_count": 45,
     "inactive_count": 8,
     "total": 53,
@@ -15,7 +15,7 @@
       "bull_ratio": 16,
       "bear_ratio": 24,
       "neutral_ratio": 60,
-      "avg_power": 57,
+      "avg_power": 56,
       "dominant": "空头"
     },
     "engine": "启发式（未检测到 DEEPSEEK_API_KEY）"
@@ -41,8 +41,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 68,
-        "avg_power": 55,
+        "avg_confidence": 63,
+        "avg_power": 58,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -55,9 +55,9 @@
           "lang": "英文",
           "date_str": "08-06",
           "sentiment": "中性",
-          "confidence": 64,
-          "power": 42,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 57,
+          "power": 53,
+          "reason": "内容呈现多空博弈，2 多 vs 2 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         },
         {
@@ -69,10 +69,10 @@
           "lang": "英文",
           "date_str": "08-04",
           "sentiment": "空头",
-          "confidence": 82,
-          "power": 70,
+          "confidence": 80,
+          "power": 75,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "空仓观望，勿接飞刀"
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "月入1万如何一年存下6万：极简生活的残酷实操",
@@ -83,10 +83,10 @@
           "lang": "英文",
           "date_str": "08-03",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 53,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 52,
+          "power": 46,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     },
@@ -111,7 +111,7 @@
         "bear_count": 1,
         "neutral_count": 2,
         "avg_confidence": 60,
-        "avg_power": 55,
+        "avg_power": 48,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -119,42 +119,42 @@
           "title": "37万亿美债重置已启动！普通人必做的3件事",
           "original_title": "37万亿美债重置已启动！普通人必做的3件事",
           "link": "https://www.youtube.com/@AndreiJikh?v=mock0",
-          "published": "2026-08-05T15:58:06.541993+00:00",
+          "published": "2026-08-05T12:06:18.171272+00:00",
           "summary": "详解美国债务货币化与美元信用裂缝，建议配置比特币、黄金与股息资产的三角防御。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 58,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "confidence": 56,
+          "power": 45,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "股息贵族崩了？我清仓了这只20年分红股",
           "original_title": "股息贵族崩了？我清仓了这只20年分红股",
           "link": "https://www.youtube.com/@AndreiJikh?v=mock1",
-          "published": "2026-07-31T16:58:06.542009+00:00",
+          "published": "2026-07-31T19:06:18.171289+00:00",
           "summary": "复盘 3M 与 Walgreens 暴跌，强调股息可持续性审查框架。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 69,
+          "confidence": 71,
           "power": 59,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "空仓观望，勿接飞刀"
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "信用卡0利率套利还能玩吗？2026年实测",
           "original_title": "信用卡0利率套利还能玩吗？2026年实测",
           "link": "https://www.youtube.com/@AndreiJikh?v=mock2",
-          "published": "2026-07-24T19:58:06.542014+00:00",
+          "published": "2026-07-24T16:06:18.171295+00:00",
           "summary": "实测 Chase 与 Amex 余额转移，结合信用分影响给出操作红线。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 50,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "confidence": 55,
+          "power": 42,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         }
       ]
@@ -179,8 +179,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 60,
-        "avg_power": 50,
+        "avg_confidence": 61,
+        "avg_power": 45,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -188,43 +188,43 @@
           "title": "用一张图看懂期权：5年级版 Call/Put 科普",
           "original_title": "用一张图看懂期权：5年级版 Call/Put 科普",
           "link": "https://www.youtube.com/@humphreytalks?v=mock0",
-          "published": "2026-08-05T18:58:07.268382+00:00",
+          "published": "2026-08-05T14:06:19.152940+00:00",
           "summary": "用买奶茶券类比期权，拆解时间价值与行权价选择。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 42,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 58,
+          "power": 49,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "15条提前退休路径大排名：时薪10万刀多久能FIRE？",
           "original_title": "15条提前退休路径大排名：时薪10万刀多久能FIRE？",
           "link": "https://www.youtube.com/@humphreytalks?v=mock1",
-          "published": "2026-07-31T20:58:07.268398+00:00",
+          "published": "2026-07-31T16:06:19.152956+00:00",
           "summary": "对比房地产、指数基金、副业等路径，给出3年到30年的时间表。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 67,
-          "power": 56,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 65,
+          "power": 44,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "比特币2026还值得买吗？我的仓位与止损线",
           "original_title": "比特币2026还值得买吗？我的仓位与止损线",
           "link": "https://www.youtube.com/@humphreytalks?v=mock2",
-          "published": "2026-07-24T12:58:07.268403+00:00",
+          "published": "2026-07-24T12:06:19.152962+00:00",
           "summary": "回顾减半周期，结合ETF资金流入判断牛熊分界。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 53,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 62,
+          "power": 44,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -248,8 +248,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 71,
-        "avg_power": 61,
+        "avg_confidence": 70,
+        "avg_power": 63,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -262,9 +262,9 @@
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "多头",
-          "confidence": 80,
-          "power": 78,
-          "reason": "标题释放积极信号（“杠杆ETF是财富加速器还是绞…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "confidence": 84,
+          "power": 75,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
           "advice": "逢低分批建仓，设8%止损"
         },
         {
@@ -276,9 +276,9 @@
           "lang": "英文",
           "date_str": "07-10",
           "sentiment": "中性",
-          "confidence": 64,
-          "power": 43,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "confidence": 58,
+          "power": 56,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "高抛低吸，区间操作"
         },
         {
@@ -290,10 +290,10 @@
           "lang": "英文",
           "date_str": "06-26",
           "sentiment": "空头",
-          "confidence": 71,
-          "power": 63,
+          "confidence": 69,
+          "power": 58,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "对冲为主，关注防御板块"
+          "advice": "降低仓位，等待恐慌释放"
         }
       ]
     },
@@ -317,8 +317,8 @@
         "bull_count": 0,
         "bear_count": 2,
         "neutral_count": 1,
-        "avg_confidence": 67,
-        "avg_power": 59,
+        "avg_confidence": 65,
+        "avg_power": 62,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
@@ -326,42 +326,42 @@
           "title": "散户的末日狂欢：Meme股与伪大师的泡沫史",
           "original_title": "散户的末日狂欢：Meme股与伪大师的泡沫史",
           "link": "https://www.youtube.com/@PBoyle?v=mock0",
-          "published": "2026-08-05T12:58:08.665463+00:00",
+          "published": "2026-08-05T21:06:20.708699+00:00",
           "summary": "回顾南海泡沫到GameStop，讽刺网红荐股的话术陷阱。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "空头",
-          "confidence": 74,
-          "power": 71,
-          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "降低仓位，等待恐慌释放"
+          "confidence": 69,
+          "power": 63,
+          "reason": "标题直指风险（“散户的末日狂欢：Meme股与…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "对冲基金如何做空你的信仰？",
           "original_title": "对冲基金如何做空你的信仰？",
           "link": "https://www.youtube.com/@PBoyle?v=mock1",
-          "published": "2026-07-31T21:58:08.665479+00:00",
+          "published": "2026-07-31T23:06:20.708712+00:00",
           "summary": "揭秘融券、CDS与波动率交易的阴暗面，带英式幽默。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 72,
-          "power": 60,
-          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "confidence": 69,
+          "power": 67,
+          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
           "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "为什么每次危机都一样？金融史的诅咒循环",
           "original_title": "为什么每次危机都一样？金融史的诅咒循环",
           "link": "https://www.youtube.com/@PBoyle?v=mock2",
-          "published": "2026-07-24T17:58:08.665485+00:00",
+          "published": "2026-07-24T15:06:20.708718+00:00",
           "summary": "对比1929与2008，指出监管套利永不眠。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 48,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 59,
+          "power": 58,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "等待方向明朗再重仓"
         }
       ]
@@ -386,8 +386,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 64,
-        "avg_power": 58,
+        "avg_confidence": 68,
+        "avg_power": 57,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -395,43 +395,43 @@
           "title": "突发：CPI爆表！美股盘前崩跌，我的操作",
           "original_title": "突发：CPI爆表！美股盘前崩跌，我的操作",
           "link": "https://www.youtube.com/@MeetKevin?v=mock0",
-          "published": "2026-08-05T20:58:09.553955+00:00",
+          "published": "2026-08-05T13:06:21.294369+00:00",
           "summary": "CPI超预期0.4%，Kevin 直播解读对冲策略，呼吁现金为王。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 69,
-          "reason": "标题释放积极信号（“突发：CPI爆表！美股盘前崩…”），基本面或资金面出现边际改善，资金有做多动能。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 76,
+          "power": 73,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "逢低分批建仓，设8%止损"
         },
         {
           "title": "加州房产税提案通过？房东的噩梦来了",
           "original_title": "加州房产税提案通过？房东的噩梦来了",
           "link": "https://www.youtube.com/@MeetKevin?v=mock1",
-          "published": "2026-07-31T15:58:09.553970+00:00",
+          "published": "2026-07-31T12:06:21.294384+00:00",
           "summary": "分析Prop 13改革对租金与房价的连锁冲击。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 52,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 63,
+          "power": 47,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "特斯拉Q2交付暴雷：Elon 还能讲故事吗？",
           "original_title": "特斯拉Q2交付暴雷：Elon 还能讲故事吗？",
           "link": "https://www.youtube.com/@MeetKevin?v=mock2",
-          "published": "2026-07-24T16:58:09.553975+00:00",
+          "published": "2026-07-24T18:06:21.294390+00:00",
           "summary": "拆解交付量与毛利率，给出 $180 支撑位判断。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 55,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 66,
+          "power": 51,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -455,8 +455,8 @@
         "bull_count": 2,
         "bear_count": 0,
         "neutral_count": 1,
-        "avg_confidence": 73,
-        "avg_power": 62,
+        "avg_confidence": 69,
+        "avg_power": 63,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -464,43 +464,43 @@
           "title": "股息增长组合7月调仓：我卖掉了这只30年分红王",
           "original_title": "股息增长组合7月调仓：我卖掉了这只30年分红王",
           "link": "https://www.youtube.com/@JosephCarlsonShow?v=mock0",
-          "published": "2026-08-05T17:58:10.486780+00:00",
+          "published": "2026-08-05T12:06:21.932210+00:00",
           "summary": "审查 Johnson & Johnson 现金流覆盖率，下调预期后止盈。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 80,
-          "power": 74,
-          "reason": "内容强调增长/利好逻辑，搭配 2 个多头关键词，短线情绪偏乐观。",
-          "advice": "逢低分批建仓，设8%止损"
+          "confidence": 81,
+          "power": 75,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "持有为主，关注量能是否跟随"
         },
         {
           "title": "被动收入月入5000刀的真相：需要多少本金？",
           "original_title": "被动收入月入5000刀的真相：需要多少本金？",
           "link": "https://www.youtube.com/@JosephCarlsonShow?v=mock1",
-          "published": "2026-07-31T20:58:10.486796+00:00",
+          "published": "2026-07-31T21:06:21.932224+00:00",
           "summary": "用 4% 法则倒推 150 万本金门槛，提示股息陷阱。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 67,
-          "power": 42,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "confidence": 55,
+          "power": 48,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "等待方向明朗再重仓"
         },
         {
           "title": "为什么我只买能涨股息的公司？",
           "original_title": "为什么我只买能涨股息的公司？",
           "link": "https://www.youtube.com/@JosephCarlsonShow?v=mock2",
-          "published": "2026-07-24T12:58:10.486801+00:00",
+          "published": "2026-07-24T12:06:21.932230+00:00",
           "summary": "对比高股息与股息增长的长期总回报，倡导质量优先。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "多头",
-          "confidence": 74,
-          "power": 71,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "逢低分批建仓，设8%止损"
+          "confidence": 73,
+          "power": 67,
+          "reason": "标题释放积极信号（“为什么我只买能涨股息的公司？…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "advice": "趋势未坏，回调即机会"
         }
       ]
     },
@@ -525,7 +525,7 @@
         "bear_count": 2,
         "neutral_count": 0,
         "avg_confidence": 74,
-        "avg_power": 65,
+        "avg_power": 63,
         "battle_text": "1多 vs 2空 vs 0中性"
       },
       "items": [
@@ -533,43 +533,43 @@
           "title": "AI泡沫的终局：价值投资者的最后防线",
           "original_title": "AI泡沫的终局：价值投资者的最后防线",
           "link": "https://www.youtube.com/@Value-Investing?v=mock0",
-          "published": "2026-08-05T15:58:11.535101+00:00",
+          "published": "2026-08-05T18:06:22.981197+00:00",
           "summary": "用 DC­F 重算英伟达与微软，警告估值偏离内在价值 60%。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "空头",
-          "confidence": 80,
-          "power": 74,
-          "reason": "标题直指风险（“AI泡沫的终局：价值投资者的…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "空仓观望，勿接飞刀"
+          "confidence": 78,
+          "power": 67,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "这家被抛弃的欧洲银行，隐含回报率 25%？",
           "original_title": "这家被抛弃的欧洲银行，隐含回报率 25%？",
           "link": "https://www.youtube.com/@Value-Investing?v=mock1",
-          "published": "2026-07-31T17:58:11.535116+00:00",
+          "published": "2026-07-31T21:06:22.981213+00:00",
           "summary": "深度研报：拨备覆盖率与账面价值折扣的错杀机会。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "多头",
-          "confidence": 71,
-          "power": 62,
-          "reason": "标题释放积极信号（“这家被抛弃的欧洲银行，隐含回…”），基本面或资金面出现边际改善，资金有做多动能。",
-          "advice": "逢低分批建仓，设8%止损"
+          "confidence": 75,
+          "power": 64,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "持有为主，关注量能是否跟随"
         },
         {
           "title": "通胀真的死了吗？大宗商品周期的危险信号",
           "original_title": "通胀真的死了吗？大宗商品周期的危险信号",
           "link": "https://www.youtube.com/@Value-Investing?v=mock2",
-          "published": "2026-07-24T11:58:11.535121+00:00",
+          "published": "2026-07-24T13:06:22.981219+00:00",
           "summary": "分析铜油库存与货币增速，提示滞胀卷土重来。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 72,
-          "power": 60,
-          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "降低仓位，等待恐慌释放"
+          "confidence": 69,
+          "power": 58,
+          "reason": "标题直指风险（“通胀真的死了吗？大宗商品周期…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "对冲为主，关注防御板块"
         }
       ]
     },
@@ -593,8 +593,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 57,
-        "avg_power": 49,
+        "avg_confidence": 52,
+        "avg_power": 47,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -602,43 +602,43 @@
           "title": "19岁开始投资 vs 30岁：复利差了整整 100万",
           "original_title": "19岁开始投资 vs 30岁：复利差了整整 100万",
           "link": "https://www.youtube.com/@MarkTilbury?v=mock0",
-          "published": "2026-08-05T15:58:12.144178+00:00",
+          "published": "2026-08-05T21:06:23.797971+00:00",
           "summary": "用 7% 年化演示晚 10 年的代价，号召年轻人立刻开户。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 43,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 52,
+          "power": 42,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "我如何用3家小生意滚到800万英镑",
           "original_title": "我如何用3家小生意滚到800万英镑",
           "link": "https://www.youtube.com/@MarkTilbury?v=mock1",
-          "published": "2026-07-31T15:58:12.144193+00:00",
+          "published": "2026-07-31T12:06:23.797987+00:00",
           "summary": "复盘洗车、房产与 YouTube 的资本叠加路径。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 46,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 53,
+          "power": 57,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "别再存钱了，先买资产！穷人与富人的分水岭",
           "original_title": "别再存钱了，先买资产！穷人与富人的分水岭",
           "link": "https://www.youtube.com/@MarkTilbury?v=mock2",
-          "published": "2026-07-24T21:58:12.144198+00:00",
+          "published": "2026-07-24T17:06:23.797993+00:00",
           "summary": "对比储蓄与资产负债表思维，鼓励现金流资产。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 58,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 53,
+          "power": 42,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     },
@@ -662,8 +662,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 68,
-        "avg_power": 60,
+        "avg_confidence": 69,
+        "avg_power": 62,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -671,43 +671,43 @@
           "title": "Palantir 财报炸裂：AI 故事还能涨多久？",
           "original_title": "Palantir 财报炸裂：AI 故事还能涨多久？",
           "link": "https://www.youtube.com/@FinancialEducation?v=mock0",
-          "published": "2026-08-05T14:58:13.167362+00:00",
+          "published": "2026-08-05T15:06:24.647083+00:00",
           "summary": "拆解政府订单与商业化拐点，给出持有与止盈区间。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 72,
-          "power": 69,
+          "confidence": 76,
+          "power": 71,
           "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
-          "advice": "逢低分批建仓，设8%止损"
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "我的重仓股暴跌40%：复盘与教训",
           "original_title": "我的重仓股暴跌40%：复盘与教训",
           "link": "https://www.youtube.com/@FinancialEducation?v=mock1",
-          "published": "2026-07-31T21:58:13.167378+00:00",
+          "published": "2026-07-31T18:06:24.647098+00:00",
           "summary": "坦承 CrowdStrike 持仓失误，强调分散与仓位管理。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 69,
-          "power": 61,
-          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "对冲为主，关注防御板块"
+          "confidence": 75,
+          "power": 68,
+          "reason": "标题直指风险（“我的重仓股暴跌40%：复盘与…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "成长股 vs 价值股：2026下半场押哪边？",
           "original_title": "成长股 vs 价值股：2026下半场押哪边？",
           "link": "https://www.youtube.com/@FinancialEducation?v=mock2",
-          "published": "2026-07-24T17:58:13.167382+00:00",
+          "published": "2026-07-24T19:06:24.647104+00:00",
           "summary": "对比利率敏感度与盈利增速，给出 60/40 配置。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 50,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 56,
+          "power": 47,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     },
@@ -731,7 +731,7 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 58,
+        "avg_confidence": 60,
         "avg_power": 51,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
@@ -740,43 +740,43 @@
           "title": "学术研究证明：95%的选股者跑不赢指数",
           "original_title": "学术研究证明：95%的选股者跑不赢指数",
           "link": "https://www.youtube.com/@BenFelixCSI?v=mock0",
-          "published": "2026-08-05T11:58:13.893574+00:00",
+          "published": "2026-08-05T13:06:25.331446+00:00",
           "summary": "引用 SPIVA 与 Fama-French，论证低费率全球分散的威力。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 51,
+          "confidence": 56,
+          "power": 52,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "为什么你不该听财经新闻做投资？",
           "original_title": "为什么你不该听财经新闻做投资？",
           "link": "https://www.youtube.com/@BenFelixCSI?v=mock1",
-          "published": "2026-07-31T15:58:13.893588+00:00",
+          "published": "2026-07-31T17:06:25.331469+00:00",
           "summary": "用噪声与信号理论解释媒体对收益的破坏。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 51,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 65,
+          "power": 48,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "等待方向明朗再重仓"
         },
         {
           "title": "最优资产配置：30岁、50岁该怎么配？",
           "original_title": "最优资产配置：30岁、50岁该怎么配？",
           "link": "https://www.youtube.com/@BenFelixCSI?v=mock2",
-          "published": "2026-07-24T21:58:13.893594+00:00",
+          "published": "2026-07-24T13:06:25.331477+00:00",
           "summary": "基于生命周期模型给出股债比例与再平衡纪律。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 53,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 61,
+          "power": 55,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     },
@@ -800,8 +800,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 56,
-        "avg_power": 52,
+        "avg_confidence": 55,
+        "avg_power": 47,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -809,43 +809,43 @@
           "title": "航空公司拒赔？这条法律让你白拿1000刀",
           "original_title": "航空公司拒赔？这条法律让你白拿1000刀",
           "link": "https://www.tiktok.com/@erikakullberg?v=mock0",
-          "published": "2026-08-05T12:58:14.621494+00:00",
+          "published": "2026-08-05T12:06:26.261854+00:00",
           "summary": "解读美欧航班延误赔偿条款，手把手教索赔话术。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 58,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 60,
+          "power": 42,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "别再为这5个费用买单：律师教你省2万",
           "original_title": "别再为这5个费用买单：律师教你省2万",
           "link": "https://www.tiktok.com/@erikakullberg?v=mock1",
-          "published": "2026-07-31T16:58:14.621511+00:00",
+          "published": "2026-07-31T17:06:26.261868+00:00",
           "summary": "拆解租约、健身房与订阅陷阱的法律漏洞。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 52,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 53,
+          "power": 49,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "学生贷款减免新政：符合条件的3类人",
           "original_title": "学生贷款减免新政：符合条件的3类人",
           "link": "https://www.tiktok.com/@erikakullberg?v=mock2",
-          "published": "2026-07-24T15:58:14.621516+00:00",
+          "published": "2026-07-24T18:06:26.261873+00:00",
           "summary": "梳理拜登新计划与申请截止，提示材料清单。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 48,
+          "confidence": 53,
+          "power": 50,
           "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -869,8 +869,8 @@
         "bull_count": 0,
         "bear_count": 2,
         "neutral_count": 1,
-        "avg_confidence": 65,
-        "avg_power": 59,
+        "avg_confidence": 67,
+        "avg_power": 57,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
@@ -878,27 +878,27 @@
           "title": "华尔街前交易员坦白：女性理财的5个坑",
           "original_title": "华尔街前交易员坦白：女性理财的5个坑",
           "link": "https://www.tiktok.com/@yourrichbff?v=mock0",
-          "published": "2026-08-05T12:58:15.105038+00:00",
+          "published": "2026-08-05T16:06:27.875228+00:00",
           "summary": "揭示收入差距与风险厌恶，教你谈薪与定投。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "空头",
-          "confidence": 71,
+          "confidence": 73,
           "power": 60,
-          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "空仓观望，勿接飞刀"
         },
         {
           "title": "月薪5000也能理财：我的50/30/20实操",
           "original_title": "月薪5000也能理财：我的50/30/20实操",
           "link": "https://www.tiktok.com/@yourrichbff?v=mock1",
-          "published": "2026-07-31T22:58:15.105054+00:00",
+          "published": "2026-07-31T16:06:27.875243+00:00",
           "summary": "演示自动转账与高息储蓄的懒人组合。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 56,
+          "confidence": 55,
+          "power": 53,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "等待方向明朗再重仓"
         },
@@ -906,15 +906,15 @@
           "title": "为什么你该先还高息债再投资？",
           "original_title": "为什么你该先还高息债再投资？",
           "link": "https://www.tiktok.com/@yourrichbff?v=mock2",
-          "published": "2026-07-24T22:58:15.105060+00:00",
+          "published": "2026-07-24T20:06:27.875248+00:00",
           "summary": "对比 7% 债务与 8% 预期收益，强调无风险回报。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 71,
-          "power": 62,
-          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "空仓观望，勿接飞刀"
+          "confidence": 73,
+          "power": 60,
+          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
+          "advice": "降低仓位，等待恐慌释放"
         }
       ]
     },
@@ -938,8 +938,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 59,
+        "avg_confidence": 64,
+        "avg_power": 54,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -947,41 +947,41 @@
           "title": "穷人思维 vs 富人思维：1个转变让你多赚10倍",
           "original_title": "穷人思维 vs 富人思维：1个转变让你多赚10倍",
           "link": "https://www.youtube.com/@MinorityMindset?v=mock0",
-          "published": "2026-08-05T16:58:16.268684+00:00",
+          "published": "2026-08-05T18:06:28.909081+00:00",
           "summary": "Minority Mindset 核心：从消费者到生产者视角。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 50,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 57,
+          "power": 43,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "美联储印钞的隐形税：谁在偷走你的购买力？",
           "original_title": "美联储印钞的隐形税：谁在偷走你的购买力？",
           "link": "https://www.youtube.com/@MinorityMindset?v=mock1",
-          "published": "2026-07-31T13:58:16.268700+00:00",
+          "published": "2026-07-31T21:06:28.909096+00:00",
           "summary": "解释通胀是穷人税，呼吁持有生产性资产。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
           "confidence": 57,
-          "power": 56,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "power": 53,
+          "reason": "内容呈现多空博弈，1 多 vs 1 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "2026年最危险的投资：你正在买的这个东西",
           "original_title": "2026年最危险的投资：你正在买的这个东西",
           "link": "https://www.youtube.com/@MinorityMindset?v=mock2",
-          "published": "2026-07-24T16:58:16.268704+00:00",
+          "published": "2026-07-24T14:06:28.909102+00:00",
           "summary": "点名长期债券与僵尸企业，警告利率风险。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 79,
-          "power": 71,
+          "confidence": 80,
+          "power": 68,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "对冲为主，关注防御板块"
         }
@@ -1007,8 +1007,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 55,
+        "avg_confidence": 61,
+        "avg_power": 57,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -1016,43 +1016,43 @@
           "title": "零基础买ETF：3只基金搞定全球配置",
           "original_title": "零基础买ETF：3只基金搞定全球配置",
           "link": "https://www.youtube.com/@InvestingwithRose?v=mock0",
-          "published": "2026-08-05T14:58:16.612565+00:00",
+          "published": "2026-08-05T16:06:29.148956+00:00",
           "summary": "推荐 VT + BND + VNQ 的一站式懒人组合。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 73,
-          "power": 72,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 75,
+          "power": 63,
+          "reason": "标题释放积极信号（“零基础买ETF：3只基金搞定…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "女生投资第一课：别怕，你比想象中更懂钱",
           "original_title": "女生投资第一课：别怕，你比想象中更懂钱",
           "link": "https://www.youtube.com/@InvestingwithRose?v=mock1",
-          "published": "2026-07-31T17:58:16.612579+00:00",
+          "published": "2026-07-31T21:06:29.148969+00:00",
           "summary": "用咖啡价类比复利，消除入门恐惧。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 45,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 53,
+          "power": 55,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "股息ETF vs 成长ETF：新手该怎么选？",
           "original_title": "股息ETF vs 成长ETF：新手该怎么选？",
           "link": "https://www.youtube.com/@InvestingwithRose?v=mock2",
-          "published": "2026-07-24T18:58:16.612585+00:00",
+          "published": "2026-07-24T21:06:29.148974+00:00",
           "summary": "对比 SCHD 与 VUG 的波动与现金流差异。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 49,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 56,
+          "power": 53,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -1076,8 +1076,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 58,
-        "avg_power": 52,
+        "avg_confidence": 60,
+        "avg_power": 49,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -1090,10 +1090,10 @@
           "lang": "英文",
           "date_str": "08-06",
           "sentiment": "中性",
-          "confidence": 57,
+          "confidence": 59,
           "power": 55,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "IRS 审计率飙升：这5类人最危险",
@@ -1104,9 +1104,9 @@
           "lang": "英文",
           "date_str": "08-03",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 58,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 60,
+          "power": 45,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "高抛低吸，区间操作"
         },
         {
@@ -1118,10 +1118,10 @@
           "lang": "英文",
           "date_str": "07-29",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 45,
+          "confidence": 62,
+          "power": 47,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "等待方向明朗再重仓"
         }
       ]
     },
@@ -1145,8 +1145,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 59,
+        "avg_confidence": 67,
+        "avg_power": 58,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -1154,13 +1154,13 @@
           "title": "八柱分析法实战：这只股票被高估了40%？",
           "original_title": "八柱分析法实战：这只股票被高估了40%？",
           "link": "https://www.youtube.com/@EverythingMoney?v=mock0",
-          "published": "2026-08-05T21:58:17.964185+00:00",
+          "published": "2026-08-05T13:06:30.127925+00:00",
           "summary": "用软件跑毛利率、债务与估值八项打分，亮红灯。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 53,
+          "confidence": 66,
+          "power": 51,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "高抛低吸，区间操作"
         },
@@ -1168,29 +1168,29 @@
           "title": "财报藏雷：3个数字识破利润操纵",
           "original_title": "财报藏雷：3个数字识破利润操纵",
           "link": "https://www.youtube.com/@EverythingMoney?v=mock1",
-          "published": "2026-07-31T21:58:17.964200+00:00",
+          "published": "2026-07-31T22:06:30.127939+00:00",
           "summary": "演示应收账款与库存周转的异常信号。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 57,
+          "confidence": 55,
+          "power": 51,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "何时卖出？我的8分制止盈纪律",
           "original_title": "何时卖出？我的8分制止盈纪律",
           "link": "https://www.youtube.com/@EverythingMoney?v=mock2",
-          "published": "2026-07-24T19:58:17.964206+00:00",
+          "published": "2026-07-24T17:06:30.127945+00:00",
           "summary": "低于 6 分即清仓，回测胜率与回撤控制。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 82,
-          "power": 68,
-          "reason": "标题直指风险（“何时卖出？我的8分制止盈纪律…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "对冲为主，关注防御板块"
+          "confidence": 80,
+          "power": 72,
+          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
+          "advice": "空仓观望，勿接飞刀"
         }
       ]
     },
@@ -1214,8 +1214,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 64,
-        "avg_power": 61,
+        "avg_confidence": 63,
+        "avg_power": 50,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -1223,43 +1223,43 @@
           "title": "巴菲特2026股东信：现金3000亿在等什么？",
           "original_title": "巴菲特2026股东信：现金3000亿在等什么？",
           "link": "https://www.youtube.com/@NewMoney?v=mock0",
-          "published": "2026-08-05T11:58:18.224585+00:00",
+          "published": "2026-08-05T22:06:30.380718+00:00",
           "summary": "解读为何股神宁可持有国债也不追高。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 76,
-          "power": 71,
+          "confidence": 72,
+          "power": 62,
           "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "逢低分批建仓，设8%止损"
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "芒格的最后忠告：别碰你不懂的生意",
           "original_title": "芒格的最后忠告：别碰你不懂的生意",
           "link": "https://www.youtube.com/@NewMoney?v=mock1",
-          "published": "2026-07-31T12:58:18.224599+00:00",
+          "published": "2026-07-31T15:06:30.380732+00:00",
           "summary": "用喜诗糖果与比亚迪案例诠释能力圈。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 58,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 60,
+          "power": 43,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "段永平 vs 芒格：中美价值投资的异同",
           "original_title": "段永平 vs 芒格：中美价值投资的异同",
           "link": "https://www.youtube.com/@NewMoney?v=mock2",
-          "published": "2026-07-24T16:58:18.224604+00:00",
+          "published": "2026-07-24T21:06:30.380738+00:00",
           "summary": "对比集中与分散的哲学，提炼可复制心法。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
           "confidence": 59,
-          "power": 55,
+          "power": 46,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "等待方向明朗再重仓"
         }
       ]
     },
@@ -1283,8 +1283,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 64,
-        "avg_power": 55,
+        "avg_confidence": 59,
+        "avg_power": 53,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -1292,43 +1292,43 @@
           "title": "我刚卖了特斯拉：持仓逻辑全复盘",
           "original_title": "我刚卖了特斯拉：持仓逻辑全复盘",
           "link": "https://www.youtube.com/@FinancialEducation?v=mock0",
-          "published": "2026-08-05T13:58:18.903511+00:00",
+          "published": "2026-08-05T18:06:31.123463+00:00",
           "summary": "止盈 30% 后转向现金，等待 150 支撑。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 54,
+          "confidence": 52,
+          "power": 52,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "这只AI小盘股，我重仓的理由",
           "original_title": "这只AI小盘股，我重仓的理由",
           "link": "https://www.youtube.com/@FinancialEducation?v=mock1",
-          "published": "2026-07-31T19:58:18.903526+00:00",
+          "published": "2026-07-31T23:06:31.123479+00:00",
           "summary": "展示仓位 25% 的高 conviction，下注算力赛道。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 49,
+          "confidence": 53,
+          "power": 44,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "跟单有风险：为什么别抄我的作业？",
           "original_title": "跟单有风险：为什么别抄我的作业？",
           "link": "https://www.youtube.com/@FinancialEducation?v=mock2",
-          "published": "2026-07-24T15:58:18.903531+00:00",
+          "published": "2026-07-24T13:06:31.123485+00:00",
           "summary": "强调个人风险承受与时间 horizon 差异。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
           "confidence": 74,
-          "power": 62,
-          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "对冲为主，关注防御板块"
+          "power": 64,
+          "reason": "标题直指风险（“跟单有风险：为什么别抄我的作…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "降低仓位，等待恐慌释放"
         }
       ]
     },
@@ -1352,8 +1352,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 66,
-        "avg_power": 54,
+        "avg_confidence": 64,
+        "avg_power": 55,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -1361,43 +1361,43 @@
           "title": "打分表测评：Shopify 商业模式能打几分？",
           "original_title": "打分表测评：Shopify 商业模式能打几分？",
           "link": "https://www.youtube.com/@BrianFeroldiYT?v=mock0",
-          "published": "2026-08-05T17:58:19.547017+00:00",
+          "published": "2026-08-05T20:06:31.679618+00:00",
           "summary": "从护城河、定价权到创始人，给出 7.5/10。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
           "confidence": 61,
-          "power": 46,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "power": 43,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "财报拆解：这家SaaS为何永远不赚钱？",
           "original_title": "财报拆解：这家SaaS为何永远不赚钱？",
           "link": "https://www.youtube.com/@BrianFeroldiYT?v=mock1",
-          "published": "2026-07-31T21:58:19.547034+00:00",
+          "published": "2026-07-31T21:06:31.679633+00:00",
           "summary": "揭示 SBC 稀释与客户流失的真相。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 46,
+          "confidence": 57,
+          "power": 57,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "10年10倍股的共同基因",
           "original_title": "10年10倍股的共同基因",
           "link": "https://www.youtube.com/@BrianFeroldiYT?v=mock2",
-          "published": "2026-07-24T16:58:19.547039+00:00",
+          "published": "2026-07-24T18:06:31.679639+00:00",
           "summary": "总结高毛利、轻资产与复利增长的三要素。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "多头",
           "confidence": 74,
-          "power": 70,
-          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
-          "advice": "持有为主，关注量能是否跟随"
+          "power": 66,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "趋势未坏，回调即机会"
         }
       ]
     },
@@ -1421,8 +1421,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 67,
-        "avg_power": 60,
+        "avg_confidence": 68,
+        "avg_power": 61,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -1435,10 +1435,10 @@
           "lang": "中文",
           "date_str": "08-07",
           "sentiment": "空头",
-          "confidence": 76,
+          "confidence": 79,
           "power": 71,
-          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "空仓观望，勿接飞刀"
+          "reason": "标题直指风险（“AI超级碗与万亿宣言！机构史…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "中美顶级金融暗战：这个周末发生了什么",
@@ -1450,9 +1450,9 @@
           "date_str": "08-06",
           "sentiment": "多头",
           "confidence": 71,
-          "power": 61,
-          "reason": "标题释放积极信号（“中美顶级金融暗战：这个周末发…”），基本面或资金面出现边际改善，资金有做多动能。",
-          "advice": "逢低分批建仓，设8%止损"
+          "power": 64,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "美股七巨头财报周：谁在裸泳一目了然",
@@ -1463,8 +1463,8 @@
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 48,
+          "confidence": 56,
+          "power": 50,
           "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "高抛低吸，区间操作"
         }
@@ -1490,8 +1490,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 61,
-        "avg_power": 50,
+        "avg_confidence": 58,
+        "avg_power": 54,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -1499,42 +1499,42 @@
           "title": "上证 vs 纳指：技术面背离的生死抉择",
           "original_title": "上证 vs 纳指：技术面背离的生死抉择",
           "link": "https://www.youtube.com/@阳光财经?v=mock0",
-          "published": "2026-08-05T16:58:20.341147+00:00",
+          "published": "2026-08-05T14:06:32.338850+00:00",
           "summary": "用 MACD 与成交量分析双市场节奏，提示轮动。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 48,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 57,
+          "power": 54,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "黄金分割+筹码峰：A股反弹目标位在哪？",
           "original_title": "黄金分割+筹码峰：A股反弹目标位在哪？",
           "link": "https://www.youtube.com/@阳光财经?v=mock1",
-          "published": "2026-07-31T12:58:20.341159+00:00",
+          "published": "2026-07-31T16:06:32.338863+00:00",
           "summary": "测算 3200 点压力与下方 2850 支撑。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 61,
+          "confidence": 60,
           "power": 52,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "北向资金连续流出：外资在怕什么？",
           "original_title": "北向资金连续流出：外资在怕什么？",
           "link": "https://www.youtube.com/@阳光财经?v=mock2",
-          "published": "2026-07-24T15:58:20.341164+00:00",
+          "published": "2026-07-24T18:06:32.338869+00:00",
           "summary": "关联汇率与美债利率，判断企稳信号。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 67,
-          "power": 51,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 57,
+          "power": 58,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "等待方向明朗再重仓"
         }
       ]
@@ -1559,8 +1559,8 @@
         "bull_count": 0,
         "bear_count": 3,
         "neutral_count": 0,
-        "avg_confidence": 79,
-        "avg_power": 71,
+        "avg_confidence": 77,
+        "avg_power": 68,
         "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
@@ -1574,9 +1574,9 @@
           "date_str": "08-07",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 74,
-          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "空仓观望，勿接飞刀"
+          "power": 70,
+          "reason": "标题直指风险（“社融暴跌背后：居民为什么不敢…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "地方城投展期潮：谁在为土地财政买单？",
@@ -1587,10 +1587,10 @@
           "lang": "中文",
           "date_str": "08-06",
           "sentiment": "空头",
-          "confidence": 83,
-          "power": 73,
-          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "空仓观望，勿接飞刀"
+          "confidence": 81,
+          "power": 68,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "人民币破7.3：央行工具箱还有多少子弹？",
@@ -1601,10 +1601,10 @@
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "空头",
-          "confidence": 74,
-          "power": 67,
-          "reason": "标题直指风险（“人民币破7.3：央行工具箱还…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "空仓观望，勿接飞刀"
+          "confidence": 71,
+          "power": 68,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "advice": "降低仓位，等待恐慌释放"
         }
       ]
     },
@@ -1628,7 +1628,7 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 65,
+        "avg_confidence": 64,
         "avg_power": 56,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
@@ -1637,13 +1637,13 @@
           "title": "半导体寒冬还是拐点？台积电财报给答案",
           "original_title": "半导体寒冬还是拐点？台积电财报给答案",
           "link": "https://www.youtube.com/@老李财经?v=mock0",
-          "published": "2026-08-05T12:58:21.665554+00:00",
+          "published": "2026-08-05T22:06:33.418131+00:00",
           "summary": "拆解 3nm 产能利用率与 AI 订单能见度。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 56,
+          "confidence": 59,
+          "power": 55,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "均衡配置，攻守兼备"
         },
@@ -1651,28 +1651,28 @@
           "title": "英伟达 vs AMD：谁能吃到AI芯片第二波？",
           "original_title": "英伟达 vs AMD：谁能吃到AI芯片第二波？",
           "link": "https://www.youtube.com/@老李财经?v=mock1",
-          "published": "2026-07-31T14:58:21.665568+00:00",
+          "published": "2026-07-31T19:06:33.418144+00:00",
           "summary": "对比 CUDA 生态与性价比，押注供应链。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 43,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 57,
+          "power": 45,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "美股科技股估值回落30%：抄底还是接飞刀？",
           "original_title": "美股科技股估值回落30%：抄底还是接飞刀？",
           "link": "https://www.youtube.com/@老李财经?v=mock2",
-          "published": "2026-07-24T15:58:21.665574+00:00",
+          "published": "2026-07-24T12:06:33.418150+00:00",
           "summary": "用 PEG 与现金流折现给出安全边际。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 71,
-          "reason": "标题释放积极信号（“美股科技股估值回落30%：抄…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "confidence": 77,
+          "power": 70,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
           "advice": "逢低分批建仓，设8%止损"
         }
       ]
@@ -1698,7 +1698,7 @@
         "bear_count": 0,
         "neutral_count": 0,
         "avg_confidence": 74,
-        "avg_power": 67,
+        "avg_power": 65,
         "battle_text": "3多 vs 0空 vs 0中性"
       },
       "items": [
@@ -1706,42 +1706,42 @@
           "title": "黄金日线三连阳：1980美元能否突破？",
           "original_title": "黄金日线三连阳：1980美元能否突破？",
           "link": "https://www.youtube.com/@瑞威金融?v=mock0",
-          "published": "2026-08-05T21:58:21.913554+00:00",
+          "published": "2026-08-05T21:06:33.666506+00:00",
           "summary": "结合非农与实际利率，推演多空分水岭。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 72,
-          "power": 65,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "逢低分批建仓，设8%止损"
+          "confidence": 71,
+          "power": 64,
+          "reason": "标题释放积极信号（“黄金日线三连阳：1980美元…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "外汇日内秘籍：伦敦开盘15分钟定胜负",
           "original_title": "外汇日内秘籍：伦敦开盘15分钟定胜负",
           "link": "https://www.youtube.com/@瑞威金融?v=mock1",
-          "published": "2026-07-31T19:58:21.913567+00:00",
+          "published": "2026-07-31T19:06:33.666519+00:00",
           "summary": "分享突破与假突破的过滤技巧。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "多头",
-          "confidence": 73,
-          "power": 66,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 77,
+          "power": 71,
+          "reason": "标题释放积极信号（“外汇日内秘籍：伦敦开盘15分…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "advice": "逢低分批建仓，设8%止损"
         },
         {
           "title": "原油暴涨10%：地缘溢价还是需求复苏？",
           "original_title": "原油暴涨10%：地缘溢价还是需求复苏？",
           "link": "https://www.youtube.com/@瑞威金融?v=mock2",
-          "published": "2026-07-24T11:58:21.913572+00:00",
+          "published": "2026-07-24T21:06:33.666525+00:00",
           "summary": "分析 OPEC+ 减产与库存去化博弈。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "多头",
-          "confidence": 77,
-          "power": 71,
-          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
+          "confidence": 74,
+          "power": 62,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
           "advice": "持有为主，关注量能是否跟随"
         }
       ]
@@ -1766,8 +1766,8 @@
         "bull_count": 2,
         "bear_count": 1,
         "neutral_count": 0,
-        "avg_confidence": 74,
-        "avg_power": 67,
+        "avg_confidence": 73,
+        "avg_power": 66,
         "battle_text": "2多 vs 1空 vs 0中性"
       },
       "items": [
@@ -1775,43 +1775,43 @@
           "title": "交易员的噩梦：为什么你总在高点买入？",
           "original_title": "交易员的噩梦：为什么你总在高点买入？",
           "link": "https://www.youtube.com/@零总投资?v=mock0",
-          "published": "2026-08-05T12:58:22.813167+00:00",
+          "published": "2026-08-05T13:06:34.587951+00:00",
           "summary": "揭示 FOMO 与锚定效应，教你预设止损。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 71,
+          "power": 70,
           "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
-          "advice": "逢低分批建仓，设8%止损"
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "港股打板心得：3个指标过滤假突破",
           "original_title": "港股打板心得：3个指标过滤假突破",
           "link": "https://www.youtube.com/@零总投资?v=mock1",
-          "published": "2026-07-31T18:58:22.813180+00:00",
+          "published": "2026-07-31T15:06:34.587964+00:00",
           "summary": "用成交量、换手与板块联动提高胜率。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "多头",
-          "confidence": 76,
-          "power": 64,
-          "reason": "标题释放积极信号（“港股打板心得：3个指标过滤假…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "confidence": 75,
+          "power": 68,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
           "advice": "持有为主，关注量能是否跟随"
         },
         {
           "title": "从爆仓到翻身：我的资金管理铁律",
           "original_title": "从爆仓到翻身：我的资金管理铁律",
           "link": "https://www.youtube.com/@零总投资?v=mock2",
-          "published": "2026-07-24T18:58:22.813184+00:00",
+          "published": "2026-07-24T14:06:34.587970+00:00",
           "summary": "固定 1% 风险敞口，活下来才有资格赚钱。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 72,
-          "power": 68,
+          "confidence": 70,
+          "power": 62,
           "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "空仓观望，勿接飞刀"
+          "advice": "降低仓位，等待恐慌释放"
         }
       ]
     },
@@ -1835,8 +1835,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 70,
-        "avg_power": 60,
+        "avg_confidence": 67,
+        "avg_power": 57,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -1844,41 +1844,41 @@
           "title": "黄金新高后暴跌5%：牛市结束了吗？",
           "original_title": "黄金新高后暴跌5%：牛市结束了吗？",
           "link": "https://www.youtube.com/@孙老师财经?v=mock0",
-          "published": "2026-08-05T15:58:23.069788+00:00",
+          "published": "2026-08-05T16:06:34.902819+00:00",
           "summary": "对比 1980 与 2011 顶部形态，判断回调是洗盘。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "多头",
-          "confidence": 77,
-          "power": 71,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 73,
+          "power": 64,
+          "reason": "内容强调增长/利好逻辑，搭配 2 个多头关键词，短线情绪偏乐观。",
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "美联储点阵图藏玄机：今年还能降几次？",
           "original_title": "美联储点阵图藏玄机：今年还能降几次？",
           "link": "https://www.youtube.com/@孙老师财经?v=mock1",
-          "published": "2026-07-31T19:58:23.069801+00:00",
+          "published": "2026-07-31T20:06:34.902833+00:00",
           "summary": "解读票委分歧与通胀粘性，给出利率路径。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 69,
-          "power": 66,
+          "confidence": 73,
+          "power": 65,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "空仓观望，勿接飞刀"
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "石油美元松动：人民币结算能走多远？",
           "original_title": "石油美元松动：人民币结算能走多远？",
           "link": "https://www.youtube.com/@孙老师财经?v=mock2",
-          "published": "2026-07-24T12:58:23.069806+00:00",
+          "published": "2026-07-24T21:06:34.902838+00:00",
           "summary": "追踪沙特与中俄能源协议的地缘冲击。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 44,
+          "confidence": 57,
+          "power": 43,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "均衡配置，攻守兼备"
         }
@@ -1905,7 +1905,7 @@
         "bear_count": 0,
         "neutral_count": 1,
         "avg_confidence": 68,
-        "avg_power": 63,
+        "avg_power": 60,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -1913,43 +1913,43 @@
           "title": "盘前必读：七巨头期权异动与大单揭秘",
           "original_title": "盘前必读：七巨头期权异动与大单揭秘",
           "link": "https://www.youtube.com/@美股投资网?v=mock0",
-          "published": "2026-08-05T19:58:23.414167+00:00",
+          "published": "2026-08-05T17:06:35.133214+00:00",
           "summary": "扫描 Unusual Options Activity，提示方向选择。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 54,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 59,
+          "power": 49,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "量化信号：标普500站上200日均线意味着什么？",
           "original_title": "量化信号：标普500站上200日均线意味着什么？",
           "link": "https://www.youtube.com/@美股投资网?v=mock1",
-          "published": "2026-07-31T21:58:23.414179+00:00",
+          "published": "2026-07-31T13:06:35.133225+00:00",
           "summary": "回测 50 年突破后的 6 个月收益分布。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "多头",
-          "confidence": 73,
-          "power": 69,
-          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
+          "confidence": 74,
+          "power": 63,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
           "advice": "逢低分批建仓，设8%止损"
         },
         {
           "title": "今夜非农：预期 18 万，前瞻与交易预案",
           "original_title": "今夜非农：预期 18 万，前瞻与交易预案",
           "link": "https://www.youtube.com/@美股投资网?v=mock2",
-          "published": "2026-07-24T17:58:23.414184+00:00",
+          "published": "2026-07-24T16:06:35.133233+00:00",
           "summary": "给出数据超预期与不及预期的两套剧本。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "多头",
-          "confidence": 74,
-          "power": 67,
-          "reason": "标题释放积极信号（“今夜非农：预期 18 万，前…”），基本面或资金面出现边际改善，资金有做多动能。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 73,
+          "power": 70,
+          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
+          "advice": "逢低分批建仓，设8%止损"
         }
       ]
     },
@@ -1973,8 +1973,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 67,
-        "avg_power": 58,
+        "avg_confidence": 66,
+        "avg_power": 59,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -1982,42 +1982,42 @@
           "title": "CPI 3.2% 背后：哪些分项在说谎？",
           "original_title": "CPI 3.2% 背后：哪些分项在说谎？",
           "link": "https://www.youtube.com/@逻辑财金?v=mock0",
-          "published": "2026-08-05T22:58:23.672191+00:00",
+          "published": "2026-08-05T22:06:35.434526+00:00",
           "summary": "拆解住房、能源与核心服务的权重扭曲。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 63,
+          "confidence": 60,
           "power": 54,
           "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "M2增速转正：钱真的流向实体了吗？",
           "original_title": "M2增速转正：钱真的流向实体了吗？",
           "link": "https://www.youtube.com/@逻辑财金?v=mock1",
-          "published": "2026-07-31T19:58:23.672204+00:00",
+          "published": "2026-07-31T15:06:35.434540+00:00",
           "summary": "追踪社融与存款搬家，揭示空转风险。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 72,
-          "reason": "标题直指风险（“M2增速转正：钱真的流向实体…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "对冲为主，关注防御板块"
+          "power": 68,
+          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "从库存周期看A股：现在处于什么位置？",
           "original_title": "从库存周期看A股：现在处于什么位置？",
           "link": "https://www.youtube.com/@逻辑财金?v=mock2",
-          "published": "2026-07-24T21:58:23.672209+00:00",
+          "published": "2026-07-24T15:06:35.434546+00:00",
           "summary": "用 PMI 与产成品库存定位周期拐点。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 49,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "confidence": 65,
+          "power": 57,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         }
       ]
@@ -2042,8 +2042,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 51,
+        "avg_confidence": 60,
+        "avg_power": 50,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -2051,41 +2051,41 @@
           "title": "财报拆解：Meta 广告帝国还能涨多久？",
           "original_title": "财报拆解：Meta 广告帝国还能涨多久？",
           "link": "https://www.youtube.com/@美股说?v=mock0",
-          "published": "2026-08-05T17:58:24.417794+00:00",
+          "published": "2026-08-05T22:06:36.182404+00:00",
           "summary": "分析 Reels 变现与 Reality Labs 烧钱的平衡。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 43,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 59,
+          "power": 52,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "竞争格局：特斯拉 vs 理想 vs 蔚来",
           "original_title": "竞争格局：特斯拉 vs 理想 vs 蔚来",
           "link": "https://www.youtube.com/@美股说?v=mock1",
-          "published": "2026-07-31T18:58:24.417807+00:00",
+          "published": "2026-07-31T14:06:36.182452+00:00",
           "summary": "对比交付、毛利与现金流，给出排序。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 46,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 53,
+          "power": 42,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "为什么我看空这只明星股？",
           "original_title": "为什么我看空这只明星股？",
           "link": "https://www.youtube.com/@美股说?v=mock2",
-          "published": "2026-07-24T20:58:24.417812+00:00",
+          "published": "2026-07-24T18:06:36.182463+00:00",
           "summary": "揭示高估值与增速放缓的剪刀差。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 74,
-          "power": 64,
+          "confidence": 70,
+          "power": 58,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "降低仓位，等待恐慌释放"
         }
@@ -2111,8 +2111,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 60,
-        "avg_power": 50,
+        "avg_confidence": 59,
+        "avg_power": 51,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2120,43 +2120,43 @@
           "title": "FIRE实战：30岁攒够100万需要多少年？",
           "original_title": "FIRE实战：30岁攒够100万需要多少年？",
           "link": "https://www.youtube.com/@KelvinLearnsInvesting?v=mock0",
-          "published": "2026-08-05T18:58:25.124965+00:00",
+          "published": "2026-08-05T19:06:36.982113+00:00",
           "summary": "用 50% 储蓄率演示 12 年路径，含新加坡案例。",
           "lang": "英文/中",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 67,
-          "power": 43,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 58,
+          "power": 54,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "指数基金 vs 买房：年轻人的第一桶金怎么选？",
           "original_title": "指数基金 vs 买房：年轻人的第一桶金怎么选？",
           "link": "https://www.youtube.com/@KelvinLearnsInvesting?v=mock1",
-          "published": "2026-07-31T22:58:25.124981+00:00",
+          "published": "2026-07-31T23:06:36.982128+00:00",
           "summary": "对比流动性与杠杆，给出混合策略。",
           "lang": "英文/中",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 52,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 64,
+          "power": 42,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "副业增收的3条跑道：我如何月入多1万",
           "original_title": "副业增收的3条跑道：我如何月入多1万",
           "link": "https://www.youtube.com/@KelvinLearnsInvesting?v=mock2",
-          "published": "2026-07-24T19:58:25.124986+00:00",
+          "published": "2026-07-24T23:06:36.982133+00:00",
           "summary": "分享内容创作与咨询变现的可复制路径。",
           "lang": "英文/中",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 59,
+          "confidence": 57,
           "power": 57,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -2180,8 +2180,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 53,
-        "avg_power": 50,
+        "avg_confidence": 59,
+        "avg_power": 52,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2189,42 +2189,42 @@
           "title": "《穷查理宝典》10句精华：芒格的终极智慧",
           "original_title": "《穷查理宝典》10句精华：芒格的终极智慧",
           "link": "https://www.youtube.com/@TheSwedishInvestor?v=mock0",
-          "published": "2026-08-05T22:58:25.625770+00:00",
+          "published": "2026-08-05T23:06:37.572865+00:00",
           "summary": "提炼多学科思维与逆向思考的核心。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 52,
-          "power": 54,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "confidence": 55,
+          "power": 55,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "等待方向明朗再重仓"
         },
         {
           "title": "《原则》精读：达利欧的投资圣经",
           "original_title": "《原则》精读：达利欧的投资圣经",
           "link": "https://www.youtube.com/@TheSwedishInvestor?v=mock1",
-          "published": "2026-07-31T16:58:25.625784+00:00",
+          "published": "2026-07-31T17:06:37.572880+00:00",
           "summary": "总结极度透明与可信度加权的组织智慧。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 52,
-          "power": 42,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 57,
+          "power": 44,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "《随机漫步》：为什么你跑不赢市场？",
           "original_title": "《随机漫步》：为什么你跑不赢市场？",
           "link": "https://www.youtube.com/@TheSwedishInvestor?v=mock2",
-          "published": "2026-07-24T19:58:25.625789+00:00",
+          "published": "2026-07-24T15:06:37.572885+00:00",
           "summary": "用醉汉走路类比有效市场假说。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 55,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 65,
+          "power": 57,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         }
       ]
@@ -2249,8 +2249,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 58,
-        "avg_power": 47,
+        "avg_confidence": 59,
+        "avg_power": 50,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2258,43 +2258,43 @@
           "title": "比特币估值模型：S2F 还有效吗？",
           "original_title": "比特币估值模型：S2F 还有效吗？",
           "link": "https://www.youtube.com/@PrestonPysh?v=mock0",
-          "published": "2026-08-05T13:58:26.226792+00:00",
+          "published": "2026-08-05T21:06:38.150469+00:00",
           "summary": "结合存量流量与链上成本，测算公允区间。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 43,
+          "confidence": 60,
+          "power": 52,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "美联储缩表 vs 财政放水：谁在决定流动性？",
           "original_title": "美联储缩表 vs 财政放水：谁在决定流动性？",
           "link": "https://www.youtube.com/@PrestonPysh?v=mock1",
-          "published": "2026-07-31T15:58:26.226807+00:00",
+          "published": "2026-07-31T13:06:38.150485+00:00",
           "summary": "拆解 TGA 与逆回购的水位博弈。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 43,
+          "confidence": 55,
+          "power": 52,
           "reason": "内容呈现多空博弈，1 多 vs 1 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "如何给一家不赚钱的AI公司估值？",
           "original_title": "如何给一家不赚钱的AI公司估值？",
           "link": "https://www.youtube.com/@PrestonPysh?v=mock2",
-          "published": "2026-07-24T18:58:26.226812+00:00",
+          "published": "2026-07-24T22:06:38.150491+00:00",
           "summary": "用 PS 与 TAM 推演终局市占率。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 55,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 63,
+          "power": 48,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     },
@@ -2318,8 +2318,8 @@
         "bull_count": 0,
         "bear_count": 2,
         "neutral_count": 1,
-        "avg_confidence": 74,
-        "avg_power": 63,
+        "avg_confidence": 70,
+        "avg_power": 57,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
@@ -2327,27 +2327,27 @@
           "title": "退休组合回测：60/40 还能用吗？",
           "original_title": "退休组合回测：60/40 还能用吗？",
           "link": "https://www.youtube.com/@PensionCraft?v=mock0",
-          "published": "2026-08-05T16:58:27.304505+00:00",
+          "published": "2026-08-05T22:06:39.404850+00:00",
           "summary": "回测 1970-2026，引入黄金与短债的改良版。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 67,
-          "power": 50,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 59,
+          "power": 44,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "英国养老金危机启示：LDI 的死亡螺旋",
           "original_title": "英国养老金危机启示：LDI 的死亡螺旋",
           "link": "https://www.youtube.com/@PensionCraft?v=mock1",
-          "published": "2026-07-31T15:58:27.304520+00:00",
+          "published": "2026-07-31T21:06:39.404866+00:00",
           "summary": "复盘 2022  gilt 崩盘，警示杠杆风险。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 83,
-          "power": 74,
+          "confidence": 78,
+          "power": 64,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "对冲为主，关注防御板块"
         },
@@ -2355,14 +2355,14 @@
           "title": "通胀挂钩债券：退休者的隐形盾牌",
           "original_title": "通胀挂钩债券：退休者的隐形盾牌",
           "link": "https://www.youtube.com/@PensionCraft?v=mock2",
-          "published": "2026-07-24T17:58:27.304524+00:00",
+          "published": "2026-07-24T21:06:39.404872+00:00",
           "summary": "对比 TIPS 与 nominal 债的真实收益。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 73,
-          "power": 67,
-          "reason": "标题直指风险（“通胀挂钩债券：退休者的隐形盾…”），警示抛售或衰退压力，防御姿态明显。",
+          "confidence": 75,
+          "power": 65,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "空仓观望，勿接飞刀"
         }
       ]
@@ -2388,7 +2388,7 @@
         "bear_count": 3,
         "neutral_count": 0,
         "avg_confidence": 72,
-        "avg_power": 64,
+        "avg_power": 62,
         "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
@@ -2396,13 +2396,13 @@
           "title": "多资产相关性崩了？股债为何同跌",
           "original_title": "多资产相关性崩了？股债为何同跌",
           "link": "https://www.youtube.com/@PensionCraft?v=mock0",
-          "published": "2026-08-05T17:58:28.187622+00:00",
+          "published": "2026-08-05T13:06:40.215444+00:00",
           "summary": "解释通胀 regime 下相关性翻转，应对策略。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "空头",
-          "confidence": 71,
-          "power": 66,
+          "confidence": 73,
+          "power": 63,
           "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "降低仓位，等待恐慌释放"
         },
@@ -2410,29 +2410,29 @@
           "title": "战略配置：如何用3个ETF覆盖全球？",
           "original_title": "战略配置：如何用3个ETF覆盖全球？",
           "link": "https://www.youtube.com/@PensionCraft?v=mock1",
-          "published": "2026-07-31T20:58:28.187642+00:00",
+          "published": "2026-07-31T13:06:40.215461+00:00",
           "summary": "用因子分散降低尾部风险。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 70,
-          "power": 63,
-          "reason": "标题直指风险（“战略配置：如何用3个ETF覆…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "空仓观望，勿接飞刀"
+          "confidence": 74,
+          "power": 61,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "退休提款率：4% 法则已死？",
           "original_title": "退休提款率：4% 法则已死？",
           "link": "https://www.youtube.com/@PensionCraft?v=mock2",
-          "published": "2026-07-24T15:58:28.187646+00:00",
+          "published": "2026-07-24T18:06:40.215467+00:00",
           "summary": "结合高估值与长寿风险，给出动态提款表。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 63,
+          "confidence": 70,
+          "power": 64,
           "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "降低仓位，等待恐慌释放"
+          "advice": "空仓观望，勿接飞刀"
         }
       ]
     },
@@ -2456,8 +2456,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 57,
-        "avg_power": 49,
+        "avg_confidence": 54,
+        "avg_power": 55,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2465,43 +2465,43 @@
           "title": "月薪3000的预算美学：如何体面地穷",
           "original_title": "月薪3000的预算美学：如何体面地穷",
           "link": "https://www.youtube.com/@TheFinancialDiet?v=mock0",
-          "published": "2026-08-05T11:58:28.970956+00:00",
+          "published": "2026-08-05T19:06:40.975581+00:00",
           "summary": "分享信封预算法与快乐消费清单。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 58,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 52,
+          "power": 55,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "为什么你总存不下钱？3个心理陷阱",
           "original_title": "为什么你总存不下钱？3个心理陷阱",
           "link": "https://www.youtube.com/@TheFinancialDiet?v=mock1",
-          "published": "2026-07-31T15:58:28.970970+00:00",
+          "published": "2026-07-31T22:06:40.975597+00:00",
           "summary": "揭示生活方式膨胀与社交比较。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 49,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 55,
+          "power": 54,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "副业焦虑：不上进还是被割韭菜？",
           "original_title": "副业焦虑：不上进还是被割韭菜？",
           "link": "https://www.youtube.com/@TheFinancialDiet?v=mock2",
-          "published": "2026-07-24T19:58:28.970976+00:00",
+          "published": "2026-07-24T18:06:40.975602+00:00",
           "summary": "批判 hustle culture，倡导可持续。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 42,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 57,
+          "power": 58,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -2526,7 +2526,7 @@
         "bear_count": 2,
         "neutral_count": 1,
         "avg_confidence": 76,
-        "avg_power": 67,
+        "avg_power": 68,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
@@ -2534,43 +2534,43 @@
           "title": "标普500 泡沫警报：席勒PE已超1929",
           "original_title": "标普500 泡沫警报：席勒PE已超1929",
           "link": "https://www.youtube.com/@MaverickofWallStreet?v=mock0",
-          "published": "2026-08-05T17:58:29.291271+00:00",
+          "published": "2026-08-05T19:06:41.296979+00:00",
           "summary": "对比历次顶部估值，警告均值回归。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "空头",
           "confidence": 82,
           "power": 77,
-          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "对冲为主，关注防御板块"
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "技术面顶背离：纳指的最后疯狂？",
           "original_title": "技术面顶背离：纳指的最后疯狂？",
           "link": "https://www.youtube.com/@MaverickofWallStreet?v=mock1",
-          "published": "2026-07-31T12:58:29.291284+00:00",
+          "published": "2026-07-31T12:06:41.296994+00:00",
           "summary": "用 RSI 与成交量揭示动能衰竭。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 46,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 57,
+          "power": 48,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "做空指南：如何用期权对冲崩盘风险",
           "original_title": "做空指南：如何用期权对冲崩盘风险",
           "link": "https://www.youtube.com/@MaverickofWallStreet?v=mock2",
-          "published": "2026-07-24T21:58:29.291289+00:00",
+          "published": "2026-07-24T20:06:41.297000+00:00",
           "summary": "演示保护性看跌与价差策略。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 87,
-          "power": 78,
-          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
-          "advice": "对冲为主，关注防御板块"
+          "confidence": 91,
+          "power": 80,
+          "reason": "文中出现 3 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
+          "advice": "空仓观望，勿接飞刀"
         }
       ]
     },
@@ -2594,8 +2594,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 56,
-        "avg_power": 53,
+        "avg_confidence": 60,
+        "avg_power": 46,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2603,13 +2603,13 @@
           "title": "DCF实战：给英伟达算个公允价",
           "original_title": "DCF实战：给英伟达算个公允价",
           "link": "https://www.youtube.com/@CameronStewartCFA?v=mock0",
-          "published": "2026-08-05T21:58:30.079585+00:00",
+          "published": "2026-08-05T15:06:42.213041+00:00",
           "summary": "假设 20% 增速 5 年，贴现率 10% 得出 $720。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
           "confidence": 55,
-          "power": 58,
+          "power": 46,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "高抛低吸，区间操作"
         },
@@ -2617,27 +2617,27 @@
           "title": "为什么DCF是唯一诚实的估值法？",
           "original_title": "为什么DCF是唯一诚实的估值法？",
           "link": "https://www.youtube.com/@CameronStewartCFA?v=mock1",
-          "published": "2026-07-31T16:58:30.079599+00:00",
+          "published": "2026-07-31T13:06:42.213056+00:00",
           "summary": "对比 PE 的操纵空间，强调现金为王。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 50,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 67,
+          "power": 47,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "手把手：用10-K算自由现金流",
           "original_title": "手把手：用10-K算自由现金流",
           "link": "https://www.youtube.com/@CameronStewartCFA?v=mock2",
-          "published": "2026-07-24T15:58:30.079604+00:00",
+          "published": "2026-07-24T23:06:42.213061+00:00",
           "summary": "从经营现金流扣除维持性资本开支。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 52,
+          "confidence": 58,
+          "power": 45,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "等待方向明朗再重仓"
         }
@@ -2663,8 +2663,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 55,
-        "avg_power": 48,
+        "avg_confidence": 56,
+        "avg_power": 49,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2672,27 +2672,27 @@
           "title": "估值回归：这只股息王被错杀了30%",
           "original_title": "估值回归：这只股息王被错杀了30%",
           "link": "https://www.youtube.com/@FASTgraphs?v=mock0",
-          "published": "2026-08-05T17:58:30.632427+00:00",
+          "published": "2026-08-05T21:06:42.759854+00:00",
           "summary": "用 FAST Graphs 展示历史 PE 通道与预期。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 46,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "confidence": 59,
+          "power": 45,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "高抛低吸，区间操作"
         },
         {
           "title": "图形化财报：3秒看懂一家公司",
           "original_title": "图形化财报：3秒看懂一家公司",
           "link": "https://www.youtube.com/@FASTgraphs?v=mock1",
-          "published": "2026-07-31T17:58:30.632442+00:00",
+          "published": "2026-07-31T14:06:42.759869+00:00",
           "summary": "蓝橙线揭示盈利与估值的背离。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
           "confidence": 54,
-          "power": 55,
+          "power": 47,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "高抛低吸，区间操作"
         },
@@ -2700,14 +2700,14 @@
           "title": "为什么我从不追高？",
           "original_title": "为什么我从不追高？",
           "link": "https://www.youtube.com/@FASTgraphs?v=mock2",
-          "published": "2026-07-24T15:58:30.632447+00:00",
+          "published": "2026-07-24T12:06:42.759875+00:00",
           "summary": "用 15% 年化预期筛选低估标的。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 45,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "confidence": 55,
+          "power": 56,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "等待方向明朗再重仓"
         }
       ]
@@ -2732,8 +2732,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 54,
-        "avg_power": 48,
+        "avg_confidence": 57,
+        "avg_power": 54,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2741,41 +2741,41 @@
           "title": "每日1分钟：今天的理财微行动",
           "original_title": "每日1分钟：今天的理财微行动",
           "link": "https://www.instagram.com/moneycoachnick?v=mock0",
-          "published": "2026-08-05T20:58:32.964940+00:00",
+          "published": "2026-08-05T21:06:45.748287+00:00",
           "summary": "自动转 10 刀到高息账户，积少成多。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 52,
-          "power": 46,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 55,
+          "power": 51,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "3个App帮你年省2000刀",
           "original_title": "3个App帮你年省2000刀",
           "link": "https://www.instagram.com/moneycoachnick?v=mock1",
-          "published": "2026-07-31T16:58:32.964957+00:00",
+          "published": "2026-07-31T19:06:45.748301+00:00",
           "summary": "对比返现与比价工具的实测。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 55,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 59,
+          "power": 56,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "别再为银行付费：免费账户清单",
           "original_title": "别再为银行付费：免费账户清单",
           "link": "https://www.instagram.com/moneycoachnick?v=mock2",
-          "published": "2026-07-24T21:58:32.964962+00:00",
+          "published": "2026-07-24T23:06:45.748307+00:00",
           "summary": "罗列零费用与高 APY 的替代。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 53,
-          "power": 44,
+          "confidence": 57,
+          "power": 56,
           "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         }
@@ -2801,8 +2801,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 71,
-        "avg_power": 63,
+        "avg_confidence": 72,
+        "avg_power": 65,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -2810,43 +2810,43 @@
           "title": "BTC 4小时头肩顶：6万关口保卫战",
           "original_title": "BTC 4小时头肩顶：6万关口保卫战",
           "link": "https://cn.tradingview.com/top-authors/?v=mock0",
-          "published": "2026-08-05T17:58:33.280014+00:00",
+          "published": "2026-08-05T13:06:46.010591+00:00",
           "summary": "多名 Top 作者共识看空，目标 5.2 万。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "空头",
-          "confidence": 71,
-          "power": 62,
-          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "空仓观望，勿接飞刀"
+          "confidence": 75,
+          "power": 64,
+          "reason": "标题直指风险（“BTC 4小时头肩顶：6万关…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "黄金周线突破：2000美元只是起点？",
           "original_title": "黄金周线突破：2000美元只是起点？",
           "link": "https://cn.tradingview.com/top-authors/?v=mock1",
-          "published": "2026-07-31T17:58:33.280027+00:00",
+          "published": "2026-07-31T16:06:46.010608+00:00",
           "summary": "技术派看多2000-2200箱体突破。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "多头",
-          "confidence": 85,
-          "power": 74,
-          "reason": "标题释放积极信号（“黄金周线突破：2000美元只…”），基本面或资金面出现边际改善，资金有做多动能。",
-          "advice": "逢低分批建仓，设8%止损"
+          "confidence": 83,
+          "power": 77,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "趋势未坏，回调即机会"
         },
         {
           "title": "标普500 期权墙：5700 是多空决战线",
           "original_title": "标普500 期权墙：5700 是多空决战线",
           "link": "https://cn.tradingview.com/top-authors/?v=mock2",
-          "published": "2026-07-24T22:58:33.280032+00:00",
+          "published": "2026-07-24T19:06:46.010613+00:00",
           "summary": "用 gamma 敞口测算最大痛点。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 53,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 59,
+          "power": 54,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -2870,8 +2870,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 68,
-        "avg_power": 62,
+        "avg_confidence": 66,
+        "avg_power": 58,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -2879,43 +2879,43 @@
           "title": "Raoul Pal：流动性海啸将至，All in 加密？",
           "original_title": "Raoul Pal：流动性海啸将至，All in 加密？",
           "link": "https://www.youtube.com/@RealVisionFinance?v=mock0",
-          "published": "2026-08-05T14:58:34.444222+00:00",
+          "published": "2026-08-05T18:06:47.167289+00:00",
           "summary": "讲述债务货币化与指数级科技的叠加。",
           "lang": "英文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 61,
+          "confidence": 65,
           "power": 58,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "Druckenmiller：我为何重仓做空长债？",
           "original_title": "Druckenmiller：我为何重仓做空长债？",
           "link": "https://www.youtube.com/@RealVisionFinance?v=mock1",
-          "published": "2026-07-31T11:58:34.444238+00:00",
+          "published": "2026-07-31T21:06:47.167304+00:00",
           "summary": "押注财政赤字与通胀二次抬头。",
           "lang": "英文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 84,
-          "power": 78,
-          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "降低仓位，等待恐慌释放"
+          "confidence": 79,
+          "power": 67,
+          "reason": "标题直指风险（“Druckenmiller：…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "中美脱钩：地缘重构下的大宗商品新秩序",
           "original_title": "中美脱钩：地缘重构下的大宗商品新秩序",
           "link": "https://www.youtube.com/@RealVisionFinance?v=mock2",
-          "published": "2026-07-24T14:58:34.444244+00:00",
+          "published": "2026-07-24T20:06:47.167309+00:00",
           "summary": "圆桌讨论铜、锂与稀土的定价权转移。",
           "lang": "英文",
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 59,
+          "confidence": 55,
           "power": 50,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "等待方向明朗再重仓"
         }
       ]
     },
@@ -2939,8 +2939,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 70,
-        "avg_power": 59,
+        "avg_confidence": 69,
+        "avg_power": 63,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -2948,41 +2948,41 @@
           "title": "A股3000点保卫战：谁在砸盘谁在护盘？",
           "original_title": "A股3000点保卫战：谁在砸盘谁在护盘？",
           "link": "https://www.youtube.com/@老厉害财经?v=mock0",
-          "published": "2026-08-05T18:58:34.717592+00:00",
+          "published": "2026-08-05T16:06:47.419847+00:00",
           "summary": "点名量化与外资流向，犀利吐槽。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
           "confidence": 58,
-          "power": 43,
+          "power": 54,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "割韭菜新套路：增发+减持的完美收割",
           "original_title": "割韭菜新套路：增发+减持的完美收割",
           "link": "https://www.youtube.com/@老厉害财经?v=mock1",
-          "published": "2026-07-31T12:58:34.717605+00:00",
+          "published": "2026-07-31T19:06:47.419860+00:00",
           "summary": "拆解定增折价与清仓式减持。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "空头",
-          "confidence": 79,
-          "power": 72,
-          "reason": "标题直指风险（“割韭菜新套路：增发+减持的完…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "降低仓位，等待恐慌释放"
+          "confidence": 80,
+          "power": 74,
+          "reason": "文中出现 2 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
+          "advice": "对冲为主，关注防御板块"
         },
         {
           "title": "牛市不言顶？这次不一样的5个幻觉",
           "original_title": "牛市不言顶？这次不一样的5个幻觉",
           "link": "https://www.youtube.com/@老厉害财经?v=mock2",
-          "published": "2026-07-24T21:58:34.717611+00:00",
+          "published": "2026-07-24T19:06:47.419866+00:00",
           "summary": "讽刺激情喊单，呼吁敬畏。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "多头",
-          "confidence": 73,
-          "power": 63,
+          "confidence": 71,
+          "power": 62,
           "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
           "advice": "持有为主，关注量能是否跟随"
         }
@@ -3008,8 +3008,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 64,
-        "avg_power": 55,
+        "avg_confidence": 68,
+        "avg_power": 59,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -3017,43 +3017,43 @@
           "title": "对话段永平：什么叫敢重仓的便宜？",
           "original_title": "对话段永平：什么叫敢重仓的便宜？",
           "link": "https://www.youtube.com/@investalk?v=mock0",
-          "published": "2026-08-05T11:58:35.492749+00:00",
+          "published": "2026-08-05T12:06:48.375164+00:00",
           "summary": "访谈实录：只买懂的，敢下重手的逻辑。",
           "lang": "中文",
           "date_str": "08-05",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 49,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 67,
+          "power": 51,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "对话半导体老兵：国产替代真能成吗？",
           "original_title": "对话半导体老兵：国产替代真能成吗？",
           "link": "https://www.youtube.com/@investalk?v=mock1",
-          "published": "2026-07-31T12:58:35.492763+00:00",
+          "published": "2026-07-31T16:06:48.375178+00:00",
           "summary": "拆解设备与材料卡脖子环节。",
           "lang": "中文",
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 50,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "confidence": 64,
+          "power": 55,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "等待方向明朗再重仓"
         },
         {
           "title": "对话抄底王：如何在恐慌中扣扳机？",
           "original_title": "对话抄底王：如何在恐慌中扣扳机？",
           "link": "https://www.youtube.com/@investalk?v=mock2",
-          "published": "2026-07-24T11:58:35.492769+00:00",
+          "published": "2026-07-24T13:06:48.375184+00:00",
           "summary": "分享仓位与心理建设的反人性训练。",
           "lang": "中文",
           "date_str": "07-24",
           "sentiment": "多头",
           "confidence": 73,
-          "power": 68,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
-          "advice": "趋势未坏，回调即机会"
+          "power": 71,
+          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
+          "advice": "持有为主，关注量能是否跟随"
         }
       ]
     },
@@ -3077,8 +3077,8 @@
         "bull_count": 0,
         "bear_count": 2,
         "neutral_count": 1,
-        "avg_confidence": 67,
-        "avg_power": 60,
+        "avg_confidence": 70,
+        "avg_power": 59,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
@@ -3092,9 +3092,9 @@
           "date_str": "08-02",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 68,
-          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "空仓观望，勿接飞刀"
+          "power": 72,
+          "reason": "标题直指风险（“香港账户全攻略：2026年还…”），警示抛售或衰退压力，防御姿态明显。",
+          "advice": "降低仓位，等待恐慌释放"
         },
         {
           "title": "USDT 换汇暗流：走资的灰色地带",
@@ -3105,10 +3105,10 @@
           "lang": "中文",
           "date_str": "08-01",
           "sentiment": "空头",
-          "confidence": 69,
-          "power": 58,
-          "reason": "文中出现 1 个空头关键词，指向泡沫/暴雷/缩表等利空因子。",
-          "advice": "对冲为主，关注防御板块"
+          "confidence": 73,
+          "power": 62,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
+          "advice": "空仓观望，勿接飞刀"
         },
         {
           "title": "新加坡家族办公室：100万刀够格吗？",
@@ -3119,10 +3119,10 @@
           "lang": "中文",
           "date_str": "07-28",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 56,
+          "confidence": 64,
+          "power": 44,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "advice": "高抛低吸，区间操作"
         }
       ]
     }
