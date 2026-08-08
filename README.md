@@ -209,13 +209,13 @@ python main.py                            # 再正式推送
 ```yaml
 - cron: '0 2 * * *'          # 每天 UTC 02:00（北京时间 10:00）
 - pip install -r requirements.txt
-- python main.py --no-push    # 生成（失败即红）
-- PUSHPLUS_TOKEN=${{ secrets.PUSHPLUS_TOKEN }} python main.py --push-only  # 推送摘要版
+- PUSHPLUS_TOKEN=${{ secrets.PUSHPLUS_TOKEN }} python main.py
 - 上传 artifact: output/report.html
 ```
 
 在 GitHub 仓库 `Settings → Secrets → Actions` 添加 `PUSHPLUS_TOKEN` 即可。
-若未配置 token，推送步骤会**明确报错失败**（不会再静默假绿）。
+> 💡 建议：可将 CI 拆为「生成（`python main.py --no-push`）+ 推送（`python main.py --push-only`）」，
+> 缺 token 时明确报错。改进版 `daily.yml` 见工作区 `.github/workflows/`（需有 `workflows` 权限的账号提交）。
 
 ---
 
