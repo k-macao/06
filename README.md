@@ -141,28 +141,44 @@ python main.py --no-push  # 仅生成
 
 ---
 
-## 📨 推送 PushPlus
+## 📨 推送 PushPlus（微信）
 
-`src/pushplus.py`
+`src/pushplus.py` · `src/digest.py`
 
 - 接口：`http://www.pushplus.plus/send`
 - 参数：`token` + `title` + `content` (html) + `template=html` + `channel=wechat`
-- 内容：完整 `report.html` + 顶部摘要横幅 `存活45家 · 🐂22 vs 🐻33`
+- **内容：自动使用战斗风精简摘要版**（`src/digest.py` 生成，约 1.6 万字符）
+  - 原因：完整 `report.html` 约 18.6 万字符，**超过 PushPlus 内容上限**（实名用户 2 万字 / 会员 10 万字），直接推送会被拒绝或截断
+  - 战斗排版含：⚔️ 多空战场横幅 · 🐂🐻 HP 血条 · 👑 主导阵营与战场风向 · 🏆 多头/空头 MVP · 🔥 多头猛攻 TOP5 · 💣 空头重击 TOP5 · 🛡️ 军团花名册（5 大阵营分组）· 💤 沉寂出局名单
 - 配置方式（优先级递减）：
   1. `python main.py --token YOUR_TOKEN`
   2. 环境变量 `PUSHPLUS_TOKEN`
   3. `config.yaml` 中 `pushplus_token`
 
 ```bash
+# ① 先发一条测试消息验证链路（token/实名/关注公众号是否正常）
+bash push_demo.sh test <你的token>
+# 返回 code=200 说明链路正常，微信应收到「✅ PushPlus 链路测试成功」
+
+# ② 完整流水线 + 推送
 export PUSHPLUS_TOKEN="你的token"
-python main.py              # 自动抓取 + 分析 + 生成 + 推送
+python main.py              # 自动抓取 + 分析 + 生成 + 推送（摘要版）
 python main.py --no-push    # 本地预览不推送
+python main.py --push-only  # 仅推送（复用上次 output/data.json，适合补推/重推）
 ```
 
 > 获取 Token：http://www.pushplus.plus/push1.html  
 > 推送标题示例：`🐙像素战场·KOL多空战报 2026年08月07日 | 存活45/53 主导:空头`
 
-推送失败时不阻塞生成，日志会提示 `no token, skipped`。
+**收不到消息？按以下顺序排查：**
+
+1. **微信必须关注「PushPlus」公众号**（服务号，模板消息经它送达）
+2. **必须实名认证**：2024-08 起未实名返回 `905`，无法发送（pushplus.plus 微信扫码实名）
+3. **token 是否有效**：返回 `903` = token 无效，到 pushplus.plus 重新复制，并同步更新仓库 Secret `PUSHPLUS_TOKEN`
+4. **请求次数限制**：相同内容 1 小时最多 3 条；1 分钟最多 5 次；每日超 200 次当日停止（返回 `900`）。在公众号里发送「请求次数」可查询
+5. **接口是异步的**：返回 `200` 只代表服务端收到请求，不代表已送达；若返回 200 但没收到，多为上述 1/2 未完成
+
+**推送失败时**：`main.py` 退出码非 0，GitHub Actions 会显示 ❌ 而不是假绿；日志会打印错误码与中文原因（903/905/900/888 等）。
 
 ---
 
@@ -180,7 +196,8 @@ python -m http.server --directory output 8000 --bind 0.0.0.0
 
 # 2. 配置推送后一键全链路
 export PUSHPLUS_TOKEN=xxxx
-python main.py
+bash push_demo.sh test $PUSHPLUS_TOKEN   # 先测链路
+python main.py                            # 再正式推送
 ```
 
 ---
@@ -190,13 +207,15 @@ python main.py
 `.github/workflows/daily.yml`：每天 UTC 02:00（北京时间 10:00）自动运行
 
 ```yaml
-- cron: '0 2 * * *'
+- cron: '0 2 * * *'          # 每天 UTC 02:00（北京时间 10:00）
 - pip install -r requirements.txt
 - PUSHPLUS_TOKEN=${{ secrets.PUSHPLUS_TOKEN }} python main.py
 - 上传 artifact: output/report.html
 ```
 
 在 GitHub 仓库 `Settings → Secrets → Actions` 添加 `PUSHPLUS_TOKEN` 即可。
+> 💡 建议：可将 CI 拆为「生成（`python main.py --no-push`）+ 推送（`python main.py --push-only`）」，
+> 缺 token 时明确报错。改进版 `daily.yml` 见工作区 `.github/workflows/`（需有 `workflows` 权限的账号提交）。
 
 ---
 
