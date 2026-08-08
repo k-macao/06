@@ -139,6 +139,17 @@ def run(push: bool = True, token: str = None, push_only: bool = False):
         res = send_report(str(html_path), title, token=token, summary=summary, digest_html=digest_html)
         print(f"PushPlus 结果: {res}")
         code = res.get("code")
+        # 将推送结果写回 data.json（随 Artifact 上传，便于 CI 留档核查）
+        try:
+            d2 = json.loads(json_path.read_text(encoding="utf-8"))
+            d2.setdefault("meta", {})["push_result"] = {
+                "code": res.get("code"),
+                "msg": res.get("msg", ""),
+                "pushed_at": datetime.now().isoformat(),
+            }
+            json_path.write_text(json.dumps(d2, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception as e:
+            print(f"[data] 推送结果写回失败: {e}")
         if code == 200:
             print("   📱 请检查微信『PushPlus』公众号的模板消息（需先关注 PushPlus 服务号并实名认证）")
             return True
