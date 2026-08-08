@@ -147,9 +147,9 @@ python main.py --no-push  # 仅生成
 
 - 接口：`http://www.pushplus.plus/send`
 - 参数：`token` + `title` + `content` (html) + `template=html` + `channel=wechat`
-- **内容：自动使用精简摘要版**（`src/digest.py` 生成，约 3 万字符）
+- **内容：自动使用战斗风精简摘要版**（`src/digest.py` 生成，约 1.6 万字符）
   - 原因：完整 `report.html` 约 18.6 万字符，**超过 PushPlus 内容上限**（实名用户 2 万字 / 会员 10 万字），直接推送会被拒绝或截断
-  - 摘要版含：多空统计横幅、🔥 多头火力 TOP5、💣 空头施压 TOP5、全部存活 KOL 一览表、沉寂名单
+  - 战斗排版含：⚔️ 多空战场横幅 · 🐂🐻 HP 血条 · 👑 主导阵营与战场风向 · 🏆 多头/空头 MVP · 🔥 多头猛攻 TOP5 · 💣 空头重击 TOP5 · 🛡️ 军团花名册（5 大阵营分组）· 💤 沉寂出局名单
 - 配置方式（优先级递减）：
   1. `python main.py --token YOUR_TOKEN`
   2. 环境变量 `PUSHPLUS_TOKEN`
