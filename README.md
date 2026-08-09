@@ -26,7 +26,7 @@
 
 ---
 
-## 🗂️ KOL 精选名单（53 家）
+## 🗂️ KOL 精选名单（97 家）
 
 ### 英文财经巨头 20 席
 | # | 名称 | 平台 | 领域 |
@@ -56,7 +56,10 @@ Kelvin, Swedish Investor, Preston Pysh, PensionCraft, Maverick, Cameron Stewart,
 
 **额外增补 3 席**：`老厉害财经` `inves talk` `硬核刘大 (刘老哥)`
 
-> 📌 **完整数据**：`kol_data.json`（含 handle/channel_id/fans/field/platform 等）
+### 港澳、中国与台湾财经扩展 44 席
+新增香港财经媒体 `信報財經新聞`、`Finance730`、`香港經濟日報 HKET`、`香港財經時報 HKBT`、`新城財經台`，以及中国宏观、港美股与台湾投资频道，包括 `财经风云`、`视野环球财经`、`财经冷眼`、`老蛮频道`、`付鹏说`、`财经M平方 MacroMicro`、`游庭皓的財經皓角`、`柴鼠兄弟 ZRBros`、`Gooaye股癌`、`股海老牛` 等。完整名单及频道链接请见数据文件。
+
+> 📌 **完整数据**：`kol_data.json`（共 97 家，含 handle/channel_id/fans/field/platform 等）
 
 ---
 
