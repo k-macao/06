@@ -26,13 +26,14 @@ from src.deepseek_analyzer import analyze_with_deepseek_or_fallback, get_deepsee
 from src.report_generator import generate_report
 from src.pushplus import send_report, explain_code
 from src.digest import build_digest
+from src.authenticity_check import run_audit
 from src.config import OUTPUT_DIR
 
 # 完整报告超长时降级为摘要版的阈值（PushPlus 会员上限 10 万字）
 FULL_HTML_LIMIT = 100_000
 
 
-def run(push: bool = True, token: str = None, push_only: bool = False):
+def run(push: bool = True, token: str = None, push_only: bool = False, strict_audit: bool = False):
     print("=" * 60)
     print("🐙 章鱼 AI·全景分析 | 全球财经 KOL 多空战场 启动")
     print(f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -164,6 +165,21 @@ def run(push: bool = True, token: str = None, push_only: bool = False):
     else:
         print("\n[4/4] 📨 已跳过推送（--no-push）")
 
+    # ---- 不作伪检查：对生成结果做真实性审计（模块 src/authenticity_check.py） ----
+    try:
+        audit = run_audit(data_json_path=json_path)
+        s = audit["summary"]
+        print("\n🔍 [审计] 不作伪检查：KOL {} | PASS {} / WARN {} / FAIL {} | 伪链接 {}/{} ({:.1f}%)".format(
+            s["total_kols"], s["pass"], s["warn"], s["fail"], s["mock_items"], s["total_items"], s["mock_ratio_pct"]))
+        if s["fail"]:
+            fails = [r["name"] for r in audit["results"] if r["verdict"] == "FAIL"]
+            print(f"   ⚠️  FAIL 名单（{len(fails)} 家）：{', '.join(fails[:10])}{' …' if len(fails) > 10 else ''}")
+        if strict_audit and s["fail"]:
+            print("   ❌ --strict-audit 门禁：检测到伪造/失实内容，拒绝通过")
+            return False
+    except Exception as e:
+        print(f"\n🔍 [审计] 跳过（{type(e).__name__}: {e}）")
+
     print("\n✅ 全部完成！报告路径:", (OUTPUT_DIR / "report.html").resolve())
     print("   本地预览: python -m http.server --directory output 8000")
     return True
@@ -174,7 +190,8 @@ if __name__ == "__main__":
     parser.add_argument("--no-push", action="store_true", help="跳过 PushPlus 推送")
     parser.add_argument("--push-only", action="store_true", help="仅推送（复用上次生成的 output/data.json）")
     parser.add_argument("--token", type=str, default=None, help="PushPlus token，覆盖环境变量")
+    parser.add_argument("--strict-audit", action="store_true", help="不作伪检查门禁：存在伪造/失实内容（FAIL）即退出码非 0（CI 用）")
     args = parser.parse_args()
-    ok = run(push=not args.no_push, token=args.token, push_only=args.push_only)
+    ok = run(push=not args.no_push, token=args.token, push_only=args.push_only, strict_audit=args.strict_audit)
     # 推送失败时退出码非 0，让 CI（GitHub Actions）能红起来而不是假绿
     sys.exit(0 if ok else 1)

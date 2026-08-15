@@ -185,6 +185,28 @@ python main.py --push-only  # 仅推送（复用上次 output/data.json，适合
 
 ---
 
+---
+
+## 🔍 不作伪检查模块（真实性审计）
+
+`src/authenticity_check.py` —— 对 KOL 名单与生成结果做防伪审计，防止"假数据/假链接"混入报告：
+
+```bash
+python -m src.authenticity_check                    # 离线全量审计（97 家）
+python -m src.authenticity_check --online --strict  # 在线验证 + 严格门禁（CI 用）
+python -m src.authenticity_check --md output/audit_report.md --json output/audit_report.json
+python main.py --strict-audit                       # 生成后自动审计，检出伪造即退出码非 0
+```
+
+- **元数据层**：channel_id 缺失（=内容必走 Mock 兜底）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
+- **内容层**：`?v=mock` 伪链接（FAIL）、语料库伪造标题（对照 `fetcher.py` 的 `MOCK_TITLES_POOL`）、未来日期、链接重复
+- **在线层**（`--online`，需网络）：频道页 HTTP 状态/订阅数、channel_id 拉 RSS 复核最新条目
+- **CI 门禁**：在 `.github/workflows/daily.yml` 中加入 `python -m src.authenticity_check --online --strict` 步骤即可令含伪造内容的构建变红（注：workflow 文件需有 `workflows` 权限的账号提交，见下文"定时任务"备注）
+
+> 📌 2026-08-15 首次全量排查：237 条内容中 **219 条（92.4%）为 mock 伪链接**；已修正 18 家频道的 channel_id/粉丝量/名称等失实字段（详见 `核查报告_全频道.md`）。
+
+---
+
 ## ⚙️ 快速开始
 
 ```bash
