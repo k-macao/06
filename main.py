@@ -6,7 +6,7 @@
   1. 排查 53 个 KOL 存活状态（90天内有更新）
   2. 抓取活跃名单最近 3 条内容（RSS + HTML + Mock 中文）
   3. AI 多空分析（DeepSeek LLM 优先，回退启发式）
-  4. 生成像素风 HTML 战报
+  4. 生成章鱼风 HTML 战报
   5. 推送 PushPlus（自动转为微信友好的精简摘要版）
 
 用法：
@@ -89,7 +89,7 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
         print(f"\n⚔️ 全市场战况：🐂 {stats['bull']} ({stats['bull_ratio']}%) vs 🐻 {stats['bear']} ({stats['bear_ratio']}%) vs ⚖️ {stats['neutral']} ({stats['neutral_ratio']}%) → 主导: {stats['dominant']}")
 
         # 4. 生成报告
-        print("\n[3/4] 🎮 生成像素风战报...")
+        print("\n[3/4] 🎮 生成章鱼风战报...")
         report_date = datetime.now().strftime("%Y年%m月%d日")
         html_path = OUTPUT_DIR / "report.html"
         json_path = OUTPUT_DIR / "data.json"
@@ -128,7 +128,7 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
     if push:
         html_path = OUTPUT_DIR / "report.html"
         print("\n[4/4] 📨 推送 PushPlus（自动使用精简摘要版，微信友好）...")
-        title = f"🐙像素战场·KOL多空战报 {report_date} | 存活{len(all_enriched)}/{len(all_enriched)+len(inactive_kols)} 主导:{stats['dominant']}"
+        title = f"🐙章鱼战场·KOL多空战报 {report_date} | 存活{len(all_enriched)}/{len(all_enriched)+len(inactive_kols)} 主导:{stats['dominant']}"
         summary = f"存活{len(all_enriched)}家 · 🐂{stats['bull']} vs 🐻{stats['bear']} | {engine} | 平均战斗力{stats['avg_power']}"
 
         # 生成摘要版（完整 HTML 约 18 万字符，超 PushPlus 上限，微信推送用摘要版）
