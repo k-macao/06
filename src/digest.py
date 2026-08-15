@@ -26,7 +26,7 @@ def _badge(text, color, bg):
 
 
 def _hp_bar(pct, color):
-    """像素风血条"""
+    """章鱼风血条"""
     pct = max(0, min(100, pct))
     return (f"<div style='height:10px;background:#0a0a14;border:1px solid #44446a;"
             f"margin:2px 0 6px'>"
@@ -182,7 +182,7 @@ def build_digest(all_enriched, stats, report_date, inactive_kols=None,
 
   <!-- ⚔️ 战斗横幅 -->
   <div style='text-align:center;background:#111122;border:3px double #ffe066;padding:10px 8px'>
-    <div style='font-size:22px;font-weight:bold;color:#ffe066;letter-spacing:3px'>⚔️ 多空战场 · 像素战报 ⚔️</div>
+    <div style='font-size:22px;font-weight:bold;color:#ffe066;letter-spacing:3px'>⚔️ 多空战场 · 章鱼战报 ⚔️</div>
     <div style='font-size:11px;color:#9adcff;margin:4px 0'>🐙 {_esc(author)} ｜ {_esc(report_date)}</div>
     <div style='font-size:13px;color:#fff;letter-spacing:1px'>🐂 BULL <span style='color:#ff6b6b'>⚡ VS ⚡</span> BEAR 🐻</div>
   </div>

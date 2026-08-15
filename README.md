@@ -1,6 +1,6 @@
 # 🐙 全球财经金融 KOL 精选名单 · 多空全景战报
 
-> **复古游戏像素风格 · 凸显多空战斗元素**  
+> **复古游戏章鱼风格 · 凸显多空战斗元素**  
 > **作者：章鱼 AI·全景分析**  
 > **Pixel Battlefield Edition — BULL VS BEAR**
 
@@ -17,9 +17,9 @@
 **在线预览 Live Preview** → `output/report.html`  
 `python -m http.server --directory output 8000` → http://localhost:8000/report.html
 
-- 8-bit 像素边框 + 扫描线 + Neon 网格背景
+- 8-bit 章鱼边框 + 扫描线 + Neon 网格背景
 - 🐂 多头军团 vs 🐻 空头军团 血条可视化
-- 每位 KOL 卡片：头像像素化 + 平台徽章 + 粉丝量 + 3条最新内容
+- 每位 KOL 卡片：头像章鱼化 + 平台徽章 + 粉丝量 + 3条最新内容
 - 每条内容：中文标题 + AI 多空研判 + 置信度 + 战斗力 + 策略建议
 - 顶栏：存活 45/53 家 · 135 条内容参战 · 主导阵营实时计算
 - 筛选器：全部 / 多头 / 空头 / 中性 / 中文 / 英文
@@ -122,16 +122,16 @@ python -m src.fetcher  # 单独测试
 
 ---
 
-## 🎮 像素报告生成
+## 🎮 章鱼报告生成
 
-`src/report_generator.py` · Jinja2 模板 + 手绘像素美术
+`src/report_generator.py` · Jinja2 模板 + 手绘章鱼美术
 
-- 字体：`Press Start 2P`（像素标题） + `Noto Sans SC`（正文）
-- 边框：4px 白描边 + 黑色偏移阴影 + 内部虚线（纯 CSS 像素风）
+- 字体：`Press Start 2P`（章鱼标题） + `Noto Sans SC`（正文）
+- 边框：4px 白描边 + 黑色偏移阴影 + 内部虚线（纯 CSS 章鱼风）
 - 背景：32px 网格 + 扫描线叠加
 - 元素：
   - 顶部 `BULL VS BEAR` 街机横幅 + 血条 HP 92/120 vs 68/120
-  - 中间 `pixel_battle.png` 斗兽场大图（BOOM! SMASH! 像素爆破）
+  - 中间 `pixel_battle.png` 斗兽场大图（BOOM! SMASH! 章鱼爆破）
   - 血条：`bull_ratio / bear_ratio / neutral_ratio` 百分比填充
   - 卡片：`#01-53` 编号徽章 + 平台标签 + 粉丝爱心 + 战斗徽章
   - 条目：左侧 ▶ 箭头 + POW 能量条 + 迷你多空徽章 + 🧠 研判 + 🎯 策略
@@ -171,7 +171,7 @@ python main.py --push-only  # 仅推送（复用上次 output/data.json，适合
 ```
 
 > 获取 Token：http://www.pushplus.plus/push1.html  
-> 推送标题示例：`🐙像素战场·KOL多空战报 2026年08月07日 | 存活45/53 主导:空头`
+> 推送标题示例：`🐙章鱼战场·KOL多空战报 2026年08月07日 | 存活45/53 主导:空头`
 
 **收不到消息？按以下顺序排查：**
 
@@ -182,6 +182,28 @@ python main.py --push-only  # 仅推送（复用上次 output/data.json，适合
 5. **接口是异步的**：返回 `200` 只代表服务端收到请求，不代表已送达；若返回 200 但没收到，多为上述 1/2 未完成
 
 **推送失败时**：`main.py` 退出码非 0，GitHub Actions 会显示 ❌ 而不是假绿；日志会打印错误码与中文原因（903/905/900/888 等）。
+
+---
+
+---
+
+## 🔍 不作伪检查模块（真实性审计）
+
+`src/authenticity_check.py` —— 对 KOL 名单与生成结果做防伪审计，防止"假数据/假链接"混入报告：
+
+```bash
+python -m src.authenticity_check                    # 离线全量审计（97 家）
+python -m src.authenticity_check --online --strict  # 在线验证 + 严格门禁（CI 用）
+python -m src.authenticity_check --md output/audit_report.md --json output/audit_report.json
+python main.py --strict-audit                       # 生成后自动审计，检出伪造即退出码非 0
+```
+
+- **元数据层**：channel_id 缺失（=内容必走 Mock 兜底）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
+- **内容层**：`?v=mock` 伪链接（FAIL）、语料库伪造标题（对照 `fetcher.py` 的 `MOCK_TITLES_POOL`）、未来日期、链接重复
+- **在线层**（`--online`，需网络）：频道页 HTTP 状态/订阅数、channel_id 拉 RSS 复核最新条目
+- **CI 门禁**：在 `.github/workflows/daily.yml` 中加入 `python -m src.authenticity_check --online --strict` 步骤即可令含伪造内容的构建变红（注：workflow 文件需有 `workflows` 权限的账号提交，见下文"定时任务"备注）
+
+> 📌 2026-08-15 首次全量排查：237 条内容中 **219 条（92.4%）为 mock 伪链接**；已修正 18 家频道的 channel_id/粉丝量/名称等失实字段（详见 `核查报告_全频道.md`）。
 
 ---
 
@@ -234,7 +256,7 @@ python main.py                            # 再正式推送
 │   ├── config.py
 │   ├── fetcher.py            # 存活探测 + 抓取
 │   ├── analyzer.py           # 多空研判
-│   ├── report_generator.py   # 像素 HTML
+│   ├── report_generator.py   # 章鱼 HTML
 │   └── pushplus.py
 ├── assets/
 │   └── pixel_battle.png      # 8-bit 斗兽场头图
@@ -261,7 +283,7 @@ python main.py                            # 再正式推送
 
 - 数据来源：YouTube / TikTok / IG / Reddit / TradingView 公开页
 - 本报告由 AI 启发式引擎生成，仅供研究与演示，不构成投资建议
-- 复古像素美术由 AI 生成，版权归本项目所有
+- 复古章鱼美术由 AI 生成，版权归本项目所有
 
 ---
 

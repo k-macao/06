@@ -1,6 +1,6 @@
 """
-像素风 HTML 报告生成器
-- 复古游戏像素风格
+章鱼风 HTML 报告生成器
+- 复古游戏章鱼风格
 - 多空战斗可视化
 - 作者：章鱼 AI·全景分析
 """
@@ -41,7 +41,7 @@ TEMPLATE_STR = r"""
     font-family:'Noto Sans SC', sans-serif;
     overflow-x:hidden;
   }
-  /* 像素网格背景 */
+  /* 章鱼网格背景 */
   body::before{
     content:"";
     position:fixed;inset:0;
@@ -60,7 +60,7 @@ TEMPLATE_STR = r"""
     pointer-events:none;z-index:999;
   }
   .container{max-width:1200px;margin:0 auto;padding:18px 16px 40px}
-  /* 像素边框通用 */
+  /* 章鱼边框通用 */
   .pixel-border{
     border:4px solid #fff;
     box-shadow:
@@ -395,7 +395,7 @@ TEMPLATE_STR = r"""
 <div class="container">
   <!-- HEADER -->
   <div class="header pixel-border">
-    <h1>⚔️ 全球财经金融 KOL 精选名单 ⚔️<br>多空全景战报 · 像素战场版</h1>
+    <h1>⚔️ 全球财经金融 KOL 精选名单 ⚔️<br>多空全景战报 · 章鱼战场版</h1>
     <div class="subtitle">PIXEL BATTLEFIELD EDITION // BULL VS BEAR</div>
     <div class="meta">
       <div class="meta-badge yellow">📅 {{ report_date }}</div>
@@ -409,7 +409,7 @@ TEMPLATE_STR = r"""
   <div class="pixel-border" style="padding:0;overflow:hidden;margin-bottom:18px;background:#000">
     <img src="pixel_battle.png" alt="BULL VS BEAR PIXEL BATTLE" style="width:100%;height:auto;display:block;image-rendering:pixelated;border-bottom:4px solid #fff">
     <div style="background:linear-gradient(90deg,#ff3b30 0%,#ffe066 25%,#00e5ff 50%,#ffe066 75%,#0080ff 100%);height:6px"></div>
-    <div style="text-align:center;padding:8px;background:#000;font-family:'Press Start 2P', monospace;font-size:7px;color:var(--yellow);letter-spacing:1px">▶ ARCADE MODE // INSERT COIN TO CONTINUE ▶ 多空对决 · 像素战场已就绪</div>
+    <div style="text-align:center;padding:8px;background:#000;font-family:'Press Start 2P', monospace;font-size:7px;color:var(--yellow);letter-spacing:1px">▶ ARCADE MODE // INSERT COIN TO CONTINUE ▶ 多空对决 · 章鱼战场已就绪</div>
   </div>
 
   <!-- BATTLEFIELD -->
@@ -506,7 +506,7 @@ TEMPLATE_STR = r"""
   </div>
 
   <div class="footer pixel-border">
-    <div>🐙 <span class="highlight">{{ author }}</span> · 像素战场出品 // PIXEL BATTLEFIELD</div>
+    <div>🐙 <span class="highlight">{{ author }}</span> · 章鱼战场出品 // PIXEL BATTLEFIELD</div>
     <div style="margin-top:6px">数据来源：YouTube / TikTok / IG / Reddit / TradingView · 抓取时间：{{ report_date }} · 仅供研究，不构成投资建议</div>
     <div class="legend">
       <div class="legend-item"><div class="legend-dot bull"></div> 多头 BULL</div>
@@ -531,7 +531,7 @@ function filterKOL(type){
   });
 }
 // 8-bit 打字机彩蛋
-console.log("%c🐙 章鱼 AI·全景分析 %c 像素战场已加载", "background:#ffe066;color:#000;padding:4px 8px;font-weight:bold", "color:#00e5ff");
+console.log("%c🐙 章鱼 AI·全景分析 %c 章鱼战场已加载", "background:#ffe066;color:#000;padding:4px 8px;font-weight:bold", "color:#00e5ff");
 </script>
 </body>
 </html>
