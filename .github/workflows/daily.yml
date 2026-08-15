@@ -1,4 +1,14 @@
-name: 🐙 像素战场 KOL 日报
+# ============================================================
+# 🐙 章鱼战场 KOL 日报（含「不作伪检查」门禁）
+# ------------------------------------------------------------
+# 用法：把本文件内容覆盖到 .github/workflows/daily.yml 即可。
+# 相对原版新增：
+#   1. 「🔍 不作伪检查（在线验证 + 严格门禁）」步骤
+#      → python -m src.authenticity_check --online --strict
+#      → 检出伪造/失实内容（FAIL）即令 CI 变红，杜绝"假绿"
+#   2. Artifact / 自动提交 增加 output/audit_report.{md,json}
+# ============================================================
+name: 🐙 章鱼战场 KOL 日报
 
 on:
   schedule:
@@ -33,10 +43,19 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_TOKEN: ${{ secrets.DEEPSEEK_TOKEN }}
         run: |
-          echo "🐙 开始排查 53 家 KOL..."
+          echo "🐙 开始排查 KOL..."
           if [ -n "$DEEPSEEK_API_KEY" ]; then echo "🔑 DeepSeek 已配置"; else echo "⚠️ 未配置 DeepSeek，将用启发式"; fi
           python main.py || python main.py --no-push
           ls -lh output/
+
+      # ---------- 新增：不作伪检查（在线验证 + 严格门禁） ----------
+      # 对 kol_data.json 与 output/data.json 全量审计：
+      #   元数据（channel_id/handle/频道链接/粉丝量）+ 内容（伪链接/语料标题/未来日期）
+      #   --online 尝试抓取频道页与 RSS 复核；--strict 检测到 FAIL 即令 CI 变红
+      - name: 🔍 不作伪检查（在线验证 + 严格门禁）
+        run: |
+          python -m src.authenticity_check --online --strict \
+            --md output/audit_report.md --json output/audit_report.json
 
       - name: 上传战报 Artifact
         uses: actions/upload-artifact@v4
@@ -46,6 +65,8 @@ jobs:
             output/report.html
             output/data.json
             output/pixel_battle.png
+            output/audit_report.md
+            output/audit_report.json
           retention-days: 30
 
       - name: 部署到 GitHub Pages (可选)
@@ -61,5 +82,5 @@ jobs:
         run: |
           git config user.name "octopus-ai"
           git config user.email "octopus@arena.ai"
-          git add output/report.html output/data.json || true
-          git diff --staged --quiet || git commit -m "🐙 auto: 更新像素战场战报 $(date +%Y-%m-%d)" && git push || echo "无需推送或无权限"
+          git add output/report.html output/data.json output/audit_report.md output/audit_report.json || true
+          git diff --staged --quiet || git commit -m "🐙 auto: 更新章鱼战场战报 $(date +%Y-%m-%d)" && git push || echo "无需推送或无权限"
