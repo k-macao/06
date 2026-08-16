@@ -372,6 +372,12 @@ def main(argv=None):
     print("🔍 不作伪检查模块 · 审计完成")
     print(f"   KOL: {s['total_kols']} | PASS {s['pass']} | WARN {s['warn']} | FAIL {s['fail']}")
     print(f"   条目: {s['total_items']} | mock伪链接 {s['mock_items']} ({s['mock_ratio_pct']}%) | 语料标题 {s['pool_titles']}")
+    if s["fail"]:
+        print("   ⚠️  FAIL 明细（供 CI 排查）：")
+        for r in audit["results"]:
+            if r["verdict"] == "FAIL":
+                msgs = "；".join(i["msg"] for i in r["issues"] if i["level"] == "FAIL")
+                print(f"   ❌ #{r['id']} {r['name']}: {msgs}")
     print("=" * 60)
 
     if not args.verify_only:
