@@ -2,7 +2,7 @@
 KOL 存活探测与内容抓取
 策略：
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
-2. 依次备用官方 YouTube Data API、频道 /videos 页结构化数据
+2. 依次备用官方 YouTube Data API、开源 yt-dlp、频道 /videos 页结构化数据
 3. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
 4. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
 """
@@ -340,6 +340,70 @@ def fetch_from_youtube_api(channel_id):
         return None, []
 
 
+def fetch_from_ytdlp(channel_url):
+    """方案 C：使用开源 yt-dlp 提取频道最近视频，不下载媒体文件。"""
+    if not channel_url or "youtube.com" not in channel_url:
+        return None, []
+    try:
+        import yt_dlp
+    except ImportError:
+        print("[yt-dlp] 未安装，跳过备用方案")
+        return None, []
+
+    videos_url = channel_url.rstrip("/") + "/videos"
+    options = {
+        "quiet": True,
+        "no_warnings": True,
+        "skip_download": True,
+        "extract_flat": False,
+        "playlist_items": "1:3",
+        "socket_timeout": REQUEST_TIMEOUT,
+        "retries": 1,
+        "ignoreerrors": True,
+    }
+    try:
+        with yt_dlp.YoutubeDL(options) as downloader:
+            result = downloader.extract_info(videos_url, download=False)
+        entries = (result or {}).get("entries") or []
+        items = []
+        dates = []
+        for entry in entries:
+            if not entry:
+                continue
+            video_id = entry.get("id")
+            title = entry.get("title")
+            webpage_url = entry.get("webpage_url")
+            if not webpage_url and video_id:
+                webpage_url = f"https://www.youtube.com/watch?v={video_id}"
+            timestamp = entry.get("timestamp") or entry.get("release_timestamp")
+            published = ""
+            dt = None
+            if timestamp:
+                dt = datetime.fromtimestamp(timestamp, tz=timezone.utc)
+                published = dt.isoformat()
+            elif entry.get("upload_date"):
+                try:
+                    dt = datetime.strptime(entry["upload_date"], "%Y%m%d").replace(tzinfo=timezone.utc)
+                    published = dt.isoformat()
+                except ValueError:
+                    pass
+            # 无发布日期无法判断是否仍在时效内，因此不纳入战报。
+            if not title or not webpage_url or not published or dt is None:
+                continue
+            dates.append(dt)
+            items.append({
+                "title": title,
+                "link": webpage_url,
+                "published": published,
+                "summary": (entry.get("description") or "")[:220],
+                "source": "yt_dlp",
+            })
+        return (max(dates), items[:3]) if items and dates else (None, [])
+    except Exception as ex:
+        print(f"[yt-dlp] {videos_url} failed: {ex}")
+        return None, []
+
+
 def _find_initial_data(page_text):
     """从频道 HTML 中安全提取 ytInitialData JSON。"""
     decoder = json.JSONDecoder()
@@ -494,6 +558,7 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
     strategies = (
         ("RSS", lambda: parse_last_update_from_rss(channel_id)),
         ("YouTube API", lambda: fetch_from_youtube_api(channel_id)),
+        ("yt-dlp", lambda: fetch_from_ytdlp(channel_url)),
         ("频道页", lambda: scrape_channel_items(channel_url)),
     )
     for _, strategy in strategies:

@@ -10,6 +10,7 @@ from src.authenticity_check import check_items, check_kol_metadata, run_audit
 from src.fetcher import (
     _find_initial_data,
     enrich_with_real_content,
+    fetch_from_ytdlp,
     is_active_kol,
     load_verified_cache,
     scrape_channel_items,
@@ -42,6 +43,25 @@ class FetcherAuthenticityTests(unittest.TestCase):
         self.assertEqual(1, len(items))
         self.assertFalse(items[0]["is_mock"])
         self.assertEqual(source[0]["link"], items[0]["link"])
+
+    def test_ytdlp_fallback_extracts_metadata_without_downloading(self):
+        timestamp = int(datetime.now(timezone.utc).timestamp())
+        result = {"entries": [{
+            "id": "ytdlp123",
+            "title": "yt-dlp real title",
+            "timestamp": timestamp,
+            "description": "Real metadata",
+        }]}
+        downloader = Mock()
+        downloader.__enter__ = Mock(return_value=downloader)
+        downloader.__exit__ = Mock(return_value=False)
+        downloader.extract_info.return_value = result
+        with patch("yt_dlp.YoutubeDL", return_value=downloader) as ydl:
+            last_update, items = fetch_from_ytdlp(self.kol["channel_url"])
+        self.assertIsNotNone(last_update)
+        self.assertEqual("yt_dlp", items[0]["source"])
+        self.assertEqual("https://www.youtube.com/watch?v=ytdlp123", items[0]["link"])
+        self.assertTrue(ydl.call_args.args[0]["skip_download"])
 
     def test_channel_page_fallback_extracts_traceable_video(self):
         initial_data = {
@@ -80,7 +100,9 @@ class FetcherAuthenticityTests(unittest.TestCase):
         }]
         with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(
             "src.fetcher.fetch_from_youtube_api", return_value=(None, [])
-        ), patch("src.fetcher.scrape_channel_items", return_value=(None, [])):
+        ), patch("src.fetcher.fetch_from_ytdlp", return_value=(None, [])), patch(
+            "src.fetcher.scrape_channel_items", return_value=(None, [])
+        ):
             active, _, items = is_active_kol(self.kol, cached_items=cached)
         self.assertTrue(active)
         self.assertEqual("verified_cache", items[0]["source"])
@@ -89,9 +111,9 @@ class FetcherAuthenticityTests(unittest.TestCase):
         kol = {**self.kol, "active": True}
         with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(
             "src.fetcher.fetch_from_youtube_api", return_value=(None, [])
-        ), patch("src.fetcher.scrape_channel_items", return_value=(None, [])), patch(
-            "src.fetcher.scrape_channel_page", return_value=None
-        ):
+        ), patch("src.fetcher.fetch_from_ytdlp", return_value=(None, [])), patch(
+            "src.fetcher.scrape_channel_items", return_value=(None, [])
+        ), patch("src.fetcher.scrape_channel_page", return_value=None):
             active, last_update, items = is_active_kol(kol)
         self.assertFalse(active)
         self.assertIsNone(last_update)
