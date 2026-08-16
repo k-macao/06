@@ -1,6 +1,6 @@
 # 🔍 全频道真实性审计报告（不作伪检查模块）
 
-- **审计时间**：2026-08-15T07:17:38.712346+00:00
+- **审计时间**：2026-08-16T04:59:44.542381+00:00
 - **KOL 总数**：97　|　**PASS**：0　|　**WARN**：16　|　**FAIL**：81
 - **内容条目**：共 237 条，其中**伪链接（mock）219 条（92.4%）**，语料库标题 234 条
 - **在线验证**：未开启（离线审计，建议 CI 中 --online 复核）
@@ -12,36 +12,36 @@
 
 | # | 名称 | 平台 | fans | channel_id | 判定 | mock/总条目 | 主要问题 |
 |---|------|------|------|-----------|------|-----------|---------|
-|  1 | Graham Stephan | YouTube | 400W+ | UCV6KDgJskWa | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「美联储突然转向？2026年降息押注与房贷利率崩跌前夜」；条目2 标题来自模拟语料库（非频道原文）: 「我为什么还在 |
-|  2 | Andrei Jikh | YouTube | 200W+ | UCGyqEtB6LDK | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@AndreiJikh?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟 |
-|  3 | Humphrey Yang | TikTok/YT | 300W+ | UCF8yH-_MqvY | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@humphreytalks?v=mock0（点击无法到达任何真实视频）；条目1 标题来 |
+|  1 | Graham Stephan | YouTube | 500W+ | UCV6KDgJskWa | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「美联储突然转向？2026年降息押注与房贷利率崩跌前夜」；条目2 标题来自模拟语料库（非频道原文）: 「我为什么还在 |
+|  2 | Andrei Jikh | YouTube | 330W+ | UCGy7SkBjcIA | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@AndreiJikh?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟 |
+|  3 | Humphrey Yang | TikTok/YT | 300W+ | UCFBpVaKCC0a | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@humphreytalks?v=mock0（点击无法到达任何真实视频）；条目1 标题来 |
 |  4 | The Plain Bagel | YouTube | 100W+ | UCFCEuCsyWP0 | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「杠杆ETF是财富加速器还是绞肉机？」；条目2 标题来自模拟语料库（非频道原文）: 「BlackRock与Vangu |
-|  5 | Patrick Boyle | YouTube | 60W+ | UCq1JpL5CMF7 | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@PBoyle?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语料库（ |
-|  6 | Meet Kevin | YouTube | 190W+ | UCUvvjPO5z2V | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@MeetKevin?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语 |
-|  7 | Joseph Carlson | YouTube | 30W+ | UCaWYZFsL5-1 | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@JosephCarlsonShow?v=mock0（点击无法到达任何真实视频）；条目1 |
-|  8 | Sven Carlin | YouTube | 25W+ | UCpM2N7Rg5q5 | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@Value-Investing?v=mock0（点击无法到达任何真实视频）；条目1 标 |
-|  9 | Mark Tilbury | TikTok/YT | 700W+ | UCxgAuX3XZRO | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@MarkTilbury?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模 |
-| 10 | Jeremy Lefebvre | YouTube | 70W+ | UCZ2zU5T4v4s | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock0（点击无法到达任何真实视频）；条目 |
-| 11 | Ben Felix | YouTube | 50W+ | UCDaP94y6a6r | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@BenFelixCSI?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模 |
+|  5 | Patrick Boyle | YouTube | 130W+ | UCASM0cgfkJx | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@PBoyle?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语料库（ |
+|  6 | Meet Kevin | YouTube | 205W+ | UCUvvj5lwue7 | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@MeetKevin?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语 |
+|  7 | Joseph Carlson | YouTube | 51W+ | UCbta0n8i6Rl | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@JosephCarlsonShow?v=mock0（点击无法到达任何真实视频）；条目1 |
+|  8 | Sven Carlin | YouTube | 25W+ | UCrTTBSUr0zh | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@Value-Investing?v=mock0（点击无法到达任何真实视频）；条目1 标 |
+|  9 | Mark Tilbury | TikTok/YT | 880W+ | UCxgAuX3XZRO | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@MarkTilbury?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模 |
+| 10 | Jeremy Lefebvre | YouTube | 94W+ | UCnMn36GT_H0 | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock0（点击无法到达任何真实视频）；条目 |
+| 11 | Ben Felix | YouTube | 62W+ | UCDXTQ8nWmx_ | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@BenFelixCSI?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模 |
 | 12 | Erika Kullberg | IG/TikTok | 500W+ | — | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.tiktok.com/@erikakullberg?v=mock0（点击无法到达任何真实视频）；条目1 标题来自 |
 | 13 | Vivien Tu | TikTok/IG | 200W+ | — | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.tiktok.com/@yourrichbff?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟 |
-| 14 | Jaspreet Singh | YouTube | 160W+ | UC3p5y1b3b3b | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@MinorityMindset?v=mock0（点击无法到达任何真实视频）；条目1 标 |
+| 14 | Jaspreet Singh | YouTube | 240W+ | UCT3EznhW_CN | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@MinorityMindset?v=mock0（点击无法到达任何真实视频）；条目1 标 |
 | 15 | Investing with Rose | YouTube | 60W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
-| 16 | ClearValue Tax | YouTube | 150W+ | UCigUBIf-zt_ | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「2026新税法：这4个抵扣让中产多退5000刀」；条目2 标题来自模拟语料库（非频道原文）: 「IRS 审计率飙升 |
+| 16 | ClearValue Tax | YouTube | 290W+ | UCigUBIf-zt_ | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「2026新税法：这4个抵扣让中产多退5000刀」；条目2 标题来自模拟语料库（非频道原文）: 「IRS 审计率飙升 |
 | 17 | Everything Money | YouTube | 20W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 18 | New Money | YouTube | 70W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 19 | Financial Education | YouTube | 70W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；channel_url 与 handle 不一致: https:// |
 | 20 | Brian Feroldi | YouTube | 5W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
-| 21 | 贝拉聊财金 | YouTube | 40W+ | UCVomjkM_t0E | **WARN** | 0/3 | channel_url 与 handle 不一致: https://www.youtube.com/@user-bella-finance vs @贝拉聊财金； |
+| 21 | 贝拉聊财金 | YouTube | 20W+ | UCVomjkM_t0E | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「AI超级碗与万亿宣言！机构史诗级抛售潮来了？」；条目2 标题来自模拟语料库（非频道原文）: 「中美顶级金融暗战：这 |
 | 22 | 阳光财经 | YouTube | 30W+ | UC2I5em6UyBp | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@阳光财经?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语料库（非频 |
-| 23 | 小翠时政财经 | YouTube | 20W+ | UCOhck8oLoIw | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「社融暴跌背后：居民为什么不敢借钱了？」；条目2 标题来自模拟语料库（非频道原文）: 「地方城投展期潮：谁在为土地财 |
+| 23 | 小翠时政财经 | YouTube | 34W+ | UCOhck8oLoIw | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「社融暴跌背后：居民为什么不敢借钱了？」；条目2 标题来自模拟语料库（非频道原文）: 「地方城投展期潮：谁在为土地财 |
 | 24 | 视野环球镜 | YouTube | 50W+ | — | **WARN** | 0/0 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；channel_url 与 handle 不一致: https:// |
 | 25 | 老李财经 | YouTube | 15W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 26 | 瑞威金融 | YouTube | 10W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 27 | 财女Nicole | YouTube | 15W+ | — | **WARN** | 0/0 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险） |
 | 28 | 孟岩的投资笔记 | YouTube/Web | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；channel_url 与 handle 不一致: https:// |
 | 29 | 零总投资 | YouTube | 8W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
-| 30 | 孙老师财经 | YouTube | 15W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
+| 30 | 孙老师财经 | YouTube | 15W+ | UC1Lk6WO-eKu | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@孙老师财经?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语料库（非 |
 | 31 | 美股投资网 | YouTube | 10W+ | UCWyPo32TSKP | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@美股投资网?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语料库（非 |
 | 32 | 逻辑财金 | YouTube | 12W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 33 | 大马理财 | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险） |
@@ -49,7 +49,7 @@
 | 35 | Kelvin Learns Investin | YouTube | 10W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 36 | The Swedish Investor | YouTube | 80W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 37 | Preston Pysh | Reddit/YT | 15W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
-| 38 | PensionCraft | YouTube | 20W+ | UC4TCb53He0U | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock0（点击无法到达任何真实视频）；条目1 标题来自 |
+| 38 | PensionCraft | YouTube | 20W+ | UC9OIwUcx-Us | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock0（点击无法到达任何真实视频）；条目1 标题来自 |
 | 39 | Ramin Nakisa | YouTube | 20W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 40 | Financial Diet | YouTube | 90W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 41 | Maverick of Wall Stree | YouTube | 20W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
@@ -61,10 +61,10 @@
 | 47 | HK Money Mentor | IG/YT | 2W+ | — | **FAIL** | 0/0 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；channel_url 与 handle 不一致: https:// |
 | 48 | Money Coach Nick | IG | 10W+ | — | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.instagram.com/moneycoachnick?v=mock0（点击无法到达任何真实视频）；条目1 标 |
 | 49 | TradingView (Top Autho | TradingView | N/A | — | **FAIL** | 3/3 | fans 缺失/未填写；条目1 链接为伪链接: https://cn.tradingview.com/top-authors/?v=mock0（点击无法到达任何 |
-| 50 | Real Vision (Individua | YouTube | 60W+ | UCBH5VZEhF8f | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@RealVisionFinance?v=mock0（点击无法到达任何真实视频）；条目1 |
+| 50 | Real Vision (Individua | YouTube | 60W+ | UC1CVw2YKIun | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@RealVisionFinance?v=mock0（点击无法到达任何真实视频）；条目1 |
 | 51 | 老厉害 | YouTube | 10W+ | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 链接为伪链接: https://www.youtube.co |
 | 52 | inves talk | YouTube | 14W+ | UCz1GOaZF_qc | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/@investalk?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语 |
-| 53 | 硬核刘大 | YouTube | 8W+ | UCF_qIUUVPM3 | **WARN** | 0/3 | 条目1 标题来自模拟语料库（非频道原文）: 「香港账户全攻略：2026年还能开哪家？」；条目2 标题来自模拟语料库（非频道原文）: 「USDT 换汇暗流：走资的 |
+| 53 | 硬核刘大 | YouTube | 11W+ | — | **WARN** | 0/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；条目1 标题来自模拟语料库（非频道原文）: 「香港账户全攻略：202 |
 | 54 | 信報財經新聞 | 香港財經媒體 | N/A | — | **FAIL** | 3/3 | fans 缺失/未填写；条目1 链接为伪链接: https://www.hkej.com/?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟语料 |
 | 55 | Finance730 | 香港財經媒體 | N/A | — | **FAIL** | 3/3 | fans 缺失/未填写；条目1 链接为伪链接: https://finance730.com.hk/?v=mock0（点击无法到达任何真实视频）；条目1 标题来 |
 | 56 | 香港經濟日報 HKET | 香港財經媒體 | N/A | — | **FAIL** | 3/3 | fans 缺失/未填写；条目1 链接为伪链接: https://inews.hket.com/?v=mock0（点击无法到达任何真实视频）；条目1 标题来自模拟 |
@@ -105,10 +105,10 @@
 | 91 | Gooaye股癌 | YouTube | N/A | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；handle 格式异常: Gooaye股癌（应为 @xxx）；cha |
 | 92 | 理財不能等（獅公李永年） | YouTube | N/A | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；handle 格式异常: 理財不能等（应为 @xxx）；channe |
 | 93 | 懶錢包LazyWallet | YouTube | N/A | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；handle 格式异常: LazyWallet（应为 @xxx）；c |
-| 94 | M觀點 | YouTube | 20W+ | UCT3uWFvKLVp | **FAIL** | 3/3 | handle 格式异常: M觀點（应为 @xxx）；channel_url 与 handle 不一致: https://www.youtube.com/resu |
+| 94 | M觀點 | YouTube | 20W+ | UCT3uWFvKLVp | **FAIL** | 3/3 | 条目1 链接为伪链接: https://www.youtube.com/results?search_query=M%E8%A7%80%E9%BB%9E+%E8 |
 | 95 | 蕾咪Rami | YouTube | 37W+ | — | **WARN** | 0/0 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；handle 格式异常: 蕾咪 Rami（应为 @xxx）；chan |
 | 96 | 元大投顧財金頻道-理財最錢線 | YouTube | N/A | — | **FAIL** | 3/3 | channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）；handle 格式异常: 元大投顧 理財最錢線（应为 @xxx）；c |
-| 97 | 股海老牛 | YouTube | 15W+ | UCwxU6JWj0oO | **FAIL** | 3/3 | handle 格式异常: 股海老牛（应为 @xxx）；channel_url 与 handle 不一致: https://www.youtube.com/res |
+| 97 | 股海老牛 | YouTube | 15W+ | UCwxU6JWj0oO | **FAIL** | 3/3 | channel_url 与 handle 不一致: https://www.youtube.com/channel/UCwxU6JWj0oOk6behq3XbO |
 
 ---
 *本报告由 `src/authenticity_check.py` 自动生成，仅供真实性核查，不构成投资建议。*
