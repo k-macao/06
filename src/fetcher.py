@@ -352,20 +352,28 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS):
         return False, dt, []
 
 def enrich_with_mock_content(kol, real_items):
+    """
+    组装每 KOL 3 条内容。
+    - 有真实 RSS 条目：title/summary/link/published 全部使用频道真实数据，
+      不得再用 MOCK_TITLES_POOL 覆盖（此前用假标题覆盖真标题，导致战报
+      内容与频道真实内容严重不符，2026-08-16 排查后修复）。
+    - 无真实数据（RSS 失败/无 channel_id）才走 Mock 兜底，并打 is_mock 标记，
+      便于下游（报告/审计）识别与过滤。
+    """
     name = kol["name"]
     pool = MOCK_TITLES_POOL.get(name, GENERIC_TITLES)
     enriched = []
     for i in range(3):
         if i < len(real_items):
             ri = real_items[i]
-            mock_title, mock_desc = pool[i % len(pool)]
             enriched.append({
-                "title": mock_title,
+                "title": ri["title"],
                 "original_title": ri["title"],
                 "link": ri["link"],
                 "published": ri["published"],
-                "summary": mock_desc,
-                "lang": kol["language"]
+                "summary": ri.get("summary", ""),
+                "lang": kol["language"],
+                "is_mock": False,
             })
         else:
             mock_title, mock_desc = pool[i % len(pool)]
@@ -377,7 +385,8 @@ def enrich_with_mock_content(kol, real_items):
                 "link": kol["channel_url"] + f"?v=mock{i}",
                 "published": dt.isoformat(),
                 "summary": mock_desc,
-                "lang": kol["language"]
+                "lang": kol["language"],
+                "is_mock": True,
             })
     return enriched
 
