@@ -1,6 +1,6 @@
 {
   "summary": {
-    "audited_at": "2026-08-16T07:29:45.706409+00:00",
+    "audited_at": "2026-08-16T07:39:07.314240+00:00",
     "total_kols": 97,
     "pass": 0,
     "warn": 97,
@@ -24,7 +24,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCV6KDgJskWaEckne5aPA0aQ vs @GrahamStephan"
+        }
+      ]
     },
     {
       "id": 2,
@@ -38,7 +44,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCGy7SkBjcIAgTiwkXEtPnYg vs @AndreiJikh"
+        }
+      ]
     },
     {
       "id": 3,
@@ -52,7 +64,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCFBpVaKCC0ajGps1vf0AgBg vs @humphrey"
+        }
+      ]
     },
     {
       "id": 4,
@@ -66,7 +84,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCFCEuCsyWP0YkP3CZ3Mr01Q vs @ThePlainBagel"
+        }
+      ]
     },
     {
       "id": 5,
@@ -80,7 +104,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCASM0cgfkJxQ1ICmRilfHLw vs @PBoyle"
+        }
+      ]
     },
     {
       "id": 6,
@@ -94,7 +124,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCUvvj5lwue7PspotMDjk5UA vs @MeetKevin"
+        }
+      ]
     },
     {
       "id": 7,
@@ -108,7 +144,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCbta0n8i6Rljh0obO7HzG9A vs @JosephCarlsonShow"
+        }
+      ]
     },
     {
       "id": 8,
@@ -122,7 +164,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCrTTBSUr0zhPU56UQljag5A vs @Value-Investing"
+        }
+      ]
     },
     {
       "id": 9,
@@ -136,7 +184,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCxgAuX3XZROujMmGphN_scA vs @MarkTilbury"
+        }
+      ]
     },
     {
       "id": 10,
@@ -150,7 +204,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCnMn36GT_H0X-w5_ckLtlgQ vs @FinancialEducation"
+        }
+      ]
     },
     {
       "id": 11,
@@ -164,7 +224,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCDXTQ8nWmx_EhZ2v-kp7QxA vs @BenFelixCSI"
+        }
+      ]
     },
     {
       "id": 12,
@@ -198,7 +264,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCgbXT2QuTj4SYxaWCs3vuAw vs @YourRichBFF"
+        }
+      ]
     },
     {
       "id": 14,
@@ -212,7 +284,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCT3EznhW_CNFcfOlyDNTLLw vs @MinorityMindset"
+        }
+      ]
     },
     {
       "id": 15,
@@ -246,7 +324,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCigUBIf-zt_DA6xyOQtq2WA vs @clearvaluetax9382"
+        }
+      ]
     },
     {
       "id": 17,
@@ -260,7 +344,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UChBVf9YnourrEDTsbbwJPRA vs @EverythingMoney"
+        }
+      ]
     },
     {
       "id": 18,
@@ -274,7 +364,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCvSXMi2LebwJEM1s4bz5IBA vs @NewMoneyYouTube"
+        }
+      ]
     },
     {
       "id": 19,
@@ -313,7 +409,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCs60_Z83HU76uygzHRQl0kA vs @BrianFeroldiYT"
+        }
+      ]
     },
     {
       "id": 21,
@@ -327,7 +429,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg vs @bellafinance"
+        }
+      ]
     },
     {
       "id": 22,
@@ -341,7 +449,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC2I5em6UyBpQiO-8ZW0nV3w vs @SUNNYFINANCE"
+        }
+      ]
     },
     {
       "id": 23,
@@ -355,7 +469,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCOhck8oLoIwSJzmwYMXsSnQ vs @cui_news"
+        }
+      ]
     },
     {
       "id": 24,
@@ -494,7 +614,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC1Lk6WO-eKuYc6GHYbKVY2g vs @sunlao"
+        }
+      ]
     },
     {
       "id": 31,
@@ -588,7 +714,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCJmaaSJX_PkfUmTuxWbrzLw vs @KelvinLearnsInvesting"
+        }
+      ]
     },
     {
       "id": 36,
@@ -630,7 +762,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC9OIwUcx-Uss7xj7s1P5XGw vs @PensionCraft"
+        }
+      ]
     },
     {
       "id": 39,
@@ -669,7 +807,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCSPYNpQ2fHv9HJ-q6MIMaPw vs @thefinancialdiet"
+        }
+      ]
     },
     {
       "id": 41,
@@ -683,7 +827,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCvk0KB4Ue0vfPqvDzjIAwiQ vs @TheMaverickofWallStreet"
+        }
+      ]
     },
     {
       "id": 42,
@@ -717,7 +867,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCpJRuue8x5Qag2Wz6uAzyjw vs @CameronStewartCFA"
+        }
+      ]
     },
     {
       "id": 44,
@@ -731,7 +887,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCJggpN5VY0PWKoOyBBT0R8A vs @FASTgraphs"
+        }
+      ]
     },
     {
       "id": 45,
@@ -853,7 +1015,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC8gZZWIWmBuCb_gzC8DUrvw vs @oldpowerful"
+        }
+      ]
     },
     {
       "id": 52,
@@ -867,7 +1035,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCz1GOaZF_qcROUFCzR-_2iQ vs @investalk"
+        }
+      ]
     },
     {
       "id": 53,
@@ -881,7 +1055,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCCeMdcZw1LJsAGKeoYXZw6A vs @硬核刘大"
+        }
+      ]
     },
     {
       "id": 54,
@@ -920,7 +1100,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCzM2jQWmoeTvpEw63x5Rsdg vs @Finance730hk"
+        }
+      ]
     },
     {
       "id": 56,
@@ -934,7 +1120,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCFgvtFvTFRjqhGC1XfIB02w vs @hketvideo"
+        }
+      ]
     },
     {
       "id": 57,
@@ -948,7 +1140,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCAwfc603xR0xXQN58x4uWeA vs @hkbt9008"
+        }
+      ]
     },
     {
       "id": 58,
@@ -962,7 +1160,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCAUiU6pnaEaTjgTVp6KY0FQ vs @HKmetroradio"
+        }
+      ]
     },
     {
       "id": 59,
@@ -976,7 +1180,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC-1F7DZmxTd1YZUJZUsA0nw vs @ChineseFinance"
+        }
+      ]
     },
     {
       "id": 60,
@@ -990,7 +1200,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCFQsi7WaF5X41tcuOryDk8w vs @RhinoFinance"
+        }
+      ]
     },
     {
       "id": 61,
@@ -1054,7 +1270,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCo2gxyermsLBSCxFHvJs0Zg vs @老李玩钱"
+        }
+      ]
     },
     {
       "id": 64,
@@ -1118,7 +1340,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCBUH38E0ngqvmTqdchWunwQ vs @MeiTouJun"
+        }
+      ]
     },
     {
       "id": 67,
@@ -1132,7 +1360,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCn9_KbNANeyYREePe8YA2DA vs @caijinglengyan"
+        }
+      ]
     },
     {
       "id": 68,
@@ -1246,7 +1480,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCb_4xq1KgaYkGtxpjkoZrtQ vs @付鹏的财经世界"
+        }
+      ]
     },
     {
       "id": 73,
@@ -1290,7 +1530,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC6LU7FUBvbFCh_cQasrHZ_Q vs @MacroMicro_tw"
+        }
+      ]
     },
     {
       "id": 75,
@@ -1368,6 +1614,11 @@
         {
           "level": "WARN",
           "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCrGSFNEBmCN0rqhATZels2Q vs @gongzishen"
+        },
+        {
+          "level": "WARN",
+          "code": "META",
           "msg": "fans 缺失/未填写"
         }
       ]
@@ -1384,7 +1635,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA vs @wenzhaoofficial"
+        }
+      ]
     },
     {
       "id": 79,
@@ -1438,7 +1695,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC0lbAQVpenvfA2QqzsRtL_g vs @yutinghaofinance"
+        }
+      ]
     },
     {
       "id": 82,
@@ -1452,7 +1715,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC45i13dEfEVac2IEJT_Nr5Q vs @ZRBro"
+        }
+      ]
     },
     {
       "id": 83,
@@ -1466,7 +1735,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCwWXGnvVmi-6Sfx2wf8S8tQ vs @TheStormMedia"
+        }
+      ]
     },
     {
       "id": 84,
@@ -1525,7 +1800,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCe7BLtnYfxTXVTRISlfupSw vs @daisychiu0101"
+        }
+      ]
     },
     {
       "id": 87,
@@ -1539,7 +1820,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UChjHWpmNm-3HbLFkQ3TPXaA vs @betterleaf"
+        }
+      ]
     },
     {
       "id": 88,
@@ -1553,7 +1840,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCVNqvJSKVl0bsdb15gKUZfg vs @GeorgeDewi"
+        }
+      ]
     },
     {
       "id": 89,
@@ -1617,7 +1910,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UC23rnlQU_qE3cec9x709peA vs @Gooaye"
+        }
+      ]
     },
     {
       "id": 92,
@@ -1631,7 +1930,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "handle 缺失"
+        }
+      ]
     },
     {
       "id": 93,
@@ -1645,7 +1950,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UChYg2EINv5URVkebzlTGbFQ vs @TheLazyWallet"
+        }
+      ]
     },
     {
       "id": 94,
@@ -1659,7 +1970,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCT3uWFvKLVpRnEealmRwvrw vs @miulaviewpoint"
+        }
+      ]
     },
     {
       "id": 95,
@@ -1693,7 +2010,13 @@
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCS1bMmw249R7R0wDjAmE6CA vs @yuantachannel"
+        }
+      ]
     },
     {
       "id": 97,
@@ -1708,6 +2031,11 @@
       "total_items": 0,
       "online": [],
       "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCwxU6JWj0oOk6behq3XbOiQ vs @股海老牛"
+        },
         {
           "level": "WARN",
           "code": "META",
