@@ -1,11 +1,16 @@
 """
-KOL 存活探测与内容抓取
+KOL 存活探测与内容抓取（不作伪：只产出真实内容）
 策略：
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
-2. 失败则尝试抓取频道页 HTML 解析最新视频
-3. 再失败则回退到 kol_data.json 里的 active 标记（基于人工 + web_search 验证）
-4. 对 TikTok/IG/Reddit 等非 YouTube 平台，直接使用 active 标记 + 模拟抓取
+2. 无 channel_id 时尝试从频道页 HTML 提取 channelId，再用 RSS 拉取
+3. 失败则尝试抓取频道页 HTML 解析最新视频发布时间
+4. 全部失败：**不伪造内容** —— 返回 (active标记, None, [])，
+   即该 KOL 可能仍在名单中但没有可证明的内容条目；
+   只有显式设置环境变量 KOL_ALLOW_MOCK=1 时才启用模拟语料兜底
+   （演示用，CI/正式链路绝不开启，审计门禁会把 mock 判定为 FAIL）。
+5. 对 TikTok/IG/Reddit 等非 YouTube 平台，按数据标记返回，不生成任何模拟条目。
 """
+import os
 import re
 import json
 import time
@@ -20,6 +25,16 @@ from bs4 import BeautifulSoup
 from .config import KOL_DATA_PATH, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
 
 HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8"}
+
+# 默认禁止模拟兜底（不作伪门禁）。仅当显式设置 KOL_ALLOW_MOCK=1 时才允许。
+MOCK_FALLBACK_ENABLED = os.getenv("KOL_ALLOW_MOCK", "").strip().lower() in ("1", "true", "yes", "on")
+
+
+def is_youtube_kol(kol) -> bool:
+    """判定该 KOL 是否走 YouTube 抓取链路（平台/链接任一含 YouTube 即视为可尝试 RSS）"""
+    platform = (kol.get("platform") or "").lower()
+    channel_url = kol.get("channel_url") or ""
+    return "youtube" in platform or "yt" in platform or "youtube.com" in channel_url
 
 # 用于中文模拟数据的真实感语料 - 覆盖全部 45 个活跃 KOL
 MOCK_TITLES_POOL = {
@@ -311,6 +326,29 @@ def scrape_channel_page(channel_url):
         print(f"[scrape] {channel_url} {ex}")
         return None
 
+
+def scrape_channel_id(channel_url):
+    """从频道页 HTML 提取 channelId（ytInitialData 中的 'channelId':'UC...' 或 /channel/UC... 链接）。
+
+    让只有 @handle / /c/ 链接、尚未补 channel_id 的 KOL 也能在联网环境下自动解析出
+    channel_id 并走真实 RSS，避免回退到无内容/模拟内容。
+    """
+    try:
+        resp = requests.get(channel_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        if resp.status_code != 200:
+            return None
+        text = resp.text
+        m = re.search(r'"channelId"\s*:\s*"(UC[A-Za-z0-9_-]{22})"', text)
+        if m:
+            return m.group(1)
+        m2 = re.search(r"/channel/(UC[A-Za-z0-9_-]{22})", text)
+        if m2:
+            return m2.group(1)
+        return None
+    except Exception as ex:
+        print(f"[scrape-cid] {channel_url} {ex}")
+        return None
+
 def parse_relative_time(s: str) -> int:
     s = s.lower()
     num = re.search(r"(\d+)", s)
@@ -328,37 +366,61 @@ def parse_relative_time(s: str) -> int:
     return n
 
 def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS):
+    """判定 KOL 存活并取回真实内容条目。
+
+    返回 (active, last_dt, items)：
+      - active: 90 天内有真实更新（RSS/页面抓取验证）；无法验证时按数据标记返回
+      - last_dt: 真实最近更新时间；无法验证时为 None（**绝不伪造日期**）
+      - items: 真实 RSS 条目（最多 3 条）；无法抓取时为 []（**绝不伪造条目**）
+    """
+    # 非 YouTube 平台（TikTok/IG/媒体网站/电台/TradingView 等）：本模块不支持抓取，
+    # 直接按数据标记返回，不生成任何模拟内容。
+    if not is_youtube_kol(kol):
+        return bool(kol.get("active", False)), None, []
+
     channel_id = kol.get("channel_id")
     channel_url = kol.get("channel_url")
-    last_dt, items = parse_last_update_from_rss(channel_id)
-    if last_dt:
-        age_days = (datetime.now(timezone.utc) - last_dt).days
-        active = age_days <= threshold_days
-        return active, last_dt, items
+
+    # 1) 有 channel_id → RSS（真实条目）
+    if channel_id:
+        last_dt, items = parse_last_update_from_rss(channel_id)
+        if last_dt:
+            age_days = (datetime.now(timezone.utc) - last_dt).days
+            active = age_days <= threshold_days
+            return active, last_dt, items
+
+    # 2) 只有频道链接 → 尝试从页面提取 channel_id 后再走 RSS（自愈）
+    if channel_url and not channel_id:
+        resolved_cid = scrape_channel_id(channel_url)
+        if resolved_cid:
+            last_dt, items = parse_last_update_from_rss(resolved_cid)
+            if last_dt:
+                age_days = (datetime.now(timezone.utc) - last_dt).days
+                active = age_days <= threshold_days
+                return active, last_dt, items
+
+    # 3) 退而求其次：抓页面解析最近发布时间（只有日期，无条目）
     if channel_url:
         dt2 = scrape_channel_page(channel_url)
         if dt2:
             age_days = (datetime.now(timezone.utc) - dt2).days
             active = age_days <= threshold_days
             return active, dt2, []
-    fallback_active = bool(kol.get("active", False))
-    if fallback_active:
-        fake_days = random.randint(1, 18)
-        dt = datetime.now(timezone.utc) - timedelta(days=fake_days)
-        return True, dt, []
-    else:
-        fake_days = random.randint(100, 300)
-        dt = datetime.now(timezone.utc) - timedelta(days=fake_days)
-        return False, dt, []
+
+    # 4) 全部失败：按名单的 active 标记返回，但最近更新时间与内容条目均为「未知」，
+    #    不再伪造日期/内容。审计模块会将此类 KOL 判为 WARN（无法证明真实），而非 FAIL。
+    return bool(kol.get("active", False)), None, []
 
 def enrich_with_mock_content(kol, real_items):
     """
-    组装每 KOL 3 条内容。
+    组装每 KOL 的内容条目（**默认不产生任何伪造内容**）。
+
     - 有真实 RSS 条目：title/summary/link/published 全部使用频道真实数据，
-      不得再用 MOCK_TITLES_POOL 覆盖（此前用假标题覆盖真标题，导致战报
-      内容与频道真实内容严重不符，2026-08-16 排查后修复）。
-    - 无真实数据（RSS 失败/无 channel_id）才走 Mock 兜底，并打 is_mock 标记，
-      便于下游（报告/审计）识别与过滤。
+      最多取 3 条，不再用 MOCK_TITLES_POOL 覆盖真实标题
+      （此前用假标题覆盖真标题导致战报失实，2026-08-16 修复）。
+    - 无真实条目：默认返回 []（该 KOL 无内容可展示，审计判 WARN 而非 FAIL）。
+    - 仅当环境变量 KOL_ALLOW_MOCK=1 时（本地演示用），才以 MOCK_TITLES_POOL
+      兜底并打 is_mock 标记；CI/正式链路绝不开启，审计会把 mock 判为 FAIL。
     """
     name = kol["name"]
     pool = MOCK_TITLES_POOL.get(name, GENERIC_TITLES)
@@ -375,7 +437,7 @@ def enrich_with_mock_content(kol, real_items):
                 "lang": kol["language"],
                 "is_mock": False,
             })
-        else:
+        elif MOCK_FALLBACK_ENABLED:
             mock_title, mock_desc = pool[i % len(pool)]
             days_ago = [2, 7, 14][i]
             dt = datetime.now(timezone.utc) - timedelta(days=days_ago, hours=random.randint(1, 12))

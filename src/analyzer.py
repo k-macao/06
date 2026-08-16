@@ -182,7 +182,9 @@ def global_battle_stats(all_analyzed_kols):
             else:
                 neutral_items += 1
     if total_items == 0:
-        return {"bull_ratio": 33, "bear_ratio": 33, "neutral_ratio": 34, "avg_power": 50, "dominant": "均衡"}
+        return {"total": 0, "bull": 0, "bear": 0, "neutral": 0,
+                "bull_ratio": 33, "bear_ratio": 33, "neutral_ratio": 34,
+                "avg_power": 50, "dominant": "均衡"}
     bull_ratio = round(bull_items / total_items * 100)
     bear_ratio = round(bear_items / total_items * 100)
     neutral_ratio = 100 - bull_ratio - bear_ratio

@@ -482,6 +482,7 @@ TEMPLATE_STR = r"""
       </div>
 
       <div class="item-list">
+        {% if kol['items'] %}
         {% for item in kol['items'] %}
         <div class="item">
           <div class="item-title">{{ item.title }}</div>
@@ -500,6 +501,12 @@ TEMPLATE_STR = r"""
           </div>
         </div>
         {% endfor %}
+        {% else %}
+        <div class="item" style="text-align:center;opacity:0.65;padding:14px 8px">
+          ⏳ 暂无抓取内容：该频道未接入 RSS 或本次抓取失败。<br>
+          <span style="font-size:10px">（不作伪：宁可留白，也不伪造链接/标题）</span>
+        </div>
+        {% endif %}
       </div>
     </div>
     {% endfor %}
