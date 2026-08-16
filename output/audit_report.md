@@ -1,6 +1,6 @@
 # 🔍 全频道真实性审计报告（不作伪检查模块）
 
-- **审计时间**：2026-08-16T07:39:07.314240+00:00
+- **审计时间**：2026-08-16T07:48:19.964158+00:00
 - **KOL 总数**：97　|　**PASS**：0　|　**WARN**：97　|　**FAIL**：0
 - **内容条目**：共 0 条，其中**伪链接（mock）0 条（0.0%）**，语料库标题 0 条
 - **在线验证**：未开启（离线审计，建议 CI 中 --online 复核）
@@ -63,7 +63,7 @@
 | 46 | DeepValue | Reddit (u/) | 5W+ | — | **WARN** | 0/0 |  |
 | 47 | HK Money Mentor | IG | 2W+ | — | **WARN** | 0/0 | channel_url 缺失 |
 | 48 | Money Coach Nick | IG | 10W+ | — | **WARN** | 0/0 | channel_url 缺失 |
-| 49 | TradingView (Top Autho | TradingView | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
+| 49 | TradingView (Top Autho | TradingView | N/A | — | **WARN** | 0/0 | channel_url 缺失；fans 缺失/未填写 |
 | 50 | Real Vision (Individua | YouTube | 60W+ | UC1CVw2YKIun | **WARN** | 0/0 |  |
 | 51 | 老厉害 | YouTube | 10W+ | UC8gZZWIWmBu | **WARN** | 0/0 | channel_url 与 handle 不一致: https://www.youtube.com/channel/UC8gZZWIWmBuCb_gzC8DUr |
 | 52 | inves talk | YouTube | 14W+ | UCz1GOaZF_qc | **WARN** | 0/0 | channel_url 与 handle 不一致: https://www.youtube.com/channel/UCz1GOaZF_qcROUFCzR-_2 |

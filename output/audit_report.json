@@ -1,6 +1,6 @@
 {
   "summary": {
-    "audited_at": "2026-08-16T07:39:07.314240+00:00",
+    "audited_at": "2026-08-16T07:48:19.964158+00:00",
     "total_kols": 97,
     "pass": 0,
     "warn": 97,
@@ -982,6 +982,11 @@
       "total_items": 0,
       "online": [],
       "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 缺失"
+        },
         {
           "level": "WARN",
           "code": "META",
