@@ -2,22 +2,23 @@
 KOL 存活探测与内容抓取
 策略：
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
-2. 失败则尝试抓取频道页 HTML 解析最新视频
-3. 再失败则回退到 kol_data.json 里的 active 标记（基于人工 + web_search 验证）
-4. 对 TikTok/IG/Reddit 等非 YouTube 平台，直接使用 active 标记 + 模拟抓取
+2. 依次备用官方 YouTube Data API、开源 yt-dlp、频道 /videos 页结构化数据
+3. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
+4. 来源没有简介时，以 youtube-transcript-api 的真实字幕作为底层内容备用
+5. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
 """
-import re
 import json
+import os
+import re
 import time
-import random
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlparse
+from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 import requests
 import feedparser
-from bs4 import BeautifulSoup
 
-from .config import KOL_DATA_PATH, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
+from .config import KOL_DATA_PATH, OUTPUT_DIR, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
 
 HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8"}
 
@@ -256,14 +257,21 @@ GENERIC_TITLES = [
     ("黄金再创新高：避险还是泡沫？", "对比实际利率与央行购金，提示追高与回调的临界点。"),
     ("降息交易拥挤度爆表：谁会成为最后的接盘侠？", "分析利率期货定价与美联储点阵图的分歧，给出防御配置。"),
 ]
+HISTORICAL_MOCK_TITLES = (
+    {title for rows in MOCK_TITLES_POOL.values() for title, _ in rows}
+    | {title for title, _ in GENERIC_TITLES}
+)
+
 
 def parse_last_update_from_rss(channel_id):
-    """尝试通过 RSS 获取最近更新"""
+    """方案 A：通过 YouTube RSS 获取最近更新（显式超时，避免 CI 卡死）。"""
     if not channel_id:
         return None, []
     rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
-        feed = feedparser.parse(rss_url)
+        response = requests.get(rss_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        feed = feedparser.parse(response.content)
         if not feed.entries:
             return None, []
         entries = feed.entries[:3]
@@ -279,12 +287,281 @@ def parse_last_update_from_rss(channel_id):
                 "title": e.title,
                 "link": e.link,
                 "published": pub.isoformat(),
-                "summary": e.get("summary", "")[:220]
+                "summary": e.get("summary", "")[:220],
+                "source": "youtube_rss",
             })
         return dt, items
     except Exception as ex:
         print(f"[RSS] {channel_id} failed: {ex}")
         return None, []
+
+
+def fetch_from_youtube_api(channel_id):
+    """方案 B：可选 YouTube Data API；设置 YOUTUBE_API_KEY 后启用。"""
+    api_key = os.getenv("YOUTUBE_API_KEY", "").strip()
+    if not channel_id or not api_key:
+        return None, []
+    try:
+        common = {"key": api_key, "part": "contentDetails", "id": channel_id}
+        channel_resp = requests.get(
+            "https://www.googleapis.com/youtube/v3/channels",
+            params=common, headers=HEADERS, timeout=REQUEST_TIMEOUT,
+        )
+        channel_resp.raise_for_status()
+        channels = channel_resp.json().get("items", [])
+        if not channels:
+            return None, []
+        uploads = channels[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        videos_resp = requests.get(
+            "https://www.googleapis.com/youtube/v3/playlistItems",
+            params={"key": api_key, "part": "snippet", "playlistId": uploads, "maxResults": 3},
+            headers=HEADERS, timeout=REQUEST_TIMEOUT,
+        )
+        videos_resp.raise_for_status()
+        items = []
+        for row in videos_resp.json().get("items", []):
+            snippet = row.get("snippet", {})
+            video_id = snippet.get("resourceId", {}).get("videoId")
+            title = snippet.get("title")
+            published = snippet.get("publishedAt") or ""
+            if not video_id or not title or title in ("Private video", "Deleted video"):
+                continue
+            items.append({
+                "title": title,
+                "link": f"https://www.youtube.com/watch?v={video_id}",
+                "published": published,
+                "summary": (snippet.get("description") or "")[:220],
+                "source": "youtube_data_api",
+            })
+        if not items:
+            return None, []
+        latest = datetime.fromisoformat(items[0]["published"].replace("Z", "+00:00"))
+        return latest, items
+    except Exception as ex:
+        print(f"[YouTube API] {channel_id} failed: {ex}")
+        return None, []
+
+
+def fetch_from_ytdlp(channel_url):
+    """方案 C：使用开源 yt-dlp 提取频道最近视频，不下载媒体文件。"""
+    if not channel_url or "youtube.com" not in channel_url:
+        return None, []
+    try:
+        import yt_dlp
+    except ImportError:
+        print("[yt-dlp] 未安装，跳过备用方案")
+        return None, []
+
+    videos_url = channel_url.rstrip("/") + "/videos"
+    options = {
+        "quiet": True,
+        "no_warnings": True,
+        "skip_download": True,
+        "extract_flat": False,
+        "playlist_items": "1:3",
+        "socket_timeout": REQUEST_TIMEOUT,
+        "retries": 1,
+        "ignoreerrors": True,
+    }
+    try:
+        with yt_dlp.YoutubeDL(options) as downloader:
+            result = downloader.extract_info(videos_url, download=False)
+        entries = (result or {}).get("entries") or []
+        items = []
+        dates = []
+        for entry in entries:
+            if not entry:
+                continue
+            video_id = entry.get("id")
+            title = entry.get("title")
+            webpage_url = entry.get("webpage_url")
+            if not webpage_url and video_id:
+                webpage_url = f"https://www.youtube.com/watch?v={video_id}"
+            timestamp = entry.get("timestamp") or entry.get("release_timestamp")
+            published = ""
+            dt = None
+            if timestamp:
+                dt = datetime.fromtimestamp(timestamp, tz=timezone.utc)
+                published = dt.isoformat()
+            elif entry.get("upload_date"):
+                try:
+                    dt = datetime.strptime(entry["upload_date"], "%Y%m%d").replace(tzinfo=timezone.utc)
+                    published = dt.isoformat()
+                except ValueError:
+                    pass
+            # 无发布日期无法判断是否仍在时效内，因此不纳入战报。
+            if not title or not webpage_url or not published or dt is None:
+                continue
+            dates.append(dt)
+            items.append({
+                "title": title,
+                "link": webpage_url,
+                "published": published,
+                "summary": (entry.get("description") or "")[:220],
+                "source": "yt_dlp",
+            })
+        return (max(dates), items[:3]) if items and dates else (None, [])
+    except Exception as ex:
+        print(f"[yt-dlp] {videos_url} failed: {ex}")
+        return None, []
+
+
+def _youtube_video_id(link):
+    """从 watch/shorts/embed/youtu.be 链接提取视频 ID。"""
+    if not link:
+        return ""
+    parsed = urlparse(link)
+    host = parsed.netloc.lower().split(":")[0]
+    if host in ("youtu.be", "www.youtu.be"):
+        return parsed.path.strip("/").split("/")[0]
+    if host.endswith("youtube.com"):
+        if parsed.path == "/watch":
+            return (parse_qs(parsed.query).get("v") or [""])[0]
+        parts = parsed.path.strip("/").split("/")
+        if len(parts) >= 2 and parts[0] in ("shorts", "embed", "live"):
+            return parts[1]
+    return ""
+
+
+def fetch_transcript_summary(video_id, languages=None, max_chars=600):
+    """底层方案：用 youtube-transcript-api 获取真实字幕作为内容摘要。"""
+    if not video_id:
+        return ""
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+    except ImportError:
+        print("[transcript] youtube-transcript-api 未安装，跳过字幕备用方案")
+        return ""
+
+    languages = languages or ["zh-Hans", "zh-Hant", "zh", "en"]
+    try:
+        # 兼容 youtube-transcript-api 1.x 与旧版静态 API。
+        if hasattr(YouTubeTranscriptApi, "fetch"):
+            class _TimeoutSession(requests.Session):
+                def request(self, method, url, **kwargs):
+                    kwargs.setdefault("timeout", REQUEST_TIMEOUT)
+                    return super().request(method, url, **kwargs)
+
+            try:
+                api = YouTubeTranscriptApi(http_client=_TimeoutSession())
+            except TypeError:
+                api = YouTubeTranscriptApi()
+            try:
+                transcript = api.fetch(video_id, languages=languages)
+            except Exception:
+                # 指定中英文不可用时，退到该视频实际提供的任意字幕语言。
+                available = api.list(video_id)
+                candidate = next(iter(available), None)
+                if candidate is None:
+                    return ""
+                transcript = candidate.fetch()
+        else:
+            try:
+                transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=languages)
+            except Exception:
+                available = YouTubeTranscriptApi.list_transcripts(video_id)
+                candidate = next(iter(available), None)
+                if candidate is None:
+                    return ""
+                transcript = candidate.fetch()
+        text_parts = []
+        for snippet in transcript:
+            text = snippet.get("text", "") if isinstance(snippet, dict) else getattr(snippet, "text", "")
+            text = re.sub(r"\s+", " ", text).strip()
+            if text:
+                text_parts.append(text)
+            if sum(len(part) for part in text_parts) >= max_chars:
+                break
+        return " ".join(text_parts)[:max_chars]
+    except Exception as ex:
+        # 字幕关闭、无对应语言、年龄限制和网络失败都只影响摘要，不影响真实链接。
+        print(f"[transcript] {video_id} unavailable: {type(ex).__name__}: {ex}")
+        return ""
+
+
+def enrich_items_with_transcripts(items, kol=None):
+    """仅在来源未提供简介时补充字幕，不覆盖已有原始摘要。"""
+    language = (kol or {}).get("language", "")
+    languages = ["zh-Hans", "zh-Hant", "zh", "en"] if "中" in language else ["en", "zh-Hans", "zh-Hant", "zh"]
+    enriched = []
+    for original in items or []:
+        item = dict(original)
+        if not (item.get("summary") or "").strip():
+            video_id = _youtube_video_id(item.get("link", ""))
+            transcript = fetch_transcript_summary(video_id, languages=languages)
+            if transcript:
+                item["summary"] = transcript
+                item["summary_source"] = "youtube_transcript_api"
+        enriched.append(item)
+    return enriched
+
+
+def _find_initial_data(page_text):
+    """从频道 HTML 中安全提取 ytInitialData JSON。"""
+    decoder = json.JSONDecoder()
+    for marker in ("var ytInitialData = ", "window[\"ytInitialData\"] = ", "ytInitialData = "):
+        start = page_text.find(marker)
+        if start < 0:
+            continue
+        raw = page_text[start + len(marker):].lstrip()
+        try:
+            return decoder.raw_decode(raw)[0]
+        except (ValueError, json.JSONDecodeError):
+            continue
+    return None
+
+
+def _walk_video_renderers(node):
+    if isinstance(node, dict):
+        for key in ("videoRenderer", "gridVideoRenderer"):
+            if isinstance(node.get(key), dict):
+                yield node[key]
+        for value in node.values():
+            yield from _walk_video_renderers(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from _walk_video_renderers(value)
+
+
+def scrape_channel_items(channel_url):
+    """方案 C：从频道 /videos 页的结构化数据提取真实视频链接。"""
+    if not channel_url or "youtube.com" not in channel_url:
+        return None, []
+    videos_url = channel_url.rstrip("/") + "/videos"
+    try:
+        response = requests.get(videos_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        data = _find_initial_data(response.text)
+        if not data:
+            return None, []
+        items = []
+        seen = set()
+        now = datetime.now(timezone.utc)
+        for renderer in _walk_video_renderers(data):
+            video_id = renderer.get("videoId")
+            title_runs = renderer.get("title", {}).get("runs", [])
+            title = title_runs[0].get("text", "") if title_runs else renderer.get("title", {}).get("simpleText", "")
+            if not video_id or not title or video_id in seen:
+                continue
+            seen.add(video_id)
+            relative = renderer.get("publishedTimeText", {}).get("simpleText", "")
+            published = now - timedelta(days=parse_relative_time(relative))
+            desc_runs = renderer.get("descriptionSnippet", {}).get("runs", [])
+            summary = "".join(run.get("text", "") for run in desc_runs)[:220]
+            items.append({
+                "title": title,
+                "link": f"https://www.youtube.com/watch?v={video_id}",
+                "published": published.isoformat(),
+                "summary": summary,
+                "source": "youtube_channel_page",
+            })
+            if len(items) == 3:
+                break
+        return (datetime.fromisoformat(items[0]["published"]), items) if items else (None, [])
+    except Exception as ex:
+        print(f"[channel videos] {videos_url} failed: {ex}")
+        return None, []
+
 
 def scrape_channel_page(channel_url):
     """轻量抓取频道页，尝试提取最近视频的 publish 信息"""
@@ -327,68 +604,100 @@ def parse_relative_time(s: str) -> int:
         return n * 365
     return n
 
-def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS):
+def load_verified_cache(data_path=OUTPUT_DIR / "data.json"):
+    """方案 D：读取上次成功产物中的真实条目，网络短暂故障时降级使用。"""
+    path = Path(data_path)
+    if not path.exists():
+        return {}
+    try:
+        output = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    cached = {}
+    for entry in output.get("active_kols", []):
+        kid = entry.get("kol", {}).get("id")
+        valid = []
+        for item in entry.get("items", []):
+            link = item.get("link", "")
+            title = item.get("title", "")
+            if (item.get("is_mock") is True or not title or not link.startswith("https://")
+                    or re.search(r"[?&]v=mock\d*", link, re.I)
+                    or title in HISTORICAL_MOCK_TITLES):
+                continue
+            clean = {k: item.get(k, "") for k in ("title", "link", "published", "summary", "lang")}
+            clean.update({"original_title": title, "is_mock": False, "source": "verified_cache"})
+            valid.append(clean)
+        if kid is not None and valid:
+            cached[kid] = valid[:3]
+    return cached
+
+
+def _latest_datetime(items):
+    dates = []
+    for item in items or []:
+        try:
+            dt = datetime.fromisoformat((item.get("published") or "").replace("Z", "+00:00"))
+            dates.append(dt.replace(tzinfo=dt.tzinfo or timezone.utc))
+        except ValueError:
+            continue
+    return max(dates) if dates else None
+
+
+def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
     channel_id = kol.get("channel_id")
     channel_url = kol.get("channel_url")
-    last_dt, items = parse_last_update_from_rss(channel_id)
-    if last_dt:
-        age_days = (datetime.now(timezone.utc) - last_dt).days
-        active = age_days <= threshold_days
-        return active, last_dt, items
+    # 按可信度与实时性依次降级，所有方案都必须返回可点击的真实来源。
+    strategies = (
+        ("RSS", lambda: parse_last_update_from_rss(channel_id)),
+        ("YouTube API", lambda: fetch_from_youtube_api(channel_id)),
+        ("yt-dlp", lambda: fetch_from_ytdlp(channel_url)),
+        ("频道页", lambda: scrape_channel_items(channel_url)),
+    )
+    for _, strategy in strategies:
+        last_dt, items = strategy()
+        if last_dt and items:
+            age_days = (datetime.now(timezone.utc) - last_dt).days
+            items = enrich_items_with_transcripts(items, kol)
+            return age_days <= threshold_days, last_dt, items
+
+    cached_items = cached_items or []
+    cached_dt = _latest_datetime(cached_items)
+    if cached_dt:
+        age_days = (datetime.now(timezone.utc) - cached_dt).days
+        if age_days <= threshold_days:
+            return True, cached_dt, enrich_items_with_transcripts(cached_items, kol)
+
+    # 最后的 HTML 日期探测只用于确认沉寂，不会制造内容。
     if channel_url:
         dt2 = scrape_channel_page(channel_url)
         if dt2:
-            age_days = (datetime.now(timezone.utc) - dt2).days
-            active = age_days <= threshold_days
-            return active, dt2, []
-    fallback_active = bool(kol.get("active", False))
-    if fallback_active:
-        fake_days = random.randint(1, 18)
-        dt = datetime.now(timezone.utc) - timedelta(days=fake_days)
-        return True, dt, []
-    else:
-        fake_days = random.randint(100, 300)
-        dt = datetime.now(timezone.utc) - timedelta(days=fake_days)
-        return False, dt, []
+            return False, dt2, []
+    return False, None, []
 
-def enrich_with_mock_content(kol, real_items):
-    """
-    组装每 KOL 3 条内容。
-    - 有真实 RSS 条目：title/summary/link/published 全部使用频道真实数据，
-      不得再用 MOCK_TITLES_POOL 覆盖（此前用假标题覆盖真标题，导致战报
-      内容与频道真实内容严重不符，2026-08-16 排查后修复）。
-    - 无真实数据（RSS 失败/无 channel_id）才走 Mock 兜底，并打 is_mock 标记，
-      便于下游（报告/审计）识别与过滤。
-    """
-    name = kol["name"]
-    pool = MOCK_TITLES_POOL.get(name, GENERIC_TITLES)
+
+def enrich_with_real_content(kol, real_items):
+    """标准化最多三条真实抓取结果；没有真实条目时返回空列表。"""
     enriched = []
-    for i in range(3):
-        if i < len(real_items):
-            ri = real_items[i]
-            enriched.append({
-                "title": ri["title"],
-                "original_title": ri["title"],
-                "link": ri["link"],
-                "published": ri["published"],
-                "summary": ri.get("summary", ""),
-                "lang": kol["language"],
-                "is_mock": False,
-            })
-        else:
-            mock_title, mock_desc = pool[i % len(pool)]
-            days_ago = [2, 7, 14][i]
-            dt = datetime.now(timezone.utc) - timedelta(days=days_ago, hours=random.randint(1, 12))
-            enriched.append({
-                "title": mock_title,
-                "original_title": mock_title,
-                "link": kol["channel_url"] + f"?v=mock{i}",
-                "published": dt.isoformat(),
-                "summary": mock_desc,
-                "lang": kol["language"],
-                "is_mock": True,
-            })
+    for ri in (real_items or [])[:3]:
+        # 缺少来源链接或标题的条目不可追溯，不进入报告。
+        if not ri.get("title") or not ri.get("link"):
+            continue
+        enriched.append({
+            "title": ri["title"],
+            "original_title": ri["title"],
+            "link": ri["link"],
+            "published": ri.get("published", ""),
+            "summary": ri.get("summary", ""),
+            "lang": kol.get("language", ""),
+            "source": ri.get("source", "verified_source"),
+            "is_mock": False,
+        })
     return enriched
+
+
+# 保留旧函数名，避免外部调用方升级时中断；其行为已改为只接受真实内容。
+def enrich_with_mock_content(kol, real_items):
+    return enrich_with_real_content(kol, real_items)
 
 def scan_kols(kol_list=None, verbose=True):
     import pathlib, json
@@ -398,17 +707,19 @@ def scan_kols(kol_list=None, verbose=True):
     active_kols = []
     inactive_kols = []
     enriched_map = {}
+    verified_cache = load_verified_cache()
     for kol in kol_list:
-        active, last_dt, items = is_active_kol(kol)
-        status = "✅活跃" if active else "💤沉寂"
+        active, last_dt, items = is_active_kol(kol, cached_items=verified_cache.get(kol.get("id"), []))
+        status = "✅活跃" if active else ("⚪未验证" if last_dt is None else "💤沉寂")
         last_str = last_dt.strftime("%Y-%m-%d") if last_dt else "未知"
         if verbose:
             print(f"{status} [{kol['id']:02d}] {kol['name']:20s} | {kol['platform']:12s} | 最近: {last_str} | {kol['fans']}")
-        if active:
+        enriched = enrich_with_real_content(kol, items) if active else []
+        if active and enriched:
             active_kols.append(kol)
-            enriched = enrich_with_mock_content(kol, items)
             enriched_map[kol["id"]] = enriched
         else:
+            # “活跃”但抓不到可追溯条目时也不进入战报，防止下游补造内容。
             inactive_kols.append(kol)
         time.sleep(0.15)
     return active_kols, inactive_kols, enriched_map

@@ -106,23 +106,26 @@ def check_kol_metadata(kol: dict) -> list:
 
     if not name:
         issues.append({"level": "FAIL", "code": "META", "msg": "name 为空"})
-    if "youtube" in platform or "yt" in platform or "youtube.com" in channel_url:
+    # 混合平台（如 IG/YT）的主链接可以合法指向 Instagram；只有链接本身
+    # 指向 YouTube，或平台明确只有 YouTube 时，才套用 YouTube 元数据规则。
+    youtube_url = "youtube.com" in channel_url or "youtu.be" in channel_url
+    youtube_only = platform.strip() == "youtube"
+    if youtube_url or youtube_only:
         if not channel_id:
-            issues.append({"level": "WARN", "code": "META", "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"})
+            issues.append({"level": "WARN", "code": "META", "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"})
         if not handle:
             issues.append({"level": "WARN", "code": "META", "msg": "handle 缺失"})
         if handle and not handle.startswith("@"):
             issues.append({"level": "WARN", "code": "META", "msg": f"handle 格式异常: {handle}（应为 @xxx）"})
         if channel_url and handle and ("@" + handle.lstrip("@")) not in channel_url and handle.lstrip("@") not in channel_url:
             issues.append({"level": "WARN", "code": "META", "msg": f"channel_url 与 handle 不一致: {channel_url} vs {handle}"})
-        # 关键：channel_url 是 YouTube 搜索页占位而非真实频道链接
+        # YouTube 搜索结果不是频道来源，不能作为链接占位。
         if "/results?search_query=" in channel_url or "/results?q=" in channel_url:
             issues.append({"level": "FAIL", "code": "META", "msg": f"channel_url 是 YouTube 搜索页占位（非真实频道链接）: {channel_url[:70]}…"})
-        elif channel_url and "youtube.com" not in channel_url:
+        elif channel_url and not youtube_url:
             issues.append({"level": "FAIL", "code": "META", "msg": f"platform=YouTube 但 channel_url 非 YouTube 域名: {channel_url[:70]}…"})
-    else:
-        if not channel_url:
-            issues.append({"level": "WARN", "code": "META", "msg": "channel_url 缺失"})
+    elif not channel_url:
+        issues.append({"level": "WARN", "code": "META", "msg": "channel_url 缺失"})
 
     fans = kol.get("fans") or ""
     if not fans or fans in ("N/A", "NA", "0", "未知"):
@@ -155,11 +158,11 @@ def check_items(kol: dict, items: list) -> list:
         title = it.get("title") or ""
         published = it.get("published") or ""
 
-        if is_mock_link(link):
+        if it.get("is_mock") is True or is_mock_link(link):
             issues.append({
                 "level": "FAIL",
                 "code": "FAKE_LINK",
-                "msg": f"条目{i+1} 链接为伪链接: {link}（点击无法到达任何真实视频）",
+                "msg": f"条目{i+1} 被标记为 mock 或使用伪链接: {link or '（空）'}",
             })
         elif not link:
             issues.append({"level": "WARN", "code": "LINK", "msg": f"条目{i+1} 无链接"})
@@ -271,7 +274,7 @@ def run_audit(kol_data_path=KOL_DATA_PATH, data_json_path=OUTPUT_DIR / "data.jso
         else:
             verdict = "PASS"
 
-        mock_count = sum(1 for it in items if is_mock_link(it.get("link", "")))
+        mock_count = sum(1 for it in items if it.get("is_mock") is True or is_mock_link(it.get("link", "")))
         pool_count = sum(1 for it in items if is_pool_title(kol.get("name", ""), it.get("title", "")))
         online_info = [i["msg"] for i in online_issues if i["level"] == "INFO"]
 

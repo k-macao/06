@@ -198,8 +198,11 @@ python -m src.authenticity_check --md output/audit_report.md --json output/audit
 python main.py --strict-audit                       # 生成后自动审计，检出伪造即退出码非 0
 ```
 
-- **元数据层**：channel_id 缺失（=内容必走 Mock 兜底）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
-- **内容层**：`?v=mock` 伪链接（FAIL）、语料库伪造标题（对照 `fetcher.py` 的 `MOCK_TITLES_POOL`）、未来日期、链接重复
+- **元数据层**：channel_id 缺失（=无法通过 RSS 抓取）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
+- **内容层**：`?v=mock` 伪链接或 `is_mock=true`（FAIL）、语料库伪造标题（对照 `fetcher.py` 的历史 `MOCK_TITLES_POOL`）、未来日期、链接重复
+- **抓取原则**：不再用静态 `active` 标记生成日期，也不再补造标题和链接；所有入选条目必须有可点击的真实来源
+- **五级备用链路**：YouTube RSS → 官方 Data API（可选 `YOUTUBE_API_KEY`）→ [`yt-dlp/yt-dlp`](https://github.com/yt-dlp/yt-dlp)（只提取元数据、不下载视频）→ 频道 `/videos` 页结构化数据 → 上次已通过防伪检查的 90 天内缓存；全部失败才标记为未验证
+- **底层内容备用**：来源没有简介时，用 [`jdepoix/youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) 获取真实字幕生成摘要；不会覆盖来源简介，字幕不可用时保持为空
 - **在线层**（`--online`，需网络）：频道页 HTTP 状态/订阅数、channel_id 拉 RSS 复核最新条目
 - **CI 门禁**：在 `.github/workflows/daily.yml` 中加入 `python -m src.authenticity_check --online --strict` 步骤即可令含伪造内容的构建变红（注：workflow 文件需有 `workflows` 权限的账号提交，见下文"定时任务"备注）
 

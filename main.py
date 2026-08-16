@@ -4,7 +4,7 @@
 作者：章鱼 AI·全景分析
 流程：
   1. 排查 53 个 KOL 存活状态（90天内有更新）
-  2. 抓取活跃名单最近 3 条内容（RSS + HTML + Mock 中文）
+  2. 抓取活跃名单最多 3 条可追溯内容（YouTube RSS；失败时不造兜底数据）
   3. AI 多空分析（DeepSeek LLM 优先，回退启发式）
   4. 生成章鱼风 HTML 战报
   5. 推送 PushPlus（自动转为微信友好的精简摘要版）
@@ -57,9 +57,9 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
         print("\n[1/4] 🔍 排查 KOL 存活状态（阈值 90 天）...")
         active_kols, inactive_kols, enriched_map = scan_kols(verbose=True)
 
-        print(f"\n📊 排查完成：存活 {len(active_kols)} / 沉寂 {len(inactive_kols)} / 总数 {len(active_kols)+len(inactive_kols)}")
+        print(f"\n📊 排查完成：有可验证内容 {len(active_kols)} / 未纳入 {len(inactive_kols)} / 总数 {len(active_kols)+len(inactive_kols)}")
         if inactive_kols:
-            print("💤 沉寂名单：", ", ".join([k["name"] for k in inactive_kols]))
+            print("⚪ 未纳入名单（沉寂、网络失败或来源不受支持）：", ", ".join([k["name"] for k in inactive_kols]))
 
         # 2+3. 分析 - 优先 DeepSeek
         has_ds = bool(get_deepseek_key())
