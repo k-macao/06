@@ -9,8 +9,11 @@ from src.analyzer import global_battle_stats
 from src.authenticity_check import check_items, check_kol_metadata, run_audit
 from src.fetcher import (
     _find_initial_data,
+    _youtube_video_id,
+    enrich_items_with_transcripts,
     enrich_with_real_content,
     fetch_from_ytdlp,
+    fetch_transcript_summary,
     is_active_kol,
     load_verified_cache,
     scrape_channel_items,
@@ -43,6 +46,31 @@ class FetcherAuthenticityTests(unittest.TestCase):
         self.assertEqual(1, len(items))
         self.assertFalse(items[0]["is_mock"])
         self.assertEqual(source[0]["link"], items[0]["link"])
+
+    def test_transcript_fallback_fills_only_missing_summary(self):
+        snippets = [Mock(text="First verified caption."), Mock(text="Second caption.")]
+        with patch("youtube_transcript_api.YouTubeTranscriptApi.fetch", return_value=snippets):
+            items = enrich_items_with_transcripts([{
+                "title": "Real video",
+                "link": "https://www.youtube.com/watch?v=caption123",
+                "summary": "",
+            }], self.kol)
+        self.assertEqual("First verified caption. Second caption.", items[0]["summary"])
+        self.assertEqual("youtube_transcript_api", items[0]["summary_source"])
+
+    def test_transcript_does_not_overwrite_source_description(self):
+        with patch("src.fetcher.fetch_transcript_summary") as transcript:
+            items = enrich_items_with_transcripts([{
+                "link": "https://youtu.be/real123",
+                "summary": "Original source description",
+            }], self.kol)
+        transcript.assert_not_called()
+        self.assertEqual("Original source description", items[0]["summary"])
+
+    def test_video_id_parser_supports_youtube_url_forms(self):
+        self.assertEqual("abc", _youtube_video_id("https://www.youtube.com/watch?v=abc"))
+        self.assertEqual("short1", _youtube_video_id("https://youtube.com/shorts/short1"))
+        self.assertEqual("tiny1", _youtube_video_id("https://youtu.be/tiny1"))
 
     def test_ytdlp_fallback_extracts_metadata_without_downloading(self):
         timestamp = int(datetime.now(timezone.utc).timestamp())
@@ -96,6 +124,7 @@ class FetcherAuthenticityTests(unittest.TestCase):
             "title": "Previously verified",
             "link": "https://www.youtube.com/watch?v=cached123",
             "published": datetime.now(timezone.utc).isoformat(),
+            "summary": "Previously verified summary",
             "source": "verified_cache",
         }]
         with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(

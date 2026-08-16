@@ -4,7 +4,8 @@ KOL 存活探测与内容抓取
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
 2. 依次备用官方 YouTube Data API、开源 yt-dlp、频道 /videos 页结构化数据
 3. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
-4. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
+4. 来源没有简介时，以 youtube-transcript-api 的真实字幕作为底层内容备用
+5. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
 """
 import json
 import os
@@ -12,6 +13,7 @@ import re
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 import requests
 import feedparser
@@ -404,6 +406,96 @@ def fetch_from_ytdlp(channel_url):
         return None, []
 
 
+def _youtube_video_id(link):
+    """从 watch/shorts/embed/youtu.be 链接提取视频 ID。"""
+    if not link:
+        return ""
+    parsed = urlparse(link)
+    host = parsed.netloc.lower().split(":")[0]
+    if host in ("youtu.be", "www.youtu.be"):
+        return parsed.path.strip("/").split("/")[0]
+    if host.endswith("youtube.com"):
+        if parsed.path == "/watch":
+            return (parse_qs(parsed.query).get("v") or [""])[0]
+        parts = parsed.path.strip("/").split("/")
+        if len(parts) >= 2 and parts[0] in ("shorts", "embed", "live"):
+            return parts[1]
+    return ""
+
+
+def fetch_transcript_summary(video_id, languages=None, max_chars=600):
+    """底层方案：用 youtube-transcript-api 获取真实字幕作为内容摘要。"""
+    if not video_id:
+        return ""
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+    except ImportError:
+        print("[transcript] youtube-transcript-api 未安装，跳过字幕备用方案")
+        return ""
+
+    languages = languages or ["zh-Hans", "zh-Hant", "zh", "en"]
+    try:
+        # 兼容 youtube-transcript-api 1.x 与旧版静态 API。
+        if hasattr(YouTubeTranscriptApi, "fetch"):
+            class _TimeoutSession(requests.Session):
+                def request(self, method, url, **kwargs):
+                    kwargs.setdefault("timeout", REQUEST_TIMEOUT)
+                    return super().request(method, url, **kwargs)
+
+            try:
+                api = YouTubeTranscriptApi(http_client=_TimeoutSession())
+            except TypeError:
+                api = YouTubeTranscriptApi()
+            try:
+                transcript = api.fetch(video_id, languages=languages)
+            except Exception:
+                # 指定中英文不可用时，退到该视频实际提供的任意字幕语言。
+                available = api.list(video_id)
+                candidate = next(iter(available), None)
+                if candidate is None:
+                    return ""
+                transcript = candidate.fetch()
+        else:
+            try:
+                transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=languages)
+            except Exception:
+                available = YouTubeTranscriptApi.list_transcripts(video_id)
+                candidate = next(iter(available), None)
+                if candidate is None:
+                    return ""
+                transcript = candidate.fetch()
+        text_parts = []
+        for snippet in transcript:
+            text = snippet.get("text", "") if isinstance(snippet, dict) else getattr(snippet, "text", "")
+            text = re.sub(r"\s+", " ", text).strip()
+            if text:
+                text_parts.append(text)
+            if sum(len(part) for part in text_parts) >= max_chars:
+                break
+        return " ".join(text_parts)[:max_chars]
+    except Exception as ex:
+        # 字幕关闭、无对应语言、年龄限制和网络失败都只影响摘要，不影响真实链接。
+        print(f"[transcript] {video_id} unavailable: {type(ex).__name__}: {ex}")
+        return ""
+
+
+def enrich_items_with_transcripts(items, kol=None):
+    """仅在来源未提供简介时补充字幕，不覆盖已有原始摘要。"""
+    language = (kol or {}).get("language", "")
+    languages = ["zh-Hans", "zh-Hant", "zh", "en"] if "中" in language else ["en", "zh-Hans", "zh-Hant", "zh"]
+    enriched = []
+    for original in items or []:
+        item = dict(original)
+        if not (item.get("summary") or "").strip():
+            video_id = _youtube_video_id(item.get("link", ""))
+            transcript = fetch_transcript_summary(video_id, languages=languages)
+            if transcript:
+                item["summary"] = transcript
+                item["summary_source"] = "youtube_transcript_api"
+        enriched.append(item)
+    return enriched
+
+
 def _find_initial_data(page_text):
     """从频道 HTML 中安全提取 ytInitialData JSON。"""
     decoder = json.JSONDecoder()
@@ -565,6 +657,7 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
         last_dt, items = strategy()
         if last_dt and items:
             age_days = (datetime.now(timezone.utc) - last_dt).days
+            items = enrich_items_with_transcripts(items, kol)
             return age_days <= threshold_days, last_dt, items
 
     cached_items = cached_items or []
@@ -572,7 +665,7 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
     if cached_dt:
         age_days = (datetime.now(timezone.utc) - cached_dt).days
         if age_days <= threshold_days:
-            return True, cached_dt, cached_items
+            return True, cached_dt, enrich_items_with_transcripts(cached_items, kol)
 
     # 最后的 HTML 日期探测只用于确认沉寂，不会制造内容。
     if channel_url:
