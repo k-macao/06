@@ -9,7 +9,6 @@
 #   2. Artifact / 自动提交 增加 output/audit_report.{md,json}
 # ============================================================
 name: 🐙 章鱼战场 KOL 日报
-
 on:
   schedule:
     - cron: '0 2 * * *'  # 每天 UTC 02:00 (北京时间 10:00)
@@ -18,7 +17,6 @@ on:
     branches:
       - main
       - 'arena/**'
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -27,28 +25,24 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-
       - name: 设置 Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-
       - name: 安装依赖
         run: pip install -r requirements.txt
-
-      - name: 生成多空战报
+      - name: 生成多空战报（先不推送）
         env:
-          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_TOKEN: ${{ secrets.DEEPSEEK_TOKEN }}
         run: |
           echo "🐙 开始排查 KOL..."
           if [ -n "$DEEPSEEK_API_KEY" ]; then echo "🔑 DeepSeek 已配置"; else echo "⚠️ 未配置 DeepSeek，将用启发式"; fi
-          python main.py || python main.py --no-push
+          # 真实性门禁通过前禁止向用户推送，避免先发送伪内容、后审计失败。
+          python main.py --no-push
           ls -lh output/
-
-      # ---------- 新增：不作伪检查（在线验证 + 严格门禁） ----------
+      # ---------- 不作伪检查（在线验证 + 严格门禁） ----------
       # 对 kol_data.json 与 output/data.json 全量审计：
       #   元数据（channel_id/handle/频道链接/粉丝量）+ 内容（伪链接/语料标题/未来日期）
       #   --online 尝试抓取频道页与 RSS 复核；--strict 检测到 FAIL 即令 CI 变红
@@ -56,8 +50,18 @@ jobs:
         run: |
           python -m src.authenticity_check --online --strict \
             --md output/audit_report.md --json output/audit_report.json
-
+      - name: 审计通过后推送 PushPlus
+        if: ${{ success() }}
+        env:
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+        run: |
+          if [ -n "$PUSHPLUS_TOKEN" ]; then
+            python main.py --push-only
+          else
+            echo "⚠️ 未配置 PUSHPLUS_TOKEN，跳过推送"
+          fi
       - name: 上传战报 Artifact
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: pixel-battle-report
@@ -68,7 +72,6 @@ jobs:
             output/audit_report.md
             output/audit_report.json
           retention-days: 30
-
       - name: 部署到 GitHub Pages (可选)
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
@@ -76,7 +79,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           publish_branch: gh-pages
-
       - name: 推送结果到分支
         if: github.event_name == 'schedule'
         run: |
