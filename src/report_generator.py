@@ -399,7 +399,7 @@ TEMPLATE_STR = r"""
     <div class="subtitle">PIXEL BATTLEFIELD EDITION // BULL VS BEAR</div>
     <div class="meta">
       <div class="meta-badge yellow">📅 {{ report_date }}</div>
-      <div class="meta-badge cyan">👾 {{ active_count }} / {{ total_count }} 存活</div>
+      <div class="meta-badge cyan">✅ {{ active_count }} / {{ total_count }} 已验证</div>
       <div class="meta-badge pink">⚡ {{ total_items }} 条内容参战</div>
       <div class="meta-badge green">🐙 {{ author }}</div>
     </div>
@@ -544,10 +544,10 @@ console.log("%c🐙 章鱼 AI·全景分析 %c 章鱼战场已加载", "backgrou
 </html>
 """
 
-def generate_report(kols_enriched, stats, output_path: Path, report_date: str = None):
+def generate_report(kols_enriched, stats, output_path: Path, report_date: str = None, total_count: int = None):
     if report_date is None:
         report_date = datetime.now().strftime("%Y年%m月%d日")
-    from .config import REPORT_TITLE, AUTHOR
+    from .config import REPORT_TITLE, AUTHOR, load_kols
 
     # kols_enriched: list of dicts {kol, items, aggregate}
     # 按 id 排序
@@ -570,8 +570,8 @@ def generate_report(kols_enriched, stats, output_path: Path, report_date: str = 
         })
 
     active_count = len(kols_enriched)
-    # total_count 需从原 json 读取，这里用 53
-    total_count = 53
+    if total_count is None:
+        total_count = len(load_kols())
     total_items = sum(len(e["items"]) for e in kols_enriched)
 
     tmpl = Template(TEMPLATE_STR)

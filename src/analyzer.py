@@ -151,14 +151,15 @@ def analyze_kol_items(kol, items):
         kol_sentiment = "轻度偏" + ("多" if bull > bear else "空")
         kol_color = "bull" if bull > bear else "bear"
 
+    item_count = len(analyzed)
     aggregate = {
         "kol_sentiment": kol_sentiment,
         "kol_color": kol_color,
         "bull_count": bull,
         "bear_count": bear,
         "neutral_count": neutral,
-        "avg_confidence": int(total_conf / 3) if analyzed else 0,
-        "avg_power": int(total_power / 3) if analyzed else 50,
+        "avg_confidence": int(total_conf / item_count) if item_count else 0,
+        "avg_power": int(total_power / item_count) if item_count else 50,
         "battle_text": f"{bull}多 vs {bear}空 vs {neutral}中性"
     }
 

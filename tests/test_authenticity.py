@@ -27,7 +27,7 @@ class FetcherAuthenticityTests(unittest.TestCase):
             "name": "Example",
             "platform": "YouTube",
             "channel_url": "https://www.youtube.com/@example",
-            "channel_id": "UCexample",
+            "channel_id": "UC1234567890123456789012",
             "handle": "@example",
             "fans": "1W+",
             "language": "中文",
@@ -38,9 +38,12 @@ class FetcherAuthenticityTests(unittest.TestCase):
     def test_real_enrichment_does_not_fill_missing_slots_with_mock_data(self):
         source = [{
             "title": "A real title",
+            "original_title": "A real title",
             "link": "https://www.youtube.com/watch?v=real-id",
             "published": "2026-08-15T00:00:00+00:00",
             "summary": "A real summary",
+            "source": "youtube_rss",
+            "source_channel_id": "UC1234567890123456789012",
         }]
         items = enrich_with_real_content(self.kol, source)
         self.assertEqual(1, len(items))
@@ -110,8 +113,11 @@ class FetcherAuthenticityTests(unittest.TestCase):
 
     def test_cache_loader_rejects_mock_entries(self):
         output = {"active_kols": [{"kol": {"id": 1}, "items": [
-            {"title": "Fake", "link": "https://example.com/?v=mock0", "is_mock": True},
-            {"title": "Real", "link": "https://example.com/real", "published": "2026-08-15T00:00:00Z"},
+            {"title": "Fake", "link": "https://www.youtube.com/watch?v=mock0", "is_mock": True},
+            {"title": "Rewritten", "original_title": "Source title",
+             "link": "https://www.youtube.com/watch?v=rewritten01", "published": "2026-08-15T00:00:00Z"},
+            {"title": "Real", "link": "https://www.youtube.com/watch?v=realvideo1",
+             "published": "2026-08-15T00:00:00Z"},
         ]}]}
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "data.json"
@@ -127,22 +133,24 @@ class FetcherAuthenticityTests(unittest.TestCase):
             "summary": "Previously verified summary",
             "source": "verified_cache",
         }]
-        with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(
-            "src.fetcher.fetch_from_youtube_api", return_value=(None, [])
-        ), patch("src.fetcher.fetch_from_ytdlp", return_value=(None, [])), patch(
-            "src.fetcher.scrape_channel_items", return_value=(None, [])
-        ):
+        with patch("src.fetcher.resolve_channel_id", return_value=self.kol["channel_id"]), patch(
+            "src.fetcher.parse_last_update_from_rss", return_value=(None, [])
+        ), patch("src.fetcher.fetch_from_youtube_api", return_value=(None, [])), patch(
+            "src.fetcher.fetch_from_ytdlp", return_value=(None, [])
+        ), patch("src.fetcher.scrape_channel_items", return_value=(None, [])):
             active, _, items = is_active_kol(self.kol, cached_items=cached)
         self.assertTrue(active)
         self.assertEqual("verified_cache", items[0]["source"])
 
     def test_failed_network_verification_does_not_use_static_active_flag(self):
         kol = {**self.kol, "active": True}
-        with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(
-            "src.fetcher.fetch_from_youtube_api", return_value=(None, [])
-        ), patch("src.fetcher.fetch_from_ytdlp", return_value=(None, [])), patch(
-            "src.fetcher.scrape_channel_items", return_value=(None, [])
-        ), patch("src.fetcher.scrape_channel_page", return_value=None):
+        with patch("src.fetcher.resolve_channel_id", return_value=kol["channel_id"]), patch(
+            "src.fetcher.parse_last_update_from_rss", return_value=(None, [])
+        ), patch("src.fetcher.fetch_from_youtube_api", return_value=(None, [])), patch(
+            "src.fetcher.fetch_from_ytdlp", return_value=(None, [])
+        ), patch("src.fetcher.scrape_channel_items", return_value=(None, [])), patch(
+            "src.fetcher.scrape_channel_page", return_value=None
+        ):
             active, last_update, items = is_active_kol(kol)
         self.assertFalse(active)
         self.assertIsNone(last_update)
@@ -183,7 +191,7 @@ class AuditTests(unittest.TestCase):
             "name": "Example",
             "platform": "YouTube",
             "channel_url": "https://www.youtube.com/@example",
-            "channel_id": "UCexample",
+            "channel_id": "UC1234567890123456789012",
             "handle": "@example",
             "fans": "1W+",
             "language": "中文",
@@ -193,8 +201,11 @@ class AuditTests(unittest.TestCase):
         }]
         output = {"active_kols": [{"kol": {"id": 1}, "items": [{
             "title": "A real title",
+            "original_title": "A real title",
             "link": "https://www.youtube.com/watch?v=real-id",
             "published": "2026-08-15T00:00:00+00:00",
+            "source": "youtube_rss",
+            "source_channel_id": "UC1234567890123456789012",
             "is_mock": False,
         }]}]}
         with tempfile.TemporaryDirectory() as directory:

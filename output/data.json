@@ -3,22 +3,25 @@
     "author": "章鱼 AI·全景分析",
     "title": "全球财经金融 KOL 精选名单 · 多空全景战报",
     "date": "2026年08月16日",
-    "generated_at": "2026-08-16T09:05:42.115347",
-    "active_count": 6,
-    "inactive_count": 91,
+    "generated_at": "2026-08-16T08:17:21.544686",
+    "active_count": 5,
+    "verified_count": 5,
+    "inactive_count": 92,
+    "quarantined_count": 92,
     "total": 97,
+    "authenticity_policy": "verified-youtube-rss-only",
     "stats": {
-      "total": 18,
+      "total": 15,
       "bull": 2,
       "bear": 1,
-      "neutral": 15,
-      "bull_ratio": 11,
-      "bear_ratio": 6,
-      "neutral_ratio": 83,
+      "neutral": 12,
+      "bull_ratio": 13,
+      "bear_ratio": 7,
+      "neutral_ratio": 80,
       "avg_power": 53,
       "dominant": "多头"
     },
-    "engine": "启发式（未检测到 DEEPSEEK_API_KEY）"
+    "engine": "启发式（旧产物真实性清理后重算）"
   },
   "active_kols": [
     {
@@ -35,16 +38,6 @@
         "channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
         "active": true
       },
-      "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "avg_confidence": 56,
-        "avg_power": 44,
-        "battle_text": "0多 vs 0空 vs 3中性"
-      },
       "items": [
         {
           "title": "The BEST Money Advice To Teach Your Kids",
@@ -53,14 +46,15 @@
           "published": "2026-08-14T17:00:07+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 44,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 55,
+          "power": 54,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "BREAKING: Trump Announces MASSIVE Tax Breaks For ALL Investors | What You MUST Know!",
@@ -69,14 +63,15 @@
           "published": "2026-08-13T16:00:12+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 43,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 58,
+          "power": 50,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "THE FED JUST RESET THE MARKET - Stocks Hit All-Time-High, Interest Rates Skyrocket!",
@@ -85,16 +80,27 @@
           "published": "2026-08-10T20:30:32+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "中性",
-          "confidence": 52,
-          "power": 46,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 55,
+          "power": 55,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "等待方向明朗再重仓"
         }
-      ]
+      ],
+      "aggregate": {
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 3,
+        "avg_confidence": 56,
+        "avg_power": 53,
+        "battle_text": "0多 vs 0空 vs 3中性"
+      }
     },
     {
       "kol": {
@@ -110,16 +116,6 @@
         "channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
         "active": true
       },
-      "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "avg_confidence": 55,
-        "avg_power": 51,
-        "battle_text": "0多 vs 0空 vs 3中性"
-      },
       "items": [
         {
           "title": "Canada's Condo Conundrum",
@@ -128,14 +124,15 @@
           "published": "2026-08-08T18:04:47+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
           "is_mock": false,
           "date_str": "08-08",
           "sentiment": "中性",
-          "confidence": 53,
-          "power": 48,
+          "confidence": 54,
+          "power": 52,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "Here We Go Again",
@@ -144,14 +141,15 @@
           "published": "2026-07-24T18:26:52+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
           "is_mock": false,
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 54,
+          "confidence": 57,
+          "power": 50,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "Finfluencer Promotions Are Getting Worse",
@@ -160,16 +158,27 @@
           "published": "2026-07-10T17:30:13+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
           "is_mock": false,
           "date_str": "07-10",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 53,
+          "confidence": 53,
+          "power": 54,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "均衡配置，攻守兼备"
         }
-      ]
+      ],
+      "aggregate": {
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 3,
+        "avg_confidence": 54,
+        "avg_power": 52,
+        "battle_text": "0多 vs 0空 vs 3中性"
+      }
     },
     {
       "kol": {
@@ -185,16 +194,6 @@
         "channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
         "active": true
       },
-      "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "avg_confidence": 55,
-        "avg_power": 52,
-        "battle_text": "0多 vs 0空 vs 3中性"
-      },
       "items": [
         {
           "title": "Inflation Fell to 3.4%... But There's a Problem",
@@ -203,14 +202,15 @@
           "published": "2026-08-13T16:00:29+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 47,
+          "confidence": 58,
+          "power": 42,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "advice": "高抛低吸，区间操作"
         },
         {
           "title": "Jobs Report Was a Disaster... But The Stock Market Loves It",
@@ -219,14 +219,15 @@
           "published": "2026-08-10T20:42:31+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 58,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 60,
+          "power": 44,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "U.S. National Debt: Government Announces Massive New Borrowing",
@@ -235,16 +236,27 @@
           "published": "2026-08-06T16:00:07+00:00",
           "summary": "",
           "lang": "英文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
           "is_mock": false,
           "date_str": "08-06",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 53,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 53,
+          "power": 46,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "等待方向明朗再重仓"
         }
-      ]
+      ],
+      "aggregate": {
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 3,
+        "avg_confidence": 57,
+        "avg_power": 44,
+        "battle_text": "0多 vs 0空 vs 3中性"
+      }
     },
     {
       "kol": {
@@ -260,16 +272,6 @@
         "channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
         "active": true
       },
-      "aggregate": {
-        "kol_sentiment": "轻度偏多",
-        "kol_color": "bull",
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 54,
-        "battle_text": "1多 vs 0空 vs 2中性"
-      },
       "items": [
         {
           "title": "25年来最贵的一笔债！",
@@ -278,13 +280,14 @@
           "published": "2026-08-15T01:59:15+00:00",
           "summary": "",
           "lang": "中文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 56,
-          "power": 46,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 59,
+          "power": 42,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
           "advice": "均衡配置，攻守兼备"
         },
         {
@@ -294,13 +297,14 @@
           "published": "2026-08-14T01:45:27+00:00",
           "summary": "",
           "lang": "中文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 77,
-          "power": 72,
-          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "confidence": 76,
+          "power": 70,
+          "reason": "标题释放积极信号（“接下来： 三重利好共振！！！…”），基本面或资金面出现边际改善，资金有做多动能。",
           "advice": "逢低分批建仓，设8%止损"
         },
         {
@@ -310,16 +314,27 @@
           "published": "2026-08-13T01:45:04+00:00",
           "summary": "",
           "lang": "中文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 63,
-          "power": 45,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 65,
+          "power": 53,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         }
-      ]
+      ],
+      "aggregate": {
+        "kol_sentiment": "轻度偏多",
+        "kol_color": "bull",
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 2,
+        "avg_confidence": 66,
+        "avg_power": 55,
+        "battle_text": "1多 vs 0空 vs 2中性"
+      }
     },
     {
       "kol": {
@@ -335,16 +350,6 @@
         "channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
         "active": true
       },
-      "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 1,
-        "avg_confidence": 71,
-        "avg_power": 63,
-        "battle_text": "1多 vs 1空 vs 1中性"
-      },
       "items": [
         {
           "title": "🔴【每日要聞】中國信貸崩了，史上最差！美國制裁中國無人機！美股再創新高，軟件揚眉吐氣！｜小翠時政財經 20260814",
@@ -353,14 +358,15 @@
           "published": "2026-08-14T13:50:53+00:00",
           "summary": "",
           "lang": "中文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 78,
-          "power": 70,
-          "reason": "标题释放积极信号（“🔴【每日要聞】中國信貸崩了，…”），基本面或资金面出现边际改善，资金有做多动能。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 77,
+          "power": 67,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "逢低分批建仓，设8%止损"
         },
         {
           "title": "中歐貿易戰開打！中國工廠將被逼出海，老百姓日子會難過｜小翠時政財經 20260813#856",
@@ -369,12 +375,13 @@
           "published": "2026-08-14T03:30:03+00:00",
           "summary": "",
           "lang": "中文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 51,
+          "confidence": 56,
+          "power": 48,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "等待方向明朗再重仓"
         },
@@ -385,91 +392,27 @@
           "published": "2026-08-13T13:36:18+00:00",
           "summary": "",
           "lang": "中文",
-          "source": "verified_cache",
+          "source": "youtube_rss",
+          "source_channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "空头",
-          "confidence": 79,
-          "power": 68,
-          "reason": "标题直指风险（“🔴【每日要聞】震驚：中國今年…”），警示抛售或衰退压力，防御姿态明显。",
+          "confidence": 77,
+          "power": 71,
+          "reason": "作者对估值与流动性表示担忧，空头能量积聚，易形成下行共振。",
           "advice": "空仓观望，勿接飞刀"
         }
-      ]
-    },
-    {
-      "kol": {
-        "id": 53,
-        "name": "硬核刘大",
-        "handle": "@硬核刘大",
-        "channel_url": "https://www.youtube.com/@硬核刘大",
-        "platform": "YouTube",
-        "language": "中文",
-        "field": "海外配置/币圈",
-        "fans": "11W+",
-        "desc": "资深投资者，专注海外资产与加密实操（注：原 channel_id 实为「刘老哥」频道，已剔除；官方频道 @硬核刘大 约 11 万订阅，channel_id 待补）",
-        "channel_id": null,
-        "active": true
-      },
+      ],
       "aggregate": {
         "kol_sentiment": "均衡拉锯",
         "kol_color": "neutral",
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "avg_confidence": 60,
-        "avg_power": 52,
-        "battle_text": "0多 vs 0空 vs 3中性"
-      },
-      "items": [
-        {
-          "title": "普通人的财务自由之路-youtube合作伙伴计划重大更新，BTC定投窗口出现。自媒体做防守盘，投资做进攻盘。",
-          "original_title": "普通人的财务自由之路-youtube合作伙伴计划重大更新，BTC定投窗口出现。自媒体做防守盘，投资做进攻盘。",
-          "link": "https://www.youtube.com/watch?v=5-cnnckXxuU",
-          "published": "2026-08-14T14:57:34+00:00",
-          "summary": "",
-          "lang": "中文",
-          "source": "verified_cache",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "中性",
-          "confidence": 56,
-          "power": 58,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
-        },
-        {
-          "title": "coldcard硬件钱包遭黑客攻击，大量资金返回头部交易所，普通投资者如何合理管理自己的币圈资金",
-          "original_title": "coldcard硬件钱包遭黑客攻击，大量资金返回头部交易所，普通投资者如何合理管理自己的币圈资金",
-          "link": "https://www.youtube.com/watch?v=kz4bKqWEFaM",
-          "published": "2026-08-02T13:25:20+00:00",
-          "summary": "",
-          "lang": "中文",
-          "source": "verified_cache",
-          "is_mock": false,
-          "date_str": "08-02",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 55,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
-        },
-        {
-          "title": "giffgaff 国内漫游或将终止，英国手机号应该转去哪？",
-          "original_title": "giffgaff 国内漫游或将终止，英国手机号应该转去哪？",
-          "link": "https://www.youtube.com/watch?v=c7-WwjvT17I",
-          "published": "2026-08-01T07:54:50+00:00",
-          "summary": "",
-          "lang": "中文",
-          "source": "verified_cache",
-          "is_mock": false,
-          "date_str": "08-01",
-          "sentiment": "中性",
-          "confidence": 64,
-          "power": 45,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
-        }
-      ]
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 1,
+        "avg_confidence": 70,
+        "avg_power": 62,
+        "battle_text": "1多 vs 1空 vs 1中性"
+      }
     }
   ],
   "inactive_kols": [
@@ -1085,6 +1028,19 @@
       "active": true
     },
     {
+      "id": 53,
+      "name": "硬核刘大",
+      "handle": "@硬核刘大",
+      "channel_url": "https://www.youtube.com/@硬核刘大",
+      "platform": "YouTube",
+      "language": "中文",
+      "field": "海外配置/币圈",
+      "fans": "11W+",
+      "desc": "资深投资者，专注海外资产与加密实操（注：原 channel_id 实为「刘老哥」频道，已剔除；官方频道 @硬核刘大 约 11 万订阅，channel_id 待补）",
+      "channel_id": null,
+      "active": true
+    },
+    {
       "id": 54,
       "name": "信報財經新聞",
       "handle": "信報財經新聞",
@@ -1127,7 +1083,7 @@
       "id": 57,
       "name": "香港財經時報 HKBT",
       "handle": "HKBT",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E9%A6%99%E6%B8%AF%E8%B2%A1%E7%B6%93%E6%99%82%E5%A0%B1+HKBT",
       "platform": "YouTube / 網頁",
       "language": "中文",
       "field": "香港財經新聞",
@@ -1192,7 +1148,7 @@
       "id": 62,
       "name": "财经全世界",
       "handle": "财经全世界",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%A8%E4%B8%96%E7%95%8C",
       "platform": "YouTube",
       "language": "中文",
       "field": "全球財經",
@@ -1205,7 +1161,7 @@
       "id": 63,
       "name": "老李玩钱",
       "handle": "老李玩钱",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%A9%E9%92%B1",
       "platform": "YouTube",
       "language": "中文",
       "field": "投資理財",
@@ -1231,7 +1187,7 @@
       "id": 65,
       "name": "贝拉说美股",
       "handle": "贝拉说美股",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%B4%E7%BE%8E%E8%82%A1",
       "platform": "YouTube",
       "language": "中文",
       "field": "美股/個股分析",
@@ -1270,7 +1226,7 @@
       "id": 68,
       "name": "老蛮频道（数据帝老蛮）",
       "handle": "老蛮频道",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%80%81%E8%9B%AE%E9%A2%91%E9%81%93+%E6%95%B0%E6%8D%AE%E5%B8%9D%E8%80%81%E8%9B%AE",
       "platform": "YouTube",
       "language": "中文",
       "field": "中國經濟數據",
@@ -1283,7 +1239,7 @@
       "id": 69,
       "name": "秦鹏观察",
       "handle": "秦鹏观察",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E7%A7%A6%E9%B9%8F%E8%A7%82%E5%AF%9F",
       "platform": "YouTube",
       "language": "中文",
       "field": "財經/時政",
@@ -1296,7 +1252,7 @@
       "id": 70,
       "name": "子朝出走中",
       "handle": "子朝出走中",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E5%AD%90%E6%9C%9D%E5%87%BA%E8%B5%B0%E4%B8%AD",
       "platform": "YouTube",
       "language": "中文",
       "field": "中國經濟觀察",
@@ -1309,7 +1265,7 @@
       "id": 71,
       "name": "马江博说趋势",
       "handle": "马江博说趋势",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%9A%E8%AF%B4%E8%B6%8B%E5%8A%BF",
       "platform": "YouTube",
       "language": "中文",
       "field": "政經趨勢",
@@ -1335,7 +1291,7 @@
       "id": 73,
       "name": "兰香财经",
       "handle": "兰香财经",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E5%85%B0%E9%A6%99%E8%B4%A2%E7%BB%8F",
       "platform": "YouTube",
       "language": "中文",
       "field": "宏觀分析",
@@ -1361,7 +1317,7 @@
       "id": 75,
       "name": "Gamma 财经",
       "handle": "Gamma 财经",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=Gamma+%E8%B4%A2%E7%BB%8F",
       "platform": "YouTube",
       "language": "中文",
       "field": "全球宏觀",
@@ -1374,7 +1330,7 @@
       "id": 76,
       "name": "Ray 观点",
       "handle": "Ray 观点",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E6%B8%AF%E7%BE%8E%E5%AE%8F%E8%A7%82",
       "platform": "YouTube",
       "language": "中文",
       "field": "港美股/宏觀",
@@ -1387,7 +1343,7 @@
       "id": 77,
       "name": "公子沈",
       "handle": "公子沈",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%88",
       "platform": "YouTube",
       "language": "中文",
       "field": "政經評論",
@@ -1400,7 +1356,7 @@
       "id": 78,
       "name": "文昭谈古论今",
       "handle": "文昭谈古论今",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%88%E5%8F%A4%E8%AE%BA%E4%BB%8A",
       "platform": "YouTube",
       "language": "中文",
       "field": "時政/經濟",
@@ -1439,7 +1395,7 @@
       "id": 81,
       "name": "游庭皓的財經皓角",
       "handle": "游庭皓的財經皓角",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%93%E7%9A%84%E8%B2%A1%E7%B6%93%E7%9A%93%E8%A7%92",
       "platform": "YouTube",
       "language": "中文",
       "field": "台灣財經/宏觀",
@@ -1465,7 +1421,7 @@
       "id": 83,
       "name": "风傳媒-下班经济學",
       "handle": "下班经济學",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%92+%E4%B8%8B%E7%8F%AD%E7%BB%8F%E6%B5%8E%E5%AD%B8",
       "platform": "YouTube",
       "language": "中文",
       "field": "台灣財經/訪談",
@@ -1478,7 +1434,7 @@
       "id": 84,
       "name": "老王愛說笑（老王/王倚隆）",
       "handle": "老王愛說笑",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%9B%E8%AA%AA%E7%AC%91+%E7%8E%8B%E5%80%9A%E9%9A%86",
       "platform": "YouTube",
       "language": "中文",
       "field": "投資/市場評論",
@@ -1491,7 +1447,7 @@
       "id": 85,
       "name": "SHIN LI",
       "handle": "SHIN LI",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%93",
       "platform": "YouTube",
       "language": "中文",
       "field": "投資理財",
@@ -1504,7 +1460,7 @@
       "id": 86,
       "name": "自由女神邱沁宜",
       "handle": "邱沁宜",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%B3%E7%A5%9E+%E9%82%B1%E6%B2%81%E5%AE%9C",
       "platform": "YouTube",
       "language": "中文",
       "field": "台灣財經/市場評論",
@@ -1517,7 +1473,7 @@
       "id": 87,
       "name": "Better Leaf 好葉",
       "handle": "Better Leaf 好葉",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%91%89",
       "platform": "YouTube",
       "language": "中文",
       "field": "個人成長/理財",
@@ -1530,7 +1486,7 @@
       "id": 88,
       "name": "慢活夫妻 George & Dewi",
       "handle": "George & Dewi",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E6%85%A2%E6%B4%BB%E5%A4%AB%E5%A6%BB+George+Dewi",
       "platform": "YouTube",
       "language": "中文",
       "field": "理財/生活方式",
@@ -1543,7 +1499,7 @@
       "id": 89,
       "name": "大俠武林",
       "handle": "大俠武林",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%A6%E6%9E%97",
       "platform": "YouTube",
       "language": "中文",
       "field": "台股/技術分析",
@@ -1556,7 +1512,7 @@
       "id": 90,
       "name": "股乾爹 KuKanTieh",
       "handle": "KuKanTieh",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E8%82%A1%E4%B9%BE%E7%88%B9+KuKanTieh",
       "platform": "YouTube",
       "language": "中文",
       "field": "台股/投資",
@@ -1569,7 +1525,7 @@
       "id": 91,
       "name": "Gooaye股癌",
       "handle": "Gooaye股癌",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C",
       "platform": "YouTube",
       "language": "中文",
       "field": "台股/投資評論",
@@ -1582,7 +1538,7 @@
       "id": 92,
       "name": "理財不能等（獅公李永年）",
       "handle": "理財不能等",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%8D%E8%83%BD%E7%AD%89+%E7%8D%85%E5%85%AC+%E6%9D%8E%E6%B0%B8%E5%B9%B4",
       "platform": "YouTube",
       "language": "中文",
       "field": "理財教育",
@@ -1595,7 +1551,7 @@
       "id": 93,
       "name": "懶錢包LazyWallet",
       "handle": "LazyWallet",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E6%87%B6%E9%8C%A2%E5%8C%85+LazyWallet",
       "platform": "YouTube",
       "language": "中文",
       "field": "被動投資/理財",
@@ -1634,7 +1590,7 @@
       "id": 96,
       "name": "元大投顧財金頻道-理財最錢線",
       "handle": "元大投顧 理財最錢線",
-      "channel_url": "",
+      "channel_url": "https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%95%E9%A1%A7+%E8%B2%A1%E9%87%91%E9%A0%BB%E9%81%93+%E7%90%86%E8%B2%A1%E6%9C%80%E9%8C%A2%E7%B7%9A",
       "platform": "YouTube",
       "language": "中文",
       "field": "台股/投資研究",

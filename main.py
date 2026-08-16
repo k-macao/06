@@ -3,11 +3,11 @@
 全球财经金融 KOL 精选名单 · 多空全景战报
 作者：章鱼 AI·全景分析
 流程：
-  1. 排查 53 个 KOL 存活状态（90天内有更新）
-  2. 抓取活跃名单最多 3 条可追溯内容（YouTube RSS；失败时不造兜底数据）
+  1. 排查 KOL 来源并隔离停用、失效或不可验证记录（90 天新鲜度门槛）
+  2. 抓取最多 3 条可验证内容（RSS→官方API→yt-dlp→频道页→已验证缓存；绝不 Mock 补位）
   3. AI 多空分析（DeepSeek LLM 优先，回退启发式）
-  4. 生成章鱼风 HTML 战报
-  5. 推送 PushPlus（自动转为微信友好的精简摘要版）
+  4. 生成并审计章鱼风 HTML 战报
+  5. 审计通过后推送 PushPlus
 
 用法：
   python main.py --no-push      # 仅生成，不推送
@@ -17,7 +17,6 @@
 import json
 import sys
 import argparse
-from pathlib import Path
 from datetime import datetime
 
 from src.fetcher import scan_kols
@@ -28,9 +27,6 @@ from src.pushplus import send_report, explain_code
 from src.digest import build_digest
 from src.authenticity_check import run_audit
 from src.config import OUTPUT_DIR
-
-# 完整报告超长时降级为摘要版的阈值（PushPlus 会员上限 10 万字）
-FULL_HTML_LIMIT = 100_000
 
 
 def run(push: bool = True, token: str = None, push_only: bool = False, strict_audit: bool = False):
@@ -51,20 +47,23 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
         inactive_kols = dump["inactive_kols"]
         report_date = dump["meta"]["date"]
         engine = dump["meta"]["engine"]
-        print(f"📂 复用上次生成结果：{report_date} | 存活 {dump['meta']['active_count']} 家")
+        print(f"📂 复用上次生成结果：{report_date} | 已验证 {dump['meta']['active_count']} 家")
     else:
         # 1. 排查
-        print("\n[1/4] 🔍 排查 KOL 存活状态（阈值 90 天）...")
+        print("\n[1/4] 🔍 验证 KOL 来源与 90 天内的官方 RSS 内容...")
         active_kols, inactive_kols, enriched_map = scan_kols(verbose=True)
 
-        print(f"\n📊 排查完成：有可验证内容 {len(active_kols)} / 未纳入 {len(inactive_kols)} / 总数 {len(active_kols)+len(inactive_kols)}")
+        print(f"\n📊 验证完成：可入报 {len(active_kols)} / 隔离 {len(inactive_kols)} / 总数 {len(active_kols)+len(inactive_kols)}")
         if inactive_kols:
-            print("⚪ 未纳入名单（沉寂、网络失败或来源不受支持）：", ", ".join([k["name"] for k in inactive_kols]))
+            print("🛡️ 隔离名单（停用、沉寂、网络失败或来源不可验证）：", ", ".join([k["name"] for k in inactive_kols]))
+        if not active_kols:
+            print("❌ 没有取得任何可验证内容；拒绝生成或推送空报告")
+            return False
 
         # 2+3. 分析 - 优先 DeepSeek
         has_ds = bool(get_deepseek_key())
         engine_name = "DeepSeek + 启发式" if has_ds else "启发式（未检测到 DEEPSEEK_API_KEY）"
-        print(f"\n[2/4] 🧠 AI 多空分析中（每 KOL 3 条）... 引擎: {engine_name}")
+        print(f"\n[2/4] 🧠 AI 多空分析中（每 KOL 最多 3 条真实内容）... 引擎: {engine_name}")
         if has_ds:
             print(f"   🔑 DeepSeek Key: {get_deepseek_key()[:8]}*** 已就绪，逐KOL调用 LLM")
         all_enriched = []
@@ -104,8 +103,11 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
                 "date": report_date,
                 "generated_at": datetime.now().isoformat(),
                 "active_count": len(active_kols),
+                "verified_count": len(active_kols),
                 "inactive_count": len(inactive_kols),
+                "quarantined_count": len(inactive_kols),
                 "total": len(active_kols)+len(inactive_kols),
+                "authenticity_policy": "verified-youtube-rss-only",
                 "stats": stats,
                 "engine": engine_name
             },
@@ -124,14 +126,36 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
         engine = engine_name
         inactive_kols = inactive_kols
 
+    # 4.5 先审计再推送；push-only 也不能绕过门禁。
+    try:
+        audit = run_audit(data_json_path=json_path)
+        s = audit["summary"]
+        print(
+            "\n🔍 [审计] KOL {} | 入报 {} / 隔离 {} | PASS {} / WARN {} / FAIL {} | 伪链接 {}/{}".format(
+                s["total_kols"], s["included_kols"], s["quarantined_kols"],
+                s["pass"], s["warn"], s["fail"], s["mock_items"], s["total_items"],
+            )
+        )
+        if s["fail"]:
+            fails = [result["name"] for result in audit["results"] if result["verdict"] == "FAIL"]
+            print(f"   ❌ FAIL 名单（{len(fails)} 家）：{', '.join(fails[:10])}{' …' if len(fails) > 10 else ''}")
+            if push or strict_audit:
+                print("   ❌ 真实性门禁：拒绝推送/通过")
+                return False
+    except Exception as exc:
+        print(f"\n🔍 [审计] 执行失败（{type(exc).__name__}: {exc}）")
+        if push or strict_audit:
+            print("   ❌ 审计失败时默认关闭推送")
+            return False
+
     # 5. 推送
     if push:
         html_path = OUTPUT_DIR / "report.html"
-        print("\n[4/4] 📨 推送 PushPlus（自动使用精简摘要版，微信友好）...")
-        title = f"🐙章鱼战场·KOL多空战报 {report_date} | 存活{len(all_enriched)}/{len(all_enriched)+len(inactive_kols)} 主导:{stats['dominant']}"
-        summary = f"存活{len(all_enriched)}家 · 🐂{stats['bull']} vs 🐻{stats['bear']} | {engine} | 平均战斗力{stats['avg_power']}"
+        print("\n[4/4] 📨 审计通过，推送 PushPlus（微信摘要版）...")
+        title = f"🐙章鱼战场·KOL多空战报 {report_date} | 已验证{len(all_enriched)}/{len(all_enriched)+len(inactive_kols)} 主导:{stats['dominant']}"
+        summary = f"真实来源{len(all_enriched)}家 · 🐂{stats['bull']} vs 🐻{stats['bear']} | {engine} | 平均战斗力{stats['avg_power']}"
 
-        # 生成摘要版（完整 HTML 约 18 万字符，超 PushPlus 上限，微信推送用摘要版）
+        # 微信始终使用紧凑摘要，完整 HTML 保留在 output/。
         digest_html = build_digest(
             all_enriched, stats, report_date,
             inactive_kols=inactive_kols, engine=engine,
@@ -164,21 +188,6 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
             return False
     else:
         print("\n[4/4] 📨 已跳过推送（--no-push）")
-
-    # ---- 不作伪检查：对生成结果做真实性审计（模块 src/authenticity_check.py） ----
-    try:
-        audit = run_audit(data_json_path=json_path)
-        s = audit["summary"]
-        print("\n🔍 [审计] 不作伪检查：KOL {} | PASS {} / WARN {} / FAIL {} | 伪链接 {}/{} ({:.1f}%)".format(
-            s["total_kols"], s["pass"], s["warn"], s["fail"], s["mock_items"], s["total_items"], s["mock_ratio_pct"]))
-        if s["fail"]:
-            fails = [r["name"] for r in audit["results"] if r["verdict"] == "FAIL"]
-            print(f"   ⚠️  FAIL 名单（{len(fails)} 家）：{', '.join(fails[:10])}{' …' if len(fails) > 10 else ''}")
-        if strict_audit and s["fail"]:
-            print("   ❌ --strict-audit 门禁：检测到伪造/失实内容，拒绝通过")
-            return False
-    except Exception as e:
-        print(f"\n🔍 [审计] 跳过（{type(e).__name__}: {e}）")
 
     print("\n✅ 全部完成！报告路径:", (OUTPUT_DIR / "report.html").resolve())
     print("   本地预览: python -m http.server --directory output 8000")

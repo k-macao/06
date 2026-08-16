@@ -1,14 +1,16 @@
 """
-KOL 存活探测与内容抓取（不作伪：只产出真实内容）
+KOL 存活探测与内容抓取（不作伪：只产出可验证的真实内容）
 策略：
-1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
-2. 依次备用官方 YouTube Data API、开源 yt-dlp、频道 /videos 页结构化数据
-3. 只有 @handle / /c/ 链接时，先从频道页 HTML 解析 channelId 再走 RSS（自愈）
+1. 尊重人工隔离：`active: false` 的重复/失实/停用记录不做线上探测
+2. 确认真实频道身份：优先使用格式有效的 channel_id；只有 @handle / /c/ / /user/
+   链接时从真实频道页解析 channelId；配置值与频道页不一致时失败关闭
+3. 优先 YouTube 官方 RSS，其次官方 Data API、开源 yt-dlp、频道 /videos 页结构化数据
 4. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
 5. 来源没有简介时，以 youtube-transcript-api 的真实字幕作为底层内容备用
-6. 非 YouTube 平台（TikTok/IG/媒体网站/电台等）本模块不抓取，按名单标记返回
+6. 搜索结果页、非 YouTube 占位链接与非视频链接一律拒绝
 7. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
 """
+import html
 import json
 import os
 import re
@@ -27,12 +29,117 @@ HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9,zh-CN;q=
 # 默认禁止模拟兜底（不作伪门禁）。仅当显式设置 KOL_ALLOW_MOCK=1 时才允许。
 MOCK_FALLBACK_ENABLED = os.getenv("KOL_ALLOW_MOCK", "").strip().lower() in ("1", "true", "yes", "on")
 
+CHANNEL_ID_RE = re.compile(r"^UC[A-Za-z0-9_-]{22}$")
+CHANNEL_ID_PATTERNS = (
+    re.compile(r'"externalId"\s*:\s*"(UC[A-Za-z0-9_-]{22})"'),
+    re.compile(r'"channelId"\s*:\s*"(UC[A-Za-z0-9_-]{22})"'),
+    re.compile(r'"browseId"\s*:\s*"(UC[A-Za-z0-9_-]{22})"'),
+    re.compile(r'<meta[^>]+itemprop=["\']channelId["\'][^>]+content=["\'](UC[A-Za-z0-9_-]{22})["\']', re.I),
+    re.compile(r"youtube\.com/channel/(UC[A-Za-z0-9_-]{22})"),
+)
+MOCK_LINK_RE = re.compile(r"(?:[?&]v=mock\d*|/mock\d*(?:/|$|\?)|mock\d+\.)", re.I)
+
+# 可信来源标记：每条入报内容都必须来自其中之一，且带真实链接。
+VERIFIED_SOURCES = (
+    "youtube_rss",
+    "youtube_data_api",
+    "yt_dlp",
+    "youtube_channel_page",
+    "verified_cache",
+)
+
 
 def is_youtube_kol(kol) -> bool:
     """判定该 KOL 是否走 YouTube 抓取链路（平台/链接任一含 YouTube 即视为可尝试 RSS）"""
     platform = (kol.get("platform") or "").lower()
     channel_url = kol.get("channel_url") or ""
     return "youtube" in platform or "yt" in platform or "youtube.com" in channel_url
+
+
+def is_youtube_channel_url(url: str) -> bool:
+    """只接受 YouTube 真实频道 URL，明确拒绝搜索结果页。"""
+    if not url:
+        return False
+    try:
+        parsed = urlparse(url)
+    except ValueError:
+        return False
+    host = (parsed.hostname or "").lower()
+    if host != "youtube.com" and not host.endswith(".youtube.com"):
+        return False
+    if parsed.path.rstrip("/") == "/results":
+        return False
+    return parsed.path.startswith(("/@", "/channel/", "/c/", "/user/"))
+
+
+def is_real_video_link(link: str) -> bool:
+    """验证条目链接是 YouTube 视频/Shorts/直播链接，而不是伪造占位链接。"""
+    if not link or MOCK_LINK_RE.search(link):
+        return False
+    try:
+        parsed = urlparse(link)
+    except ValueError:
+        return False
+    host = (parsed.hostname or "").lower()
+    path_parts = [part for part in parsed.path.split("/") if part]
+    if host == "youtu.be":
+        return bool(path_parts)
+    if host != "youtube.com" and not host.endswith(".youtube.com"):
+        return False
+    if parsed.path == "/watch":
+        return bool(parse_qs(parsed.query).get("v", [""])[0])
+    return len(path_parts) >= 2 and path_parts[0] in {"shorts", "embed", "live"}
+
+
+def _channel_id_from_url(url: str) -> str:
+    if not is_youtube_channel_url(url):
+        return ""
+    match = re.search(r"/channel/(UC[A-Za-z0-9_-]{22})(?:/|$)", urlparse(url).path)
+    return match.group(1) if match else ""
+
+
+def resolve_channel_id(kol):
+    """确认频道身份：URL 已含 channel_id 时直接用；否则从真实频道页核验/解析。
+
+    - `/channel/UCxxx` 已把身份编码在 URL 中，配置值与之不一致时失败关闭；
+    - `@handle` / `/c/` / `/user/` 必须从频道页确认身份，页面身份与配置值不一致
+      时同样失败关闭（避免张冠李戴抓错频道）；
+    - 页面暂时不可达属于可用性问题而非造假，此时退回已配置的合法 channel_id，
+      由后续 RSS 请求自行验证；没有配置值则返回 None。
+    """
+    configured = (kol.get("channel_id") or "").strip()
+    configured = configured if CHANNEL_ID_RE.fullmatch(configured) else ""
+    channel_url = (kol.get("channel_url") or "").strip()
+
+    from_url = _channel_id_from_url(channel_url)
+    if from_url:
+        if configured and configured != from_url:
+            print(f"[channel] {kol.get('name', '?')} 配置 channel_id 与 URL 不一致")
+            return None
+        return from_url
+
+    if not is_youtube_channel_url(channel_url):
+        return configured or None
+
+    try:
+        response = requests.get(channel_url, headers=HEADERS, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+        response.raise_for_status()
+    except Exception as exc:
+        print(f"[channel] {kol.get('name', '?')} 频道页暂不可达，沿用已配置 channel_id: {exc}")
+        return configured or None
+
+    page = html.unescape(response.text)
+    for pattern in CHANNEL_ID_PATTERNS:
+        match = pattern.search(page)
+        if match:
+            resolved = match.group(1)
+            if configured and configured != resolved:
+                print(f"[channel] {kol.get('name', '?')} 配置 channel_id 与频道页不一致")
+                return None
+            return resolved
+    print(f"[channel] {kol.get('name', '?')} 页面未找到 channel_id")
+    return configured or None
+
 
 # 用于中文模拟数据的真实感语料 - 覆盖全部 45 个活跃 KOL
 MOCK_TITLES_POOL = {
@@ -276,33 +383,42 @@ HISTORICAL_MOCK_TITLES = (
 
 
 def parse_last_update_from_rss(channel_id):
-    """方案 A：通过 YouTube RSS 获取最近更新（显式超时，避免 CI 卡死）。"""
-    if not channel_id:
+    """方案 A：通过 YouTube 官方 RSS 获取最近更新（显式超时，避免 CI 卡死）。
+
+    只接受带真实标题、真实视频链接与真实发布时间的条目，并记录来源频道 ID，
+    供审计模块核对内容归属，杜绝张冠李戴与伪造条目。
+    """
+    if not CHANNEL_ID_RE.fullmatch(channel_id or ""):
         return None, []
     rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
         response = requests.get(rss_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
         feed = feedparser.parse(response.content)
-        if not feed.entries:
-            return None, []
-        entries = feed.entries[:3]
-        latest = entries[0]
-        if hasattr(latest, "published_parsed") and latest.published_parsed:
-            dt = datetime(*latest.published_parsed[:6], tzinfo=timezone.utc)
-        else:
-            dt = datetime.now(timezone.utc)
         items = []
-        for e in entries:
-            pub = datetime(*e.published_parsed[:6], tzinfo=timezone.utc) if hasattr(e, "published_parsed") and e.published_parsed else dt
+        for entry in feed.entries:
+            title = (entry.get("title") or "").strip()
+            link = (entry.get("link") or "").strip()
+            parsed = entry.get("published_parsed") or entry.get("updated_parsed")
+            if not title or not parsed or not is_real_video_link(link):
+                continue
+            published = datetime(*parsed[:6], tzinfo=timezone.utc)
             items.append({
-                "title": e.title,
-                "link": e.link,
-                "published": pub.isoformat(),
-                "summary": e.get("summary", "")[:220],
+                "title": title,
+                "original_title": title,
+                "link": link,
+                "published": published.isoformat(),
+                "summary": (entry.get("summary") or "")[:220],
                 "source": "youtube_rss",
+                "source_channel_id": channel_id,
+                "is_mock": False,
             })
-        return dt, items
+            if len(items) == 3:
+                break
+        if not items:
+            print(f"[RSS] {channel_id} 无有效条目")
+            return None, []
+        return datetime.fromisoformat(items[0]["published"]), items
     except Exception as ex:
         print(f"[RSS] {channel_id} failed: {ex}")
         return None, []
@@ -338,12 +454,18 @@ def fetch_from_youtube_api(channel_id):
             published = snippet.get("publishedAt") or ""
             if not video_id or not title or title in ("Private video", "Deleted video"):
                 continue
+            link = f"https://www.youtube.com/watch?v={video_id}"
+            if not published or not is_real_video_link(link):
+                continue
             items.append({
                 "title": title,
-                "link": f"https://www.youtube.com/watch?v={video_id}",
+                "original_title": title,
+                "link": link,
                 "published": published,
                 "summary": (snippet.get("description") or "")[:220],
                 "source": "youtube_data_api",
+                "source_channel_id": channel_id,
+                "is_mock": False,
             })
         if not items:
             return None, []
@@ -404,13 +526,18 @@ def fetch_from_ytdlp(channel_url):
             # 无发布日期无法判断是否仍在时效内，因此不纳入战报。
             if not title or not webpage_url or not published or dt is None:
                 continue
+            if not is_real_video_link(webpage_url):
+                continue
             dates.append(dt)
             items.append({
                 "title": title,
+                "original_title": title,
                 "link": webpage_url,
                 "published": published,
                 "summary": (entry.get("description") or "")[:220],
                 "source": "yt_dlp",
+                "source_channel_id": (entry.get("channel_id") or "").strip(),
+                "is_mock": False,
             })
         return (max(dates), items[:3]) if items and dates else (None, [])
     except Exception as ex:
@@ -560,12 +687,18 @@ def scrape_channel_items(channel_url):
             published = now - timedelta(days=parse_relative_time(relative))
             desc_runs = renderer.get("descriptionSnippet", {}).get("runs", [])
             summary = "".join(run.get("text", "") for run in desc_runs)[:220]
+            link = f"https://www.youtube.com/watch?v={video_id}"
+            if not is_real_video_link(link):
+                continue
             items.append({
                 "title": title,
-                "link": f"https://www.youtube.com/watch?v={video_id}",
+                "original_title": title,
+                "link": link,
                 "published": published.isoformat(),
                 "summary": summary,
                 "source": "youtube_channel_page",
+                "source_channel_id": "",
+                "is_mock": False,
             })
             if len(items) == 3:
                 break
@@ -655,12 +788,20 @@ def load_verified_cache(data_path=OUTPUT_DIR / "data.json"):
         for item in entry.get("items", []):
             link = item.get("link", "")
             title = item.get("title", "")
-            if (item.get("is_mock") is True or not title or not link.startswith("https://")
-                    or re.search(r"[?&]v=mock\d*", link, re.I)
-                    or title in HISTORICAL_MOCK_TITLES):
+            original_title = item.get("original_title")
+            # 缓存条目同样要过不作伪门禁：mock 标记、伪链接、历史语料标题、
+            # 与 RSS 原题不符的改写标题都不得回流到新一期战报。
+            if (item.get("is_mock") is True or not title or not is_real_video_link(link)
+                    or title in HISTORICAL_MOCK_TITLES
+                    or (original_title is not None and original_title != title)):
                 continue
             clean = {k: item.get(k, "") for k in ("title", "link", "published", "summary", "lang")}
-            clean.update({"original_title": title, "is_mock": False, "source": "verified_cache"})
+            clean.update({
+                "original_title": title,
+                "is_mock": False,
+                "source": "verified_cache",
+                "source_channel_id": item.get("source_channel_id", ""),
+            })
             valid.append(clean)
         if kid is not None and valid:
             cached[kid] = valid[:3]
@@ -679,12 +820,18 @@ def _latest_datetime(items):
 
 
 def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
-    channel_id = kol.get("channel_id")
-    channel_url = kol.get("channel_url")
+    """判定 KOL 是否可入报，并返回可验证的真实条目。
 
-    # 只有 @handle / /c/ 链接时先自愈出 channel_id，让这些频道也能走真实 RSS。
-    if not channel_id and channel_url and is_youtube_kol(kol):
-        channel_id = scrape_channel_id(channel_url) or None
+    返回 (active, last_dt, items)：任何一项都必须来自真实来源；
+    无法验证时返回 (False, None, []) —— 绝不用名单里的静态 active 标记充数。
+    """
+    # active=false 是人工隔离开关，优先于线上探测，避免重复/存疑频道回流。
+    if kol.get("active") is False:
+        return False, None, []
+
+    channel_url = (kol.get("channel_url") or "").strip()
+    # 确认频道身份（URL 自带 → 配置值 → 频道页自愈解析），不一致则失败关闭。
+    channel_id = (resolve_channel_id(kol) or "") if is_youtube_kol(kol) else ""
 
     if is_youtube_kol(kol):
         # 按可信度与实时性依次降级，所有方案都必须返回可点击的真实来源。
@@ -697,6 +844,10 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
         for _, strategy in strategies:
             last_dt, items = strategy()
             if last_dt and items:
+                # 来源没带频道 ID 时补上已确认的身份，供审计核对内容归属。
+                for item in items:
+                    if not item.get("source_channel_id") and channel_id:
+                        item["source_channel_id"] = channel_id
                 age_days = (datetime.now(timezone.utc) - last_dt).days
                 items = enrich_items_with_transcripts(items, kol)
                 return age_days <= threshold_days, last_dt, items
@@ -711,7 +862,7 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
             return True, cached_dt, enrich_items_with_transcripts(cached_items, kol)
 
     # 最后的 HTML 日期探测只用于确认沉寂，不会制造内容。
-    if channel_url:
+    if is_youtube_channel_url(channel_url):
         dt2 = scrape_channel_page(channel_url)
         if dt2:
             return False, dt2, []
@@ -719,23 +870,38 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
 
 
 def enrich_with_real_content(kol, real_items):
-    """标准化最多三条真实抓取结果；没有真实条目时返回空列表。"""
+    """标准化最多三条真实抓取结果；不改写来源标题、链接与日期。
+
+    条目必须同时满足：真实视频链接、非 mock 标记、有发布时间、有可信来源标记，
+    否则一律丢弃 —— 宁可少展示，也不用无法追溯的内容凑版面。
+    """
     enriched = []
     for ri in (real_items or [])[:3]:
-        # 缺少来源链接或标题的条目不可追溯，不进入报告。
-        if not ri.get("title") or not ri.get("link"):
+        title = (ri.get("title") or "").strip()
+        link = (ri.get("link") or "").strip()
+        original_title = ri.get("original_title", title)
+        source = ri.get("source", "")
+        if ri.get("is_mock") is True or not title or not is_real_video_link(link):
+            continue
+        if original_title != title or not ri.get("published") or source not in VERIFIED_SOURCES:
             continue
         enriched.append({
-            "title": ri["title"],
-            "original_title": ri["title"],
-            "link": ri["link"],
+            "title": title,
+            "original_title": title,
+            "link": link,
             "published": ri.get("published", ""),
             "summary": ri.get("summary", ""),
             "lang": kol.get("language", ""),
-            "source": ri.get("source", "verified_source"),
+            "source": source,
+            "source_channel_id": ri.get("source_channel_id", ""),
             "is_mock": False,
         })
     return enriched
+
+
+# 与 PR #8 命名保持一致的别名，语义相同：只接受已验证内容。
+def enrich_with_verified_content(kol, real_items):
+    return enrich_with_real_content(kol, real_items)
 
 
 # 保留旧函数名，避免外部调用方升级时中断；其行为已改为只接受真实内容。
@@ -743,7 +909,7 @@ def enrich_with_mock_content(kol, real_items):
     return enrich_with_real_content(kol, real_items)
 
 def scan_kols(kol_list=None, verbose=True):
-    import pathlib, json
+    """扫描名单，返回可入报频道、隔离记录与已验证条目映射。"""
     if kol_list is None:
         with open(KOL_DATA_PATH, "r", encoding="utf-8") as f:
             kol_list = json.load(f)
@@ -753,19 +919,28 @@ def scan_kols(kol_list=None, verbose=True):
     verified_cache = load_verified_cache()
     for kol in kol_list:
         active, last_dt, items = is_active_kol(kol, cached_items=verified_cache.get(kol.get("id"), []))
-        status = "✅活跃" if active else ("⚪未验证" if last_dt is None else "💤沉寂")
+        enriched = enrich_with_real_content(kol, items) if active else []
+        active = active and bool(enriched)
         last_str = last_dt.strftime("%Y-%m-%d") if last_dt else "未知"
         if verbose:
+            if active:
+                status = "✅已验证"
+            elif kol.get("active") is False:
+                status = "⏸️已停用"
+            elif last_dt is None:
+                status = "⚪未验证"
+            else:
+                status = "💤沉寂"
             print(f"{status} [{kol['id']:02d}] {kol['name']:20s} | {kol['platform']:12s} | 最近: {last_str} | {kol['fans']}")
-        enriched = enrich_with_real_content(kol, items) if active else []
-        if active and enriched:
+        if active:
             active_kols.append(kol)
             enriched_map[kol["id"]] = enriched
         else:
-            # “活跃”但抓不到可追溯条目时也不进入战报，防止下游补造内容。
+            # "活跃"但抓不到可追溯条目时也不进入战报，防止下游补造内容。
             inactive_kols.append(kol)
         time.sleep(0.15)
     return active_kols, inactive_kols, enriched_map
+
 
 if __name__ == "__main__":
     a, b, m = scan_kols()

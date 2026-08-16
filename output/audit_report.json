@@ -1,12 +1,15 @@
 {
   "summary": {
-    "audited_at": "2026-08-16T09:05:46.255823+00:00",
+    "audited_at": "2026-08-16T09:41:55.571649+00:00",
     "total_kols": 97,
+    "included_kols": 5,
+    "quarantined_kols": 92,
     "pass": 5,
     "warn": 92,
     "fail": 0,
-    "total_items": 18,
+    "total_items": 15,
     "mock_items": 0,
+    "altered_titles": 0,
     "pool_titles": 0,
     "mock_ratio_pct": 0.0,
     "online_verified": false
@@ -18,9 +21,11 @@
       "platform": "YouTube",
       "fans": "500W+",
       "channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
-      "active": true,
+      "configured_active": true,
+      "included": true,
       "verdict": "PASS",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [],
@@ -32,9 +37,11 @@
       "platform": "YouTube",
       "fans": "330W+",
       "channel_id": "UCGy7SkBjcIAgTiwkXEtPnYg",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -46,9 +53,11 @@
       "platform": "TikTok/YT",
       "fans": "300W+",
       "channel_id": "UCFBpVaKCC0ajGps1vf0AgBg",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -60,9 +69,11 @@
       "platform": "YouTube",
       "fans": "100W+",
       "channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
-      "active": true,
+      "configured_active": true,
+      "included": true,
       "verdict": "PASS",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [],
@@ -74,9 +85,11 @@
       "platform": "YouTube",
       "fans": "130W+",
       "channel_id": "UCASM0cgfkJxQ1ICmRilfHLw",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -88,9 +101,11 @@
       "platform": "YouTube",
       "fans": "205W+",
       "channel_id": "UCUvvj5lwue7PspotMDjk5UA",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -102,9 +117,11 @@
       "platform": "YouTube",
       "fans": "51W+",
       "channel_id": "UCbta0n8i6Rljh0obO7HzG9A",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -116,9 +133,11 @@
       "platform": "YouTube",
       "fans": "25W+",
       "channel_id": "UCrTTBSUr0zhPU56UQljag5A",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -130,9 +149,11 @@
       "platform": "TikTok/YT",
       "fans": "880W+",
       "channel_id": "UCxgAuX3XZROujMmGphN_scA",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -144,9 +165,11 @@
       "platform": "YouTube",
       "fans": "94W+",
       "channel_id": "UCnMn36GT_H0X-w5_ckLtlgQ",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -158,9 +181,11 @@
       "platform": "YouTube",
       "fans": "62W+",
       "channel_id": "UCDXTQ8nWmx_EhZ2v-kp7QxA",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -169,26 +194,36 @@
     {
       "id": 12,
       "name": "Erika Kullberg",
-      "platform": "IG/TikTok",
+      "platform": "TikTok/YT",
       "fans": "500W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCoSw1rKMkCbwzKpkC0OjRKA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "handle 缺失"
+        }
+      ]
     },
     {
       "id": 13,
       "name": "Vivien Tu",
-      "platform": "TikTok/IG",
+      "platform": "TikTok/YT",
       "fans": "200W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCgbXT2QuTj4SYxaWCs3vuAw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -200,9 +235,11 @@
       "platform": "YouTube",
       "fans": "240W+",
       "channel_id": "UCT3EznhW_CNFcfOlyDNTLLw",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -212,21 +249,17 @@
       "id": 15,
       "name": "Investing with Rose",
       "platform": "YouTube",
-      "fans": "60W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "100W+",
+      "channel_id": "UCIbslwukNCyVp-XMz_2-gmw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 16,
@@ -234,9 +267,11 @@
       "platform": "YouTube",
       "fans": "290W+",
       "channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
-      "active": true,
+      "configured_active": true,
+      "included": true,
       "verdict": "PASS",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [],
@@ -246,41 +281,33 @@
       "id": 17,
       "name": "Everything Money",
       "platform": "YouTube",
-      "fans": "20W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "40W+",
+      "channel_id": "UChBVf9YnourrEDTsbbwJPRA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 18,
       "name": "New Money",
       "platform": "YouTube",
-      "fans": "70W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "100W+",
+      "channel_id": "UCvSXMi2LebwJEM1s4bz5IBA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 19,
@@ -288,9 +315,11 @@
       "platform": "YouTube",
       "fans": "70W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -298,12 +327,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@FinancialEducation vs @FinancialEducationJeremy"
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@FinancialEducation vs @FinancialEducationJeremy（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -312,20 +341,16 @@
       "name": "Brian Feroldi",
       "platform": "YouTube",
       "fans": "5W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCs60_Z83HU76uygzHRQl0kA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 21,
@@ -333,9 +358,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
-      "active": true,
+      "configured_active": true,
+      "included": true,
       "verdict": "PASS",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [],
@@ -347,9 +374,11 @@
       "platform": "YouTube",
       "fans": "30W+",
       "channel_id": "UC2I5em6UyBpQiO-8ZW0nV3w",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -361,9 +390,11 @@
       "platform": "YouTube",
       "fans": "34W+",
       "channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
-      "active": true,
+      "configured_active": true,
+      "included": true,
       "verdict": "PASS",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [],
@@ -375,9 +406,11 @@
       "platform": "YouTube",
       "fans": "50W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -385,12 +418,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@全球视野 vs @globalvision"
+          "msg": "handle 缺失"
         }
       ]
     },
@@ -400,9 +433,11 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -410,7 +445,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -420,9 +455,11 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -430,7 +467,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -440,9 +477,11 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -450,7 +489,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -460,9 +499,11 @@
       "platform": "YouTube/Web",
       "fans": "10W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -470,12 +511,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@孟岩的投资笔记 vs @孟岩投资笔记"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -485,9 +521,11 @@
       "platform": "YouTube",
       "fans": "8W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -495,7 +533,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -505,9 +543,11 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "UC1Lk6WO-eKuYc6GHYbKVY2g",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -519,23 +559,11 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "UCWyPo32TSKPr8Py7gb7NhYw",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": []
-    },
-    {
-      "id": 32,
-      "name": "逻辑财金",
-      "platform": "YouTube",
-      "fans": "12W+",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -543,7 +571,29 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "handle 缺失"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "逻辑财金",
+      "platform": "YouTube",
+      "fans": "12W+",
+      "channel_id": "",
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -553,9 +603,11 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -563,7 +615,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -573,9 +625,11 @@
       "platform": "YouTube",
       "fans": "5W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -583,7 +637,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -591,61 +645,49 @@
       "id": 35,
       "name": "Kelvin Learns Investing",
       "platform": "YouTube",
-      "fans": "10W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "12W+",
+      "channel_id": "UCJmaaSJX_PkfUmTuxWbrzLw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 36,
       "name": "The Swedish Investor",
       "platform": "YouTube",
-      "fans": "80W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "100W+",
+      "channel_id": "UCAeAB8ABXGoGMbXuYPmiu2A",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 37,
       "name": "Preston Pysh",
       "platform": "Reddit/YT",
       "fans": "15W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCLTdCY-fNXc1GqzIuflK-OQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 38,
@@ -653,9 +695,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "UC9OIwUcx-Uss7xj7s1P5XGw",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -667,9 +711,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -677,7 +723,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
+        },
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "handle 缺失"
         }
       ]
     },
@@ -685,41 +736,33 @@
       "id": 40,
       "name": "Financial Diet",
       "platform": "YouTube",
-      "fans": "90W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "120W+",
+      "channel_id": "UCSPYNpQ2fHv9HJ-q6MIMaPw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 41,
       "name": "Maverick of Wall Street",
       "platform": "YouTube",
-      "fans": "20W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "14W+",
+      "channel_id": "UCvk0KB4Ue0vfPqvDzjIAwiQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 42,
@@ -727,9 +770,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -737,7 +782,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -746,40 +791,32 @@
       "name": "Cameron Stewart",
       "platform": "YouTube",
       "fans": "5W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCpJRuue8x5Qag2Wz6uAzyjw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 44,
       "name": "Fast Graphs (Chuck Carnevale)",
       "platform": "YouTube",
-      "fans": "10W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "15W+",
+      "channel_id": "UCJggpN5VY0PWKoOyBBT0R8A",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 45,
@@ -787,9 +824,11 @@
       "platform": "YouTube",
       "fans": "8W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -797,7 +836,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -807,9 +846,11 @@
       "platform": "Reddit (u/)",
       "fans": "5W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -818,16 +859,24 @@
     {
       "id": 47,
       "name": "HK Money Mentor",
-      "platform": "IG/YT",
+      "platform": "IG",
       "fans": "2W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 缺失"
+        }
+      ]
     },
     {
       "id": 48,
@@ -835,13 +884,21 @@
       "platform": "IG",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [
+        {
+          "level": "WARN",
+          "code": "META",
+          "msg": "channel_url 缺失"
+        }
+      ]
     },
     {
       "id": 49,
@@ -849,157 +906,11 @@
       "platform": "TradingView",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
-    },
-    {
-      "id": 50,
-      "name": "Real Vision (Individual Guest Analysts)",
-      "platform": "YouTube",
-      "fans": "60W+",
-      "channel_id": "UC1CVw2YKIunKc_Mp-VZbFmA",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": []
-    },
-    {
-      "id": 51,
-      "name": "老厉害",
-      "platform": "YouTube",
-      "fans": "10W+",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
-    },
-    {
-      "id": 52,
-      "name": "inves talk",
-      "platform": "YouTube",
-      "fans": "14W+",
-      "channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": []
-    },
-    {
-      "id": 53,
-      "name": "硬核刘大",
-      "platform": "YouTube",
-      "fans": "11W+",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 3,
-      "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
-    },
-    {
-      "id": 54,
-      "name": "信報財經新聞",
-      "platform": "香港財經媒體",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
-    },
-    {
-      "id": 55,
-      "name": "Finance730",
-      "platform": "香港財經媒體",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
-    },
-    {
-      "id": 56,
-      "name": "香港經濟日報 HKET",
-      "platform": "香港財經媒體",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
-      "pool_titles": 0,
-      "total_items": 0,
-      "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
-    },
-    {
-      "id": 57,
-      "name": "香港財經時報 HKBT",
-      "platform": "YouTube / 網頁",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
-      "verdict": "WARN",
-      "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1017,14 +928,80 @@
       ]
     },
     {
-      "id": 58,
-      "name": "新城財經台",
-      "platform": "香港財經電台",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "id": 50,
+      "name": "Real Vision (Individual Guest Analysts)",
+      "platform": "YouTube",
+      "fans": "60W+",
+      "channel_id": "UC1CVw2YKIunKc_Mp-VZbFmA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 51,
+      "name": "老厉害",
+      "platform": "YouTube",
+      "fans": "10W+",
+      "channel_id": "UC8gZZWIWmBuCb_gzC8DUrvw",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 52,
+      "name": "inves talk",
+      "platform": "YouTube",
+      "fans": "14W+",
+      "channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 53,
+      "name": "硬核刘大",
+      "platform": "YouTube",
+      "fans": "11W+",
+      "channel_id": "UCCeMdcZw1LJsAGKeoYXZw6A",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 54,
+      "name": "信報財經新聞",
+      "platform": "YouTube/財經媒體",
+      "fans": "N/A",
+      "channel_id": "UClRaYVzu5DIh3kRZkXIX9WA",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1037,44 +1014,100 @@
       ]
     },
     {
+      "id": 55,
+      "name": "Finance730",
+      "platform": "YouTube/財經媒體",
+      "fans": "26W+",
+      "channel_id": "UCzM2jQWmoeTvpEw63x5Rsdg",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 56,
+      "name": "香港經濟日報 HKET",
+      "platform": "YouTube/財經媒體",
+      "fans": "12W+",
+      "channel_id": "UCFgvtFvTFRjqhGC1XfIB02w",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 57,
+      "name": "香港財經時報 HKBT",
+      "platform": "YouTube/財經媒體",
+      "fans": "1W+",
+      "channel_id": "UCAwfc603xR0xXQN58x4uWeA",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
+      "id": 58,
+      "name": "新城財經台",
+      "platform": "YouTube/財經電台",
+      "fans": "17W+",
+      "channel_id": "UCAUiU6pnaEaTjgTVp6KY0FQ",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
+      "online": [],
+      "issues": []
+    },
+    {
       "id": 59,
       "name": "财经风云 (@ChineseFinance)",
       "platform": "YouTube",
       "fans": "24W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 60,
       "name": "视野环球财经 (@RhinoFinance)",
       "platform": "YouTube",
       "fans": "30W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCFQsi7WaF5X41tcuOryDk8w",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 61,
@@ -1082,9 +1115,11 @@
       "platform": "中文投資網站",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1102,9 +1137,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1112,7 +1149,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1131,25 +1168,16 @@
       "name": "老李玩钱",
       "platform": "YouTube",
       "fans": "10W+",
-      "channel_id": "",
-      "active": false,
+      "channel_id": "UCo2gxyermsLBSCxFHvJs0Zg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 老李玩钱（应为 @xxx）"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 64,
@@ -1157,19 +1185,15 @@
       "platform": "YouTube",
       "fans": "5W+",
       "channel_id": "UCWvjeM3d1GNj8pK7o_AN_yA",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCWvjeM3d1GNj8pK7o_AN_yA vs @土妹美股"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 65,
@@ -1177,9 +1201,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1187,7 +1213,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1205,21 +1231,17 @@
       "id": 66,
       "name": "美投讲美股",
       "platform": "YouTube",
-      "fans": "66W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "68W+",
+      "channel_id": "UCBUH38E0ngqvmTqdchWunwQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 67,
@@ -1227,9 +1249,11 @@
       "platform": "YouTube",
       "fans": "18W+",
       "channel_id": "UCn9_KbNANeyYREePe8YA2DA",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1239,55 +1263,33 @@
       "id": 68,
       "name": "老蛮频道（数据帝老蛮）",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "1W+",
+      "channel_id": "UCrAC23izk57G7jCBPfdXGkg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 老蛮频道（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 69,
       "name": "秦鹏观察",
       "platform": "YouTube",
       "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCrYc9TEMHjiHNrNl6WpqLbQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
       "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 秦鹏观察（应为 @xxx）"
-        },
         {
           "level": "WARN",
           "code": "META",
@@ -1301,9 +1303,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1311,7 +1315,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1331,9 +1335,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1341,12 +1347,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 马江博说趋势（应为 @xxx）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1359,21 +1360,17 @@
       "id": 72,
       "name": "付鹏的财经世界",
       "platform": "YouTube",
-      "fans": "20W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "2W+",
+      "channel_id": "UCb_4xq1KgaYkGtxpjkoZrtQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 73,
@@ -1381,9 +1378,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1391,7 +1390,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1408,22 +1407,18 @@
     {
       "id": 74,
       "name": "财经M平方 MacroMicro",
-      "platform": "宏觀數據平台",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "platform": "YouTube/宏觀數據平台",
+      "fans": "6W+",
+      "channel_id": "UC6LU7FUBvbFCh_cQasrHZ_Q",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 75,
@@ -1431,9 +1426,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1441,7 +1438,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1461,9 +1458,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1471,7 +1470,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -1490,24 +1489,16 @@
       "name": "公子沈",
       "platform": "YouTube",
       "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCrGSFNEBmCN0rqhATZels2Q",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
       "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 公子沈（应为 @xxx）"
-        },
         {
           "level": "WARN",
           "code": "META",
@@ -1519,26 +1510,17 @@
       "id": 78,
       "name": "文昭谈古论今",
       "platform": "YouTube",
-      "fans": "150W+",
-      "channel_id": "",
-      "active": true,
+      "fans": "160W+",
+      "channel_id": "UCtAIPjABiQD3qjlEl1T5VpA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 文昭谈古论今（应为 @xxx）"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 79,
@@ -1546,9 +1528,11 @@
       "platform": "財經媒體",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1566,123 +1550,79 @@
       "platform": "YouTube",
       "fans": "25W+",
       "channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 大康有话说（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg vs 大康有话说"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 81,
       "name": "游庭皓的財經皓角",
       "platform": "YouTube",
       "fans": "68W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UC0lbAQVpenvfA2QqzsRtL_g",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 游庭皓的財經皓角（应为 @xxx）"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 82,
       "name": "柴鼠兄弟 ZRBros",
       "platform": "YouTube",
       "fans": "100W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UC45i13dEfEVac2IEJT_Nr5Q",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 83,
       "name": "风傳媒-下班经济學",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "250W+",
+      "channel_id": "UCwWXGnvVmi-6Sfx2wf8S8tQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 下班经济學（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 84,
       "name": "老王愛說笑（老王/王倚隆）",
       "platform": "YouTube",
       "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCvnLmiWt_zIVIh0zUm_j4Hw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
       "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 老王愛說笑（应为 @xxx）"
-        },
         {
           "level": "WARN",
           "code": "META",
@@ -1694,145 +1634,81 @@
       "id": 85,
       "name": "SHIN LI",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "10W+",
+      "channel_id": "UCK-qc_POQZwWrMg-Pr-oYtg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: SHIN LI（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 86,
       "name": "自由女神邱沁宜",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "27W+",
+      "channel_id": "UCe7BLtnYfxTXVTRISlfupSw",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 邱沁宜（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 87,
       "name": "Better Leaf 好葉",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "100W+",
+      "channel_id": "UChjHWpmNm-3HbLFkQ3TPXaA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: Better Leaf 好葉（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 88,
       "name": "慢活夫妻 George & Dewi",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "12W+",
+      "channel_id": "UCVNqvJSKVl0bsdb15gKUZfg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: George & Dewi（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 89,
       "name": "大俠武林",
       "platform": "YouTube",
       "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UC-b6b7CGlRsdcRS7bXDvTYQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
       "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 大俠武林（应为 @xxx）"
-        },
         {
           "level": "WARN",
           "code": "META",
@@ -1845,24 +1721,16 @@
       "name": "股乾爹 KuKanTieh",
       "platform": "YouTube",
       "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCDDneQi63kJAdr3i5VCPzHg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
       "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: KuKanTieh（应为 @xxx）"
-        },
         {
           "level": "WARN",
           "code": "META",
@@ -1874,41 +1742,29 @@
       "id": 91,
       "name": "Gooaye股癌",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "17W+",
+      "channel_id": "UC23rnlQU_qE3cec9x709peA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: Gooaye股癌（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 92,
       "name": "理財不能等（獅公李永年）",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "27W+",
+      "channel_id": "UC21AfB2CIbvpjFxrJfZNfeg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1916,17 +1772,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 理財不能等（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
+          "msg": "handle 缺失"
         }
       ]
     },
@@ -1934,31 +1780,17 @@
       "id": 93,
       "name": "懶錢包LazyWallet",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "20W+",
+      "channel_id": "UChYg2EINv5URVkebzlTGbFQ",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: LazyWallet（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 94,
@@ -1966,9 +1798,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "UCT3uWFvKLVpRnEealmRwvrw",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1979,70 +1813,44 @@
       "name": "蕾咪Rami",
       "platform": "YouTube",
       "fans": "37W+",
-      "channel_id": "",
-      "active": true,
+      "channel_id": "UCGX-lnOzsVjbdzb1VJxmWSg",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 蕾咪 Rami（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/c/LinRami vs 蕾咪 Rami"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 96,
       "name": "元大投顧財金頻道-理財最錢線",
       "platform": "YouTube",
-      "fans": "N/A",
-      "channel_id": "",
-      "active": true,
+      "fans": "15W+",
+      "channel_id": "UCS1bMmw249R7R0wDjAmE6CA",
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_id 缺失 → 无法通过 RSS 抓取和验证内容"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "handle 格式异常: 元大投顧 理財最錢線（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "fans 缺失/未填写"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 97,
       "name": "股海老牛",
       "platform": "YouTube",
-      "fans": "15W+",
+      "fans": "",
       "channel_id": "UCwxU6JWj0oOk6behq3XbOiQ",
-      "active": true,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -2050,7 +1858,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCwxU6JWj0oOk6behq3XbOiQ vs @股海老牛"
+          "msg": "fans 缺失/未填写"
         }
       ]
     }
