@@ -70,9 +70,7 @@ Kelvin, Swedish Investor, Preston Pysh, PensionCraft, Maverick, Cameron Stewart,
 1. **RSS 优先**：`https://www.youtube.com/feeds/videos.xml?channel_id=UCxxx`  
    `feedparser` 解析 `published_parsed`，计算距今天数。
 2. **HTML 回退**：抓取 `https://www.youtube.com/@handle/videos`，正则提取 `publishedTimeText` / `uploadDate`。
-3. **兜底标记**：`kol_data.json` 中 `active` 字段（基于 2026-08 人工 + `web_search` 验证）  
-   - 活跃 → 模拟 1-18 天前更新  
-   - 沉寂 → 模拟 100-300 天前更新
+3. **不作伪兜底**：全部失败时按 `kol_data.json` 的 `active` 标记返回，但「最近更新」与「内容条目」均为未知/空——**绝不伪造日期或内容**（审计会将其判为 WARN）。只有显式设置 `KOL_ALLOW_MOCK=1` 时才启用模拟语料兜底（本地演示用，CI/正式链路绝不开启）。
 
 阈值：`ACTIVE_THRESHOLD_DAYS = 90` 天内有更新视为存活。
 
@@ -91,13 +89,14 @@ python -m src.fetcher  # 单独测试
 
 ## 📥 抓取与中文转化
 
-`enrich_with_mock_content()`（2026-08-16 修复）：
+`enrich_with_mock_content()`（2026-08-16 两轮整改）：
 
 - 若 RSS 拿到真实 `title/link/published/summary`，**全部使用频道真实数据**（此前曾用 `MOCK_TITLES_POOL` 中文标题覆盖真标题，导致战报内容与频道真实内容不符，已修复）。
-- 若无真实数据，才走 Mock 兜底：生成 2 / 7 / 14 天前的模拟发布时间 + 中文标题，并打 `is_mock: true` 标记便于审计过滤。
-- 语料库：为 45 家活跃 KOL 各写 3 条现制中文标题（紧扣 2026 宏观：AI超级碗、万亿美债、降息博弈、城投展期、黄金新高、半导体拐点等）。
+- 默认**不生成任何伪造内容**：无真实 RSS 条目的频道直接留空（报告显示「暂无抓取内容」，审计判 WARN 而非 FAIL）。
+- 仅当显式设置 `KOL_ALLOW_MOCK=1`（本地演示）才用 `MOCK_TITLES_POOL` 兜底并打 `is_mock: true` 标记；CI/正式链路绝不开启。
+- 语料库（`MOCK_TITLES_POOL`）保留，供审计模块对照识别伪造标题、以及演示模式使用。
 
-每家 **固定 3 条**，合计 **135 条**参战内容，全部中文文字呈现。
+每个频道最多取 **3 条**真实条目；无法抓取的频道不占位、不伪造。
 
 ---
 
@@ -207,6 +206,8 @@ python main.py --strict-audit                       # 生成后自动审计，�
 - **CI 门禁**：在 `.github/workflows/daily.yml` 中加入 `python -m src.authenticity_check --online --strict` 步骤即可令含伪造内容的构建变红（注：workflow 文件需有 `workflows` 权限的账号提交，见下文"定时任务"备注）
 
 > 📌 2026-08-15 首次全量排查：237 条内容中 **219 条（92.4%）为 mock 伪链接**；已修正 18 家频道的 channel_id/粉丝量/名称等失实字段（详见 `核查报告_全频道.md`）。
+>
+> 📌 2026-08-16 二轮整改（本轮）：补全 **45 家** channel_id（71/97 家有真实 channel_id），8 家疑似虚构/无内容/停更频道标记 `active=false`（瑞威金融、零总投资、财经全世界、逻辑财金、美股说、老李财经、子朝出走中、马江博说趋势），修复 handle/channel_url/fans 失实字段；抓取器默认**不再产生任何 mock 伪链接**。联网模拟验证：**PASS 59 / WARN 38 / FAIL 0**（详见 `核查报告_全频道_20260816b.md`）。
 
 ---
 

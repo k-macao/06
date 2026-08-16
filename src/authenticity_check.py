@@ -323,6 +323,9 @@ def render_markdown(audit: dict) -> str:
         f"- **内容条目**：共 {s['total_items']} 条，其中**伪链接（mock）{s['mock_items']} 条（{s['mock_ratio_pct']}%）**，语料库标题 {s['pool_titles']} 条",
         f"- **在线验证**：{'开启' if s['online_verified'] else '未开启（离线审计，建议 CI 中 --online 复核）'}",
         "",
+        "> 说明：离线/无网络环境无法抓取任何真实内容，所有 KOL 均判 WARN（无法证明真实，但**无伪造**）。",
+        "> 联网 CI（GitHub Actions）会用 channel_id 拉取真实 RSS 后重新判定，已补全 channel_id 的频道将升级为 PASS。",
+        "",
         "## 判定口径",
         "- **FAIL**：检测到伪造内容（伪链接等）或在线验证确认元数据严重失实",
         "- **WARN**：元数据不完整（channel_id/fans 缺失等）→ 无法证明真实，需人工核",
@@ -372,6 +375,12 @@ def main(argv=None):
     print("🔍 不作伪检查模块 · 审计完成")
     print(f"   KOL: {s['total_kols']} | PASS {s['pass']} | WARN {s['warn']} | FAIL {s['fail']}")
     print(f"   条目: {s['total_items']} | mock伪链接 {s['mock_items']} ({s['mock_ratio_pct']}%) | 语料标题 {s['pool_titles']}")
+    if s["fail"]:
+        print("   ⚠️  FAIL 明细（供 CI 排查）：")
+        for r in audit["results"]:
+            if r["verdict"] == "FAIL":
+                msgs = "；".join(i["msg"] for i in r["issues"] if i["level"] == "FAIL")
+                print(f"   ❌ #{r['id']} {r['name']}: {msgs}")
     print("=" * 60)
 
     if not args.verify_only:

@@ -1,11 +1,13 @@
 """
-KOL 存活探测与内容抓取
+KOL 存活探测与内容抓取（不作伪：只产出真实内容）
 策略：
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
 2. 依次备用官方 YouTube Data API、开源 yt-dlp、频道 /videos 页结构化数据
-3. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
-4. 来源没有简介时，以 youtube-transcript-api 的真实字幕作为底层内容备用
-5. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
+3. 只有 @handle / /c/ 链接时，先从频道页 HTML 解析 channelId 再走 RSS（自愈）
+4. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
+5. 来源没有简介时，以 youtube-transcript-api 的真实字幕作为底层内容备用
+6. 非 YouTube 平台（TikTok/IG/媒体网站/电台等）本模块不抓取，按名单标记返回
+7. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
 """
 import json
 import os
@@ -21,6 +23,16 @@ import feedparser
 from .config import KOL_DATA_PATH, OUTPUT_DIR, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
 
 HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8"}
+
+# 默认禁止模拟兜底（不作伪门禁）。仅当显式设置 KOL_ALLOW_MOCK=1 时才允许。
+MOCK_FALLBACK_ENABLED = os.getenv("KOL_ALLOW_MOCK", "").strip().lower() in ("1", "true", "yes", "on")
+
+
+def is_youtube_kol(kol) -> bool:
+    """判定该 KOL 是否走 YouTube 抓取链路（平台/链接任一含 YouTube 即视为可尝试 RSS）"""
+    platform = (kol.get("platform") or "").lower()
+    channel_url = kol.get("channel_url") or ""
+    return "youtube" in platform or "yt" in platform or "youtube.com" in channel_url
 
 # 用于中文模拟数据的真实感语料 - 覆盖全部 45 个活跃 KOL
 MOCK_TITLES_POOL = {
@@ -588,6 +600,29 @@ def scrape_channel_page(channel_url):
         print(f"[scrape] {channel_url} {ex}")
         return None
 
+
+def scrape_channel_id(channel_url):
+    """从频道页 HTML 提取 channelId（ytInitialData 中的 'channelId':'UC...' 或 /channel/UC... 链接）。
+
+    让只有 @handle / /c/ 链接、尚未补 channel_id 的 KOL 也能在联网环境下自动解析出
+    channel_id 并走真实 RSS，避免回退到无内容/模拟内容。
+    """
+    try:
+        resp = requests.get(channel_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        if resp.status_code != 200:
+            return None
+        text = resp.text
+        m = re.search(r'"channelId"\s*:\s*"(UC[A-Za-z0-9_-]{22})"', text)
+        if m:
+            return m.group(1)
+        m2 = re.search(r"/channel/(UC[A-Za-z0-9_-]{22})", text)
+        if m2:
+            return m2.group(1)
+        return None
+    except Exception as ex:
+        print(f"[scrape-cid] {channel_url} {ex}")
+        return None
+
 def parse_relative_time(s: str) -> int:
     s = s.lower()
     num = re.search(r"(\d+)", s)
@@ -646,20 +681,28 @@ def _latest_datetime(items):
 def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
     channel_id = kol.get("channel_id")
     channel_url = kol.get("channel_url")
-    # 按可信度与实时性依次降级，所有方案都必须返回可点击的真实来源。
-    strategies = (
-        ("RSS", lambda: parse_last_update_from_rss(channel_id)),
-        ("YouTube API", lambda: fetch_from_youtube_api(channel_id)),
-        ("yt-dlp", lambda: fetch_from_ytdlp(channel_url)),
-        ("频道页", lambda: scrape_channel_items(channel_url)),
-    )
-    for _, strategy in strategies:
-        last_dt, items = strategy()
-        if last_dt and items:
-            age_days = (datetime.now(timezone.utc) - last_dt).days
-            items = enrich_items_with_transcripts(items, kol)
-            return age_days <= threshold_days, last_dt, items
 
+    # 只有 @handle / /c/ 链接时先自愈出 channel_id，让这些频道也能走真实 RSS。
+    if not channel_id and channel_url and is_youtube_kol(kol):
+        channel_id = scrape_channel_id(channel_url) or None
+
+    if is_youtube_kol(kol):
+        # 按可信度与实时性依次降级，所有方案都必须返回可点击的真实来源。
+        strategies = (
+            ("RSS", lambda: parse_last_update_from_rss(channel_id)),
+            ("YouTube API", lambda: fetch_from_youtube_api(channel_id)),
+            ("yt-dlp", lambda: fetch_from_ytdlp(channel_url)),
+            ("频道页", lambda: scrape_channel_items(channel_url)),
+        )
+        for _, strategy in strategies:
+            last_dt, items = strategy()
+            if last_dt and items:
+                age_days = (datetime.now(timezone.utc) - last_dt).days
+                items = enrich_items_with_transcripts(items, kol)
+                return age_days <= threshold_days, last_dt, items
+
+    # 非 YouTube 平台（TikTok/IG/媒体网站/电台/TradingView 等）本模块不抓取，
+    # 只能依赖上次已审计通过的真实缓存，绝不按名单标记伪造存活内容。
     cached_items = cached_items or []
     cached_dt = _latest_datetime(cached_items)
     if cached_dt:
