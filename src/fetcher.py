@@ -2,20 +2,16 @@
 KOL 存活探测与内容抓取
 策略：
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
-2. 失败则尝试抓取频道页 HTML 解析最新视频
-3. 再失败则回退到 kol_data.json 里的 active 标记（基于人工 + web_search 验证）
-4. 对 TikTok/IG/Reddit 等非 YouTube 平台，直接使用 active 标记 + 模拟抓取
+2. 失败则尝试抓取频道页 HTML，仅用于判断最近是否更新
+3. 只有 RSS 返回了可追溯的真实条目，才把 KOL 纳入内容战报
+4. 网络失败、缺少 channel_id 或暂不支持的平台均标记为未验证；绝不生成兜底标题、日期或链接
 """
 import re
-import json
 import time
-import random
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlparse
 
 import requests
 import feedparser
-from bs4 import BeautifulSoup
 
 from .config import KOL_DATA_PATH, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
 
@@ -341,54 +337,32 @@ def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS):
             age_days = (datetime.now(timezone.utc) - dt2).days
             active = age_days <= threshold_days
             return active, dt2, []
-    fallback_active = bool(kol.get("active", False))
-    if fallback_active:
-        fake_days = random.randint(1, 18)
-        dt = datetime.now(timezone.utc) - timedelta(days=fake_days)
-        return True, dt, []
-    else:
-        fake_days = random.randint(100, 300)
-        dt = datetime.now(timezone.utc) - timedelta(days=fake_days)
-        return False, dt, []
+    # 无法在线核实时不得根据静态 active 标记伪造“最近更新”日期。
+    return False, None, []
 
-def enrich_with_mock_content(kol, real_items):
-    """
-    组装每 KOL 3 条内容。
-    - 有真实 RSS 条目：title/summary/link/published 全部使用频道真实数据，
-      不得再用 MOCK_TITLES_POOL 覆盖（此前用假标题覆盖真标题，导致战报
-      内容与频道真实内容严重不符，2026-08-16 排查后修复）。
-    - 无真实数据（RSS 失败/无 channel_id）才走 Mock 兜底，并打 is_mock 标记，
-      便于下游（报告/审计）识别与过滤。
-    """
-    name = kol["name"]
-    pool = MOCK_TITLES_POOL.get(name, GENERIC_TITLES)
+
+def enrich_with_real_content(kol, real_items):
+    """标准化最多三条真实抓取结果；没有真实条目时返回空列表。"""
     enriched = []
-    for i in range(3):
-        if i < len(real_items):
-            ri = real_items[i]
-            enriched.append({
-                "title": ri["title"],
-                "original_title": ri["title"],
-                "link": ri["link"],
-                "published": ri["published"],
-                "summary": ri.get("summary", ""),
-                "lang": kol["language"],
-                "is_mock": False,
-            })
-        else:
-            mock_title, mock_desc = pool[i % len(pool)]
-            days_ago = [2, 7, 14][i]
-            dt = datetime.now(timezone.utc) - timedelta(days=days_ago, hours=random.randint(1, 12))
-            enriched.append({
-                "title": mock_title,
-                "original_title": mock_title,
-                "link": kol["channel_url"] + f"?v=mock{i}",
-                "published": dt.isoformat(),
-                "summary": mock_desc,
-                "lang": kol["language"],
-                "is_mock": True,
-            })
+    for ri in (real_items or [])[:3]:
+        # 缺少来源链接或标题的条目不可追溯，不进入报告。
+        if not ri.get("title") or not ri.get("link"):
+            continue
+        enriched.append({
+            "title": ri["title"],
+            "original_title": ri["title"],
+            "link": ri["link"],
+            "published": ri.get("published", ""),
+            "summary": ri.get("summary", ""),
+            "lang": kol.get("language", ""),
+            "is_mock": False,
+        })
     return enriched
+
+
+# 保留旧函数名，避免外部调用方升级时中断；其行为已改为只接受真实内容。
+def enrich_with_mock_content(kol, real_items):
+    return enrich_with_real_content(kol, real_items)
 
 def scan_kols(kol_list=None, verbose=True):
     import pathlib, json
@@ -400,15 +374,16 @@ def scan_kols(kol_list=None, verbose=True):
     enriched_map = {}
     for kol in kol_list:
         active, last_dt, items = is_active_kol(kol)
-        status = "✅活跃" if active else "💤沉寂"
+        status = "✅活跃" if active else ("⚪未验证" if last_dt is None else "💤沉寂")
         last_str = last_dt.strftime("%Y-%m-%d") if last_dt else "未知"
         if verbose:
             print(f"{status} [{kol['id']:02d}] {kol['name']:20s} | {kol['platform']:12s} | 最近: {last_str} | {kol['fans']}")
-        if active:
+        enriched = enrich_with_real_content(kol, items) if active else []
+        if active and enriched:
             active_kols.append(kol)
-            enriched = enrich_with_mock_content(kol, items)
             enriched_map[kol["id"]] = enriched
         else:
+            # “活跃”但抓不到可追溯条目时也不进入战报，防止下游补造内容。
             inactive_kols.append(kol)
         time.sleep(0.15)
     return active_kols, inactive_kols, enriched_map

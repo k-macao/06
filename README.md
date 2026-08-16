@@ -198,8 +198,9 @@ python -m src.authenticity_check --md output/audit_report.md --json output/audit
 python main.py --strict-audit                       # 生成后自动审计，检出伪造即退出码非 0
 ```
 
-- **元数据层**：channel_id 缺失（=内容必走 Mock 兜底）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
-- **内容层**：`?v=mock` 伪链接（FAIL）、语料库伪造标题（对照 `fetcher.py` 的 `MOCK_TITLES_POOL`）、未来日期、链接重复
+- **元数据层**：channel_id 缺失（=无法通过 RSS 抓取）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
+- **内容层**：`?v=mock` 伪链接或 `is_mock=true`（FAIL）、语料库伪造标题（对照 `fetcher.py` 的历史 `MOCK_TITLES_POOL`）、未来日期、链接重复
+- **抓取原则**：RSS/网络验证失败时将该 KOL 记为未验证，不加入本期内容报告；不再用静态 `active` 标记生成日期，也不再补造标题和链接
 - **在线层**（`--online`，需网络）：频道页 HTTP 状态/订阅数、channel_id 拉 RSS 复核最新条目
 - **CI 门禁**：在 `.github/workflows/daily.yml` 中加入 `python -m src.authenticity_check --online --strict` 步骤即可令含伪造内容的构建变红（注：workflow 文件需有 `workflows` 权限的账号提交，见下文"定时任务"备注）
 
