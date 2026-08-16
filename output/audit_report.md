@@ -1,114 +1,115 @@
 # 🔍 全频道真实性审计报告（不作伪检查模块）
 
-- **审计时间**：2026-08-16T09:05:46.255823+00:00
-- **KOL 总数**：97　|　**PASS**：5　|　**WARN**：92　|　**FAIL**：0
-- **内容条目**：共 18 条，其中**伪链接（mock）0 条（0.0%）**，语料库标题 0 条
-- **在线验证**：未开启（离线审计，建议 CI 中 --online 复核）
+- **审计时间**：2026-08-16T09:41:55.571649+00:00
+- **KOL 目录**：97（本次入报 5，隔离 92）
+- **判定**：PASS 5　|　WARN 92　|　FAIL 0
+- **内容条目**：15 条；模拟/伪链接 0；改写标题 0
+- **在线复核**：未开启
 
 ## 判定口径
-- **FAIL**：检测到伪造内容（伪链接等）或在线验证确认元数据严重失实
-- **WARN**：元数据不完整（channel_id/fans 缺失等）→ 无法证明真实，需人工核
-- **PASS**：无伪造痕迹且元数据完整（在线模式还要求验证通过）
+- **FAIL**：本次报告含模拟内容、伪链接、改写标题，或入报来源在线确认严重失实。
+- **WARN**：目录元数据不完整、网络暂时不可验证，或记录未入报并已隔离。
+- **PASS**：入报内容具备真实来源且无伪造痕迹。
 
-| # | 名称 | 平台 | fans | channel_id | 判定 | mock/总条目 | 主要问题 |
-|---|------|------|------|-----------|------|-----------|---------|
-|  1 | Graham Stephan | YouTube | 500W+ | UCV6KDgJskWa | **PASS** | 0/3 |  |
-|  2 | Andrei Jikh | YouTube | 330W+ | UCGy7SkBjcIA | **WARN** | 0/0 |  |
-|  3 | Humphrey Yang | TikTok/YT | 300W+ | UCFBpVaKCC0a | **WARN** | 0/0 |  |
-|  4 | The Plain Bagel | YouTube | 100W+ | UCFCEuCsyWP0 | **PASS** | 0/3 |  |
-|  5 | Patrick Boyle | YouTube | 130W+ | UCASM0cgfkJx | **WARN** | 0/0 |  |
-|  6 | Meet Kevin | YouTube | 205W+ | UCUvvj5lwue7 | **WARN** | 0/0 |  |
-|  7 | Joseph Carlson | YouTube | 51W+ | UCbta0n8i6Rl | **WARN** | 0/0 |  |
-|  8 | Sven Carlin | YouTube | 25W+ | UCrTTBSUr0zh | **WARN** | 0/0 |  |
-|  9 | Mark Tilbury | TikTok/YT | 880W+ | UCxgAuX3XZRO | **WARN** | 0/0 |  |
-| 10 | Jeremy Lefebvre | YouTube | 94W+ | UCnMn36GT_H0 | **WARN** | 0/0 |  |
-| 11 | Ben Felix | YouTube | 62W+ | UCDXTQ8nWmx_ | **WARN** | 0/0 |  |
-| 12 | Erika Kullberg | IG/TikTok | 500W+ | — | **WARN** | 0/0 |  |
-| 13 | Vivien Tu | TikTok/IG | 200W+ | — | **WARN** | 0/0 |  |
-| 14 | Jaspreet Singh | YouTube | 240W+ | UCT3EznhW_CN | **WARN** | 0/0 |  |
-| 15 | Investing with Rose | YouTube | 60W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 16 | ClearValue Tax | YouTube | 290W+ | UCigUBIf-zt_ | **PASS** | 0/3 |  |
-| 17 | Everything Money | YouTube | 20W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 18 | New Money | YouTube | 70W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 19 | Financial Education | YouTube | 70W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；channel_url 与 handle 不一致: https://www.youtube.c |
-| 20 | Brian Feroldi | YouTube | 5W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 21 | 贝拉聊财金 | YouTube | 20W+ | UCVomjkM_t0E | **PASS** | 0/3 |  |
-| 22 | 阳光财经 | YouTube | 30W+ | UC2I5em6UyBp | **WARN** | 0/0 |  |
-| 23 | 小翠时政财经 | YouTube | 34W+ | UCOhck8oLoIw | **PASS** | 0/3 |  |
-| 24 | 视野环球镜 | YouTube | 50W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；channel_url 与 handle 不一致: https://www.youtube.c |
-| 25 | 老李财经 | YouTube | 15W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 26 | 瑞威金融 | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 27 | 财女Nicole | YouTube | 15W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 28 | 孟岩的投资笔记 | YouTube/Web | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；channel_url 与 handle 不一致: https://www.youtube.c |
-| 29 | 零总投资 | YouTube | 8W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 30 | 孙老师财经 | YouTube | 15W+ | UC1Lk6WO-eKu | **WARN** | 0/0 |  |
-| 31 | 美股投资网 | YouTube | 10W+ | UCWyPo32TSKP | **WARN** | 0/0 |  |
-| 32 | 逻辑财金 | YouTube | 12W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 33 | 大马理财 | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 34 | 美股说 | YouTube | 5W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 35 | Kelvin Learns Investin | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 36 | The Swedish Investor | YouTube | 80W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 37 | Preston Pysh | Reddit/YT | 15W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 38 | PensionCraft | YouTube | 20W+ | UC9OIwUcx-Us | **WARN** | 0/0 |  |
-| 39 | Ramin Nakisa | YouTube | 20W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 40 | Financial Diet | YouTube | 90W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 41 | Maverick of Wall Stree | YouTube | 20W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 42 | Daniel Pronk | YouTube | 20W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 43 | Cameron Stewart | YouTube | 5W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 44 | Fast Graphs (Chuck Car | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 45 | The Nomad Wallstreet | YouTube | 8W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 46 | DeepValue | Reddit (u/) | 5W+ | — | **WARN** | 0/0 |  |
-| 47 | HK Money Mentor | IG/YT | 2W+ | — | **WARN** | 0/0 |  |
-| 48 | Money Coach Nick | IG | 10W+ | — | **WARN** | 0/0 |  |
-| 49 | TradingView (Top Autho | TradingView | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 50 | Real Vision (Individua | YouTube | 60W+ | UC1CVw2YKIun | **WARN** | 0/0 |  |
-| 51 | 老厉害 | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 52 | inves talk | YouTube | 14W+ | UCz1GOaZF_qc | **WARN** | 0/0 |  |
-| 53 | 硬核刘大 | YouTube | 11W+ | — | **WARN** | 0/3 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 54 | 信報財經新聞 | 香港財經媒體 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 55 | Finance730 | 香港財經媒體 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 56 | 香港經濟日報 HKET | 香港財經媒體 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 57 | 香港財經時報 HKBT | YouTube / 網頁 | N/A | — | **WARN** | 0/0 | channel_url 缺失；fans 缺失/未填写 |
-| 58 | 新城財經台 | 香港財經電台 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 59 | 财经风云 (@ChineseFinance) | YouTube | 24W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 60 | 视野环球财经 (@RhinoFinance) | YouTube | 30W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 61 | ChineseFN 中文投資網 | 中文投資網站 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 62 | 财经全世界 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 财经全世界（应为 @xxx）；fans 缺失/未填写 |
-| 63 | 老李玩钱 | YouTube | 10W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 老李玩钱（应为 @xxx） |
-| 64 | 土妹美股 | YouTube | 5W+ | UCWvjeM3d1GN | **WARN** | 0/0 | channel_url 与 handle 不一致: https://www.youtube.com/channel/UCWvjeM3d1GNj8pK7o_AN_ |
-| 65 | 贝拉说美股 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 贝拉说美股（应为 @xxx）；fans 缺失/未填写 |
-| 66 | 美投讲美股 | YouTube | 66W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 67 | 财经冷眼 | YouTube | 18W+ | UCn9_KbNANey | **WARN** | 0/0 |  |
-| 68 | 老蛮频道（数据帝老蛮） | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 老蛮频道（应为 @xxx）；fans 缺失/未填写 |
-| 69 | 秦鹏观察 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 秦鹏观察（应为 @xxx）；fans 缺失/未填写 |
-| 70 | 子朝出走中 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 子朝出走中（应为 @xxx）；fans 缺失/未填写 |
-| 71 | 马江博说趋势 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 马江博说趋势（应为 @xxx）；fans 缺失/未填写 |
-| 72 | 付鹏的财经世界 | YouTube | 20W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 73 | 兰香财经 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 兰香财经（应为 @xxx）；fans 缺失/未填写 |
-| 74 | 财经M平方 MacroMicro | 宏觀數據平台 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 75 | Gamma 财经 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: Gamma 财经（应为 @xxx）；fans 缺失/未填写 |
-| 76 | Ray 观点 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: Ray 观点（应为 @xxx）；fans 缺失/未填写 |
-| 77 | 公子沈 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 公子沈（应为 @xxx）；fans 缺失/未填写 |
-| 78 | 文昭谈古论今 | YouTube | 150W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 文昭谈古论今（应为 @xxx） |
-| 79 | 雅虎财经（Yahoo Finance 台湾/ | 財經媒體 | N/A | — | **WARN** | 0/0 | fans 缺失/未填写 |
-| 80 | 大康有话说 | YouTube | 25W+ | UCG6ADYIl4Gx | **WARN** | 0/0 | handle 格式异常: 大康有话说（应为 @xxx）；channel_url 与 handle 不一致: https://www.youtube.com/ch |
-| 81 | 游庭皓的財經皓角 | YouTube | 68W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 游庭皓的財經皓角（应为 @xxx） |
-| 82 | 柴鼠兄弟 ZRBros | YouTube | 100W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容 |
-| 83 | 风傳媒-下班经济學 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 下班经济學（应为 @xxx）；fans 缺失/未填写 |
-| 84 | 老王愛說笑（老王/王倚隆） | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 老王愛說笑（应为 @xxx）；fans 缺失/未填写 |
-| 85 | SHIN LI | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: SHIN LI（应为 @xxx）；fans 缺失/未填写 |
-| 86 | 自由女神邱沁宜 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 邱沁宜（应为 @xxx）；fans 缺失/未填写 |
-| 87 | Better Leaf 好葉 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: Better Leaf 好葉（应为 @xxx）；fans 缺失/未填 |
-| 88 | 慢活夫妻 George & Dewi | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: George & Dewi（应为 @xxx）；fans 缺失/未填写 |
-| 89 | 大俠武林 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 大俠武林（应为 @xxx）；fans 缺失/未填写 |
-| 90 | 股乾爹 KuKanTieh | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: KuKanTieh（应为 @xxx）；fans 缺失/未填写 |
-| 91 | Gooaye股癌 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: Gooaye股癌（应为 @xxx）；fans 缺失/未填写 |
-| 92 | 理財不能等（獅公李永年） | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 理財不能等（应为 @xxx）；fans 缺失/未填写 |
-| 93 | 懶錢包LazyWallet | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: LazyWallet（应为 @xxx）；fans 缺失/未填写 |
-| 94 | M觀點 | YouTube | 20W+ | UCT3uWFvKLVp | **WARN** | 0/0 |  |
-| 95 | 蕾咪Rami | YouTube | 37W+ | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 蕾咪 Rami（应为 @xxx）；channel_url 与 han |
-| 96 | 元大投顧財金頻道-理財最錢線 | YouTube | N/A | — | **WARN** | 0/0 | channel_id 缺失 → 无法通过 RSS 抓取和验证内容；handle 格式异常: 元大投顧 理財最錢線（应为 @xxx）；fans 缺失/未填写 |
-| 97 | 股海老牛 | YouTube | 15W+ | UCwxU6JWj0oO | **WARN** | 0/0 | channel_url 与 handle 不一致: https://www.youtube.com/channel/UCwxU6JWj0oOk6behq3XbO |
+| # | 名称 | 入报 | 平台 | 判定 | mock/条目 | 主要问题 |
+|---|------|------|------|------|-----------|---------|
+|  1 | Graham Stephan | 是 | YouTube | **PASS** | 0/3 |  |
+|  2 | Andrei Jikh | 否 | YouTube | **WARN** | 0/0 |  |
+|  3 | Humphrey Yang | 否 | TikTok/YT | **WARN** | 0/0 |  |
+|  4 | The Plain Bagel | 是 | YouTube | **PASS** | 0/3 |  |
+|  5 | Patrick Boyle | 否 | YouTube | **WARN** | 0/0 |  |
+|  6 | Meet Kevin | 否 | YouTube | **WARN** | 0/0 |  |
+|  7 | Joseph Carlson | 否 | YouTube | **WARN** | 0/0 |  |
+|  8 | Sven Carlin | 否 | YouTube | **WARN** | 0/0 |  |
+|  9 | Mark Tilbury | 否 | TikTok/YT | **WARN** | 0/0 |  |
+| 10 | Jeremy Lefebvre | 否 | YouTube | **WARN** | 0/0 |  |
+| 11 | Ben Felix | 否 | YouTube | **WARN** | 0/0 |  |
+| 12 | Erika Kullberg | 否 | TikTok/YT | **WARN** | 0/0 | handle 缺失 |
+| 13 | Vivien Tu | 否 | TikTok/YT | **WARN** | 0/0 |  |
+| 14 | Jaspreet Singh | 否 | YouTube | **WARN** | 0/0 |  |
+| 15 | Investing with Rose | 否 | YouTube | **WARN** | 0/0 |  |
+| 16 | ClearValue Tax | 是 | YouTube | **PASS** | 0/3 |  |
+| 17 | Everything Money | 否 | YouTube | **WARN** | 0/0 |  |
+| 18 | New Money | 否 | YouTube | **WARN** | 0/0 |  |
+| 19 | Financial Education | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；channel_url 与 handle 不一致: https://www.youtube.com/@FinancialEducat |
+| 20 | Brian Feroldi | 否 | YouTube | **WARN** | 0/0 |  |
+| 21 | 贝拉聊财金 | 是 | YouTube | **PASS** | 0/3 |  |
+| 22 | 阳光财经 | 否 | YouTube | **WARN** | 0/0 |  |
+| 23 | 小翠时政财经 | 是 | YouTube | **PASS** | 0/3 |  |
+| 24 | 视野环球镜 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 缺失 |
+| 25 | 老李财经 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 26 | 瑞威金融 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 27 | 财女Nicole | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 28 | 孟岩的投资笔记 | 否 | YouTube/Web | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 29 | 零总投资 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 30 | 孙老师财经 | 否 | YouTube | **WARN** | 0/0 |  |
+| 31 | 美股投资网 | 否 | YouTube | **WARN** | 0/0 | handle 缺失 |
+| 32 | 逻辑财金 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 33 | 大马理财 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 34 | 美股说 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 35 | Kelvin Learns Investing | 否 | YouTube | **WARN** | 0/0 |  |
+| 36 | The Swedish Investor | 否 | YouTube | **WARN** | 0/0 |  |
+| 37 | Preston Pysh | 否 | Reddit/YT | **WARN** | 0/0 |  |
+| 38 | PensionCraft | 否 | YouTube | **WARN** | 0/0 |  |
+| 39 | Ramin Nakisa | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 缺失 |
+| 40 | Financial Diet | 否 | YouTube | **WARN** | 0/0 |  |
+| 41 | Maverick of Wall Street | 否 | YouTube | **WARN** | 0/0 |  |
+| 42 | Daniel Pronk | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 43 | Cameron Stewart | 否 | YouTube | **WARN** | 0/0 |  |
+| 44 | Fast Graphs (Chuck Carne | 否 | YouTube | **WARN** | 0/0 |  |
+| 45 | The Nomad Wallstreet | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离 |
+| 46 | DeepValue | 否 | Reddit (u/) | **WARN** | 0/0 |  |
+| 47 | HK Money Mentor | 否 | IG | **WARN** | 0/0 | channel_url 缺失 |
+| 48 | Money Coach Nick | 否 | IG | **WARN** | 0/0 | channel_url 缺失 |
+| 49 | TradingView (Top Authors | 否 | TradingView | **WARN** | 0/0 | channel_url 缺失；fans 缺失/未填写 |
+| 50 | Real Vision (Individual  | 否 | YouTube | **WARN** | 0/0 |  |
+| 51 | 老厉害 | 否 | YouTube | **WARN** | 0/0 |  |
+| 52 | inves talk | 否 | YouTube | **WARN** | 0/0 |  |
+| 53 | 硬核刘大 | 否 | YouTube | **WARN** | 0/0 |  |
+| 54 | 信報財經新聞 | 否 | YouTube/財經媒體 | **WARN** | 0/0 | fans 缺失/未填写 |
+| 55 | Finance730 | 否 | YouTube/財經媒體 | **WARN** | 0/0 |  |
+| 56 | 香港經濟日報 HKET | 否 | YouTube/財經媒體 | **WARN** | 0/0 |  |
+| 57 | 香港財經時報 HKBT | 否 | YouTube/財經媒體 | **WARN** | 0/0 |  |
+| 58 | 新城財經台 | 否 | YouTube/財經電台 | **WARN** | 0/0 |  |
+| 59 | 财经风云 (@ChineseFinance) | 否 | YouTube | **WARN** | 0/0 |  |
+| 60 | 视野环球财经 (@RhinoFinance) | 否 | YouTube | **WARN** | 0/0 |  |
+| 61 | ChineseFN 中文投資網 | 否 | 中文投資網站 | **WARN** | 0/0 | fans 缺失/未填写 |
+| 62 | 财经全世界 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 格式异常: 财经全世界（应为 @xxx）；fans 缺失/未填写 |
+| 63 | 老李玩钱 | 否 | YouTube | **WARN** | 0/0 |  |
+| 64 | 土妹美股 | 否 | YouTube | **WARN** | 0/0 |  |
+| 65 | 贝拉说美股 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 格式异常: 贝拉说美股（应为 @xxx）；fans 缺失/未填写 |
+| 66 | 美投讲美股 | 否 | YouTube | **WARN** | 0/0 |  |
+| 67 | 财经冷眼 | 否 | YouTube | **WARN** | 0/0 |  |
+| 68 | 老蛮频道（数据帝老蛮） | 否 | YouTube | **WARN** | 0/0 |  |
+| 69 | 秦鹏观察 | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
+| 70 | 子朝出走中 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 格式异常: 子朝出走中（应为 @xxx）；fans 缺失/未填写 |
+| 71 | 马江博说趋势 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；fans 缺失/未填写 |
+| 72 | 付鹏的财经世界 | 否 | YouTube | **WARN** | 0/0 |  |
+| 73 | 兰香财经 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 格式异常: 兰香财经（应为 @xxx）；fans 缺失/未填写 |
+| 74 | 财经M平方 MacroMicro | 否 | YouTube/宏觀數據平台 | **WARN** | 0/0 |  |
+| 75 | Gamma 财经 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 格式异常: Gamma 财经（应为 @xxx）；fans 缺失/未填写 |
+| 76 | Ray 观点 | 否 | YouTube | **WARN** | 0/0 | channel_id 缺失；运行时必须从真实频道页解析，失败则隔离；handle 格式异常: Ray 观点（应为 @xxx）；fans 缺失/未填写 |
+| 77 | 公子沈 | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
+| 78 | 文昭谈古论今 | 否 | YouTube | **WARN** | 0/0 |  |
+| 79 | 雅虎财经（Yahoo Finance 台湾/香港 | 否 | 財經媒體 | **WARN** | 0/0 | fans 缺失/未填写 |
+| 80 | 大康有话说 | 否 | YouTube | **WARN** | 0/0 |  |
+| 81 | 游庭皓的財經皓角 | 否 | YouTube | **WARN** | 0/0 |  |
+| 82 | 柴鼠兄弟 ZRBros | 否 | YouTube | **WARN** | 0/0 |  |
+| 83 | 风傳媒-下班经济學 | 否 | YouTube | **WARN** | 0/0 |  |
+| 84 | 老王愛說笑（老王/王倚隆） | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
+| 85 | SHIN LI | 否 | YouTube | **WARN** | 0/0 |  |
+| 86 | 自由女神邱沁宜 | 否 | YouTube | **WARN** | 0/0 |  |
+| 87 | Better Leaf 好葉 | 否 | YouTube | **WARN** | 0/0 |  |
+| 88 | 慢活夫妻 George & Dewi | 否 | YouTube | **WARN** | 0/0 |  |
+| 89 | 大俠武林 | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
+| 90 | 股乾爹 KuKanTieh | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
+| 91 | Gooaye股癌 | 否 | YouTube | **WARN** | 0/0 |  |
+| 92 | 理財不能等（獅公李永年） | 否 | YouTube | **WARN** | 0/0 | handle 缺失 |
+| 93 | 懶錢包LazyWallet | 否 | YouTube | **WARN** | 0/0 |  |
+| 94 | M觀點 | 否 | YouTube | **WARN** | 0/0 |  |
+| 95 | 蕾咪Rami | 否 | YouTube | **WARN** | 0/0 |  |
+| 96 | 元大投顧財金頻道-理財最錢線 | 否 | YouTube | **WARN** | 0/0 |  |
+| 97 | 股海老牛 | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
 
 ---
 *本报告由 `src/authenticity_check.py` 自动生成，仅供真实性核查，不构成投资建议。*

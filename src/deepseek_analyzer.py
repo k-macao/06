@@ -43,11 +43,12 @@ def call_deepseek_batch(items, kol_name, kol_field):
 [{"sentiment":"多头","confidence":78,"reason":"标题释放降息利好，资金面边际改善利于反弹","advice":"逢低分批建仓，设8%止损"},{"sentiment":"空头","confidence":82,"reason":"警示估值泡沫与抛售压力，防御姿态明显","advice":"降低仓位，等待恐慌释放"}]
 """
 
+    item_count = len(items)
     user_prompt = f"""KOL：{kol_name}（领域：{kol_field}）
-待分析内容（3条）：
+待分析内容（{item_count}条）：
 {prompt_items}
 
-请严格按 JSON 数组返回 3 个对象，每个对象含 sentiment/confidence/reason/advice。
+请严格按 JSON 数组返回 {item_count} 个对象，每个对象含 sentiment/confidence/reason/advice。
 """
 
     headers = {
@@ -178,14 +179,15 @@ def analyze_with_deepseek_or_fallback(kol, items):
         kol_sentiment = "轻度偏" + ("多" if bull > bear else "空")
         kol_color = "bull" if bull > bear else "bear"
 
+    analyzed_count = len(analyzed)
     aggregate = {
         "kol_sentiment": kol_sentiment,
         "kol_color": kol_color,
         "bull_count": bull,
         "bear_count": bear,
         "neutral_count": neutral,
-        "avg_confidence": int(total_conf / 3) if analyzed else 0,
-        "avg_power": int(total_power / 3) if analyzed else 50,
+        "avg_confidence": int(total_conf / analyzed_count) if analyzed_count else 0,
+        "avg_power": int(total_power / analyzed_count) if analyzed_count else 50,
         "battle_text": f"{bull}多 vs {bear}空 vs {neutral}中性"
     }
 

@@ -19,9 +19,9 @@
 
 - 8-bit 章鱼边框 + 扫描线 + Neon 网格背景
 - 🐂 多头军团 vs 🐻 空头军团 血条可视化
-- 每位 KOL 卡片：头像章鱼化 + 平台徽章 + 粉丝量 + 3条最新内容
-- 每条内容：中文标题 + AI 多空研判 + 置信度 + 战斗力 + 策略建议
-- 顶栏：存活 45/53 家 · 135 条内容参战 · 主导阵营实时计算
+- 每位 KOL 卡片：头像章鱼化 + 平台徽章 + 粉丝量 + 最多 3 条官方 RSS 内容
+- 每条内容：频道原始标题 + AI 多空研判 + 置信度 + 战斗力 + 策略建议
+- 顶栏：本次已验证频道与真实条目数 · 主导阵营实时计算
 - 筛选器：全部 / 多头 / 空头 / 中性 / 中文 / 英文
 
 ---
@@ -63,41 +63,38 @@ Kelvin, Swedish Investor, Preston Pysh, PensionCraft, Maverick, Cameron Stewart,
 
 ---
 
-## 🔍 排查逻辑：谁还活着？
+## 🔍 排查逻辑：哪些内容可以入报？
 
-`src/fetcher.py` · 三级存活探测
+`src/fetcher.py` 采用真实性优先、失败关闭（fail closed）的抓取策略：
 
-1. **RSS 优先**：`https://www.youtube.com/feeds/videos.xml?channel_id=UCxxx`  
-   `feedparser` 解析 `published_parsed`，计算距今天数。
-2. **HTML 回退**：抓取 `https://www.youtube.com/@handle/videos`，正则提取 `publishedTimeText` / `uploadDate`。
-3. **兜底标记**：`kol_data.json` 中 `active` 字段（基于 2026-08 人工 + `web_search` 验证）  
-   - 活跃 → 模拟 1-18 天前更新  
-   - 沉寂 → 模拟 100-300 天前更新
+1. **尊重人工隔离**：`active: false` 的重复、失实或停用记录不会进行线上探测。
+2. **确认真实频道**：优先使用 URL 自带的 `/channel/UCxxx`，其次格式有效的 `channel_id`；只有 `@handle` / `/c/` / `/user/` 链接时从真实频道页解析 `channelId`（自愈）。配置值与频道页不一致时**失败关闭**；搜索结果页和非 YouTube 占位链接一律拒绝。
+3. **五级可验证来源链**：官方 RSS → YouTube Data API（可选 `YOUTUBE_API_KEY`）→ [`yt-dlp`](https://github.com/yt-dlp/yt-dlp)（只取元数据，不下载）→ 频道 `/videos` 页结构化数据 → 上次已通过审计且仍在时效内的缓存。每条内容都带 `source` 与来源频道标记。
+4. **字幕补全**：来源没有简介时，用 [`youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) 的真实字幕生成摘要，不覆盖来源原有简介。
+5. **90 天新鲜度门槛**：最新有效条目在 `ACTIVE_THRESHOLD_DAYS` 内才可进入日报。
+6. **全部失败即隔离**：不回退到静态 `active` 标记，不伪造日期与内容。
 
-阈值：`ACTIVE_THRESHOLD_DAYS = 90` 天内有更新视为存活。
+抓取失败、平台暂不支持或来源无法验证时，记录会显示为「⚠️未验证」并隔离，**不会再根据 `active` 标记伪造更新日期**。
 
 ```bash
-python -m src.fetcher  # 单独测试
-# 输出示例：✅活跃 [01] Graham Stephan | 最近: 2026-07-21
+python -m src.fetcher
+# 输出示例：✅已验证 [01] Graham Stephan | 最近: 2026-08-14
+#            ⚠️未验证 [12] Erika Kullberg   | 最近: 未知
 ```
-
-**本次排查结果（2026-08-07）**
-
-- ✅ **存活 45 家** / 💤 沉寂 8 家
-- 沉寂名单：视野环球镜, 财女Nicole, 孟岩的投资笔记, 大马理财, Daniel Pronk, The Nomad Wallstreet, DeepValue, HK Money Mentor
-- 存活名单自动进入抓取白名单，保证报告只含新鲜内容。
 
 ---
 
-## 📥 抓取与中文转化
+## 📥 真实内容策略
 
-`enrich_with_mock_content()`（2026-08-16 修复）：
+`enrich_with_real_content()`（别名 `enrich_with_verified_content()`）只补充展示字段，不改写来源内容：
 
-- 若 RSS 拿到真实 `title/link/published/summary`，**全部使用频道真实数据**（此前曾用 `MOCK_TITLES_POOL` 中文标题覆盖真标题，导致战报内容与频道真实内容不符，已修复）。
-- 若无真实数据，才走 Mock 兜底：生成 2 / 7 / 14 天前的模拟发布时间 + 中文标题，并打 `is_mock: true` 标记便于审计过滤。
-- 语料库：为 45 家活跃 KOL 各写 3 条现制中文标题（紧扣 2026 宏观：AI超级碗、万亿美债、降息博弈、城投展期、黄金新高、半导体拐点等）。
+- `title` 必须与 `original_title` 完全一致；
+- `link` 必须是 YouTube 视频、Shorts 或直播链接（`?v=mock` 等伪链接直接丢弃）；
+- `published` 必须来自真实来源；
+- 每条内容带 `source`（`youtube_rss` / `youtube_data_api` / `yt_dlp` / `youtube_channel_page` / `verified_cache`）、`source_channel_id` 与 `is_mock: false`；
+- 有几条有效内容就展示几条（最多 3 条），绝不为了固定版面补足模拟条目。
 
-每家 **固定 3 条**，合计 **135 条**参战内容，全部中文文字呈现。
+模拟日期与 `?v=mock` 链接已从生产抓取链路中移除。`MOCK_TITLES_POOL` 语料库仅作为**历史伪造标题黑名单**保留，供审计模块比对识别，不再参与内容生成。
 
 ---
 
@@ -118,7 +115,7 @@ python -m src.fetcher  # 单独测试
 每条内容输出：`sentiment` / `confidence` / `power` / `reason` / `advice`  
 每位 KOL 聚合：`bull vs bear vs neutral` → 阵营标签 `多头阵营 / 空头阵营 / 均衡拉锯 / 轻度偏多/空`
 
-全市场战场：`global_battle_stats()` 统计 135 条中多/空/中性占比，判定主导（本次：🐻 33 空 vs 🐂 22 多 → 空头主导 24% vs 16%）
+全市场战场：`global_battle_stats()` 按本次取得的真实条目动态统计多/空/中性占比并判定主导。
 
 ---
 
@@ -133,13 +130,13 @@ python -m src.fetcher  # 单独测试
   - 顶部 `BULL VS BEAR` 街机横幅 + 血条 HP 92/120 vs 68/120
   - 中间 `pixel_battle.png` 斗兽场大图（BOOM! SMASH! 章鱼爆破）
   - 血条：`bull_ratio / bear_ratio / neutral_ratio` 百分比填充
-  - 卡片：`#01-53` 编号徽章 + 平台标签 + 粉丝爱心 + 战斗徽章
+  - 卡片：保留 `kol_data.json` 的 `#01-97` 编号徽章 + 平台标签 + 粉丝爱心 + 战斗徽章
   - 条目：左侧 ▶ 箭头 + POW 能量条 + 迷你多空徽章 + 🧠 研判 + 🎯 策略
 
 ```bash
-python main.py --no-push  # 仅生成
-# output/report.html  (209KB)
-# output/data.json    (135条结构化数据)
+python main.py --no-push  # 仅生成；若没有任何可验证内容则失败退出
+# output/report.html  动态大小
+# output/data.json    仅含本次验证通过的真实来源条目
 ```
 
 ---
@@ -150,9 +147,8 @@ python main.py --no-push  # 仅生成
 
 - 接口：`http://www.pushplus.plus/send`
 - 参数：`token` + `title` + `content` (html) + `template=html` + `channel=wechat`
-- **内容：自动使用战斗风精简摘要版**（`src/digest.py` 生成，约 1.6 万字符）
-  - 原因：完整 `report.html` 约 18.6 万字符，**超过 PushPlus 内容上限**（实名用户 2 万字 / 会员 10 万字），直接推送会被拒绝或截断
-  - 战斗排版含：⚔️ 多空战场横幅 · 🐂🐻 HP 血条 · 👑 主导阵营与战场风向 · 🏆 多头/空头 MVP · 🔥 多头猛攻 TOP5 · 💣 空头重击 TOP5 · 🛡️ 军团花名册（5 大阵营分组）· 💤 沉寂出局名单
+- **内容：自动使用战斗风精简摘要版**（`src/digest.py` 生成，避免频道数量增长时超过 PushPlus 上限）
+  - 战斗排版含：⚔️ 多空战场横幅 · 🐂🐻 HP 血条 · 👑 主导阵营与战场风向 · 🏆 多头/空头 MVP · 🔥 多头猛攻 TOP5 · 💣 空头重击 TOP5 · 🛡️ 军团花名册（5 大阵营分组）· 本次隔离/未验证名单
 - 配置方式（优先级递减）：
   1. `python main.py --token YOUR_TOKEN`
   2. 环境变量 `PUSHPLUS_TOKEN`
@@ -171,7 +167,7 @@ python main.py --push-only  # 仅推送（复用上次 output/data.json，适合
 ```
 
 > 获取 Token：http://www.pushplus.plus/push1.html  
-> 推送标题示例：`🐙章鱼战场·KOL多空战报 2026年08月07日 | 存活45/53 主导:空头`
+> 推送标题示例：`🐙章鱼战场·KOL多空战报 2026年08月16日 | 已验证21/97 主导:空头`。`main.py` 与 `--push-only` 都会在推送前执行真实性审计，不能绕过门禁。
 
 **收不到消息？按以下顺序排查：**
 
@@ -198,15 +194,17 @@ python -m src.authenticity_check --md output/audit_report.md --json output/audit
 python main.py --strict-audit                       # 生成后自动审计，检出伪造即退出码非 0
 ```
 
-- **元数据层**：channel_id 缺失（=无法通过 RSS 抓取）、handle 格式/一致性、channel_url 为搜索页占位或非 YouTube 域名、fans 缺失/异常
-- **内容层**：`?v=mock` 伪链接或 `is_mock=true`（FAIL）、语料库伪造标题（对照 `fetcher.py` 的历史 `MOCK_TITLES_POOL`）、未来日期、链接重复
-- **抓取原则**：不再用静态 `active` 标记生成日期，也不再补造标题和链接；所有入选条目必须有可点击的真实来源
-- **五级备用链路**：YouTube RSS → 官方 Data API（可选 `YOUTUBE_API_KEY`）→ [`yt-dlp/yt-dlp`](https://github.com/yt-dlp/yt-dlp)（只提取元数据、不下载视频）→ 频道 `/videos` 页结构化数据 → 上次已通过防伪检查的 90 天内缓存；全部失败才标记为未验证
-- **底层内容备用**：来源没有简介时，用 [`jdepoix/youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) 获取真实字幕生成摘要；不会覆盖来源简介，字幕不可用时保持为空
-- **在线层**（`--online`，需网络）：频道页 HTTP 状态/订阅数、channel_id 拉 RSS 复核最新条目
-- **CI 门禁**：在 `.github/workflows/daily.yml` 中加入 `python -m src.authenticity_check --online --strict` 步骤即可令含伪造内容的构建变红（注：workflow 文件需有 `workflows` 权限的账号提交，见下文"定时任务"备注）
+- **元数据层**：检查 channel_id、handle、搜索页占位、域名与 fans。未入报的存疑记录记为 WARN 并保持隔离；若同一问题污染了本次报告则升级为 FAIL。
+- **内容层**：`is_mock: true`、`?v=mock` 伪链接、标题与 `original_title` 不一致、命中历史 `MOCK_TITLES_POOL` 语料的伪标题、来源标记不受支持、来源频道不一致、缺失/未来日期均为 FAIL。
+- **来源标记**：RSS 与官方 API 条目必须带合法 `source_channel_id`（否则 FAIL）；yt-dlp / 频道页 / 缓存链路拿不到频道 ID 时记 WARN，避免可用性下降被误判为伪造。
+- **在线层**（`--online`，需网络）：只复核本次报告实际引用的频道页和 RSS，避免 97 家目录中的隔离项造成无关抖动。
+- **CI 门禁**：workflow 先运行回归测试，再生成报告，最后执行 `python -m src.authenticity_check --online --strict`；只有零 FAIL 才允许 PushPlus 推送。
 
 > 📌 2026-08-15 首次全量排查：237 条内容中 **219 条（92.4%）为 mock 伪链接**；已修正 18 家频道的 channel_id/粉丝量/名称等失实字段（详见 `核查报告_全频道.md`）。
+>
+> 📌 2026-08-16 二轮整改：补全 **45 家** channel_id，消除全部 `results?search_query=` 搜索页占位链接，8 家疑似虚构/无内容/停更频道标记 `active=false`（详见 `核查报告_全频道_20260816b.md`）。
+>
+> 📌 2026-08-16 三轮整改（本轮）：生产抓取链移除所有 Mock 兜底，条目必须携带 `original_title` 与来源标记；旧报告已清除伪链接与改写标题。目录中暂未核实的记录保留作后续修订，但不会进入日报。
 
 ---
 
@@ -251,13 +249,13 @@ python main.py                            # 再正式推送
 
 ```
 06/
-├── kol_data.json              # 53 家 KOL 元数据
+├── kol_data.json              # 97 家 KOL 元数据与人工隔离开关
 ├── config.yaml                # PushPlus 与阈值配置
 ├── requirements.txt
 ├── main.py                    # 一键流水线
 ├── src/
 │   ├── config.py
-│   ├── fetcher.py            # 存活探测 + 抓取
+│   ├── fetcher.py            # 频道身份验证 + 官方 RSS 抓取
 │   ├── analyzer.py           # 多空研判
 │   ├── report_generator.py   # 章鱼 HTML
 │   └── pushplus.py
@@ -275,7 +273,7 @@ python main.py                            # 再正式推送
 
 ## 🔧 自定义
 
-- 增减 KOL：编辑 `kol_data.json`，`active` 字段控制初始活跃标记
+- 增减 KOL：编辑 `kol_data.json`；`active: false` 会强制隔离，`active: true` 仍须通过真实频道与 RSS 验证
 - 调阈值：`config.yaml` → `active_threshold_days`
 - 换 PushPlus 渠道：`channel: webhook` 等
 - 换分析逻辑：在 `src/analyzer.py` 扩充 `BULL/BEAR_KEYWORDS` 或接入 LLM API
@@ -284,7 +282,7 @@ python main.py                            # 再正式推送
 
 ## ⚠️ 声明
 
-- 数据来源：YouTube / TikTok / IG / Reddit / TradingView 公开页
+- 当前可入报的数据来源仅为 YouTube 官方 RSS；其他平台记录在实现可信抓取器前保持隔离
 - 本报告由 AI 启发式引擎生成，仅供研究与演示，不构成投资建议
 - 复古章鱼美术由 AI 生成，版权归本项目所有
 

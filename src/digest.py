@@ -4,9 +4,8 @@
 排版风格：战斗竞技场 —— 血条 HP、军团花名册、猛攻/重击 TOP5、MVP 表彰
 小符号体系：🐂🐻 阵营 · ⚔️🛡️🗡️ 武器 · 💥🔥💣 火力 · 🏆🥇👑 荣誉 · 📈📉 行情
 
-背景：完整 report.html 约 18.6 万字符，远超 PushPlus 内容上限
-（实名用户 2 万字 / 会员 10 万字），推送到微信会被拒绝或截断。
-因此推送时改用本模块生成的紧凑摘要版，完整版保留在仓库 output/report.html。
+背景：完整 report.html 会随已验证频道数量增长，可能超过 PushPlus 内容上限。
+因此推送始终使用本模块生成的紧凑摘要版，完整版保留在仓库 output/report.html。
 
 作者：章鱼 AI·全景分析
 """
@@ -147,13 +146,13 @@ def build_digest(all_enriched, stats, report_date, inactive_kols=None,
             f"<div style='font-size:11px;color:#b9b9d6;margin-top:3px;line-height:1.7'>{names}</div>"
             f"</div>")
 
-    # 6️⃣ 沉寂名单
+    # 6️⃣ 隔离/未验证名单（可能是停用、来源失效或暂不支持的平台，不等于沉寂）
     inactive_txt = ""
     if inactive_kols:
-        names = "、".join(f"💤{_esc(k['name'])}" for k in inactive_kols)
+        names = "、".join(f"🛡️{_esc(k['name'])}" for k in inactive_kols)
         inactive_txt = (f"<div style='margin-top:10px;font-size:12px;color:#999;background:#1a1a2e;"
                         f"border:1px dashed #555;padding:6px 10px'>"
-                        f"💤 沉寂出局（{len(inactive_kols)} 家）：{names}</div>")
+                        f"🛡️ 本次隔离/未验证（{len(inactive_kols)} 家）：{names}</div>")
 
     # 7️⃣ 完整版链接 / 提示
     if full_link:
@@ -161,7 +160,7 @@ def build_digest(all_enriched, stats, report_date, inactive_kols=None,
                     f"📎 完整战报：<a href='{_esc(full_link)}' style='color:#7CFC00'>{_esc(full_link)}</a></div>")
     else:
         link_txt = (f"<div style='margin-top:10px;font-size:11px;color:#777;text-align:center'>"
-                    f"完整版 18 万字符超微信上限，已自动转为战场摘要版；完整 HTML 见仓库 output/report.html</div>")
+                    f"微信推送使用战场摘要版；完整 HTML 见仓库 output/report.html</div>")
 
     mvp_txt = ""
     if bull_mvp or bear_mvp:
@@ -222,7 +221,7 @@ def build_digest(all_enriched, stats, report_date, inactive_kols=None,
   {link_txt}
 
   <div style='margin-top:12px;font-size:10px;color:#666;text-align:center;line-height:1.7'>
-    🗡️ 数据来源：YouTube / TikTok / IG / Reddit / TradingView 公开页<br>
+    🗡️ 入报数据来源：YouTube 官方 RSS（其他平台在可信抓取器完成前保持隔离）<br>
     ⚠️ 本报告由 AI 启发式引擎生成，仅供研究与演示，不构成投资建议
   </div>
 </div>
