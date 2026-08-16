@@ -1,14 +1,17 @@
 {
   "summary": {
-    "audited_at": "2026-08-16T04:59:44.542381+00:00",
+    "audited_at": "2026-08-16T08:21:13.854322+00:00",
     "total_kols": 97,
-    "pass": 0,
-    "warn": 16,
-    "fail": 81,
-    "total_items": 237,
-    "mock_items": 219,
-    "pool_titles": 234,
-    "mock_ratio_pct": 92.4,
+    "included_kols": 5,
+    "quarantined_kols": 92,
+    "pass": 5,
+    "warn": 92,
+    "fail": 0,
+    "total_items": 15,
+    "mock_items": 0,
+    "altered_titles": 0,
+    "pool_titles": 0,
+    "mock_ratio_pct": 0.0,
     "online_verified": false
   },
   "results": [
@@ -18,29 +21,15 @@
       "platform": "YouTube",
       "fans": "500W+",
       "channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
-      "active": true,
-      "verdict": "WARN",
+      "configured_active": true,
+      "included": true,
+      "verdict": "PASS",
       "mock_items": 0,
-      "pool_titles": 3,
+      "altered_titles": 0,
+      "pool_titles": 0,
       "total_items": 3,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美联储突然转向？2026年降息押注与房贷利率崩跌前夜」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「我为什么还在定投VOO：标普500估值泡沫下的生存指南」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「月入1万如何一年存下6万：极简生活的残酷实操」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 2,
@@ -48,44 +37,15 @@
       "platform": "YouTube",
       "fans": "330W+",
       "channel_id": "UCGy7SkBjcIAgTiwkXEtPnYg",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@AndreiJikh?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「37万亿美债重置已启动！普通人必做的3件事」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@AndreiJikh?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「股息贵族崩了？我清仓了这只20年分红股」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@AndreiJikh?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「信用卡0利率套利还能玩吗？2026年实测」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 3,
@@ -93,44 +53,15 @@
       "platform": "TikTok/YT",
       "fans": "300W+",
       "channel_id": "UCFBpVaKCC0ajGps1vf0AgBg",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@humphreytalks?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「用一张图看懂期权：5年级版 Call/Put 科普」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@humphreytalks?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「15条提前退休路径大排名：时薪10万刀多久能FIRE？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@humphreytalks?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「比特币2026还值得买吗？我的仓位与止损线」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 4,
@@ -138,29 +69,15 @@
       "platform": "YouTube",
       "fans": "100W+",
       "channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
-      "active": true,
-      "verdict": "WARN",
+      "configured_active": true,
+      "included": true,
+      "verdict": "PASS",
       "mock_items": 0,
-      "pool_titles": 3,
+      "altered_titles": 0,
+      "pool_titles": 0,
       "total_items": 3,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「杠杆ETF是财富加速器还是绞肉机？」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「BlackRock与Vanguard真的控制全世界吗？」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「量化紧缩QT：美联储缩表如何抽干你的流动性」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 5,
@@ -168,44 +85,15 @@
       "platform": "YouTube",
       "fans": "130W+",
       "channel_id": "UCASM0cgfkJxQ1ICmRilfHLw",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@PBoyle?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「散户的末日狂欢：Meme股与伪大师的泡沫史」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@PBoyle?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「对冲基金如何做空你的信仰？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@PBoyle?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「为什么每次危机都一样？金融史的诅咒循环」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 6,
@@ -213,44 +101,15 @@
       "platform": "YouTube",
       "fans": "205W+",
       "channel_id": "UCUvvj5lwue7PspotMDjk5UA",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@MeetKevin?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「突发：CPI爆表！美股盘前崩跌，我的操作」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@MeetKevin?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「加州房产税提案通过？房东的噩梦来了」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@MeetKevin?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「特斯拉Q2交付暴雷：Elon 还能讲故事吗？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 7,
@@ -258,44 +117,15 @@
       "platform": "YouTube",
       "fans": "51W+",
       "channel_id": "UCbta0n8i6Rljh0obO7HzG9A",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@JosephCarlsonShow?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「股息增长组合7月调仓：我卖掉了这只30年分红王」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@JosephCarlsonShow?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「被动收入月入5000刀的真相：需要多少本金？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@JosephCarlsonShow?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「为什么我只买能涨股息的公司？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 8,
@@ -303,44 +133,15 @@
       "platform": "YouTube",
       "fans": "25W+",
       "channel_id": "UCrTTBSUr0zhPU56UQljag5A",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@Value-Investing?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「AI泡沫的终局：价值投资者的最后防线」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@Value-Investing?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「这家被抛弃的欧洲银行，隐含回报率 25%？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@Value-Investing?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「通胀真的死了吗？大宗商品周期的危险信号」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 9,
@@ -348,44 +149,15 @@
       "platform": "TikTok/YT",
       "fans": "880W+",
       "channel_id": "UCxgAuX3XZROujMmGphN_scA",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@MarkTilbury?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「19岁开始投资 vs 30岁：复利差了整整 100万」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@MarkTilbury?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「我如何用3家小生意滚到800万英镑」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@MarkTilbury?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「别再存钱了，先买资产！穷人与富人的分水岭」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 10,
@@ -393,44 +165,15 @@
       "platform": "YouTube",
       "fans": "94W+",
       "channel_id": "UCnMn36GT_H0X-w5_ckLtlgQ",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「Palantir 财报炸裂：AI 故事还能涨多久？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「我的重仓股暴跌40%：复盘与教训」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「成长股 vs 价值股：2026下半场押哪边？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 11,
@@ -438,44 +181,15 @@
       "platform": "YouTube",
       "fans": "62W+",
       "channel_id": "UCDXTQ8nWmx_EhZ2v-kp7QxA",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@BenFelixCSI?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「学术研究证明：95%的选股者跑不赢指数」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@BenFelixCSI?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「为什么你不该听财经新闻做投资？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@BenFelixCSI?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「最优资产配置：30岁、50岁该怎么配？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 12,
@@ -483,44 +197,15 @@
       "platform": "IG/TikTok",
       "fans": "500W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.tiktok.com/@erikakullberg?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「航空公司拒赔？这条法律让你白拿1000刀」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.tiktok.com/@erikakullberg?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「别再为这5个费用买单：律师教你省2万」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.tiktok.com/@erikakullberg?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「学生贷款减免新政：符合条件的3类人」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 13,
@@ -528,44 +213,15 @@
       "platform": "TikTok/IG",
       "fans": "200W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.tiktok.com/@yourrichbff?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「华尔街前交易员坦白：女性理财的5个坑」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.tiktok.com/@yourrichbff?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「月薪5000也能理财：我的50/30/20实操」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.tiktok.com/@yourrichbff?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「为什么你该先还高息债再投资？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 14,
@@ -573,44 +229,15 @@
       "platform": "YouTube",
       "fans": "240W+",
       "channel_id": "UCT3EznhW_CNFcfOlyDNTLLw",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@MinorityMindset?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「穷人思维 vs 富人思维：1个转变让你多赚10倍」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@MinorityMindset?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「美联储印钞的隐形税：谁在偷走你的购买力？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@MinorityMindset?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「2026年最危险的投资：你正在买的这个东西」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 15,
@@ -618,47 +245,19 @@
       "platform": "YouTube",
       "fans": "60W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@InvestingwithRose?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「零基础买ETF：3只基金搞定全球配置」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@InvestingwithRose?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「女生投资第一课：别怕，你比想象中更懂钱」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@InvestingwithRose?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「股息ETF vs 成长ETF：新手该怎么选？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -668,29 +267,15 @@
       "platform": "YouTube",
       "fans": "290W+",
       "channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
-      "active": true,
-      "verdict": "WARN",
+      "configured_active": true,
+      "included": true,
+      "verdict": "PASS",
       "mock_items": 0,
-      "pool_titles": 3,
+      "altered_titles": 0,
+      "pool_titles": 0,
       "total_items": 3,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「2026新税法：这4个抵扣让中产多退5000刀」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「IRS 审计率飙升：这5类人最危险」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「小企业主必看：QBI 20% 抵扣还能薅多久？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 17,
@@ -698,47 +283,19 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@EverythingMoney?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「八柱分析法实战：这只股票被高估了40%？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@EverythingMoney?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「财报藏雷：3个数字识破利润操纵」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@EverythingMoney?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「何时卖出？我的8分制止盈纪律」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -748,47 +305,19 @@
       "platform": "YouTube",
       "fans": "70W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@NewMoney?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「巴菲特2026股东信：现金3000亿在等什么？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@NewMoney?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「芒格的最后忠告：别碰你不懂的生意」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@NewMoney?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「段永平 vs 芒格：中美价值投资的异同」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -798,52 +327,24 @@
       "platform": "YouTube",
       "fans": "70W+",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@FinancialEducation vs @FinancialEducationJeremy"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「我刚卖了特斯拉：持仓逻辑全复盘」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「这只AI小盘股，我重仓的理由」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@FinancialEducation?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「跟单有风险：为什么别抄我的作业？」"
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@FinancialEducation vs @FinancialEducationJeremy（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -853,47 +354,19 @@
       "platform": "YouTube",
       "fans": "5W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@BrianFeroldiYT?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「打分表测评：Shopify 商业模式能打几分？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@BrianFeroldiYT?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「财报拆解：这家SaaS为何永远不赚钱？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@BrianFeroldiYT?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「10年10倍股的共同基因」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -903,29 +376,15 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
-      "active": true,
-      "verdict": "WARN",
+      "configured_active": true,
+      "included": true,
+      "verdict": "PASS",
       "mock_items": 0,
-      "pool_titles": 3,
+      "altered_titles": 0,
+      "pool_titles": 0,
       "total_items": 3,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「AI超级碗与万亿宣言！机构史诗级抛售潮来了？」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「中美顶级金融暗战：这个周末发生了什么」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「美股七巨头财报周：谁在裸泳一目了然」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 22,
@@ -933,44 +392,15 @@
       "platform": "YouTube",
       "fans": "30W+",
       "channel_id": "UC2I5em6UyBpQiO-8ZW0nV3w",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@阳光财经?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「上证 vs 纳指：技术面背离的生死抉择」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@阳光财经?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金分割+筹码峰：A股反弹目标位在哪？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@阳光财经?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「北向资金连续流出：外资在怕什么？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 23,
@@ -978,29 +408,15 @@
       "platform": "YouTube",
       "fans": "34W+",
       "channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
-      "active": true,
-      "verdict": "WARN",
+      "configured_active": true,
+      "included": true,
+      "verdict": "PASS",
       "mock_items": 0,
-      "pool_titles": 3,
+      "altered_titles": 0,
+      "pool_titles": 0,
       "total_items": 3,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「社融暴跌背后：居民为什么不敢借钱了？」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「地方城投展期潮：谁在为土地财政买单？」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「人民币破7.3：央行工具箱还有多少子弹？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 24,
@@ -1008,9 +424,11 @@
       "platform": "YouTube",
       "fans": "50W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1018,12 +436,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@全球视野 vs @globalvision"
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@全球视野 vs @globalvision（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -1033,47 +451,19 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@老李财经?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「半导体寒冬还是拐点？台积电财报给答案」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@老李财经?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「英伟达 vs AMD：谁能吃到AI芯片第二波？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@老李财经?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「美股科技股估值回落30%：抄底还是接飞刀？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1083,47 +473,19 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@瑞威金融?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「黄金日线三连阳：1980美元能否突破？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@瑞威金融?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「外汇日内秘籍：伦敦开盘15分钟定胜负」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@瑞威金融?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「原油暴涨10%：地缘溢价还是需求复苏？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1133,9 +495,11 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1143,7 +507,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1153,9 +517,11 @@
       "platform": "YouTube/Web",
       "fans": "10W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1163,12 +529,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@孟岩的投资笔记 vs @孟岩投资笔记"
+          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@孟岩的投资笔记 vs @孟岩投资笔记（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -1178,47 +544,19 @@
       "platform": "YouTube",
       "fans": "8W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@零总投资?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「交易员的噩梦：为什么你总在高点买入？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@零总投资?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「港股打板心得：3个指标过滤假突破」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@零总投资?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「从爆仓到翻身：我的资金管理铁律」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1228,44 +566,15 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "UC1Lk6WO-eKuYc6GHYbKVY2g",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@孙老师财经?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「黄金新高后暴跌5%：牛市结束了吗？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@孙老师财经?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「美联储点阵图藏玄机：今年还能降几次？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@孙老师财经?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「石油美元松动：人民币结算能走多远？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 31,
@@ -1273,44 +582,15 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "UCWyPo32TSKPr8Py7gb7NhYw",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@美股投资网?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「盘前必读：七巨头期权异动与大单揭秘」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@美股投资网?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「量化信号：标普500站上200日均线意味着什么？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@美股投资网?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「今夜非农：预期 18 万，前瞻与交易预案」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 32,
@@ -1318,47 +598,19 @@
       "platform": "YouTube",
       "fans": "12W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@逻辑财金?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「CPI 3.2% 背后：哪些分项在说谎？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@逻辑财金?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「M2增速转正：钱真的流向实体了吗？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@逻辑财金?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「从库存周期看A股：现在处于什么位置？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1368,9 +620,11 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1378,7 +632,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1388,47 +642,19 @@
       "platform": "YouTube",
       "fans": "5W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@美股说?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「财报拆解：Meta 广告帝国还能涨多久？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@美股说?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「竞争格局：特斯拉 vs 理想 vs 蔚来」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@美股说?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「为什么我看空这只明星股？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1438,47 +664,19 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@KelvinLearnsInvesting?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「FIRE实战：30岁攒够100万需要多少年？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@KelvinLearnsInvesting?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「指数基金 vs 买房：年轻人的第一桶金怎么选？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@KelvinLearnsInvesting?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「副业增收的3条跑道：我如何月入多1万」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1488,47 +686,19 @@
       "platform": "YouTube",
       "fans": "80W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@TheSwedishInvestor?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「《穷查理宝典》10句精华：芒格的终极智慧」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@TheSwedishInvestor?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「《原则》精读：达利欧的投资圣经」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@TheSwedishInvestor?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「《随机漫步》：为什么你跑不赢市场？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1538,47 +708,19 @@
       "platform": "Reddit/YT",
       "fans": "15W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@PrestonPysh?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「比特币估值模型：S2F 还有效吗？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@PrestonPysh?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「美联储缩表 vs 财政放水：谁在决定流动性？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@PrestonPysh?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「如何给一家不赚钱的AI公司估值？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1588,44 +730,15 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "UC9OIwUcx-Uss7xj7s1P5XGw",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「退休组合回测：60/40 还能用吗？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「英国养老金危机启示：LDI 的死亡螺旋」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「通胀挂钩债券：退休者的隐形盾牌」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 39,
@@ -1633,47 +746,19 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「多资产相关性崩了？股债为何同跌」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「战略配置：如何用3个ETF覆盖全球？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@PensionCraft?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「退休提款率：4% 法则已死？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1683,47 +768,19 @@
       "platform": "YouTube",
       "fans": "90W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@TheFinancialDiet?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「月薪3000的预算美学：如何体面地穷」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@TheFinancialDiet?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「为什么你总存不下钱？3个心理陷阱」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@TheFinancialDiet?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「副业焦虑：不上进还是被割韭菜？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1733,47 +790,19 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@MaverickofWallStreet?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「标普500 泡沫警报：席勒PE已超1929」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@MaverickofWallStreet?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「技术面顶背离：纳指的最后疯狂？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@MaverickofWallStreet?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「做空指南：如何用期权对冲崩盘风险」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1783,9 +812,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1793,7 +824,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1803,47 +834,19 @@
       "platform": "YouTube",
       "fans": "5W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@CameronStewartCFA?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「DCF实战：给英伟达算个公允价」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@CameronStewartCFA?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「为什么DCF是唯一诚实的估值法？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@CameronStewartCFA?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「手把手：用10-K算自由现金流」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1853,47 +856,19 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@FASTgraphs?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「估值回归：这只股息王被错杀了30%」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@FASTgraphs?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「图形化财报：3秒看懂一家公司」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@FASTgraphs?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「为什么我从不追高？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1903,9 +878,11 @@
       "platform": "YouTube",
       "fans": "8W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1913,7 +890,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -1923,9 +900,11 @@
       "platform": "Reddit (u/)",
       "fans": "5W+",
       "channel_id": "",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1937,9 +916,11 @@
       "platform": "IG/YT",
       "fans": "2W+",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -1947,17 +928,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.instagram.com/hkmoneymentor vs @HKMoneyMentor"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "platform=YouTube 但 channel_url 非 YouTube 域名: https://www.instagram.com/hkmoneymentor…"
+          "msg": "YouTube 记录使用非 YouTube 来源: https://www.instagram.com/hkmoneymentor…（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -1967,44 +943,15 @@
       "platform": "IG",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.instagram.com/moneycoachnick?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「每日1分钟：今天的理财微行动」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.instagram.com/moneycoachnick?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「3个App帮你年省2000刀」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.instagram.com/moneycoachnick?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「别再为银行付费：免费账户清单」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 49,
@@ -2012,47 +959,19 @@
       "platform": "TradingView",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://cn.tradingview.com/top-authors/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「BTC 4小时头肩顶：6万关口保卫战」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://cn.tradingview.com/top-authors/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金周线突破：2000美元只是起点？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://cn.tradingview.com/top-authors/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「标普500 期权墙：5700 是多空决战线」"
         }
       ]
     },
@@ -2062,44 +981,15 @@
       "platform": "YouTube",
       "fans": "60W+",
       "channel_id": "UC1CVw2YKIunKc_Mp-VZbFmA",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@RealVisionFinance?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「Raoul Pal：流动性海啸将至，All in 加密？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@RealVisionFinance?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「Druckenmiller：我为何重仓做空长债？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@RealVisionFinance?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「中美脱钩：地缘重构下的大宗商品新秩序」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 51,
@@ -2107,32 +997,19 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
-      "total_items": 3,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@老厉害财经?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@老厉害财经?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@老厉害财经?v=mock2（点击无法到达任何真实视频）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -2142,44 +1019,15 @@
       "platform": "YouTube",
       "fans": "14W+",
       "channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@investalk?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「对话段永平：什么叫敢重仓的便宜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@investalk?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「对话半导体老兵：国产替代真能成吗？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@investalk?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「对话抄底王：如何在恐慌中扣扳机？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 53,
@@ -2187,32 +1035,19 @@
       "platform": "YouTube",
       "fans": "11W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
-      "pool_titles": 3,
-      "total_items": 3,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「香港账户全攻略：2026年还能开哪家？」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「USDT 换汇暗流：走资的灰色地带」"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「新加坡家族办公室：100万刀够格吗？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -2222,47 +1057,19 @@
       "platform": "香港財經媒體",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.hkej.com/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.hkej.com/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.hkej.com/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2272,47 +1079,19 @@
       "platform": "香港財經媒體",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://finance730.com.hk/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://finance730.com.hk/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://finance730.com.hk/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2322,47 +1101,19 @@
       "platform": "香港財經媒體",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://inews.hket.com/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://inews.hket.com/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://inews.hket.com/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2372,9 +1123,11 @@
       "platform": "YouTube / 網頁",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -2382,7 +1135,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -2390,9 +1143,9 @@
           "msg": "handle 格式异常: HKBT（应为 @xxx）"
         },
         {
-          "level": "FAIL",
+          "level": "WARN",
           "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E9%A6%99%E6%B8%AF%E8%B2%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E9%A6%99%E6%B8%AF%E8%B2%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -2407,47 +1160,19 @@
       "platform": "香港財經電台",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.metroradio.com.hk/finance/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.metroradio.com.hk/finance/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.metroradio.com.hk/finance/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2457,47 +1182,19 @@
       "platform": "YouTube",
       "fans": "24W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@ChineseFinance?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@ChineseFinance?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@ChineseFinance?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -2507,47 +1204,19 @@
       "platform": "YouTube",
       "fans": "30W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/@RhinoFinance?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/@RhinoFinance?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/@RhinoFinance?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -2557,47 +1226,19 @@
       "platform": "中文投資網站",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.chinesefn.com/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.chinesefn.com/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.chinesefn.com/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2607,17 +1248,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -2627,47 +1270,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%A8%E4%B8%96%E7%95%8C vs 财经全世界"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%A8%E4%B8%96%E7%95%8C?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%A8%E4%B8%96%E7%95%8C?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%85%A8%E4%B8%96%E7%95%8C?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2677,17 +1285,19 @@
       "platform": "YouTube",
       "fans": "10W+",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -2697,42 +1307,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%A9%E9%92%B1 vs 老李玩钱"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%…"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%A9%E9%92%B1?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%A9%E9%92%B1?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%A9%E9%92%B1?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%80%81%E6%9D%8E%E7%8E%…（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -2742,19 +1317,15 @@
       "platform": "YouTube",
       "fans": "5W+",
       "channel_id": "UCWvjeM3d1GNj8pK7o_AN_yA",
-      "active": false,
+      "configured_active": false,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCWvjeM3d1GNj8pK7o_AN_yA vs @土妹美股"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 65,
@@ -2762,17 +1333,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -2782,47 +1355,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%B4%E7%BE%8E%E8%82%A1 vs 贝拉说美股"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%B4%E7%BE%8E%E8%82%A1?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%B4%E7%BE%8E%E8%82%A1?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%9D%E6%8B%89%E8%AF%B4%E7%BE%8E%E8%82%A1?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -2832,47 +1370,19 @@
       "platform": "YouTube",
       "fans": "66W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E7%BE%8E%E6%8A%95%E8%AF%B4%E7%BE%8E%E8%82%A1?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E7%BE%8E%E6%8A%95%E8%AF%B4%E7%BE%8E%E8%82%A1?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E7%BE%8E%E6%8A%95%E8%AF%B4%E7%BE%8E%E8%82%A1?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -2882,44 +1392,15 @@
       "platform": "YouTube",
       "fans": "18W+",
       "channel_id": "UCn9_KbNANeyYREePe8YA2DA",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%86%B7%E7%9C%BC+%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%86%B7%E7%9C%BC+%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%B4%A2%E7%BB%8F%E5%86%B7%E7%9C%BC+%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 68,
@@ -2927,9 +1408,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -2937,7 +1420,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -2947,12 +1430,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E8%80%81%E8%9B%AE%E9%A2%91%E9%81%93+%E6%95%B0%E6%8D%AE%E5%B8%9D%E8%80%81%E8%9B%AE vs 老蛮频道"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%80%81%E8%9B%AE%E9%A2%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%80%81%E8%9B%AE%E9%A2%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -2967,9 +1445,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -2977,7 +1457,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -2987,12 +1467,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E7%A7%A6%E9%B9%8F%E8%A7%82%E5%AF%9F vs 秦鹏观察"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E7%A7%A6%E9%B9%8F%E8%A7%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E7%A7%A6%E9%B9%8F%E8%A7%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -3007,9 +1482,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -3017,7 +1494,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3027,12 +1504,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E5%AD%90%E6%9C%9D%E5%87%BA%E8%B5%B0%E4%B8%AD vs 子朝出走中"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E5%AD%90%E6%9C%9D%E5%87%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E5%AD%90%E6%9C%9D%E5%87%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -3047,17 +1519,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3067,47 +1541,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%9A%E8%AF%B4%E8%B6%8B%E5%8A%BF vs 马江博说趋势"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%9A%E8%AF%B4%E8%B6%8B%E5%8A%BF?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%9A%E8%AF%B4%E8%B6%8B%E5%8A%BF?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E9%A9%AC%E6%B1%9F%E5%8D%9A%E8%AF%B4%E8%B6%8B%E5%8A%BF?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3117,9 +1556,11 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -3127,7 +1568,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -3137,9 +1578,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -3147,7 +1590,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3157,12 +1600,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E5%85%B0%E9%A6%99%E8%B4%A2%E7%BB%8F vs 兰香财经"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E5%85%B0%E9%A6%99%E8%B4%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E5%85%B0%E9%A6%99%E8%B4%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -3177,47 +1615,19 @@
       "platform": "宏觀數據平台",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.macromicro.me/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.macromicro.me/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.macromicro.me/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3227,9 +1637,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -3237,7 +1649,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3247,12 +1659,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=Gamma+%E8%B4%A2%E7%BB%8F vs Gamma 财经"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=Gamma+%E8%B4%A2%E7%BB%8F…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=Gamma+%E8%B4%A2%E7%BB%8F…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -3267,17 +1674,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": false,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": false,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3287,47 +1696,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E6%B8%AF%E7%BE%8E%E5%AE%8F%E8%A7%82 vs Ray 观点"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E6%B8%AF%E7%BE%8E%E5%AE%8F%E8%A7%82?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E6%B8%AF%E7%BE%8E%E5%AE%8F%E8%A7%82?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=Ray+%E8%A7%82%E7%82%B9+%E6%B8%AF%E7%BE%8E%E5%AE%8F%E8%A7%82?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3337,17 +1711,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3357,47 +1733,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%88 vs 公子沈"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%88?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%88?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E5%85%AC%E5%AD%90%E6%B2%88?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3407,17 +1748,19 @@
       "platform": "YouTube",
       "fans": "150W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3427,42 +1770,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%88%E5%8F%A4%E8%AE%BA%E4%BB%8A vs 文昭谈古论今"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%…"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%88%E5%8F%A4%E8%AE%BA%E4%BB%8A?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%88%E5%8F%A4%E8%AE%BA%E4%BB%8A?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%88%E5%8F%A4%E8%AE%BA%E4%BB%8A?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E6%96%87%E6%98%AD%E8%B0%…（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -3472,47 +1780,19 @@
       "platform": "財經媒體",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://finance.yahoo.com/?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://finance.yahoo.com/?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://finance.yahoo.com/?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3522,52 +1802,19 @@
       "platform": "YouTube",
       "fans": "25W+",
       "channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
           "msg": "handle 格式异常: 大康有话说（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg vs 大康有话说"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E6%95%B0%E5%AD%97%E7%89%A7%E6%B0%91+%E5%A4%A7%E5%BA%B7%E6%9C%89%E8%AF%9D%E8%AF%B4?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E6%95%B0%E5%AD%97%E7%89%A7%E6%B0%91+%E5%A4%A7%E5%BA%B7%E6%9C%89%E8%AF%9D%E8%AF%B4?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E6%95%B0%E5%AD%97%E7%89%A7%E6%B0%91+%E5%A4%A7%E5%BA%B7%E6%9C%89%E8%AF%9D%E8%AF%B4?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3577,17 +1824,19 @@
       "platform": "YouTube",
       "fans": "68W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3597,42 +1846,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%93%E7%9A%84%E8%B2%A1%E7%B6%93%E7%9A%93%E8%A7%92 vs 游庭皓的財經皓角"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%…"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%93%E7%9A%84%E8%B2%A1%E7%B6%93%E7%9A%93%E8%A7%92?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%93%E7%9A%84%E8%B2%A1%E7%B6%93%E7%9A%93%E8%A7%92?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%93%E7%9A%84%E8%B2%A1%E7%B6%93%E7%9A%93%E8%A7%92?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E6%B8%B8%E5%BA%AD%E7%9A%…（未进入本次报告，已隔离）"
         }
       ]
     },
@@ -3642,47 +1856,19 @@
       "platform": "YouTube",
       "fans": "100W+",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E6%9F%B4%E9%BC%A0%E5%85%84%E5%BC%9F+ZRBros?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E6%9F%B4%E9%BC%A0%E5%85%84%E5%BC%9F+ZRBros?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E6%9F%B4%E9%BC%A0%E5%85%84%E5%BC%9F+ZRBros?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
       ]
     },
@@ -3692,17 +1878,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3712,47 +1900,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%92+%E4%B8%8B%E7%8F%AD%E7%BB%8F%E6%B5%8E%E5%AD%B8 vs 下班经济學"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%92+%E4%B8%8B%E7%8F%AD%E7%BB%8F%E6%B5%8E%E5%AD%B8?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%92+%E4%B8%8B%E7%8F%AD%E7%BB%8F%E6%B5%8E%E5%AD%B8?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E9%A3%8E%E5%82%B3%E5%AA%92+%E4%B8%8B%E7%8F%AD%E7%BB%8F%E6%B5%8E%E5%AD%B8?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3762,17 +1915,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3782,47 +1937,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%9B%E8%AA%AA%E7%AC%91+%E7%8E%8B%E5%80%9A%E9%9A%86 vs 老王愛說笑"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%9B%E8%AA%AA%E7%AC%91+%E7%8E%8B%E5%80%9A%E9%9A%86?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%9B%E8%AA%AA%E7%AC%91+%E7%8E%8B%E5%80%9A%E9%9A%86?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%80%81%E7%8E%8B%E6%84%9B%E8%AA%AA%E7%AC%91+%E7%8E%8B%E5%80%9A%E9%9A%86?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3832,17 +1952,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3852,47 +1974,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%93 vs SHIN LI"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%9…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%9…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%93?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%93?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=SHIN+LI+%E8%B2%A1%E7%B6%93?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3902,17 +1989,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3922,47 +2011,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%B3%E7%A5%9E+%E9%82%B1%E6%B2%81%E5%AE%9C vs 邱沁宜"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%B3%E7%A5%9E+%E9%82%B1%E6%B2%81%E5%AE%9C?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%B3%E7%A5%9E+%E9%82%B1%E6%B2%81%E5%AE%9C?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%87%AA%E7%94%B1%E5%A5%B3%E7%A5%9E+%E9%82%B1%E6%B2%81%E5%AE%9C?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -3972,17 +2026,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -3992,47 +2048,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%91%89 vs Better Leaf 好葉"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%91%89?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%91%89?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=Better+Leaf+%E5%A5%BD%E8%91%89?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4042,9 +2063,11 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -4052,7 +2075,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4062,12 +2085,7 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E6%85%A2%E6%B4%BB%E5%A4%AB%E5%A6%BB+George+Dewi vs George & Dewi"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E6%85%A2%E6%B4%BB%E5%A4%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E6%85%A2%E6%B4%BB%E5%A4%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
@@ -4082,17 +2100,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4102,47 +2122,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%A6%E6%9E%97 vs 大俠武林"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%A6%E6%9E%97?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%A6%E6%9E%97?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E5%A4%A7%E4%BF%A0%E6%AD%A6%E6%9E%97?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4152,17 +2137,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4170,44 +2157,14 @@
           "msg": "handle 格式异常: KuKanTieh（应为 @xxx）"
         },
         {
-          "level": "FAIL",
+          "level": "WARN",
           "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E8%82%A1%E4%B9%BE%E7%88%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E8%82%A1%E4%B9%BE%E7%88%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%82%A1%E4%B9%BE%E7%88%B9+KuKanTieh?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%82%A1%E4%B9%BE%E7%88%B9+KuKanTieh?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%82%A1%E4%B9%BE%E7%88%B9+KuKanTieh?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4217,17 +2174,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4237,47 +2196,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C vs Gooaye股癌"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=Gooaye+%E8%82%A1%E7%99%8C?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4287,17 +2211,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4307,47 +2233,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%8D%E8%83%BD%E7%AD%89+%E7%8D%85%E5%85%AC+%E6%9D%8E%E6%B0%B8%E5%B9%B4 vs 理財不能等"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%8D%E8%83%BD%E7%AD%89+%E7%8D%85%E5%85%AC+%E6%9D%8E%E6%B0%B8%E5%B9%B4?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%8D%E8%83%BD%E7%AD%89+%E7%8D%85%E5%85%AC+%E6%9D%8E%E6%B0%B8%E5%B9%B4?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E7%90%86%E8%B2%A1%E4%B8%8D%E8%83%BD%E7%AD%89+%E7%8D%85%E5%85%AC+%E6%9D%8E%E6%B0%B8%E5%B9%B4?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4357,17 +2248,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4375,44 +2268,14 @@
           "msg": "handle 格式异常: LazyWallet（应为 @xxx）"
         },
         {
-          "level": "FAIL",
+          "level": "WARN",
           "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E6%87%B6%E9%8C%A2%E5%8C%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E6%87%B6%E9%8C%A2%E5%8C%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E6%87%B6%E9%8C%A2%E5%8C%85+LazyWallet?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E6%87%B6%E9%8C%A2%E5%8C%85+LazyWallet?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E6%87%B6%E9%8C%A2%E5%8C%85+LazyWallet?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4422,44 +2285,15 @@
       "platform": "YouTube",
       "fans": "20W+",
       "channel_id": "UCT3uWFvKLVpRnEealmRwvrw",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=M%E8%A7%80%E9%BB%9E+%E8%B2%A1%E7%B6%93?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=M%E8%A7%80%E9%BB%9E+%E8%B2%A1%E7%B6%93?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=M%E8%A7%80%E9%BB%9E+%E8%B2%A1%E7%B6%93?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
-        }
-      ]
+      "issues": []
     },
     {
       "id": 95,
@@ -4467,9 +2301,11 @@
       "platform": "YouTube",
       "fans": "37W+",
       "channel_id": "",
-      "active": true,
+      "configured_active": true,
+      "included": false,
       "verdict": "WARN",
       "mock_items": 0,
+      "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
@@ -4477,17 +2313,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "handle 格式异常: 蕾咪 Rami（应为 @xxx）"
-        },
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/c/LinRami vs 蕾咪 Rami"
         }
       ]
     },
@@ -4497,17 +2328,19 @@
       "platform": "YouTube",
       "fans": "N/A",
       "channel_id": "",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
       "issues": [
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_id 缺失 → RSS 抓取必然跳过，内容走 Mock 兜底（高伪造风险）"
+          "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         },
         {
           "level": "WARN",
@@ -4517,47 +2350,12 @@
         {
           "level": "WARN",
           "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%95%E9%A1%A7+%E8%B2%A1%E9%87%91%E9%A0%BB%E9%81%93+%E7%90%86%E8%B2%A1%E6%9C%80%E9%8C%A2%E7%B7%9A vs 元大投顧 理財最錢線"
-        },
-        {
-          "level": "FAIL",
-          "code": "META",
-          "msg": "channel_url 是 YouTube 搜索页占位（非真实频道链接）: https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%…"
+          "msg": "channel_url 是搜索页占位而非频道: https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%…（未进入本次报告，已隔离）"
         },
         {
           "level": "WARN",
           "code": "META",
           "msg": "fans 缺失/未填写"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%95%E9%A1%A7+%E8%B2%A1%E9%87%91%E9%A0%BB%E9%81%93+%E7%90%86%E8%B2%A1%E6%9C%80%E9%8C%A2%E7%B7%9A?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%95%E9%A1%A7+%E8%B2%A1%E9%87%91%E9%A0%BB%E9%81%93+%E7%90%86%E8%B2%A1%E6%9C%80%E9%8C%A2%E7%B7%9A?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E5%85%83%E5%A4%A7%E6%8A%95%E9%A1%A7+%E8%B2%A1%E9%87%91%E9%A0%BB%E9%81%93+%E7%90%86%E8%B2%A1%E6%9C%80%E9%8C%A2%E7%B7%9A?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
         }
       ]
     },
@@ -4567,49 +2365,15 @@
       "platform": "YouTube",
       "fans": "15W+",
       "channel_id": "UCwxU6JWj0oOk6behq3XbOiQ",
-      "active": true,
-      "verdict": "FAIL",
-      "mock_items": 3,
-      "pool_titles": 3,
-      "total_items": 3,
+      "configured_active": true,
+      "included": false,
+      "verdict": "WARN",
+      "mock_items": 0,
+      "altered_titles": 0,
+      "pool_titles": 0,
+      "total_items": 0,
       "online": [],
-      "issues": [
-        {
-          "level": "WARN",
-          "code": "META",
-          "msg": "channel_url 与 handle 不一致: https://www.youtube.com/channel/UCwxU6JWj0oOk6behq3XbOiQ vs @股海老牛"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目1 链接为伪链接: https://www.youtube.com/results?search_query=%E8%82%A1%E6%B5%B7%E8%80%81%E7%89%9B?v=mock0（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目1 标题来自模拟语料库（非频道原文）: 「美股高位震荡：财报季是蜜糖还是砒霜？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目2 链接为伪链接: https://www.youtube.com/results?search_query=%E8%82%A1%E6%B5%B7%E8%80%81%E7%89%9B?v=mock1（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目2 标题来自模拟语料库（非频道原文）: 「黄金再创新高：避险还是泡沫？」"
-        },
-        {
-          "level": "FAIL",
-          "code": "FAKE_LINK",
-          "msg": "条目3 链接为伪链接: https://www.youtube.com/results?search_query=%E8%82%A1%E6%B5%B7%E8%80%81%E7%89%9B?v=mock2（点击无法到达任何真实视频）"
-        },
-        {
-          "level": "WARN",
-          "code": "FAKE_TITLE",
-          "msg": "条目3 标题来自模拟语料库（非频道原文）: 「降息交易拥挤度爆表：谁会成为最后的接盘侠？」"
-        }
-      ]
+      "issues": []
     }
   ]
 }
