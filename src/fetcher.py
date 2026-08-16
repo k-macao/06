@@ -2,18 +2,21 @@
 KOL 存活探测与内容抓取
 策略：
 1. 优先尝试 YouTube RSS (https://www.youtube.com/feeds/videos.xml?channel_id=...)
-2. 失败则尝试抓取频道页 HTML，仅用于判断最近是否更新
-3. 只有 RSS 返回了可追溯的真实条目，才把 KOL 纳入内容战报
-4. 网络失败、缺少 channel_id 或暂不支持的平台均标记为未验证；绝不生成兜底标题、日期或链接
+2. 依次备用官方 YouTube Data API、频道 /videos 页结构化数据
+3. 网络短暂故障时使用上次已审计通过且仍在时效内的真实条目
+4. 所有方案都失败才标记为未验证；绝不生成兜底标题、日期或链接
 """
+import json
+import os
 import re
 import time
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 import requests
 import feedparser
 
-from .config import KOL_DATA_PATH, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
+from .config import KOL_DATA_PATH, OUTPUT_DIR, REQUEST_TIMEOUT, USER_AGENT, ACTIVE_THRESHOLD_DAYS
 
 HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8"}
 
@@ -252,14 +255,21 @@ GENERIC_TITLES = [
     ("黄金再创新高：避险还是泡沫？", "对比实际利率与央行购金，提示追高与回调的临界点。"),
     ("降息交易拥挤度爆表：谁会成为最后的接盘侠？", "分析利率期货定价与美联储点阵图的分歧，给出防御配置。"),
 ]
+HISTORICAL_MOCK_TITLES = (
+    {title for rows in MOCK_TITLES_POOL.values() for title, _ in rows}
+    | {title for title, _ in GENERIC_TITLES}
+)
+
 
 def parse_last_update_from_rss(channel_id):
-    """尝试通过 RSS 获取最近更新"""
+    """方案 A：通过 YouTube RSS 获取最近更新（显式超时，避免 CI 卡死）。"""
     if not channel_id:
         return None, []
     rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
-        feed = feedparser.parse(rss_url)
+        response = requests.get(rss_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        feed = feedparser.parse(response.content)
         if not feed.entries:
             return None, []
         entries = feed.entries[:3]
@@ -275,12 +285,127 @@ def parse_last_update_from_rss(channel_id):
                 "title": e.title,
                 "link": e.link,
                 "published": pub.isoformat(),
-                "summary": e.get("summary", "")[:220]
+                "summary": e.get("summary", "")[:220],
+                "source": "youtube_rss",
             })
         return dt, items
     except Exception as ex:
         print(f"[RSS] {channel_id} failed: {ex}")
         return None, []
+
+
+def fetch_from_youtube_api(channel_id):
+    """方案 B：可选 YouTube Data API；设置 YOUTUBE_API_KEY 后启用。"""
+    api_key = os.getenv("YOUTUBE_API_KEY", "").strip()
+    if not channel_id or not api_key:
+        return None, []
+    try:
+        common = {"key": api_key, "part": "contentDetails", "id": channel_id}
+        channel_resp = requests.get(
+            "https://www.googleapis.com/youtube/v3/channels",
+            params=common, headers=HEADERS, timeout=REQUEST_TIMEOUT,
+        )
+        channel_resp.raise_for_status()
+        channels = channel_resp.json().get("items", [])
+        if not channels:
+            return None, []
+        uploads = channels[0]["contentDetails"]["relatedPlaylists"]["uploads"]
+        videos_resp = requests.get(
+            "https://www.googleapis.com/youtube/v3/playlistItems",
+            params={"key": api_key, "part": "snippet", "playlistId": uploads, "maxResults": 3},
+            headers=HEADERS, timeout=REQUEST_TIMEOUT,
+        )
+        videos_resp.raise_for_status()
+        items = []
+        for row in videos_resp.json().get("items", []):
+            snippet = row.get("snippet", {})
+            video_id = snippet.get("resourceId", {}).get("videoId")
+            title = snippet.get("title")
+            published = snippet.get("publishedAt") or ""
+            if not video_id or not title or title in ("Private video", "Deleted video"):
+                continue
+            items.append({
+                "title": title,
+                "link": f"https://www.youtube.com/watch?v={video_id}",
+                "published": published,
+                "summary": (snippet.get("description") or "")[:220],
+                "source": "youtube_data_api",
+            })
+        if not items:
+            return None, []
+        latest = datetime.fromisoformat(items[0]["published"].replace("Z", "+00:00"))
+        return latest, items
+    except Exception as ex:
+        print(f"[YouTube API] {channel_id} failed: {ex}")
+        return None, []
+
+
+def _find_initial_data(page_text):
+    """从频道 HTML 中安全提取 ytInitialData JSON。"""
+    decoder = json.JSONDecoder()
+    for marker in ("var ytInitialData = ", "window[\"ytInitialData\"] = ", "ytInitialData = "):
+        start = page_text.find(marker)
+        if start < 0:
+            continue
+        raw = page_text[start + len(marker):].lstrip()
+        try:
+            return decoder.raw_decode(raw)[0]
+        except (ValueError, json.JSONDecodeError):
+            continue
+    return None
+
+
+def _walk_video_renderers(node):
+    if isinstance(node, dict):
+        for key in ("videoRenderer", "gridVideoRenderer"):
+            if isinstance(node.get(key), dict):
+                yield node[key]
+        for value in node.values():
+            yield from _walk_video_renderers(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from _walk_video_renderers(value)
+
+
+def scrape_channel_items(channel_url):
+    """方案 C：从频道 /videos 页的结构化数据提取真实视频链接。"""
+    if not channel_url or "youtube.com" not in channel_url:
+        return None, []
+    videos_url = channel_url.rstrip("/") + "/videos"
+    try:
+        response = requests.get(videos_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        data = _find_initial_data(response.text)
+        if not data:
+            return None, []
+        items = []
+        seen = set()
+        now = datetime.now(timezone.utc)
+        for renderer in _walk_video_renderers(data):
+            video_id = renderer.get("videoId")
+            title_runs = renderer.get("title", {}).get("runs", [])
+            title = title_runs[0].get("text", "") if title_runs else renderer.get("title", {}).get("simpleText", "")
+            if not video_id or not title or video_id in seen:
+                continue
+            seen.add(video_id)
+            relative = renderer.get("publishedTimeText", {}).get("simpleText", "")
+            published = now - timedelta(days=parse_relative_time(relative))
+            desc_runs = renderer.get("descriptionSnippet", {}).get("runs", [])
+            summary = "".join(run.get("text", "") for run in desc_runs)[:220]
+            items.append({
+                "title": title,
+                "link": f"https://www.youtube.com/watch?v={video_id}",
+                "published": published.isoformat(),
+                "summary": summary,
+                "source": "youtube_channel_page",
+            })
+            if len(items) == 3:
+                break
+        return (datetime.fromisoformat(items[0]["published"]), items) if items else (None, [])
+    except Exception as ex:
+        print(f"[channel videos] {videos_url} failed: {ex}")
+        return None, []
+
 
 def scrape_channel_page(channel_url):
     """轻量抓取频道页，尝试提取最近视频的 publish 信息"""
@@ -323,21 +448,72 @@ def parse_relative_time(s: str) -> int:
         return n * 365
     return n
 
-def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS):
+def load_verified_cache(data_path=OUTPUT_DIR / "data.json"):
+    """方案 D：读取上次成功产物中的真实条目，网络短暂故障时降级使用。"""
+    path = Path(data_path)
+    if not path.exists():
+        return {}
+    try:
+        output = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    cached = {}
+    for entry in output.get("active_kols", []):
+        kid = entry.get("kol", {}).get("id")
+        valid = []
+        for item in entry.get("items", []):
+            link = item.get("link", "")
+            title = item.get("title", "")
+            if (item.get("is_mock") is True or not title or not link.startswith("https://")
+                    or re.search(r"[?&]v=mock\d*", link, re.I)
+                    or title in HISTORICAL_MOCK_TITLES):
+                continue
+            clean = {k: item.get(k, "") for k in ("title", "link", "published", "summary", "lang")}
+            clean.update({"original_title": title, "is_mock": False, "source": "verified_cache"})
+            valid.append(clean)
+        if kid is not None and valid:
+            cached[kid] = valid[:3]
+    return cached
+
+
+def _latest_datetime(items):
+    dates = []
+    for item in items or []:
+        try:
+            dt = datetime.fromisoformat((item.get("published") or "").replace("Z", "+00:00"))
+            dates.append(dt.replace(tzinfo=dt.tzinfo or timezone.utc))
+        except ValueError:
+            continue
+    return max(dates) if dates else None
+
+
+def is_active_kol(kol, threshold_days=ACTIVE_THRESHOLD_DAYS, cached_items=None):
     channel_id = kol.get("channel_id")
     channel_url = kol.get("channel_url")
-    last_dt, items = parse_last_update_from_rss(channel_id)
-    if last_dt:
-        age_days = (datetime.now(timezone.utc) - last_dt).days
-        active = age_days <= threshold_days
-        return active, last_dt, items
+    # 按可信度与实时性依次降级，所有方案都必须返回可点击的真实来源。
+    strategies = (
+        ("RSS", lambda: parse_last_update_from_rss(channel_id)),
+        ("YouTube API", lambda: fetch_from_youtube_api(channel_id)),
+        ("频道页", lambda: scrape_channel_items(channel_url)),
+    )
+    for _, strategy in strategies:
+        last_dt, items = strategy()
+        if last_dt and items:
+            age_days = (datetime.now(timezone.utc) - last_dt).days
+            return age_days <= threshold_days, last_dt, items
+
+    cached_items = cached_items or []
+    cached_dt = _latest_datetime(cached_items)
+    if cached_dt:
+        age_days = (datetime.now(timezone.utc) - cached_dt).days
+        if age_days <= threshold_days:
+            return True, cached_dt, cached_items
+
+    # 最后的 HTML 日期探测只用于确认沉寂，不会制造内容。
     if channel_url:
         dt2 = scrape_channel_page(channel_url)
         if dt2:
-            age_days = (datetime.now(timezone.utc) - dt2).days
-            active = age_days <= threshold_days
-            return active, dt2, []
-    # 无法在线核实时不得根据静态 active 标记伪造“最近更新”日期。
+            return False, dt2, []
     return False, None, []
 
 
@@ -355,6 +531,7 @@ def enrich_with_real_content(kol, real_items):
             "published": ri.get("published", ""),
             "summary": ri.get("summary", ""),
             "lang": kol.get("language", ""),
+            "source": ri.get("source", "verified_source"),
             "is_mock": False,
         })
     return enriched
@@ -372,8 +549,9 @@ def scan_kols(kol_list=None, verbose=True):
     active_kols = []
     inactive_kols = []
     enriched_map = {}
+    verified_cache = load_verified_cache()
     for kol in kol_list:
-        active, last_dt, items = is_active_kol(kol)
+        active, last_dt, items = is_active_kol(kol, cached_items=verified_cache.get(kol.get("id"), []))
         status = "✅活跃" if active else ("⚪未验证" if last_dt is None else "💤沉寂")
         last_str = last_dt.strftime("%Y-%m-%d") if last_dt else "未知"
         if verbose:

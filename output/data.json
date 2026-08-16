@@ -2,8 +2,8 @@
   "meta": {
     "author": "章鱼 AI·全景分析",
     "title": "全球财经金融 KOL 精选名单 · 多空全景战报",
-    "date": "2026年08月15日",
-    "generated_at": "2026-08-15T02:58:05.042103",
+    "date": "2026年08月16日",
+    "generated_at": "2026-08-16T09:05:42.115347",
     "active_count": 6,
     "inactive_count": 91,
     "total": 97,
@@ -15,16 +15,10 @@
       "bull_ratio": 11,
       "bear_ratio": 6,
       "neutral_ratio": 83,
-      "avg_power": 55,
+      "avg_power": 53,
       "dominant": "多头"
     },
-    "engine": "DeepSeek + 启发式",
-    "push_result": {
-      "code": 200,
-      "msg": "执行成功",
-      "pushed_at": "2026-08-15T02:58:05.940333"
-    },
-    "content_policy": "verified-source-only; no mock fallback"
+    "engine": "启发式（未检测到 DEEPSEEK_API_KEY）"
   },
   "active_kols": [
     {
@@ -47,8 +41,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 54,
-        "avg_power": 51,
+        "avg_confidence": 56,
+        "avg_power": 44,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -59,13 +53,14 @@
           "published": "2026-08-14T17:00:07+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 55,
+          "confidence": 59,
+          "power": 44,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "高抛低吸，区间操作"
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "BREAKING: Trump Announces MASSIVE Tax Breaks For ALL Investors | What You MUST Know!",
@@ -74,11 +69,12 @@
           "published": "2026-08-13T16:00:12+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 56,
+          "confidence": 59,
+          "power": 43,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "均衡配置，攻守兼备"
         },
@@ -89,12 +85,13 @@
           "published": "2026-08-10T20:30:32+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 43,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 52,
+          "power": 46,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "均衡配置，攻守兼备"
         }
       ]
@@ -119,7 +116,7 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 58,
+        "avg_confidence": 55,
         "avg_power": 51,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
@@ -131,11 +128,12 @@
           "published": "2026-08-08T18:04:47+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-08",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 57,
+          "confidence": 53,
+          "power": 48,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "等待方向明朗再重仓"
         },
@@ -146,11 +144,12 @@
           "published": "2026-07-24T18:26:52+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "07-24",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 49,
+          "confidence": 54,
+          "power": 54,
           "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "高抛低吸，区间操作"
         },
@@ -161,13 +160,14 @@
           "published": "2026-07-10T17:30:13+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "07-10",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 49,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 60,
+          "power": 53,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "advice": "均衡配置，攻守兼备"
         }
       ]
     },
@@ -203,13 +203,14 @@
           "published": "2026-08-13T16:00:29+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 54,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 55,
+          "power": 47,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "Jobs Report Was a Disaster... But The Stock Market Loves It",
@@ -218,12 +219,13 @@
           "published": "2026-08-10T20:42:31+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 48,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
+          "confidence": 54,
+          "power": 58,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "均衡配置，攻守兼备"
         },
         {
@@ -233,13 +235,14 @@
           "published": "2026-08-06T16:00:07+00:00",
           "summary": "",
           "lang": "英文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-06",
           "sentiment": "中性",
-          "confidence": 54,
-          "power": 56,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "均衡配置，攻守兼备"
+          "confidence": 57,
+          "power": 53,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     },
@@ -263,8 +266,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 64,
-        "avg_power": 61,
+        "avg_confidence": 65,
+        "avg_power": 54,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -275,13 +278,14 @@
           "published": "2026-08-15T01:59:15+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 58,
-          "power": 56,
+          "confidence": 56,
+          "power": 46,
           "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "advice": "均衡配置，攻守兼备"
         },
         {
           "title": "接下来： 三重利好共振！！！",
@@ -290,13 +294,14 @@
           "published": "2026-08-14T01:45:27+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 79,
-          "power": 71,
-          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
-          "advice": "持有为主，关注量能是否跟随"
+          "confidence": 77,
+          "power": 72,
+          "reason": "作者暗示抄底窗口打开，配合量价或政策催化，利于多头发起进攻。",
+          "advice": "逢低分批建仓，设8%止损"
         },
         {
           "title": "答卷：属于典型的 “踩线及格”！ 川普酝酿“大招”！！！又有超级IPO临近...？",
@@ -305,13 +310,14 @@
           "published": "2026-08-13T01:45:04+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 58,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
-          "advice": "高抛低吸，区间操作"
+          "confidence": 63,
+          "power": 45,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "等待方向明朗再重仓"
         }
       ]
     },
@@ -347,13 +353,14 @@
           "published": "2026-08-14T13:50:53+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 79,
-          "power": 69,
-          "reason": "内容强调增长/利好逻辑，搭配 1 个多头关键词，短线情绪偏乐观。",
-          "advice": "逢低分批建仓，设8%止损"
+          "confidence": 78,
+          "power": 70,
+          "reason": "标题释放积极信号（“🔴【每日要聞】中國信貸崩了，…”），基本面或资金面出现边际改善，资金有做多动能。",
+          "advice": "持有为主，关注量能是否跟随"
         },
         {
           "title": "中歐貿易戰開打！中國工廠將被逼出海，老百姓日子會難過｜小翠時政財經 20260813#856",
@@ -362,13 +369,14 @@
           "published": "2026-08-14T03:30:03+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 58,
           "power": 51,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "高抛低吸，区间操作"
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "advice": "等待方向明朗再重仓"
         },
         {
           "title": "🔴【每日要聞】震驚：中國今年失業增加4000萬！大空頭Burry激進做空成燃料，破防怒罵英偉達！OpenAI企業端利潤爆發，Anthropic想要2萬億IPO！｜小翠時政財經 20260813",
@@ -377,13 +385,14 @@
           "published": "2026-08-13T13:36:18+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "空头",
-          "confidence": 76,
-          "power": 70,
+          "confidence": 79,
+          "power": 68,
           "reason": "标题直指风险（“🔴【每日要聞】震驚：中國今年…”），警示抛售或衰退压力，防御姿态明显。",
-          "advice": "降低仓位，等待恐慌释放"
+          "advice": "空仓观望，勿接飞刀"
         }
       ]
     },
@@ -407,8 +416,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 56,
-        "avg_power": 50,
+        "avg_confidence": 60,
+        "avg_power": 52,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -419,12 +428,13 @@
           "published": "2026-08-14T14:57:34+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 53,
-          "power": 49,
-          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "confidence": 56,
+          "power": 58,
+          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
           "advice": "高抛低吸，区间操作"
         },
         {
@@ -434,12 +444,13 @@
           "published": "2026-08-02T13:25:20+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-02",
           "sentiment": "中性",
-          "confidence": 59,
-          "power": 46,
-          "reason": "作者更偏客观复盘，缺乏明确方向指引，市场处于混沌期。",
+          "confidence": 60,
+          "power": 55,
+          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
           "advice": "均衡配置，攻守兼备"
         },
         {
@@ -449,13 +460,14 @@
           "published": "2026-08-01T07:54:50+00:00",
           "summary": "",
           "lang": "中文",
+          "source": "verified_cache",
           "is_mock": false,
           "date_str": "08-01",
           "sentiment": "中性",
-          "confidence": 57,
-          "power": 57,
-          "reason": "标题设问、观点平衡，强调震荡与分化，适合区间战术而非单边押注。",
-          "advice": "等待方向明朗再重仓"
+          "confidence": 64,
+          "power": 45,
+          "reason": "内容呈现多空博弈，0 多 vs 0 空，方向未明，需等待催化。",
+          "advice": "高抛低吸，区间操作"
         }
       ]
     }

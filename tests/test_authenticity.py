@@ -1,12 +1,19 @@
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from src.analyzer import global_battle_stats
 from src.authenticity_check import check_items, check_kol_metadata, run_audit
-from src.fetcher import enrich_with_real_content, is_active_kol
+from src.fetcher import (
+    _find_initial_data,
+    enrich_with_real_content,
+    is_active_kol,
+    load_verified_cache,
+    scrape_channel_items,
+)
 
 
 class FetcherAuthenticityTests(unittest.TestCase):
@@ -36,9 +43,53 @@ class FetcherAuthenticityTests(unittest.TestCase):
         self.assertFalse(items[0]["is_mock"])
         self.assertEqual(source[0]["link"], items[0]["link"])
 
+    def test_channel_page_fallback_extracts_traceable_video(self):
+        initial_data = {
+            "contents": [{"videoRenderer": {
+                "videoId": "real123",
+                "title": {"runs": [{"text": "Real page title"}]},
+                "publishedTimeText": {"simpleText": "2 days ago"},
+                "descriptionSnippet": {"runs": [{"text": "Real description"}]},
+            }}]
+        }
+        response = Mock(text="var ytInitialData = " + json.dumps(initial_data) + ";")
+        response.raise_for_status.return_value = None
+        with patch("src.fetcher.requests.get", return_value=response):
+            last_update, items = scrape_channel_items(self.kol["channel_url"])
+        self.assertIsNotNone(last_update)
+        self.assertEqual("https://www.youtube.com/watch?v=real123", items[0]["link"])
+        self.assertEqual("youtube_channel_page", items[0]["source"])
+
+    def test_cache_loader_rejects_mock_entries(self):
+        output = {"active_kols": [{"kol": {"id": 1}, "items": [
+            {"title": "Fake", "link": "https://example.com/?v=mock0", "is_mock": True},
+            {"title": "Real", "link": "https://example.com/real", "published": "2026-08-15T00:00:00Z"},
+        ]}]}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "data.json"
+            path.write_text(json.dumps(output), encoding="utf-8")
+            cached = load_verified_cache(path)
+        self.assertEqual(["Real"], [item["title"] for item in cached[1]])
+
+    def test_recent_verified_cache_is_the_last_live_fallback(self):
+        cached = [{
+            "title": "Previously verified",
+            "link": "https://www.youtube.com/watch?v=cached123",
+            "published": datetime.now(timezone.utc).isoformat(),
+            "source": "verified_cache",
+        }]
+        with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(
+            "src.fetcher.fetch_from_youtube_api", return_value=(None, [])
+        ), patch("src.fetcher.scrape_channel_items", return_value=(None, [])):
+            active, _, items = is_active_kol(self.kol, cached_items=cached)
+        self.assertTrue(active)
+        self.assertEqual("verified_cache", items[0]["source"])
+
     def test_failed_network_verification_does_not_use_static_active_flag(self):
         kol = {**self.kol, "active": True}
         with patch("src.fetcher.parse_last_update_from_rss", return_value=(None, [])), patch(
+            "src.fetcher.fetch_from_youtube_api", return_value=(None, [])
+        ), patch("src.fetcher.scrape_channel_items", return_value=(None, [])), patch(
             "src.fetcher.scrape_channel_page", return_value=None
         ):
             active, last_update, items = is_active_kol(kol)
