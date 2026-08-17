@@ -2,8 +2,8 @@
   "meta": {
     "author": "章鱼 AI·全景分析",
     "title": "全球财经金融 KOL 精选名单 · 多空全景战报",
-    "date": "2026年08月16日",
-    "generated_at": "2026-08-16T11:46:44.817080",
+    "date": "2026年08月17日",
+    "generated_at": "2026-08-17T03:06:20.966846",
     "active_count": 64,
     "verified_count": 64,
     "inactive_count": 33,
@@ -12,12 +12,12 @@
     "authenticity_policy": "verified-youtube-rss-only",
     "stats": {
       "total": 192,
-      "bull": 43,
-      "bear": 47,
-      "neutral": 102,
-      "bull_ratio": 22,
-      "bear_ratio": 24,
-      "neutral_ratio": 54,
+      "bull": 41,
+      "bear": 43,
+      "neutral": 108,
+      "bull_ratio": 21,
+      "bear_ratio": 22,
+      "neutral_ratio": 57,
       "avg_power": 58,
       "dominant": "空头"
     },
@@ -25,7 +25,7 @@
     "push_result": {
       "code": 200,
       "msg": "执行成功",
-      "pushed_at": "2026-08-16T11:47:26.433071"
+      "pushed_at": "2026-08-17T03:07:01.803119"
     }
   },
   "active_kols": [
@@ -44,16 +44,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "轻度偏多",
-        "kol_color": "bull",
-        "bull_count": 1,
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
+        "bull_count": 0,
         "bear_count": 0,
-        "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 55,
-        "battle_text": "1多 vs 0空 vs 2中性"
+        "neutral_count": 3,
+        "avg_confidence": 61,
+        "avg_power": 50,
+        "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
+        {
+          "title": "How Justin Waller Has A 6-Pack 🤣",
+          "original_title": "How Justin Waller Has A 6-Pack 🤣",
+          "link": "https://www.youtube.com/shorts/vFiKY8Xz3w4",
+          "published": "2026-08-16T17:00:29+00:00",
+          "summary": "Add me on Instagram: GPStephan\n\nPROMOTIONAL OFFER: Get a TRANSFER BONUS when you sign up and make a deposit using my paid affiliate link for WeBull: https://www.webull.com/k/GrahamStephan\n\nSTART BUILDING WEALTH WITH MY F",
+          "lang": "英文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 45,
+          "reason": "内容为个人生活分享与推广，无明确多空信号",
+          "advice": "关注其投资观点，忽略娱乐内容",
+          "engine": "deepseek"
+        },
         {
           "title": "She Makes $142k BUT Blames Her KID For Their Debt…",
           "original_title": "She Makes $142k BUT Blames Her KID For Their Debt…",
@@ -66,10 +84,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 48,
-          "reason": "内容聚焦个人债务案例，未涉及市场多空信号，属于理财教育类内容",
-          "advice": "关注理财规划，无需操作",
+          "confidence": 65,
+          "power": 50,
+          "reason": "涉及个人债务案例，但未给出明确市场判断",
+          "advice": "可借鉴理财建议，但需独立分析",
           "engine": "deepseek"
         },
         {
@@ -85,27 +103,9 @@
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 49,
-          "reason": "内容为理财教育建议，无市场多空指向，属于中性知识分享",
-          "advice": "学习理财知识，保持观望",
-          "engine": "deepseek"
-        },
-        {
-          "title": "BREAKING: Trump Announces MASSIVE Tax Breaks For ALL Investors | What You MUST Know!",
-          "original_title": "BREAKING: Trump Announces MASSIVE Tax Breaks For ALL Investors | What You MUST Know!",
-          "link": "https://www.youtube.com/watch?v=-2jQm1t9pBs",
-          "published": "2026-08-13T16:00:12+00:00",
-          "summary": "You’ve worked hard to build your financial future - Coveron helps you protect it. The first 100 users get 20% off with code GRAHAMSTEPHAN at https://coveron.com/grahamstephan | Let's talk about the Trump Tax Plan, Indexi",
-          "lang": "英文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
-          "is_mock": false,
-          "date_str": "08-13",
-          "sentiment": "多头",
-          "confidence": 75,
-          "power": 69,
-          "reason": "特朗普宣布大规模税收减免，直接利好投资者，提升市场风险偏好",
-          "advice": "关注受益板块，逢低布局",
+          "power": 56,
+          "reason": "教育性内容，无市场多空指向",
+          "advice": "学习理财知识，保持理性投资",
           "engine": "deepseek"
         }
       ]
@@ -130,7 +130,7 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 71,
+        "avg_confidence": 63,
         "avg_power": 56,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
@@ -147,10 +147,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 45,
-          "reason": "标题涉及俄罗斯数字经济准备，未明确多空，属于客观报道或展望",
-          "advice": "关注后续政策动向，暂观望",
+          "confidence": 60,
+          "power": 50,
+          "reason": "标题仅陈述俄罗斯准备数字经济，未明确多空，但隐含对加密货币的潜在利好",
+          "advice": "关注政策动向，暂不操作",
           "engine": "deepseek"
         },
         {
@@ -165,10 +165,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 55,
-          "reason": "标题描述俄罗斯构建新型货币，未直接表明利好或利空，需更多细节",
-          "advice": "等待具体方案，谨慎参与",
+          "confidence": 60,
+          "power": 52,
+          "reason": "标题描述俄罗斯构建新型货币，未直接指向市场涨跌，但可能影响加密货币格局",
+          "advice": "观望为主，留意后续细节",
           "engine": "deepseek"
         },
         {
@@ -183,10 +183,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 69,
-          "reason": "标题暗示全球加密货币权力转移开始，可能利好新兴加密市场或相关资产",
-          "advice": "可适度关注加密板块机会",
+          "confidence": 70,
+          "power": 68,
+          "reason": "标题暗示全球加密货币权力转移，可能利好新兴市场或加密货币采用",
+          "advice": "可适度关注相关板块",
           "engine": "deepseek"
         }
       ]
@@ -211,7 +211,7 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 65,
+        "avg_confidence": 72,
         "avg_power": 52,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
@@ -228,10 +228,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 54,
-          "reason": "内容为401k账户余额统计，属客观数据展示，无明确多空倾向",
-          "advice": "关注自身退休储蓄进度",
+          "confidence": 70,
+          "power": 53,
+          "reason": "内容为401k账户余额统计，属于客观数据展示，无明确多空倾向",
+          "advice": "关注自身账户配置，无需操作",
           "engine": "deepseek"
         },
         {
@@ -246,10 +246,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 52,
-          "reason": "讨论表面富有但实际破产的迹象，属财务教育，无市场方向判断",
-          "advice": "审视个人财务健康度",
+          "confidence": 75,
+          "power": 46,
+          "reason": "标题提示识别虚假富有，属于消费警示，不涉及市场多空",
+          "advice": "理性消费，避免攀比",
           "engine": "deepseek"
         },
         {
@@ -264,10 +264,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 50,
-          "reason": "分享值得购买的物品清单，属消费建议，不涉及投资市场多空",
-          "advice": "理性消费，按需购买",
+          "confidence": 72,
+          "power": 57,
+          "reason": "讨论值得购买的物品，属于消费观念分享，无市场多空信号",
+          "advice": "按需购买，注重价值",
           "engine": "deepseek"
         }
       ]
@@ -290,11 +290,11 @@
         "kol_sentiment": "空头阵营",
         "kol_color": "bear",
         "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 1,
-        "avg_confidence": 66,
-        "avg_power": 57,
-        "battle_text": "0多 vs 2空 vs 1中性"
+        "bear_count": 3,
+        "neutral_count": 0,
+        "avg_confidence": 75,
+        "avg_power": 63,
+        "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
         {
@@ -309,10 +309,10 @@
           "is_mock": false,
           "date_str": "08-08",
           "sentiment": "空头",
-          "confidence": 72,
-          "power": 62,
-          "reason": "内容涉及人口下降、利率高企、经济放缓等利空因素，对加拿大公寓市场构成压力。",
-          "advice": "谨慎观望，关注利率与人口数据",
+          "confidence": 75,
+          "power": 65,
+          "reason": "内容聚焦加拿大公寓市场困境，涉及人口下降、利率高企、经济放缓等多重利空因素，整体偏空。",
+          "advice": "关注地产板块风险，暂避公寓类投资",
           "engine": "deepseek"
         },
         {
@@ -327,10 +327,10 @@
           "is_mock": false,
           "date_str": "07-24",
           "sentiment": "空头",
-          "confidence": 68,
-          "power": 61,
-          "reason": "特朗普宣布新关税，贸易摩擦升级，可能对加拿大经济与市场造成负面影响。",
-          "advice": "规避贸易敏感板块，控制仓位",
+          "confidence": 80,
+          "power": 68,
+          "reason": "特朗普宣布新关税，贸易摩擦升级，对加拿大贸易和经济增长构成压力，利空市场。",
+          "advice": "规避贸易敏感行业，控制仓位",
           "engine": "deepseek"
         },
         {
@@ -344,11 +344,11 @@
           "source_channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
           "is_mock": false,
           "date_str": "07-10",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 50,
-          "reason": "内容聚焦金融网红推广乱象与监管问题，属于行业风险讨论，未明确指向市场多空。",
-          "advice": "保持警惕，关注监管动态",
+          "sentiment": "空头",
+          "confidence": 70,
+          "power": 58,
+          "reason": "揭露金融网红推广乱象，涉及市场操纵和监管缺失，损害投资者信心，偏空。",
+          "advice": "警惕网红推荐标的，加强风险意识",
           "engine": "deepseek"
         }
       ]
@@ -374,7 +374,7 @@
         "bear_count": 1,
         "neutral_count": 2,
         "avg_confidence": 70,
-        "avg_power": 53,
+        "avg_power": 59,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -391,9 +391,9 @@
           "date_str": "08-15",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 44,
-          "reason": "标题提及美日货币救助，但内容为历史事件回顾，未明确多空信号",
-          "advice": "关注历史案例，等待明确信号",
+          "power": 55,
+          "reason": "标题提及美日货币救助，但摘要未明确方向，历史干预或引发波动，多空因素不明",
+          "advice": "关注汇率政策细节，暂观望",
           "engine": "deepseek"
         },
         {
@@ -409,9 +409,9 @@
           "date_str": "08-10",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 48,
-          "reason": "内容涉及个人经历，未涉及市场多空因素，缺乏明确方向",
-          "advice": "观望为主，等待实质信息",
+          "power": 56,
+          "reason": "内容聚焦人物背景，未涉及市场多空信号，属客观介绍，无明确方向",
+          "advice": "等待实质观点，不急于操作",
           "engine": "deepseek"
         },
         {
@@ -427,8 +427,8 @@
           "date_str": "08-04",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 68,
-          "reason": "聚焦科技巨头债务问题，隐含风险警示，可能引发市场担忧",
+          "power": 67,
+          "reason": "标题警示华尔街忽视科技巨头债务，隐含债务风险与潜在违约担忧，偏空信号",
           "advice": "警惕科技股债务风险，控制仓位",
           "engine": "deepseek"
         }
@@ -454,8 +454,8 @@
         "bull_count": 2,
         "bear_count": 0,
         "neutral_count": 1,
-        "avg_confidence": 73,
-        "avg_power": 65,
+        "avg_confidence": 70,
+        "avg_power": 62,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -471,10 +471,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "多头",
-          "confidence": 85,
-          "power": 73,
-          "reason": "标题明确表示AI软件股易涨3倍，释放强烈看涨信号，预期高增长",
-          "advice": "可关注该股，逢低布局",
+          "confidence": 75,
+          "power": 67,
+          "reason": "标题暗示AI软件股有3倍上涨空间，明确看多信号，但未提供具体基本面支撑。",
+          "advice": "关注基本面，谨慎追高",
           "engine": "deepseek"
         },
         {
@@ -489,10 +489,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 67,
-          "reason": "标题称房市刚触底，且提及20万美元利润交易，暗示底部机会",
-          "advice": "考虑逢低介入地产相关",
+          "confidence": 70,
+          "power": 66,
+          "reason": "标题称房市已触底，并提及20万美元利润交易，显示市场回暖迹象。",
+          "advice": "可关注地产板块，逢低布局",
           "engine": "deepseek"
         },
         {
@@ -507,9 +507,9 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 56,
-          "reason": "标题涉及特朗普解决伊朗问题，地缘政治不确定性高，多空因素混杂",
+          "confidence": 65,
+          "power": 54,
+          "reason": "标题涉及地缘政治事件，但未明确多空方向，需关注后续政策影响。",
           "advice": "观望为主，等待明确信号",
           "engine": "deepseek"
         }
@@ -535,8 +535,8 @@
         "bull_count": 2,
         "bear_count": 1,
         "neutral_count": 0,
-        "avg_confidence": 75,
-        "avg_power": 66,
+        "avg_confidence": 79,
+        "avg_power": 72,
         "battle_text": "2多 vs 1空 vs 0中性"
       },
       "items": [
@@ -553,9 +553,9 @@
           "date_str": "08-12",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 64,
-          "reason": "标题暗示9只股票可能带来财富，内容涉及多只个股，整体偏乐观，但未提供具体利好细节。",
-          "advice": "关注个股基本面，精选配置",
+          "power": 71,
+          "reason": "标题暗示9只股票可能带来财富，内容涉及多只个股分析，整体偏乐观",
+          "advice": "关注个股基本面，逢低布局",
           "engine": "deepseek"
         },
         {
@@ -571,9 +571,9 @@
           "date_str": "06-08",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 70,
-          "reason": "标题明确提示股票下跌，内容提及市场波动加剧及Steve Eisman的看空观点，空头信号明显。",
-          "advice": "减仓避险，等待企稳信号",
+          "power": 73,
+          "reason": "标题明确看跌，提及市场波动加剧和Steve Eisman的看空观点",
+          "advice": "减仓避险，等待企稳",
           "engine": "deepseek"
         },
         {
@@ -588,10 +588,10 @@
           "is_mock": false,
           "date_str": "04-22",
           "sentiment": "多头",
-          "confidence": 70,
-          "power": 64,
-          "reason": "标题暗示股票即将起飞，内容引用Tom Lee的牛市观点，市场情绪偏乐观，但缺乏具体数据支撑。",
-          "advice": "可适度参与，控制仓位",
+          "confidence": 82,
+          "power": 73,
+          "reason": "标题预示股票即将起飞，引用Tom Lee看涨观点，市场复苏逻辑明确",
+          "advice": "积极配置，顺势加仓",
           "engine": "deepseek"
         }
       ]
@@ -616,11 +616,47 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 75,
-        "avg_power": 62,
+        "avg_confidence": 71,
+        "avg_power": 63,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
+        {
+          "title": "Young Investors Should Take More Risk?",
+          "original_title": "Young Investors Should Take More Risk?",
+          "link": "https://www.youtube.com/shorts/AkDKNBgVa4Q",
+          "published": "2026-08-16T19:00:19+00:00",
+          "summary": "Young Investors Should Take More Risk?\n\nIf you are a sophisticated investor looking for in depth, independent stock analyses, a strategic value investing portfolio approach, here is my STOCK MARKET RESEARCH PLATFORM (bus",
+          "lang": "英文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCrTTBSUr0zhPU56UQljag5A",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "多头",
+          "confidence": 72,
+          "power": 65,
+          "reason": "标题鼓励年轻投资者承担更多风险，隐含看好长期增长潜力，风险偏好提升利好股市",
+          "advice": "年轻投资者可适度增加权益配置",
+          "engine": "deepseek"
+        },
+        {
+          "title": "Passive Investing Is Not Broken, Yet...",
+          "original_title": "Passive Investing Is Not Broken, Yet...",
+          "link": "https://www.youtube.com/shorts/k0-y8QpbmaY",
+          "published": "2026-08-16T14:14:42+00:00",
+          "summary": "Passive Investing Is Not Broken, Yet...\n\nIf you are a sophisticated investor looking for in depth, independent stock analyses, a strategic value investing portfolio approach, here is my STOCK MARKET RESEARCH PLATFORM (bu",
+          "lang": "英文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCrTTBSUr0zhPU56UQljag5A",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 65,
+          "power": 57,
+          "reason": "标题暗示被动投资尚未失效，但未明确多空，属于客观评估当前市场结构",
+          "advice": "维持现有被动投资策略",
+          "engine": "deepseek"
+        },
         {
           "title": "Avoiding This Crazy AI Bubble, Doesn't Mean Losing Money!",
           "original_title": "Avoiding This Crazy AI Bubble, Doesn't Mean Losing Money!",
@@ -633,46 +669,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "空头",
-          "confidence": 80,
-          "power": 75,
-          "reason": "标题直指AI泡沫疯狂，提示规避风险，空头信号明确",
-          "advice": "规避AI高位股，等待泡沫出清",
-          "engine": "deepseek"
-        },
-        {
-          "title": "BRK a Buy or Sell Now? Intrinsic Value, Cash & Margin of Safety!",
-          "original_title": "BRK a Buy or Sell Now? Intrinsic Value, Cash & Margin of Safety!",
-          "link": "https://www.youtube.com/watch?v=u9HihTkeuWE",
-          "published": "2026-08-14T12:00:27+00:00",
-          "summary": "BRK a Buy or Sell Now? Berkshire's Intrinsic Value, Cash & Margin of Safety!\n\nIf you are a sophisticated investor looking for in depth, independent stock analyses, a strategic value investing portfolio approach, here is ",
-          "lang": "英文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCrTTBSUr0zhPU56UQljag5A",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "中性",
-          "confidence": 70,
-          "power": 48,
-          "reason": "分析伯克希尔内在价值与安全边际，多空因素均衡，属客观评估",
-          "advice": "关注估值与安全边际，择机配置",
-          "engine": "deepseek"
-        },
-        {
-          "title": "3 Great Buys - Even Better Comments...",
-          "original_title": "3 Great Buys - Even Better Comments...",
-          "link": "https://www.youtube.com/watch?v=Yf4UOWLO4Z8",
-          "published": "2026-08-13T12:50:48+00:00",
-          "summary": "3 Great Buys - Even Better Comments...\n\nIf you are a sophisticated investor looking for in depth, independent stock analyses, a strategic value investing portfolio approach, here is my STOCK MARKET RESEARCH PLATFORM (bus",
-          "lang": "英文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCrTTBSUr0zhPU56UQljag5A",
-          "is_mock": false,
-          "date_str": "08-13",
-          "sentiment": "多头",
-          "confidence": 75,
-          "power": 64,
-          "reason": "标题称三大优质买入机会，释放积极买入信号",
-          "advice": "精选标的，分批布局",
+          "confidence": 78,
+          "power": 69,
+          "reason": "标题警示AI泡沫，暗示市场存在高估风险，规避泡沫可避免损失",
+          "advice": "减持AI相关高估值标的",
           "engine": "deepseek"
         }
       ]
@@ -697,8 +697,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 65,
-        "avg_power": 49,
+        "avg_confidence": 61,
+        "avg_power": 53,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -714,10 +714,10 @@
           "is_mock": false,
           "date_str": "08-16",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 52,
+          "confidence": 60,
+          "power": 55,
           "reason": "内容为美英油价对比，属客观信息展示，无明确多空倾向",
-          "advice": "关注油价波动，暂不操作",
+          "advice": "关注油价趋势，暂不操作",
           "engine": "deepseek"
         },
         {
@@ -734,8 +734,8 @@
           "sentiment": "中性",
           "confidence": 65,
           "power": 53,
-          "reason": "展示富豪生活方式，非投资观点，无市场信号",
-          "advice": "保持观望，不据此调整",
+          "reason": "展示富豪生活方式，非投资建议，无明确市场信号",
+          "advice": "保持观望，不据此操作",
           "engine": "deepseek"
         },
         {
@@ -751,9 +751,9 @@
           "date_str": "08-10",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 43,
+          "power": 53,
           "reason": "比较纽约商品价格，属消费调研，不涉及投资方向",
-          "advice": "维持现有策略，等待明确信号",
+          "advice": "关注消费数据，谨慎参考",
           "engine": "deepseek"
         }
       ]
@@ -778,8 +778,8 @@
         "bull_count": 3,
         "bear_count": 0,
         "neutral_count": 0,
-        "avg_confidence": 69,
-        "avg_power": 64,
+        "avg_confidence": 77,
+        "avg_power": 69,
         "battle_text": "3多 vs 0空 vs 0中性"
       },
       "items": [
@@ -795,10 +795,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 72,
-          "power": 71,
-          "reason": "标题推荐低价股买入，暗示存在上涨潜力，但缺乏具体依据，信心中等。",
-          "advice": "关注个股基本面，谨慎参与",
+          "confidence": 80,
+          "power": 68,
+          "reason": "标题明确推荐低价股买入，暗示上涨潜力，多头信号强烈",
+          "advice": "可关注低价股，但需精选基本面",
           "engine": "deepseek"
         },
         {
@@ -813,10 +813,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "多头",
-          "confidence": 65,
-          "power": 57,
-          "reason": "标题预测股价升至1000美元，强烈看涨信号，但可能夸大，需谨慎。",
-          "advice": "核实公司前景，避免追高",
+          "confidence": 75,
+          "power": 68,
+          "reason": "标题预测股价达1000美元，显示极度看涨预期，但需警惕夸大",
+          "advice": "谨慎追高，注意风险控制",
           "engine": "deepseek"
         },
         {
@@ -831,10 +831,10 @@
           "is_mock": false,
           "date_str": "08-12",
           "sentiment": "多头",
-          "confidence": 70,
-          "power": 65,
-          "reason": "推荐当前最佳买入股票，时间点明确，看多情绪明显。",
-          "advice": "结合自身风险，择优配置",
+          "confidence": 78,
+          "power": 71,
+          "reason": "推荐当前最佳买入股票，时间点明确，多头情绪积极",
+          "advice": "关注推荐标的，择机布局",
           "engine": "deepseek"
         }
       ]
@@ -859,8 +859,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 70,
-        "avg_power": 50,
+        "avg_confidence": 72,
+        "avg_power": 49,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -877,9 +877,9 @@
           "date_str": "08-16",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 56,
-          "reason": "内容聚焦储蓄目标与规划工具，未涉及市场多空信号，属客观理财教育",
-          "advice": "关注长期目标，无需调整仓位",
+          "power": 45,
+          "reason": "内容为个人财务规划工具推广，未涉及市场多空判断，属于客观建议",
+          "advice": "关注长期目标，理性规划",
           "engine": "deepseek"
         },
         {
@@ -895,9 +895,9 @@
           "date_str": "07-26",
           "sentiment": "中性",
           "confidence": 75,
-          "power": 45,
-          "reason": "内容质疑传统储蓄建议，引入生命周期模型，属理论探讨，无明确多空指向",
-          "advice": "结合生命周期规划储蓄，保持均衡",
+          "power": 57,
+          "reason": "揭示常见理财误区，强调生命周期模型，多空信号不明确，属客观分析",
+          "advice": "结合生命周期调整储蓄",
           "engine": "deepseek"
         },
         {
@@ -912,10 +912,10 @@
           "is_mock": false,
           "date_str": "07-12",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 50,
-          "reason": "标题偏向购房，但摘要仅提及工具，未给出明确多空结论，需看完整内容",
-          "advice": "根据自身情况权衡租购，理性决策",
+          "confidence": 72,
+          "power": 46,
+          "reason": "讨论租房与买房利弊，未明确看多或看空，属于中性对比分析",
+          "advice": "根据自身情况权衡选择",
           "engine": "deepseek"
         }
       ]
@@ -940,8 +940,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 60,
-        "avg_power": 48,
+        "avg_confidence": 70,
+        "avg_power": 49,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -957,10 +957,10 @@
           "is_mock": false,
           "date_str": "07-28",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 45,
-          "reason": "内容为旅行省钱技巧，无明确多空信号，属于生活理财建议",
-          "advice": "关注实用技巧，不涉及投资",
+          "confidence": 70,
+          "power": 57,
+          "reason": "内容为旅行省钱技巧，不涉及金融市场，无多空信号",
+          "advice": "关注消费类机会，无操作建议",
           "engine": "deepseek"
         },
         {
@@ -975,10 +975,10 @@
           "is_mock": false,
           "date_str": "05-28",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 50,
-          "reason": "推广eSIM产品，强调节省漫游费，但无市场多空指向",
-          "advice": "可参考节省开支，无操作建议",
+          "confidence": 70,
+          "power": 48,
+          "reason": "内容为旅行通讯省钱建议，与金融市场无关，无多空信号",
+          "advice": "关注消费类机会，无操作建议",
           "engine": "deepseek"
         },
         {
@@ -993,10 +993,10 @@
           "is_mock": false,
           "date_str": "02-23",
           "sentiment": "中性",
-          "confidence": 55,
-          "power": 49,
-          "reason": "内容为Adobe工具推广，与金融市场无关，无多空因子",
-          "advice": "忽略，不涉及投资决策",
+          "confidence": 70,
+          "power": 44,
+          "reason": "内容为工具推广，无金融多空因素，属中性信息",
+          "advice": "无操作建议，保持观望",
           "engine": "deepseek"
         }
       ]
@@ -1022,7 +1022,7 @@
         "bear_count": 1,
         "neutral_count": 2,
         "avg_confidence": 65,
-        "avg_power": 54,
+        "avg_power": 53,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -1039,9 +1039,9 @@
           "date_str": "08-13",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 47,
-          "reason": "内容为广告推广，无明确多空信号，仅提及品牌合作。",
-          "advice": "忽略广告，关注实质内容",
+          "power": 53,
+          "reason": "内容为赞助商推广，无明确市场信号，仅提及品牌，不涉及多空因素。",
+          "advice": "忽略无实质信息内容",
           "engine": "deepseek"
         },
         {
@@ -1057,9 +1057,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 47,
-          "reason": "建议考虑薪资、债务和职业匹配，属于理性规划，无明确多空倾向。",
-          "advice": "理性评估专业选择",
+          "power": 46,
+          "reason": "建议考虑薪资、债务与职业匹配，属于理性规划，无明确多空倾向。",
+          "advice": "理性评估教育投资回报",
           "engine": "deepseek"
         },
         {
@@ -1075,9 +1075,9 @@
           "date_str": "08-12",
           "sentiment": "空头",
           "confidence": 70,
-          "power": 68,
-          "reason": "指出返校购物陷阱可能耗尽学生资金，警示消费风险，偏空头。",
-          "advice": "谨慎消费，避免冲动购物",
+          "power": 60,
+          "reason": "指出返校购物陷阱可能耗尽学生资金，警示消费风险，偏空头情绪。",
+          "advice": "警惕消费陷阱，控制预算",
           "engine": "deepseek"
         }
       ]
@@ -1103,7 +1103,7 @@
         "bear_count": 0,
         "neutral_count": 3,
         "avg_confidence": 60,
-        "avg_power": 49,
+        "avg_power": 47,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -1120,8 +1120,8 @@
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 44,
-          "reason": "标题涉及财富心态，但摘要仅为推广链接，无明确多空信号",
+          "power": 43,
+          "reason": "标题强调财富心态，摘要为免费电子书推广，无明确多空信号",
           "advice": "关注内容实质，谨慎操作",
           "engine": "deepseek"
         },
@@ -1138,9 +1138,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 55,
-          "reason": "标题关于摆脱薪资循环，摘要无市场信息，多空不明确",
-          "advice": "等待具体策略，暂不操作",
+          "power": 52,
+          "reason": "标题涉及摆脱薪资循环，摘要为推广，无市场多空指向",
+          "advice": "学习理财知识，暂不操作",
           "engine": "deepseek"
         },
         {
@@ -1156,9 +1156,9 @@
           "date_str": "08-11",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 50,
-          "reason": "标题提及百万富翁公式，摘要为推广，无市场多空因子",
-          "advice": "忽略推广，观望为主",
+          "power": 48,
+          "reason": "标题提及百万富翁公式，摘要为推广，无具体市场信号",
+          "advice": "理性参考，避免盲目跟从",
           "engine": "deepseek"
         }
       ]
@@ -1184,7 +1184,7 @@
         "bear_count": 0,
         "neutral_count": 3,
         "avg_confidence": 60,
-        "avg_power": 52,
+        "avg_power": 47,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -1201,9 +1201,9 @@
           "date_str": "08-13",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 54,
-          "reason": "内容为心灵鸡汤，无具体市场信息，不构成多空信号",
-          "advice": "保持观望，关注实质财经数据",
+          "power": 48,
+          "reason": "内容为励志格言，无具体市场信息，不构成多空信号",
+          "advice": "保持观望，关注实质信息",
           "engine": "deepseek"
         },
         {
@@ -1219,9 +1219,9 @@
           "date_str": "07-30",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 56,
-          "reason": "内容为感恩心态，与市场无关，无多空因子",
-          "advice": "维持原策略，勿受情绪影响",
+          "power": 47,
+          "reason": "内容为感恩心态，无市场相关因子，无法判断方向",
+          "advice": "维持现有策略，等待明确信号",
           "engine": "deepseek"
         },
         {
@@ -1237,9 +1237,9 @@
           "date_str": "07-23",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 48,
-          "reason": "内容强调信念与机会，无具体市场分析，多空不明",
-          "advice": "理性投资，等待明确信号",
+          "power": 46,
+          "reason": "内容为富足心态，无财经数据或趋势，不构成多空依据",
+          "advice": "忽略情绪，基于基本面决策",
           "engine": "deepseek"
         }
       ]
@@ -1264,7 +1264,7 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 68,
+        "avg_confidence": 75,
         "avg_power": 62,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
@@ -1281,9 +1281,9 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 53,
-          "reason": "通胀回落但存在隐忧，多空因素交织，标题暗示问题但未明确方向",
+          "confidence": 70,
+          "power": 45,
+          "reason": "通胀降至3.4%但存在隐忧，多空因素交织，需进一步观察",
           "advice": "观望为主，关注后续数据",
           "engine": "deepseek"
         },
@@ -1299,9 +1299,9 @@
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "多头",
-          "confidence": 70,
-          "power": 66,
-          "reason": "就业数据不佳但市场反应积极，暗示宽松预期升温，利好股市",
+          "confidence": 75,
+          "power": 67,
+          "reason": "就业数据不佳但市场反应积极，可能预期宽松政策",
           "advice": "可适度参与反弹，注意风险",
           "engine": "deepseek"
         },
@@ -1317,10 +1317,10 @@
           "is_mock": false,
           "date_str": "08-06",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 67,
-          "reason": "政府大规模举债增加供给压力，可能推高利率，对市场构成利空",
-          "advice": "谨慎操作，关注利率变化",
+          "confidence": 80,
+          "power": 76,
+          "reason": "政府大规模举债增加供给压力，或推升利率压制市场",
+          "advice": "谨慎操作，防范利率风险",
           "engine": "deepseek"
         }
       ]
@@ -1345,7 +1345,7 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 71,
+        "avg_confidence": 73,
         "avg_power": 57,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
@@ -1362,10 +1362,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "多头",
-          "confidence": 80,
-          "power": 69,
-          "reason": "标题强调历史性买入机会，AI市场潜力巨大，机构悄悄布局，多头信号明确。",
-          "advice": "关注AI细分领域，逢低布局",
+          "confidence": 85,
+          "power": 78,
+          "reason": "标题强调历史性买入机会，AI细分市场潜力巨大，华尔街聪明钱涌入，多头信号明确。",
+          "advice": "关注AI细分龙头，积极布局",
           "engine": "deepseek"
         },
         {
@@ -1382,8 +1382,8 @@
           "sentiment": "中性",
           "confidence": 70,
           "power": 45,
-          "reason": "提及知名投资者操作，但未明确多空方向，属于客观信息分享。",
-          "advice": "观察持仓变化，谨慎跟随",
+          "reason": "提及知名投资者操作但未明确方向，内容为持仓披露，多空信号不清晰。",
+          "advice": "观望为主，等待明确信号",
           "engine": "deepseek"
         },
         {
@@ -1399,9 +1399,9 @@
           "date_str": "08-11",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 57,
-          "reason": "内容呈现多空分歧，既有未来潜力也有风险警示，方向不明。",
-          "advice": "等待明确信号，暂不操作",
+          "power": 50,
+          "reason": "标题暗示重大变化，但摘要显示市场分歧，未来与风险并存，多空因素交织。",
+          "advice": "谨慎持有，关注后续动态",
           "engine": "deepseek"
         }
       ]
@@ -1427,7 +1427,7 @@
         "bear_count": 1,
         "neutral_count": 2,
         "avg_confidence": 71,
-        "avg_power": 59,
+        "avg_power": 64,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -1444,8 +1444,8 @@
           "date_str": "08-15",
           "sentiment": "空头",
           "confidence": 85,
-          "power": 80,
-          "reason": "知名大空头警示AI泡沫，指出多米诺骨牌效应，市场风险偏好下降",
+          "power": 79,
+          "reason": "大空头投资者警示AI泡沫，指出三个多米诺骨牌开始倒下，市场风险加剧",
           "advice": "减持科技股，关注防御板块",
           "engine": "deepseek"
         },
@@ -1462,9 +1462,9 @@
           "date_str": "08-02",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 48,
-          "reason": "内容为巴菲特风格投资者对市场及个股的客观讨论，未明确多空倾向",
-          "advice": "保持观望，关注其持仓变化",
+          "power": 57,
+          "reason": "巴菲特风格投资者讨论市场现状和巴菲特投资谷歌，多空因素未明",
+          "advice": "观望为主，等待明确信号",
           "engine": "deepseek"
         },
         {
@@ -1480,9 +1480,9 @@
           "date_str": "07-27",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 51,
-          "reason": "标题提及巴菲特对谷歌的坦白，但摘要主要为促销信息，缺乏实质多空信号",
-          "advice": "忽略促销，关注后续分析",
+          "power": 58,
+          "reason": "内容主要为投资产品促销，附带巴菲特对谷歌的评论，多空信号不明确",
+          "advice": "谨慎对待促销信息，关注实质分析",
           "engine": "deepseek"
         }
       ]
@@ -1508,10 +1508,28 @@
         "bear_count": 0,
         "neutral_count": 3,
         "avg_confidence": 70,
-        "avg_power": 51,
+        "avg_power": 50,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
+        {
+          "title": "CRWD vs PANW: Which cybersecurity leader is the BETTER BUY right now?",
+          "original_title": "CRWD vs PANW: Which cybersecurity leader is the BETTER BUY right now?",
+          "link": "https://www.youtube.com/watch?v=jzAulcHf2fA",
+          "published": "2026-08-16T21:02:11+00:00",
+          "summary": "Analyze any stock in minutes. Get $100 off Pro: https://longtermmindset.spiffy.co/checkout/stock-simplifer?c=YTLIVEPRO100\n\nCRWD and PANW are both leaders in the cybersecurity industry.\n\nWhich stock is the \"Better Buy\" ri",
+          "lang": "英文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCs60_Z83HU76uygzHRQl0kA",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 48,
+          "reason": "内容为两家网络安全龙头对比分析，未明确多空倾向，属客观比较。",
+          "advice": "关注个股基本面，等待明确信号",
+          "engine": "deepseek"
+        },
         {
           "title": "IONQ vs RGTI: Which Quantum Computing Stock Is the Better Buy Right Now?",
           "original_title": "IONQ vs RGTI: Which Quantum Computing Stock Is the Better Buy Right Now?",
@@ -1525,9 +1543,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 56,
-          "reason": "内容为股票对比分析，未明确看多或看空，仅比较两家公司优劣。",
-          "advice": "关注量子计算赛道，等待明确信号",
+          "power": 58,
+          "reason": "量子计算股票对比，未给出明确多空判断，仅比较优劣。",
+          "advice": "观察行业趋势，谨慎参与",
           "engine": "deepseek"
         },
         {
@@ -1544,26 +1562,8 @@
           "sentiment": "中性",
           "confidence": 70,
           "power": 44,
-          "reason": "对比SpaceX与Palantir，提及AI繁荣但未给出明确多空倾向。",
-          "advice": "关注AI龙头，等待趋势确认",
-          "engine": "deepseek"
-        },
-        {
-          "title": "Nebius vs.IREN: Which AI Stock Is the Better Buy Right Now?",
-          "original_title": "Nebius vs.IREN: Which AI Stock Is the Better Buy Right Now?",
-          "link": "https://www.youtube.com/watch?v=npcb1ROWw1A",
-          "published": "2026-07-22T05:08:03+00:00",
-          "summary": "Analyze any stock in minutes. Get $100 off Pro: https://longtermmindset.spiffy.co/checkout/stock-simplifer?c=YTLIVEPRO100\n\nNebius and IREN are  both growing like mad thanks to the  AI boom. \n\nWhich stock is the \"Better B",
-          "lang": "英文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCs60_Z83HU76uygzHRQl0kA",
-          "is_mock": false,
-          "date_str": "07-22",
-          "sentiment": "中性",
-          "confidence": 70,
-          "power": 55,
-          "reason": "对比Nebius与IREN，强调AI增长但无明确方向判断。",
-          "advice": "关注AI概念股，谨慎操作",
+          "reason": "AI股票对比，提及增长但未明确多空，属客观分析。",
+          "advice": "评估成长性，注意估值风险",
           "engine": "deepseek"
         }
       ]
@@ -1583,16 +1583,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
-        "bull_count": 1,
-        "bear_count": 1,
+        "kol_sentiment": "空头阵营",
+        "kol_color": "bear",
+        "bull_count": 0,
+        "bear_count": 2,
         "neutral_count": 1,
-        "avg_confidence": 70,
+        "avg_confidence": 75,
         "avg_power": 61,
-        "battle_text": "1多 vs 1空 vs 1中性"
+        "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
+        {
+          "title": "下周大事提前看...！一好一坏两条主线正在同步上演。。。",
+          "original_title": "下周大事提前看...！一好一坏两条主线正在同步上演。。。",
+          "link": "https://www.youtube.com/watch?v=-upyUhfKRuA",
+          "published": "2026-08-17T02:19:37+00:00",
+          "summary": "下周大事提前看...！\n一好一坏两条主线正在同步上演。。。\n\n如果需要查询过往视频中讲解过的公司：可以在YouTube上查“贝拉聊财金 + (公司名称/股票代号)\"，比如“贝拉聊财金 TSLA Tesla”，如果标题提到就会显示在结果里，或者点击下面这个链接就可以看到全部视频的列表（按时间顺序）： https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg/videos \n\n如果您喜",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 52,
+          "reason": "标题提及一好一坏两条主线，多空信号并存，方向不明",
+          "advice": "观望为主，等待主线明朗",
+          "engine": "deepseek"
+        },
         {
           "title": "周末大事件！历史轮回的警示灯！",
           "original_title": "周末大事件！历史轮回的警示灯！",
@@ -1604,11 +1622,11 @@
           "source_channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
           "is_mock": false,
           "date_str": "08-16",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 44,
-          "reason": "标题提及历史轮回警示灯，暗示风险但未明确方向，多空信号混杂",
-          "advice": "观望为主，等待明确信号",
+          "sentiment": "空头",
+          "confidence": 75,
+          "power": 66,
+          "reason": "历史轮回警示灯暗示风险，可能重演下跌周期",
+          "advice": "谨慎减仓，防范回调风险",
           "engine": "deepseek"
         },
         {
@@ -1623,28 +1641,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "空头",
-          "confidence": 70,
-          "power": 61,
-          "reason": "标题强调25年来最贵的一笔债，暗示高成本与债务风险，偏空",
-          "advice": "谨慎持仓，关注利率变化",
-          "engine": "deepseek"
-        },
-        {
-          "title": "接下来： 三重利好共振！！！",
-          "original_title": "接下来： 三重利好共振！！！",
-          "link": "https://www.youtube.com/watch?v=k86kR6kHJl0",
-          "published": "2026-08-14T01:45:27+00:00",
-          "summary": "接下来： 三重利好共振！！！\n\n如果需要查询过往视频中讲解过的公司：可以在YouTube上查“贝拉聊财金 + (公司名称/股票代号)\"，比如“贝拉聊财金 TSLA Tesla”，如果标题提到就会显示在结果里，或者点击下面这个链接就可以看到全部视频的列表（按时间顺序）： https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg/videos \n\n如果您喜欢😍并且愿意支持我的频道，可以",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "多头",
           "confidence": 80,
-          "power": 78,
-          "reason": "标题明确三重利好共振，释放积极信号，看多情绪强烈",
-          "advice": "积极布局，把握反弹机会",
+          "power": 66,
+          "reason": "25年来最贵债务凸显高成本融资压力，利空市场",
+          "advice": "降低杠杆，规避高息资产",
           "engine": "deepseek"
         }
       ]
@@ -1669,8 +1669,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 68,
-        "avg_power": 60,
+        "avg_confidence": 75,
+        "avg_power": 62,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -1686,10 +1686,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 44,
-          "reason": "标题提及机构调仓与空头做空标的，多空因素并存，未明确方向",
-          "advice": "观望为主，关注持仓变化",
+          "confidence": 70,
+          "power": 49,
+          "reason": "标题提及机构调仓与空头做空，多空因素并存，未明确方向",
+          "advice": "观望为主，待方向明确",
           "engine": "deepseek"
         },
         {
@@ -1704,9 +1704,9 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 72,
-          "reason": "标题警示重大隐患且透支买入，风险信号明显，谨慎对待",
+          "confidence": 80,
+          "power": 75,
+          "reason": "标题警示重大隐患及透支买入，风险信号明显，偏防御",
           "advice": "减仓避险，控制杠杆",
           "engine": "deepseek"
         },
@@ -1722,10 +1722,10 @@
           "is_mock": false,
           "date_str": "08-12",
           "sentiment": "多头",
-          "confidence": 70,
+          "confidence": 75,
           "power": 64,
-          "reason": "半导体牛回速归暗示板块反弹，市场情绪偏乐观",
-          "advice": "可轻仓参与，设好止损",
+          "reason": "标题暗示半导体板块快速回升，行业景气度回暖，偏积极",
+          "advice": "可关注半导体，轻仓试探",
           "engine": "deepseek"
         }
       ]
@@ -1751,7 +1751,7 @@
         "bear_count": 3,
         "neutral_count": 0,
         "avg_confidence": 80,
-        "avg_power": 74,
+        "avg_power": 67,
         "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
@@ -1768,9 +1768,9 @@
           "date_str": "08-14",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 76,
-          "reason": "标题提及中国信贷史上最差，美国制裁中国无人机，空头信号明显，但美股创新高部分对冲",
-          "advice": "关注信贷风险，谨慎操作",
+          "power": 66,
+          "reason": "标题提及中国信贷史上最差，美国制裁中国无人机，均属利空因素，压制市场情绪。",
+          "advice": "规避相关板块，控制仓位",
           "engine": "deepseek"
         },
         {
@@ -1786,9 +1786,9 @@
           "date_str": "08-14",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 72,
-          "reason": "中欧贸易战开打，中国工厂被迫出海，经济压力增大，利空因素主导",
-          "advice": "规避贸易相关板块",
+          "power": 63,
+          "reason": "中欧贸易战开打，中国工厂被迫出海，经济压力增大，利空出口及制造业。",
+          "advice": "减持出口相关，关注内需",
           "engine": "deepseek"
         },
         {
@@ -1804,9 +1804,9 @@
           "date_str": "08-13",
           "sentiment": "空头",
           "confidence": 85,
-          "power": 75,
-          "reason": "中国失业增加4000万，大空头做空英伟达，市场风险偏好下降，空头信号强烈",
-          "advice": "降低仓位，防御为主",
+          "power": 73,
+          "reason": "中国失业增加4000万，大空头做空英伟达，多重利空信号，市场风险偏好下降。",
+          "advice": "降低仓位，等待企稳信号",
           "engine": "deepseek"
         }
       ]
@@ -1831,8 +1831,8 @@
         "bull_count": 0,
         "bear_count": 3,
         "neutral_count": 0,
-        "avg_confidence": 82,
-        "avg_power": 71,
+        "avg_confidence": 80,
+        "avg_power": 73,
         "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
@@ -1849,9 +1849,9 @@
           "date_str": "08-15",
           "sentiment": "空头",
           "confidence": 85,
-          "power": 77,
-          "reason": "内容强调中美竞争导致中国系统性崩溃风险，文化劣根性等负面观点，看空中国经济前景。",
-          "advice": "规避中国相关资产，关注风险",
+          "power": 72,
+          "reason": "内容断言中美竞争将导致中国系统性崩溃，并归因于文化劣质，空头信号强烈。",
+          "advice": "规避中国相关资产，观望为主",
           "engine": "deepseek"
         },
         {
@@ -1866,10 +1866,10 @@
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "空头",
-          "confidence": 80,
-          "power": 68,
-          "reason": "指出亚洲人口老龄化危机，经济政策失效，后发劣势拖累发展，看空亚洲经济。",
-          "advice": "减持亚洲市场，关注人口结构",
+          "confidence": 75,
+          "power": 72,
+          "reason": "强调亚洲人口老龄化危机与经济政策失效，后发劣势拖累增长，空头情绪明显。",
+          "advice": "减持亚洲市场敞口，关注人口结构",
           "engine": "deepseek"
         },
         {
@@ -1884,10 +1884,10 @@
           "is_mock": false,
           "date_str": "07-30",
           "sentiment": "空头",
-          "confidence": 82,
-          "power": 68,
-          "reason": "认为中国房地产调控战略终将失败，地缘战略烂尾，并攻击美国经济股市，看空中国及全球。",
-          "advice": "谨慎投资，规避高风险资产",
+          "confidence": 80,
+          "power": 75,
+          "reason": "预测中国地缘战略失败，并暗示攻击美国经济股市，整体看空中国及全球市场。",
+          "advice": "保持防御，降低风险资产配置",
           "engine": "deepseek"
         }
       ]
@@ -1913,10 +1913,28 @@
         "bear_count": 0,
         "neutral_count": 1,
         "avg_confidence": 78,
-        "avg_power": 66,
+        "avg_power": 65,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
+        {
+          "title": "美股 被严重低估，鲜为人知的一只AI潜力股！巨头抢着跟它合作！",
+          "original_title": "美股 被严重低估，鲜为人知的一只AI潜力股！巨头抢着跟它合作！",
+          "link": "https://www.youtube.com/watch?v=Cdq4SJ-wyRE",
+          "published": "2026-08-16T23:02:29+00:00",
+          "summary": "【前纽约证券交易所分析师Ken创业】美股VIP会员 https://stockwe.com/VIP\n✅1.每天实时正股+期权操作，明确给出买卖点位（买涨做空），盘中实时技术分析解答\n✅2.附送美股大数据 AI量化美股分析工具 https://StockWe.com，监测个股资金进出，华尔街大机构每日千万大额期权订单和暗池大单通道买卖\n✅3.独家资深美股老师一对一实战案例指导，提供专业建议和解套方案（前纽约证券交易所资深分析师Ken）\n✅",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCWyPo32TSKPr8Py7gb7NhYw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "多头",
+          "confidence": 80,
+          "power": 70,
+          "reason": "标题强调AI潜力股被低估且巨头合作，释放积极信号，看涨情绪明显",
+          "advice": "关注合作进展，可逢低布局",
+          "engine": "deepseek"
+        },
         {
           "title": "美股 NBIS 末日期权怒赚18倍，后续还能飞！百年一遇的机会！",
           "original_title": "美股 NBIS 末日期权怒赚18倍，后续还能飞！百年一遇的机会！",
@@ -1930,9 +1948,9 @@
           "date_str": "08-13",
           "sentiment": "多头",
           "confidence": 85,
-          "power": 79,
-          "reason": "标题强调期权18倍收益与百年一遇机会，明确看涨信号，情绪极度乐观",
-          "advice": "可短线参与，注意高位风险",
+          "power": 82,
+          "reason": "末日期权暴赚18倍，暗示股价强势，且称百年一遇机会，多头信心极强",
+          "advice": "短线可参与，但注意止盈止损",
           "engine": "deepseek"
         },
         {
@@ -1948,27 +1966,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 48,
-          "reason": "内容为财报预测与研报拆解，多空因素并存，属客观分析",
-          "advice": "关注财报落地，等待方向明确",
-          "engine": "deepseek"
-        },
-        {
-          "title": "美股 我看好的一只AI股，八月必买入！#snow",
-          "original_title": "美股 我看好的一只AI股，八月必买入！#snow",
-          "link": "https://www.youtube.com/watch?v=mqAE3fkuuwQ",
-          "published": "2026-08-02T22:00:08+00:00",
-          "summary": "【前纽约证券交易所分析师Ken创业】美股VIP会员 https://stockwe.com/VIP\n✅1.每天实时正股+期权操作，明确给出买卖点位（买涨做空），盘中实时技术分析解答\n✅2.附送美股大数据 AI量化美股分析工具 https://StockWe.com，监测个股资金进出，华尔街大机构每日千万大额期权订单和暗池大单通道买卖\n✅3.独家资深美股老师一对一实战案例指导，提供专业建议和解套方案（前纽约证券交易所资深分析师Ken）\n✅",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCWyPo32TSKPr8Py7gb7NhYw",
-          "is_mock": false,
-          "date_str": "08-02",
-          "sentiment": "多头",
-          "confidence": 80,
-          "power": 72,
-          "reason": "明确看好AI股并建议八月买入，看涨情绪强烈",
-          "advice": "逢低布局，设好止损",
+          "power": 43,
+          "reason": "内容为财报预测及研报拆解，客观分析多空因素，未明确方向",
+          "advice": "等待财报落地，观望为主",
           "engine": "deepseek"
         }
       ]
@@ -1988,16 +1988,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "多头阵营",
+        "kol_sentiment": "轻度偏多",
         "kol_color": "bull",
-        "bull_count": 2,
+        "bull_count": 1,
         "bear_count": 0,
-        "neutral_count": 1,
-        "avg_confidence": 75,
-        "avg_power": 64,
-        "battle_text": "2多 vs 0空 vs 1中性"
+        "neutral_count": 2,
+        "avg_confidence": 65,
+        "avg_power": 59,
+        "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
+        {
+          "title": "How I Beat The S&P 500 With Options (12 Wins, 0 Losses)",
+          "original_title": "How I Beat The S&P 500 With Options (12 Wins, 0 Losses)",
+          "link": "https://www.youtube.com/watch?v=SVJ-J7TJd3Q",
+          "published": "2026-08-16T23:00:12+00:00",
+          "summary": "Sponsored by Moomoo SG. Sign up at https://start.moomoo.com/0BEgld or search for \"special deposit\" in moomoo app, key in my code: KELVIN88 before you make the first deposit. \n\nMoomoo Malaysia https://kvli.link/moomoomy\n\n",
+          "lang": "英文/中",
+          "source": "youtube_rss",
+          "source_channel_id": "UCJmaaSJX_PkfUmTuxWbrzLw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "多头",
+          "confidence": 70,
+          "power": 67,
+          "reason": "标题展示期权策略跑赢标普500，12胜0负，暗示高胜率与超额收益，偏多信号。",
+          "advice": "可关注期权策略，但需注意风险",
+          "engine": "deepseek"
+        },
         {
           "title": "What Actually Happens When You Invest $100 a Month",
           "original_title": "What Actually Happens When You Invest $100 a Month",
@@ -2009,11 +2027,11 @@
           "source_channel_id": "UCJmaaSJX_PkfUmTuxWbrzLw",
           "is_mock": false,
           "date_str": "08-12",
-          "sentiment": "多头",
-          "confidence": 75,
-          "power": 69,
-          "reason": "强调小额持续投资的重要性，鼓励尽早开始，传递长期复利增长理念",
-          "advice": "坚持定投，积少成多",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 54,
+          "reason": "内容为每月定投100美元的效果分析，未明确多空，属于客观教育内容。",
+          "advice": "坚持长期定投，分散投资",
           "engine": "deepseek"
         },
         {
@@ -2028,28 +2046,10 @@
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 48,
-          "reason": "内容为投资操作指南，提醒隐藏费用，客观分析利弊，无明确多空倾向",
-          "advice": "注意费用，优化投资渠道",
-          "engine": "deepseek"
-        },
-        {
-          "title": "How I Earn $24,000/Month In Passive Income (Singapore, 2026)",
-          "original_title": "How I Earn $24,000/Month In Passive Income (Singapore, 2026)",
-          "link": "https://www.youtube.com/watch?v=6LF_7KVJwQQ",
-          "published": "2026-08-05T23:00:16+00:00",
-          "summary": "Sponsored by BigFundr. Sign up with CODE \"R19037B\" https://kvli.link/bigfundr\n\nPassive income in Singapore sounds like the dream: build it once, and it pays you forever. I have 8 different sources that together bring in ",
-          "lang": "英文/中",
-          "source": "youtube_rss",
-          "source_channel_id": "UCJmaaSJX_PkfUmTuxWbrzLw",
-          "is_mock": false,
-          "date_str": "08-05",
-          "sentiment": "多头",
-          "confidence": 80,
-          "power": 75,
-          "reason": "展示被动收入来源多样且收益可观，传递财务自由可行信号，鼓舞投资信心",
-          "advice": "构建多元被动收入，长期布局",
+          "confidence": 65,
+          "power": 56,
+          "reason": "介绍CPF和SRS投资方法，提示隐藏费用，属于客观信息分享，无明确多空倾向。",
+          "advice": "投资前仔细了解费用结构",
           "engine": "deepseek"
         }
       ]
@@ -2075,7 +2075,7 @@
         "bear_count": 0,
         "neutral_count": 2,
         "avg_confidence": 70,
-        "avg_power": 57,
+        "avg_power": 56,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -2092,9 +2092,9 @@
           "date_str": "08-15",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 51,
-          "reason": "指出被动投资ETF结构问题，但未明确看多或看空，属客观分析",
-          "advice": "关注ETF流动性风险，分散配置",
+          "power": 44,
+          "reason": "内容讨论被动投资ETF结构变化，未明确多空，属于客观分析",
+          "advice": "关注ETF结构变化，暂观望",
           "engine": "deepseek"
         },
         {
@@ -2110,9 +2110,9 @@
           "date_str": "08-08",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 71,
-          "reason": "强调永久资金池概念，暗示长期投资和复利增长，利好长期持有",
-          "advice": "坚持长期定投，注重现金流",
+          "power": 68,
+          "reason": "强调永续收入与财务自由，隐含长期增长与复利利好",
+          "advice": "布局长期稳健资产，坚持定投",
           "engine": "deepseek"
         },
         {
@@ -2128,9 +2128,9 @@
           "date_str": "08-06",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 49,
-          "reason": "仅为直播问答预告，无实质市场观点，信息中性",
-          "advice": "可参与直播获取更多观点",
+          "power": 56,
+          "reason": "直播问答形式，无明确多空观点，仅提供互动机会",
+          "advice": "可参与直播获取信息，谨慎决策",
           "engine": "deepseek"
         }
       ]
@@ -2155,8 +2155,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 56,
+        "avg_confidence": 66,
+        "avg_power": 55,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -2172,10 +2172,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "空头",
-          "confidence": 70,
-          "power": 65,
-          "reason": "标题暗示网红经济失控，可能涉及泡沫或负面评价，但摘要未明确具体利空因素",
-          "advice": "谨慎看待网红经济相关投资",
+          "confidence": 75,
+          "power": 62,
+          "reason": "标题暗示网红经济失控，可能引发对相关行业泡沫的担忧，利空情绪明显。",
+          "advice": "谨慎看待网红概念股，注意风险。",
           "engine": "deepseek"
         },
         {
@@ -2191,9 +2191,9 @@
           "date_str": "08-13",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 57,
-          "reason": "标题关于长女，内容未提供明确财经信号，可能为个人或社会话题",
-          "advice": "观望，等待更多信息",
+          "power": 53,
+          "reason": "标题未明确多空，内容可能涉及家庭责任或社会话题，与市场关联度低。",
+          "advice": "观望为主，无需操作。",
           "engine": "deepseek"
         },
         {
@@ -2209,9 +2209,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 48,
-          "reason": "涉及媒体素养和隐私，非直接财经内容，但可能隐含对科技巨头监管风险",
-          "advice": "关注科技股监管动态",
+          "power": 51,
+          "reason": "强调媒体素养和隐私，可能引发对科技巨头监管的讨论，但无明确多空信号。",
+          "advice": "关注科技股政策风险，暂持中性。",
           "engine": "deepseek"
         }
       ]
@@ -2237,7 +2237,7 @@
         "bear_count": 3,
         "neutral_count": 0,
         "avg_confidence": 80,
-        "avg_power": 74,
+        "avg_power": 71,
         "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
@@ -2254,9 +2254,9 @@
           "date_str": "07-30",
           "sentiment": "空头",
           "confidence": 85,
-          "power": 77,
-          "reason": "标题提及万亿崩盘、美联储主席失误及AI泡沫破裂，空头信号强烈",
-          "advice": "清仓观望，等待市场企稳",
+          "power": 78,
+          "reason": "标题提及万亿美元崩盘、美联储主席失误及AI泡沫破裂，空头信号强烈",
+          "advice": "清仓避险，等待市场企稳",
           "engine": "deepseek"
         },
         {
@@ -2272,9 +2272,9 @@
           "date_str": "07-25",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 76,
-          "reason": "Oracle预示AI泡沫破裂，但无人倾听，暗示风险被忽视",
-          "advice": "减持科技股，控制风险",
+          "power": 68,
+          "reason": "标题暗示AI泡沫将破裂，Oracle预警但无人倾听，空头情绪浓厚",
+          "advice": "减持科技股，关注防御板块",
           "engine": "deepseek"
         },
         {
@@ -2290,9 +2290,9 @@
           "date_str": "07-14",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 71,
-          "reason": "特朗普陷入陷阱，能源危机加剧，负面因素叠加",
-          "advice": "规避能源板块，保持谨慎",
+          "power": 68,
+          "reason": "标题提及特朗普陷入陷阱及能源危机加剧，负面事件频发，利空市场",
+          "advice": "降低仓位，关注能源板块",
           "engine": "deepseek"
         }
       ]
@@ -2317,8 +2317,8 @@
         "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "avg_confidence": 75,
-        "avg_power": 64,
+        "avg_confidence": 72,
+        "avg_power": 62,
         "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
@@ -2334,10 +2334,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "空头",
-          "confidence": 80,
+          "confidence": 75,
           "power": 69,
-          "reason": "市场集中度达历史高位，被动投资加剧相关性风险，暗示市场见顶风险。",
-          "advice": "降低仓位，关注分散化",
+          "reason": "市场集中度达历史高位，被动投资加剧相关性风险，暗示见顶风险。",
+          "advice": "谨慎观望，降低指数基金仓位",
           "engine": "deepseek"
         },
         {
@@ -2354,7 +2354,7 @@
           "sentiment": "中性",
           "confidence": 70,
           "power": 52,
-          "reason": "分析微软财报与业绩指标，未明确多空倾向，属于客观评估。",
+          "reason": "分析微软财报与业绩指标，未明确多空方向，属客观评估。",
           "advice": "关注财报细节，等待明确信号",
           "engine": "deepseek"
         },
@@ -2370,9 +2370,9 @@
           "is_mock": false,
           "date_str": "08-11",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 73,
-          "reason": "标题强调6倍现金回报，暗示高回报潜力，偏正面。",
+          "confidence": 72,
+          "power": 66,
+          "reason": "标题强调6倍现金回报，暗示高回报潜力，利好估值。",
           "advice": "可关注，但需验证基本面",
           "engine": "deepseek"
         }
@@ -2398,8 +2398,8 @@
         "bull_count": 2,
         "bear_count": 0,
         "neutral_count": 1,
-        "avg_confidence": 71,
-        "avg_power": 63,
+        "avg_confidence": 70,
+        "avg_power": 62,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -2415,10 +2415,10 @@
           "is_mock": false,
           "date_str": "08-12",
           "sentiment": "多头",
-          "confidence": 78,
-          "power": 71,
-          "reason": "PEG小于1的成长股兼具成长性与合理估值，投资价值凸显",
-          "advice": "关注低PEG成长股，分批建仓",
+          "confidence": 75,
+          "power": 70,
+          "reason": "筛选出14只PEG小于1的成长股，强调合理估值下的增长潜力，属积极选股信号",
+          "advice": "关注低PEG成长股，逢低布局",
           "engine": "deepseek"
         },
         {
@@ -2433,9 +2433,9 @@
           "is_mock": false,
           "date_str": "08-07",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 73,
-          "reason": "股息成长策略保守且回报可观，结合估值分析更稳健",
+          "confidence": 70,
+          "power": 68,
+          "reason": "强调股息增长策略的保守性和长期回报，结合合理估值，利好长期投资者",
           "advice": "配置优质股息股，长期持有",
           "engine": "deepseek"
         },
@@ -2451,9 +2451,9 @@
           "is_mock": false,
           "date_str": "08-04",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 47,
-          "reason": "内容为AI工具功能介绍，无明确多空信号，属客观展示",
+          "confidence": 65,
+          "power": 49,
+          "reason": "内容为AI研究助手功能介绍，属工具演示，无明确市场多空倾向",
           "advice": "了解工具功能，辅助投资决策",
           "engine": "deepseek"
         }
@@ -2476,14 +2476,32 @@
       "aggregate": {
         "kol_sentiment": "空头阵营",
         "kol_color": "bear",
-        "bull_count": 1,
-        "bear_count": 2,
+        "bull_count": 0,
+        "bear_count": 3,
         "neutral_count": 0,
-        "avg_confidence": 75,
-        "avg_power": 66,
-        "battle_text": "1多 vs 2空 vs 0中性"
+        "avg_confidence": 80,
+        "avg_power": 72,
+        "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
+        {
+          "title": "「小摩&大摩」20260814：政治局会议后未见起色，7月官方贷款数据续创历史新低，8月至今政府债券发行节奏仍大幅落后去年同期",
+          "original_title": "「小摩&大摩」20260814：政治局会议后未见起色，7月官方贷款数据续创历史新低，8月至今政府债券发行节奏仍大幅落后去年同期",
+          "link": "https://www.youtube.com/watch?v=8RTcQ2EEcHs",
+          "published": "2026-08-16T16:00:24+00:00",
+          "summary": "影片录完发现国家统计局竟然把经济数据发布时间调整到下午3点A股收盘之后了\n\n\n【水印用于防盗搬，请见谅】\n\n【本期研报Google Drive下载链接】：\n小摩：https://drive.google.com/file/d/1VlVy7HaqDQq-R6U9-9yghH_G5vkoKPCD/view?usp=drive_link\n大摩：https://drive.google.com/file/d/13jDtSeeeBV2edZjTq",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UC8gZZWIWmBuCb_gzC8DUrvw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "空头",
+          "confidence": 85,
+          "power": 71,
+          "reason": "贷款数据创新低、政府债券发行落后，经济数据发布时间调整，均指向经济疲软与政策不及预期",
+          "advice": "谨慎观望，等待政策明确信号",
+          "engine": "deepseek"
+        },
         {
           "title": "「高盛」20260814：不必期待消费复苏",
           "original_title": "「高盛」20260814：不必期待消费复苏",
@@ -2496,10 +2514,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 64,
-          "reason": "标题明确表示不必期待消费复苏，指向消费疲软，利空消费板块。",
-          "advice": "规避消费股，关注政策动向",
+          "confidence": 80,
+          "power": 75,
+          "reason": "高盛明确表示不必期待消费复苏，消费疲软将拖累经济增长，市场信心受挫",
+          "advice": "规避消费板块，关注防御性资产",
           "engine": "deepseek"
         },
         {
@@ -2514,28 +2532,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "空头",
-          "confidence": 80,
-          "power": 68,
-          "reason": "极度内卷暗示行业竞争激烈、价格战，利润承压，利空车企。",
-          "advice": "减持车企，等待行业出清",
-          "engine": "deepseek"
-        },
-        {
-          "title": "「瑞银」20260811：是时候回大A了",
-          "original_title": "「瑞银」20260811：是时候回大A了",
-          "link": "https://www.youtube.com/watch?v=FxUBbbN3VOw",
-          "published": "2026-08-12T16:00:03+00:00",
-          "summary": "【水印用于防盗搬，请见谅】\n\n【本期研报Google Drive下载链接】：https://drive.google.com/file/d/1YBBG5JLzZUw5hLDVX7bnULs68IDkFH7E/view?usp=drive_link",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UC8gZZWIWmBuCb_gzC8DUrvw",
-          "is_mock": false,
-          "date_str": "08-12",
-          "sentiment": "多头",
-          "confidence": 70,
-          "power": 66,
-          "reason": "标题暗示现在是回归A股的好时机，看好市场机会。",
-          "advice": "逢低布局，关注优质标的",
+          "confidence": 75,
+          "power": 70,
+          "reason": "瑞银指出中国车企极度内卷，价格战压缩利润，行业竞争加剧，盈利前景承压",
+          "advice": "减持汽车股，关注行业整合机会",
           "engine": "deepseek"
         }
       ]
@@ -2555,16 +2555,52 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "空头阵营",
-        "kol_color": "bear",
-        "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 1,
-        "avg_confidence": 78,
-        "avg_power": 69,
-        "battle_text": "0多 vs 2空 vs 1中性"
+        "kol_sentiment": "轻度偏多",
+        "kol_color": "bull",
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 2,
+        "avg_confidence": 65,
+        "avg_power": 50,
+        "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
+        {
+          "title": "【開市Talk】嘉賓：曾啟邦（17/8/2026）",
+          "original_title": "【開市Talk】嘉賓：曾啟邦（17/8/2026）",
+          "link": "https://www.youtube.com/watch?v=6wN3bk-d9SU",
+          "published": "2026-08-14T03:08:34+00:00",
+          "summary": "【開市Talk】嘉賓：曾啟邦（17/8/2026）\n\n嘉賓：#曾啟邦 AO Summit創辦人/瑭明算法投資董事\n主持：范巧茹\n\n#港股 #美股 #恒指 #開市Talk #investalk \n🟧 🟧 🟧 🟧 🟧 🟧 🟧 🟧 🟧 🟧 🟧 🟧\n【AO Summit 系統14天免費試用】\nhttps://payment.aosummit.com/?promocode=fan\n【AO telegram】\nhttps://t.me/AOSumm",
+          "lang": "粤语/繁体中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
+          "is_mock": false,
+          "date_str": "08-14",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 44,
+          "reason": "内容为节目预告，无明确多空观点，仅提及嘉宾和主题。",
+          "advice": "关注节目内容，等待明确信号",
+          "engine": "deepseek"
+        },
+        {
+          "title": "【美股速遞】NVDA Q2：SpaceX 成第二大重倉｜Goog 成巴郡第四大重倉股｜Reddit將入標指｜Leopold爆倉前持倉曝光｜逾半倉押注SanDisk、美光（17/8/2026)",
+          "original_title": "【美股速遞】NVDA Q2：SpaceX 成第二大重倉｜Goog 成巴郡第四大重倉股｜Reddit將入標指｜Leopold爆倉前持倉曝光｜逾半倉押注SanDisk、美光（17/8/2026)",
+          "link": "https://www.youtube.com/watch?v=JT86X2xnnwU",
+          "published": "2026-08-17T01:43:48+00:00",
+          "summary": "【美股速遞】NVDA Q2：SpaceX躍居第二大重倉| 閃迪再升7% 本週大漲逾35%｜Goog 成巴郡第四大重倉股｜Reddit將納入標普500指數｜Leopold爆倉前持倉曝光  逾半倉押注SanDisk、美光（17/8/2026)\n\n#道指 #納指 #標普 #SP #港股 #日股 #范巧茹 #MorningTalk #investalk #美股速遞  #日圓 #美元 #日元 #人民幣 #52周高 #比特幣 #Bitcoin #特",
+          "lang": "粤语/繁体中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "多头",
+          "confidence": 72,
+          "power": 63,
+          "reason": "提及NVDA重仓SpaceX、Goog成巴郡重仓、Reddit纳入标指，显示机构增持与指数纳入利好。",
+          "advice": "关注相关个股，可适当参与",
+          "engine": "deepseek"
+        },
         {
           "title": "【曾生信箱.30】首次現場真人版｜2027年港島區住宅樓市預測｜太古城單位應否沽出｜傲瀧只會跑輸大市？碧瑤灣收租好，應賣嗎？(15/8/2026)",
           "original_title": "【曾生信箱.30】首次現場真人版｜2027年港島區住宅樓市預測｜太古城單位應否沽出｜傲瀧只會跑輸大市？碧瑤灣收租好，應賣嗎？(15/8/2026)",
@@ -2577,46 +2613,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 53,
-          "reason": "内容为楼市预测与个案讨论，多空因素混杂，未明确看涨或看跌",
-          "advice": "关注个案，谨慎决策",
-          "engine": "deepseek"
-        },
-        {
-          "title": "【星級輪證】騰訊績後資金一面倒睇淡",
-          "original_title": "【星級輪證】騰訊績後資金一面倒睇淡",
-          "link": "https://www.youtube.com/watch?v=WdCQB29mn0c",
-          "published": "2026-08-14T16:00:17+00:00",
-          "summary": "#星級輪證 嘉賓  #八十後投機客 Alan 看淡 #騰訊控股(0700)，港股受騰訊(0700)業績偏軟拖累，失守20天線並於25100點附近整固。八十後投機客 Alan 指出，市場主要憂慮騰訊旗下元寶及 Work Buddy 等 AI 業務暫未能成功轉化為實質收入或新增長曲線，巨額 AI 資本投入令短期估值承壓。從資金及期權籌碼面看，9月份期權未平倉合約一面倒看淡，淡倉規模高達14億元，大戶多建立保護性認沽對沖，440元關口已形成明",
-          "lang": "粤语/繁体中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "空头",
-          "confidence": 85,
-          "power": 79,
-          "reason": "腾讯AI业务变现存疑，期权淡仓庞大，股价承压明显",
-          "advice": "规避或对冲，等待企稳",
-          "engine": "deepseek"
-        },
-        {
-          "title": "【開市Talk】吳穎姍：恒指26000鋼鐵頂 暫時難升穿｜華虹績後急跌 有機會跌至90元｜京東收入跌績後急回 勿接飛刀｜聯想績佳賽道吸引 建議32元買入｜富昌金融尊尚理財總監（14.08.2026）",
-          "original_title": "【開市Talk】吳穎姍：恒指26000鋼鐵頂 暫時難升穿｜華虹績後急跌 有機會跌至90元｜京東收入跌績後急回 勿接飛刀｜聯想績佳賽道吸引 建議32元買入｜富昌金融尊尚理財總監（14.08.2026）",
-          "link": "https://www.youtube.com/watch?v=hncrnM0ZWcY",
-          "published": "2026-08-14T02:58:04+00:00",
-          "summary": "【開市Talk】吳穎姍：恒指26000是鋼鐵頂 暫時難升穿｜華虹績後急跌 有機會跌至90元｜京東收入跌績後急回 勿接飛刀｜聯想績佳賽道吸引 建議回至32元買入｜富昌金融尊尚理財總監（14.08.2026） \n\n#港股 #美股 \n#騰訊 #中芯 #華虹 #聯想\n#京東 #中移動 #美團 \n#吳穎姍 \n\n嘉賓：#吳頴姍 (#豹姐)  富昌金融集團尊尚理財總監\n主持：#譚凱韻\n\n💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\n美國頂尖券商 納斯達克上",
-          "lang": "粤语/繁体中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "空头",
-          "confidence": 80,
-          "power": 76,
-          "reason": "恒指26000阻力强，华虹京东看跌，建议勿接飞刀",
-          "advice": "减仓观望，勿抢反弹",
+          "confidence": 65,
+          "power": 43,
+          "reason": "讨论楼市预测与物业处置，多空因素混杂，未给出明确方向。",
+          "advice": "观望为主，结合自身情况决策",
           "engine": "deepseek"
         }
       ]
@@ -2636,16 +2636,52 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "轻度偏空",
+        "kol_sentiment": "空头阵营",
         "kol_color": "bear",
         "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "avg_confidence": 63,
-        "avg_power": 51,
-        "battle_text": "0多 vs 1空 vs 2中性"
+        "bear_count": 2,
+        "neutral_count": 1,
+        "avg_confidence": 78,
+        "avg_power": 67,
+        "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
+        {
+          "title": "【0812 付鹏最新分享】散户血亏80％，AI概念回调只是开始，真正的财富洗牌在2030！",
+          "original_title": "【0812 付鹏最新分享】散户血亏80％，AI概念回调只是开始，真正的财富洗牌在2030！",
+          "link": "https://www.youtube.com/watch?v=kNQXVXgZLnM",
+          "published": "2026-08-16T16:59:27+00:00",
+          "summary": "【0812 付鹏最新分享】散户血亏80％，AI概念回调只是开始，真正的财富洗牌在2030！ #中国 #中国楼市 #中国经济 #房价 #时政 #社会 #社会热点 #经济 #财经 #财经资讯",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCCeMdcZw1LJsAGKeoYXZw6A",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "空头",
+          "confidence": 80,
+          "power": 69,
+          "reason": "标题警示散户亏损与AI概念回调，暗示市场风险与财富洗牌，空头信号明显",
+          "advice": "谨慎观望，避免追高AI板块",
+          "engine": "deepseek"
+        },
+        {
+          "title": "【罕见原声流出】朱镕基私下开会：下属大气都不敢出！霸气全开！  ｜朱镕基逝世｜朱镕基去世｜朱镕基",
+          "original_title": "【罕见原声流出】朱镕基私下开会：下属大气都不敢出！霸气全开！  ｜朱镕基逝世｜朱镕基去世｜朱镕基",
+          "link": "https://www.youtube.com/watch?v=dM8u3HbueXI",
+          "published": "2026-08-16T15:08:34+00:00",
+          "summary": "【罕见原声流出】朱镕基私下开会：下属大气都不敢出！霸气全开！  ｜朱镕基逝世｜朱镕基去世｜朱镕基 #中国 #中国楼市 #中国经济 #房价 #时政 #社会 #社会热点 #经济 #财经 #财经资讯",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCCeMdcZw1LJsAGKeoYXZw6A",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 58,
+          "reason": "内容为历史人物轶事，与当前财经市场无直接关联，多空信号不明确",
+          "advice": "关注实际政策动向，保持中性",
+          "engine": "deepseek"
+        },
         {
           "title": "触目惊心的数据，1000万坏账，全是中年人！韩红悄悄被抛弃，单月近30万人停止月捐！资金断崖缩水1600万！ ｜信用卡｜消费贷｜银行｜不良资产｜韩红｜走个面｜公益｜韩红基金会",
           "original_title": "触目惊心的数据，1000万坏账，全是中年人！韩红悄悄被抛弃，单月近30万人停止月捐！资金断崖缩水1600万！ ｜信用卡｜消费贷｜银行｜不良资产｜韩红｜走个面｜公益｜韩红基金会",
@@ -2658,46 +2694,10 @@
           "is_mock": false,
           "date_str": "08-16",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 64,
-          "reason": "坏账激增、公益资金缩水，反映消费信贷风险与民间经济压力上升",
-          "advice": "关注消费金融风险，谨慎加杠杆",
-          "engine": "deepseek"
-        },
-        {
-          "title": "郭德纲因改红歌被举报立案，贾冰饭局被朋友偷拍，一些东西又开始回来了！",
-          "original_title": "郭德纲因改红歌被举报立案，贾冰饭局被朋友偷拍，一些东西又开始回来了！",
-          "link": "https://www.youtube.com/watch?v=4kXCPppp-sw",
-          "published": "2026-08-15T17:20:16+00:00",
-          "summary": "",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCCeMdcZw1LJsAGKeoYXZw6A",
-          "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 47,
-          "reason": "内容涉及社会事件与舆论动向，无直接财经多空信号",
-          "advice": "观望为主，留意政策风向",
-          "engine": "deepseek"
-        },
-        {
-          "title": "朱镕基拍桌怒吼：香港搞不好，我们就是民族罪人！全场起立鼓掌  ｜朱镕基逝世｜朱镕基去世｜朱镕基｜香港",
-          "original_title": "朱镕基拍桌怒吼：香港搞不好，我们就是民族罪人！全场起立鼓掌  ｜朱镕基逝世｜朱镕基去世｜朱镕基｜香港",
-          "link": "https://www.youtube.com/watch?v=B7BeiK9mU-Y",
-          "published": "2026-08-15T09:03:00+00:00",
-          "summary": "朱镕基拍桌怒吼：香港搞不好，我们就是民族罪人！全场起立鼓掌  ｜朱镕基逝世｜朱镕基去世｜朱镕基｜香港 #中国 #中国楼市 #中国经济 #房价 #时政 #社会 #社会热点 #经济 #财经 #财经资讯",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCCeMdcZw1LJsAGKeoYXZw6A",
-          "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "中性",
-          "confidence": 55,
-          "power": 43,
-          "reason": "历史人物言论回顾，无直接市场影响，情绪面中性",
-          "advice": "保持中性，关注政策落地",
+          "confidence": 85,
+          "power": 75,
+          "reason": "提及坏账、资金缩水等负面数据，反映消费信贷与公益资金压力，空头信号强",
+          "advice": "规避消费贷相关标的，注意风险",
           "engine": "deepseek"
         }
       ]
@@ -2722,7 +2722,7 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 75,
+        "avg_confidence": 71,
         "avg_power": 58,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
@@ -2740,9 +2740,9 @@
           "date_str": "08-16",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 55,
-          "reason": "内容为财务焦虑现象分析，无明确多空信号，仅探讨收入与焦虑关系",
-          "advice": "关注个人财务规划，理性消费",
+          "power": 57,
+          "reason": "内容为财务焦虑现象分析，无明确多空信号，仅讨论收入与净资产关系，不涉及市场走势。",
+          "advice": "关注个人财务健康，理性配置资产",
           "engine": "deepseek"
         },
         {
@@ -2757,9 +2757,9 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 75,
-          "power": 44,
-          "reason": "纪念朱镕基总理，回顾历史贡献，不涉及当前市场多空因素",
+          "confidence": 65,
+          "power": 52,
+          "reason": "内容为朱镕基逝世及香港情结的回顾，属客观叙事，无市场多空指向。",
           "advice": "保持观望，关注政策动向",
           "engine": "deepseek"
         },
@@ -2775,10 +2775,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "空头",
-          "confidence": 82,
-          "power": 75,
-          "reason": "内地加强监管，境外资产征税，防走资措施收紧，利空跨境投资",
-          "advice": "规避境外资产配置，注意合规风险",
+          "confidence": 80,
+          "power": 66,
+          "reason": "内地监管趋严，境外资产配置受限，征税及穿透监管增加合规风险，利空跨境投资。",
+          "advice": "规避境外资产，关注合规风险",
           "engine": "deepseek"
         }
       ]
@@ -2804,7 +2804,7 @@
         "bear_count": 1,
         "neutral_count": 2,
         "avg_confidence": 71,
-        "avg_power": 56,
+        "avg_power": 59,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -2821,9 +2821,9 @@
           "date_str": "08-14",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 75,
-          "reason": "标题警示香港面临结构性危机，经济转型困难，楼市股市承压，人口老化等问题，整体偏空。",
-          "advice": "关注政策动向，谨慎投资香港资产。",
+          "power": 76,
+          "reason": "警告香港面临结构性危机，经济转型困难，或成国家包袱，市场信心受挫",
+          "advice": "谨慎观望，关注政策动向",
           "engine": "deepseek"
         },
         {
@@ -2839,9 +2839,9 @@
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 44,
-          "reason": "内容理性回应外界批评，强调背靠内地优势，但未明确多空信号，属于客观分析。",
-          "advice": "保持中性仓位，关注基本面变化。",
+          "power": 56,
+          "reason": "理性看待香港前景，背靠内地是优势，投资者国际化，但需应对批评",
+          "advice": "保持中性，关注基本面",
           "engine": "deepseek"
         },
         {
@@ -2857,9 +2857,9 @@
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 50,
-          "reason": "内容为楼盘介绍，无市场多空信号，仅描述户型及景观，属于客观信息。",
-          "advice": "若关注楼市，可实地考察再决策。",
+          "power": 46,
+          "reason": "楼盘介绍客观，无明确多空信号，仅展示户型与景观",
+          "advice": "按需评估，不涉投资建议",
           "engine": "deepseek"
         }
       ]
@@ -2879,16 +2879,52 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "轻度偏空",
-        "kol_color": "bear",
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
         "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
+        "bear_count": 0,
+        "neutral_count": 3,
         "avg_confidence": 65,
-        "avg_power": 49,
-        "battle_text": "0多 vs 1空 vs 2中性"
+        "avg_power": 52,
+        "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
+        {
+          "title": "姚浩然Patrick直擊市況︱阿里小米放榜　大市續迎考驗？四日狂飆40%　SanDisk追得過？︱【開市追揸沽】",
+          "original_title": "姚浩然Patrick直擊市況︱阿里小米放榜　大市續迎考驗？四日狂飆40%　SanDisk追得過？︱【開市追揸沽】",
+          "link": "https://www.youtube.com/watch?v=2Tcv-pJrd8M",
+          "published": "2026-08-17T02:27:40+00:00",
+          "summary": "港股本周繼續「超級業績期」，阿里巴巴（09988）、小米（01810）等相繼放榜。上周騰訊（00700）、京東（09618）等業績後均被洗倉，投資者本周宜當心？另一邊廂，內地即將公布三頭馬車數據，怎影響港股後市？\n\nSanDisk（美：SNDK）連升四日，累升40%。公司月初公布業績，市場不受落，但上周舉行投資者日（Investor Day）後股價強勢爆升，公司宣佈未來三年營收保持中高雙位數增長及「100%現金」回饋股東等，股價連日大漲",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCFgvtFvTFRjqhGC1XfIB02w",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 55,
+          "reason": "超级业绩期多空交织，腾讯京东业绩后遭洗仓，但SanDisk强势上涨，整体方向不明",
+          "advice": "观望为主，关注业绩指引",
+          "engine": "deepseek"
+        },
+        {
+          "title": "吳穎姍豹姐直擊市況︱逢港股交易日9時於《ET開市直擊》陪你開市︱【ET開市直擊】",
+          "original_title": "吳穎姍豹姐直擊市況︱逢港股交易日9時於《ET開市直擊》陪你開市︱【ET開市直擊】",
+          "link": "https://www.youtube.com/watch?v=uBiYQQLFMrg",
+          "published": "2026-08-17T02:20:09+00:00",
+          "summary": "📌Follow hket Youtube頻道，緊貼最新財經、投資熱話：👉  @hketvideo  \n\n【觀看更豐富hket TV財經影片】https://bit.ly/46rONzf\n---\n⏱️本集重點傳送門\n\n📺 更多財經新節目影片：\n\n爆旋陀螺變死場救星? 拆解「陀螺經濟」! 買陀螺有冇投資價值? 炒玩具vs買生產商股票點揀好?｜【投資撈過界】#童年回憶 #炒賣 #經典玩具 #爆旋陀螺 #陀螺 #hket\nhttps://www",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCFgvtFvTFRjqhGC1XfIB02w",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 65,
+          "power": 45,
+          "reason": "内容仅为节目预告，无明确多空信号，涉及玩具投资话题但未给出方向",
+          "advice": "关注节目内容，暂不操作",
+          "engine": "deepseek"
+        },
         {
           "title": "美日息差縮？｜石鏡泉（石Sir）｜AI主播聲音導航｜hketPRO｜經濟日報專欄｜政政經經｜HKET隨身聽",
           "original_title": "美日息差縮？｜石鏡泉（石Sir）｜AI主播聲音導航｜hketPRO｜經濟日報專欄｜政政經經｜HKET隨身聽",
@@ -2902,45 +2938,9 @@
           "date_str": "08-15",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 43,
-          "reason": "标题提及美日息差缩，但摘要无具体内容，多空信号不明",
-          "advice": "观望为主，待明确信号",
-          "engine": "deepseek"
-        },
-        {
-          "title": "黃偉豪Ravi直擊市況︱京東放榜超預期　但疑慮未除照捱沽？聯想AI業務勁爆　股價破頂點跟？︱【ET開市直擊】",
-          "original_title": "黃偉豪Ravi直擊市況︱京東放榜超預期　但疑慮未除照捱沽？聯想AI業務勁爆　股價破頂點跟？︱【ET開市直擊】",
-          "link": "https://www.youtube.com/watch?v=N193sF3RQZM",
-          "published": "2026-08-14T14:14:07+00:00",
-          "summary": "京東（09618）第二季受惠外賣業務虧損收窄一半，經調整純利增逾兩成，勝預期。零售利潤率創促銷季新高，現金流同步好轉。不過，市場仍憂慮京東海外市場加大投資，公司預告未來幾季加大零售平台Joybuy投入。京東美股（美：JD）急跌7%，京東港股難逃捱沽命運？\n\n聯想集團（00992）周三爆升20%創新高。首財季業績在AI驅動下表現強勁，經調整淨利潤突破10億美元，按年增1.7倍勝預期；董事長兼CEO楊元慶表示，今年有信心提前達成1000億美",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCFgvtFvTFRjqhGC1XfIB02w",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "空头",
-          "confidence": 70,
-          "power": 64,
-          "reason": "京东业绩超预期但美股大跌，市场忧虑海外投资，股价承压",
-          "advice": "谨慎持有，关注海外投入进展",
-          "engine": "deepseek"
-        },
-        {
-          "title": "爆旋陀螺變死場救星? 拆解「陀螺經濟」! 買陀螺有冇投資價值? 炒玩具vs買生產商股票點揀好?｜【投資撈過界】#童年回憶 #炒賣 #經典玩具 #爆旋陀螺 #陀螺 #hket",
-          "original_title": "爆旋陀螺變死場救星? 拆解「陀螺經濟」! 買陀螺有冇投資價值? 炒玩具vs買生產商股票點揀好?｜【投資撈過界】#童年回憶 #炒賣 #經典玩具 #爆旋陀螺 #陀螺 #hket",
-          "link": "https://www.youtube.com/watch?v=sgxYnYMv9mc",
-          "published": "2026-08-14T13:00:07+00:00",
-          "summary": "【爆旋陀螺變死場救星？拆解陀螺經濟與投資價值】爆旋陀螺點解突然爆紅，甚至變身香港商場的「死場救星」? 原價百多元的玩具，炒價竟然破千！面對這股全城熱議的「陀螺熱」現象，到底買陀螺有沒有投資價值? 如果想落場參與，炒實體玩具 vs 買日本生產商股票，應該怎樣選擇？\n今集《#投資撈過界》同大家一齊拆解「陀螺熱」現象背後的商業密碼，從實體零售、營銷、黃牛炒賣到股票投資，一口氣拆解「陀螺經濟」！\n\n全文: https://inews.hket.",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCFgvtFvTFRjqhGC1XfIB02w",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "中性",
-          "confidence": 65,
-          "power": 42,
-          "reason": "陀螺经济现象分析，涉及炒卖与股票投资，但无明确多空倾向",
-          "advice": "理性看待，避免盲目跟风",
+          "power": 58,
+          "reason": "标题提及美日息差缩，可能影响汇率和资金流向，但未明确多空，另有黄金上8000的标题暗示看多",
+          "advice": "留意息差变化，谨慎观望",
           "engine": "deepseek"
         }
       ]
@@ -2965,8 +2965,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 70,
-        "avg_power": 47,
+        "avg_confidence": 60,
+        "avg_power": 50,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -2982,10 +2982,10 @@
           "is_mock": false,
           "date_str": "07-03",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 55,
-          "reason": "内容为保险行业人才计划专访，无明确市场多空信号，偏行业动态报道",
-          "advice": "关注行业趋势，暂不操作",
+          "confidence": 60,
+          "power": 45,
+          "reason": "内容为保险行业人才招募专访，无直接市场多空信号，属行业动态",
+          "advice": "关注行业趋势，不急于操作",
           "engine": "deepseek"
         },
         {
@@ -3000,10 +3000,10 @@
           "is_mock": false,
           "date_str": "06-08",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 42,
-          "reason": "专访聚焦团队建设与个人成长，未涉及市场行情或投资建议，多空因素缺失",
-          "advice": "保持观望，留意后续信息",
+          "confidence": 60,
+          "power": 49,
+          "reason": "专访聚焦团队建设与个人成长，未涉及市场行情，多空因素缺失",
+          "advice": "观望为主，留意后续数据",
           "engine": "deepseek"
         },
         {
@@ -3018,10 +3018,10 @@
           "is_mock": false,
           "date_str": "05-18",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 44,
-          "reason": "内容为保险业领袖经验分享，无市场方向性指引，属客观人物报道",
-          "advice": "维持现状，等待明确信号",
+          "confidence": 60,
+          "power": 56,
+          "reason": "报道保险团队业绩突破，但非市场指标，对投资无明确指引",
+          "advice": "维持现有配置，等待明确信号",
           "engine": "deepseek"
         }
       ]
@@ -3041,16 +3041,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
+        "kol_sentiment": "轻度偏空",
+        "kol_color": "bear",
         "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 3,
+        "bear_count": 1,
+        "neutral_count": 2,
         "avg_confidence": 65,
         "avg_power": 54,
-        "battle_text": "0多 vs 0空 vs 3中性"
+        "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
+        {
+          "title": "【財智心戰室】#青心揀輪 2026-08-17 星期一｜魏美珍 胡孟青",
+          "original_title": "【財智心戰室】#青心揀輪 2026-08-17 星期一｜魏美珍 胡孟青",
+          "link": "https://www.youtube.com/watch?v=FkCoVKqK3-M",
+          "published": "2026-08-17T00:55:55+00:00",
+          "summary": "【財智心戰室】#青心揀輪 2026-08-17 星期一｜魏美珍 胡孟青",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCAUiU6pnaEaTjgTVp6KY0FQ",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 54,
+          "reason": "标题仅为节目预告，无实质市场信息，多空信号不明。",
+          "advice": "观望为主，关注节目内容。",
+          "engine": "deepseek"
+        },
         {
           "title": "【呼吸有道】糖尿病人感染RSV入院風險高11.4倍？血糖失衡背後的病毒挑戰",
           "original_title": "【呼吸有道】糖尿病人感染RSV入院風險高11.4倍？血糖失衡背後的病毒挑戰",
@@ -3062,11 +3080,11 @@
           "source_channel_id": "UCAUiU6pnaEaTjgTVp6KY0FQ",
           "is_mock": false,
           "date_str": "08-16",
-          "sentiment": "中性",
+          "sentiment": "空头",
           "confidence": 70,
-          "power": 54,
-          "reason": "内容为健康科普，提及RSV风险与疫苗，但无直接财经多空信号",
-          "advice": "关注医药板块疫苗相关机会",
+          "power": 63,
+          "reason": "强调糖尿病患者感染RSV风险高，入院及医疗费用增加，利空相关医疗负担。",
+          "advice": "关注疫苗相关板块，谨慎投资。",
           "engine": "deepseek"
         },
         {
@@ -3082,27 +3100,9 @@
           "date_str": "08-16",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 58,
-          "reason": "讨论抑郁症对工作影响，涉及生产力损失，但无明确市场多空指向",
-          "advice": "留意心理健康相关产业投资",
-          "engine": "deepseek"
-        },
-        {
-          "title": "【銀色旅途】唔理聽力，個腦會退化？",
-          "original_title": "【銀色旅途】唔理聽力，個腦會退化？",
-          "link": "https://www.youtube.com/watch?v=yTXE6JdKzO8",
-          "published": "2026-08-15T11:02:21+00:00",
-          "summary": "好多人覺得聽力差啲只係小事，別人講嘢大聲就冇問題。但原來「聽到聲」唔止靠隻耳，負責分析聲音嘅大腦先至係關鍵。如果對耳長期收唔足夠聲音，大腦缺乏刺激，後果會係點？又點解聽得唔好，會連方向感同平衡感都受影響，令長者較易跌倒？\n\n今集《銀色旅途》會拆解聽覺與大腦健康嘅關係，若及早配戴助聽器、提供充足刺激予大腦，係咪可以減低腦退化同跌倒嘅風險。想知答案，立即睇片。\n\n=======================\n《銀色旅途》\n逢星期六 191",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCAUiU6pnaEaTjgTVp6KY0FQ",
-          "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 52,
-          "reason": "内容为听力健康科普，无财经多空因子，仅间接关联医疗设备",
-          "advice": "可关注助听器行业长期需求",
+          "power": 47,
+          "reason": "讨论抑郁症对专业人士影响，涉及生产力损失，但未直接关联市场多空。",
+          "advice": "关注心理健康板块，理性配置。",
           "engine": "deepseek"
         }
       ]
@@ -3122,68 +3122,68 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "多头阵营",
-        "kol_color": "bull",
-        "bull_count": 2,
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
+        "bull_count": 0,
         "bear_count": 0,
-        "neutral_count": 1,
-        "avg_confidence": 69,
-        "avg_power": 59,
-        "battle_text": "2多 vs 0空 vs 1中性"
+        "neutral_count": 3,
+        "avg_confidence": 72,
+        "avg_power": 47,
+        "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
         {
-          "title": "《对话》 20260815 中国：世界创新实验室 |  财经风云",
-          "original_title": "《对话》 20260815 中国：世界创新实验室 |  财经风云",
-          "link": "https://www.youtube.com/watch?v=I3VZTotbQH4",
-          "published": "2026-08-15T14:50:18+00:00",
-          "summary": "本期节目主要内容：\n    从大模型、机器人到创新药研发，中国正在成为新技术加速走向现实应用的一座“世界创新实验室”，产品得到全球用户追捧的同时，中国人工智能等前沿产业的最新动向也成为全球企业关注的焦点。\n（《对话》 20260815 中国：世界创新实验室）\n\n#对话 #财经 \n\n从入世到互联网风暴到金融危机到供给侧改革再到十九大的胜利召开，《对话》纪录着中国经济从追赶世界到引领世界到逐渐被世界追赶的全过程。\n\n《对话》播放列表：htt",
+          "title": "《中国经济大讲堂》 20260816 “六张网”上的中国：新一代通信网 | 财经风云",
+          "original_title": "《中国经济大讲堂》 20260816 “六张网”上的中国：新一代通信网 | 财经风云",
+          "link": "https://www.youtube.com/watch?v=w6S2zieQ5Qg",
+          "published": "2026-08-16T15:07:15+00:00",
+          "summary": "本期节目主要内容：\n    千帆星座是我国自主建设的低轨卫星互联网星座，数量已经达到238颗，不仅信号延迟短，更能通过成千上万颗卫星的组网解决高山、荒漠、深海等地区的网络通讯盲区。以千帆星座为代表的卫星互联网是构成我国新一代通信网的重要组成部分，新一代通信网不仅是传统意义上的网络升级，更是面向智能时代数字信息基础设施的一次关键革新。\n（《中国经济大讲堂》 20260816 “六张网”上的中国：新一代通信网）\n\n#中国经济大讲堂 #经济知",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
           "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "多头",
-          "confidence": 72,
-          "power": 64,
-          "reason": "中国创新产业获全球关注，前沿技术加速落地，利好科技成长板块",
-          "advice": "关注AI、机器人等创新主线",
-          "engine": "deepseek"
-        },
-        {
-          "title": "《央视财经评论》 20260814 新能源汽车开出“中国速度” 动力来自哪里？ |  财经风云",
-          "original_title": "《央视财经评论》 20260814 新能源汽车开出“中国速度” 动力来自哪里？ |  财经风云",
-          "link": "https://www.youtube.com/watch?v=OiNH42Dn_tc",
-          "published": "2026-08-14T14:38:03+00:00",
-          "summary": "本期节目主要内容：\n    近期，“中国速度”成为全球汽车行业热议话题。美国汽车研究中心新发布的报告提出一个核心结论，美国汽车行业必须跟上“中国速度”。如今中国汽车产业持续快速迭代，凭借高效研发、快速落地的发展模式，不断重塑全球汽车行业竞争格局。\n（《央视财经评论》 20260814 新能源汽车开出“中国速度” 动力来自哪里？）\n\n#央视财经评论 #中国经济 \n\n《央视财经评论》是一档演播室访谈节目，以多元化的视角，邀请嘉宾或评论员，对",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "多头",
-          "confidence": 75,
-          "power": 67,
-          "reason": "新能源汽车产业快速迭代，重塑全球格局，行业景气度高",
-          "advice": "逢低布局新能源车产业链",
-          "engine": "deepseek"
-        },
-        {
-          "title": "《经济半小时》 20260814 暑期新消费：影视取景地巧接大流量 |  财经风云",
-          "original_title": "《经济半小时》 20260814 暑期新消费：影视取景地巧接大流量 |  财经风云",
-          "link": "https://www.youtube.com/watch?v=ip0f4yO_Y9A",
-          "published": "2026-08-14T13:24:13+00:00",
-          "summary": "本期节目主要内容：\n    2026年暑期，院线大片佳作轮番上映，暑期档总票房突破90亿元，单日票房连续三十多天站稳亿元大关。电影产业价值不止体现在银幕票房，不少观众走出影院奔赴影片取景地。依托热映影片带来的热度，众多取景地顺势出圈，收获可观流量。\n（《经济半小时》 20260814 暑期新消费：影视取景地巧接大流量）\n\n#经济半小时\n\n《经济半小时》用经济的眼光关注社会热点，选择重大经济事件、业界风云人物作为报道的核心，以严谨的态度、",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
-          "is_mock": false,
-          "date_str": "08-14",
+          "date_str": "08-16",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 46,
-          "reason": "暑期消费数据亮眼，但属季节性现象，对整体市场影响有限",
-          "advice": "关注消费板块短期机会",
+          "confidence": 70,
+          "power": 50,
+          "reason": "内容为通信基础设施科普，无直接市场多空信号，属客观介绍。",
+          "advice": "关注政策导向，暂不操作",
+          "engine": "deepseek"
+        },
+        {
+          "title": "《职场健康课》 20260816 暴雨预警 这份健康指南请收好 | 财经风云",
+          "original_title": "《职场健康课》 20260816 暴雨预警 这份健康指南请收好 | 财经风云",
+          "link": "https://www.youtube.com/watch?v=4R4mOKde2nM",
+          "published": "2026-08-16T12:43:53+00:00",
+          "summary": "本期节目主要内容：\n    近日，全国多地暴雨和极端强对流天气预警频频发布，不仅影响出行，背后还隐藏着健康和安全隐患，本期邀请防汛安全、医疗卫生和消防救援不同领域的专家，和大家聊一聊暴雨天气的急救知识。\n（《职场健康课》 20260816 暴雨预警 这份健康指南请收好）\n\n#职场健康课 #健康 #职业病 \n\n《职场健康课》以职场的亚健康状态和职业病为主要关注点，做好健康科普，探讨职场健康话题，为大家职场打拼保驾护航。\n\n《职场健康课》播",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 75,
+          "power": 48,
+          "reason": "暴雨预警涉及健康安全，非财经市场信息，无多空指向。",
+          "advice": "规避相关风险，观望为主",
+          "engine": "deepseek"
+        },
+        {
+          "title": "《一槌定音》 20260816 |  财经风云",
+          "original_title": "《一槌定音》 20260816 |  财经风云",
+          "link": "https://www.youtube.com/watch?v=pZ_NJHgGx1E",
+          "published": "2026-08-16T12:21:44+00:00",
+          "summary": "本期节目主要内容：\n     本期节目宝物众多，精彩纷呈。青花《仕女图》方瓶、清代和田玉带钩、清代琥珀朝珠等，各种藏品难得一见，且看专家现场辨真假。\n（《一槌定音》 20260816）\n\n#一槌定音 #古董 \n\n《一槌定音》用模拟交易的方式，向观众传播艺术品投资的技巧、知识、风险防范，更加凸显财经特色。\n\n《一槌定音》播放列表：https://www.youtube.com/playlist?list=PLrybf3rp9BTsBStz",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 72,
+          "power": 45,
+          "reason": "古董鉴赏节目，涉及投资技巧但无明确市场趋势判断。",
+          "advice": "学习知识，谨慎参与",
           "engine": "deepseek"
         }
       ]
@@ -3208,8 +3208,8 @@
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 2,
-        "avg_confidence": 68,
-        "avg_power": 56,
+        "avg_confidence": 71,
+        "avg_power": 59,
         "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
@@ -3226,9 +3226,9 @@
           "date_str": "08-15",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 67,
-          "reason": "标题提及大空头Michael Burry最新操作相当空，暗示看空情绪浓厚，可能引发市场担忧。",
-          "advice": "关注做空动向，谨慎持仓",
+          "power": 73,
+          "reason": "大空头Michael Burry最新操作相当空，暗示市场风险偏好下降，机构减仓可能引发抛售。",
+          "advice": "谨慎观望，降低仓位",
           "engine": "deepseek"
         },
         {
@@ -3243,10 +3243,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 60,
+          "confidence": 65,
           "power": 49,
-          "reason": "标题涉及个股表现对比和止跌迹象，但未明确多空方向，属于客观复盘。",
-          "advice": "观察个股走势，等待明确信号",
+          "reason": "标题提及IGV压SOXX、NFLX止跌等个股表现，多空信号混杂，缺乏明确方向。",
+          "advice": "关注个股分化，灵活操作",
           "engine": "deepseek"
         },
         {
@@ -3261,10 +3261,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 53,
-          "reason": "标题提及重新武装杠杆和修复，多空因素交织，且涉及板块轮动，方向不明。",
-          "advice": "均衡配置，关注板块轮动",
+          "confidence": 70,
+          "power": 57,
+          "reason": "系统准备重新武装杠杆，MSFT再跌修复，半导体与软件跷跷板，多空因素并存。",
+          "advice": "均衡配置，等待趋势明朗",
           "engine": "deepseek"
         }
       ]
@@ -3289,8 +3289,8 @@
         "bull_count": 2,
         "bear_count": 0,
         "neutral_count": 1,
-        "avg_confidence": 65,
-        "avg_power": 57,
+        "avg_confidence": 70,
+        "avg_power": 60,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -3306,10 +3306,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "多头",
-          "confidence": 70,
-          "power": 63,
-          "reason": "标题提及华尔街大举买入加仓，暗示机构看多，但内容含推广，需谨慎。",
-          "advice": "关注机构动向，谨慎跟投",
+          "confidence": 75,
+          "power": 64,
+          "reason": "标题提及华尔街大举买入加仓，暗示机构看多，且附赠股票开户福利，情绪偏多",
+          "advice": "可关注相关个股，逢低布局",
           "engine": "deepseek"
         },
         {
@@ -3324,10 +3324,10 @@
           "is_mock": false,
           "date_str": "08-10",
           "sentiment": "多头",
-          "confidence": 65,
-          "power": 55,
-          "reason": "个股点评及买入建议，明确看多个股，但内容含推广，需谨慎。",
-          "advice": "精选个股，控制仓位",
+          "confidence": 70,
+          "power": 69,
+          "reason": "个股点评及买入建议，直接给出买入信号，且开户送股活动强化看多氛围",
+          "advice": "参考建议，分批买入",
           "engine": "deepseek"
         },
         {
@@ -3342,9 +3342,9 @@
           "is_mock": false,
           "date_str": "08-06",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 54,
-          "reason": "讨论美股高位是否卖出，多空因素并存，属于客观分析。",
+          "confidence": 65,
+          "power": 48,
+          "reason": "讨论美股高位是否卖出，多空因素并存，属于策略性复盘，未明确方向",
           "advice": "观望为主，等待明确信号",
           "engine": "deepseek"
         }
@@ -3370,8 +3370,8 @@
         "bull_count": 2,
         "bear_count": 0,
         "neutral_count": 1,
-        "avg_confidence": 75,
-        "avg_power": 67,
+        "avg_confidence": 71,
+        "avg_power": 66,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -3387,10 +3387,10 @@
           "is_mock": false,
           "date_str": "08-16",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 58,
-          "reason": "内容为社群推广，未涉及具体市场多空判断，仅提及投资方法论和风险防范",
-          "advice": "关注社群内容，谨慎参考",
+          "confidence": 60,
+          "power": 55,
+          "reason": "内容为社群推广，提及抓机会防风险，多空信号不明确",
+          "advice": "关注社群价值，谨慎参与",
           "engine": "deepseek"
         },
         {
@@ -3406,8 +3406,8 @@
           "date_str": "08-09",
           "sentiment": "多头",
           "confidence": 80,
-          "power": 76,
-          "reason": "PLTR财报大涨30%，逆境反转，暗示AI应用股爆发，多头信号明确",
+          "power": 77,
+          "reason": "PLTR财报大涨30%，逆境反转，AI应用股爆发信号明确",
           "advice": "可关注AI应用板块，逢低布局",
           "engine": "deepseek"
         },
@@ -3424,8 +3424,8 @@
           "date_str": "08-02",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 69,
-          "reason": "微软史无前例大反转，蛰伏一年后准备起飞，释放积极增长信号",
+          "power": 67,
+          "reason": "微软史无前例大反转，蛰伏后准备起飞，利好预期强烈",
           "advice": "关注微软及科技巨头，择机介入",
           "engine": "deepseek"
         }
@@ -3446,68 +3446,68 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "空头阵营",
-        "kol_color": "bear",
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
         "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 1,
-        "avg_confidence": 71,
-        "avg_power": 64,
-        "battle_text": "0多 vs 2空 vs 1中性"
+        "bear_count": 0,
+        "neutral_count": 3,
+        "avg_confidence": 60,
+        "avg_power": 54,
+        "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
         {
-          "title": "为了骗多生力工，墙内已经这么疯狂了！",
-          "original_title": "为了骗多生力工，墙内已经这么疯狂了！",
-          "link": "https://www.youtube.com/shorts/qEQ8KI06X34",
-          "published": "2026-08-15T16:26:56+00:00",
+          "title": "华人女博主零元购视频刷爆全网！",
+          "original_title": "华人女博主零元购视频刷爆全网！",
+          "link": "https://www.youtube.com/shorts/qD9y-YFqKHs",
+          "published": "2026-08-17T01:35:10+00:00",
           "summary": "",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCn9_KbNANeyYREePe8YA2DA",
           "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "空头",
-          "confidence": 80,
-          "power": 71,
-          "reason": "标题暗示政策激进，存在社会风险，利空市场情绪",
-          "advice": "观望为主，规避政策敏感板块",
-          "engine": "deepseek"
-        },
-        {
-          "title": "难怪中共要搞他的！看看郭德刚最经典相声最后一句话……",
-          "original_title": "难怪中共要搞他的！看看郭德刚最经典相声最后一句话……",
-          "link": "https://www.youtube.com/shorts/hO15fu5szaU",
-          "published": "2026-08-15T16:11:32+00:00",
-          "summary": "",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCn9_KbNANeyYREePe8YA2DA",
-          "is_mock": false,
-          "date_str": "08-15",
+          "date_str": "08-17",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 52,
-          "reason": "内容涉及文化娱乐，与财经关联度低，多空信号不明",
-          "advice": "关注后续事件发酵，暂不操作",
+          "power": 55,
+          "reason": "内容涉及社会现象，无明确财经多空信号，属于客观描述或情绪表达",
+          "advice": "保持观望，关注后续",
           "engine": "deepseek"
         },
         {
-          "title": "著名歌星酒桌妄议中央，偷拍视频流出！下一个老毕？",
-          "original_title": "著名歌星酒桌妄议中央，偷拍视频流出！下一个老毕？",
-          "link": "https://www.youtube.com/shorts/0sKB4v6ddrg",
-          "published": "2026-08-15T15:17:03+00:00",
+          "title": "街头底层韮菜，认知配得上苦难！",
+          "original_title": "街头底层韮菜，认知配得上苦难！",
+          "link": "https://www.youtube.com/shorts/k6MpQo-E5KM",
+          "published": "2026-08-17T01:02:06+00:00",
           "summary": "",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCn9_KbNANeyYREePe8YA2DA",
           "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "空头",
-          "confidence": 75,
-          "power": 69,
-          "reason": "负面舆情事件可能引发监管收紧，影响市场风险偏好",
-          "advice": "降低仓位，防范政策风险",
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 54,
+          "reason": "标题涉及社会阶层，无直接财经多空因子，可能隐含风险但未明确",
+          "advice": "谨慎对待，等待明确信号",
+          "engine": "deepseek"
+        },
+        {
+          "title": "男子亲自实验，打脸央视官媒",
+          "original_title": "男子亲自实验，打脸央视官媒",
+          "link": "https://www.youtube.com/shorts/lEmQrW2IcVU",
+          "published": "2026-08-16T23:39:53+00:00",
+          "summary": "",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCn9_KbNANeyYREePe8YA2DA",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 53,
+          "reason": "内容涉及媒体质疑，无直接财经多空信号，需关注具体事实",
+          "advice": "保持中立，核实信息",
           "engine": "deepseek"
         }
       ]
@@ -3532,8 +3532,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 61,
-        "avg_power": 48,
+        "avg_confidence": 72,
+        "avg_power": 52,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -3549,10 +3549,10 @@
           "is_mock": false,
           "date_str": "08-11",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 44,
-          "reason": "内容涉及历史事件分析，不直接关联金融市场，多空信号不明显。",
-          "advice": "关注历史事件对市场情绪的影响",
+          "confidence": 70,
+          "power": 58,
+          "reason": "内容涉及历史人物分析，与财经无关，无多空信号。",
+          "advice": "不适用，关注财经内容",
           "engine": "deepseek"
         },
         {
@@ -3567,10 +3567,10 @@
           "is_mock": false,
           "date_str": "08-04",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 58,
-          "reason": "涉及国际政治经济协议，可能影响市场预期，但未明确多空方向。",
-          "advice": "关注协议细节及市场反应",
+          "confidence": 75,
+          "power": 55,
+          "reason": "涉及国际政治协议，但未提及经济影响，多空不明。",
+          "advice": "观望，等待经济数据",
           "engine": "deepseek"
         },
         {
@@ -3585,10 +3585,10 @@
           "is_mock": false,
           "date_str": "07-31",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 42,
-          "reason": "政治人物行为分析，对金融市场影响间接，多空信号不明确。",
-          "advice": "关注地缘政治风险变化",
+          "confidence": 72,
+          "power": 45,
+          "reason": "政治人物评价，无直接财经因子，多空信号缺失。",
+          "advice": "不适用，关注财经内容",
           "engine": "deepseek"
         }
       ]
@@ -3608,16 +3608,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "轻度偏空",
+        "kol_sentiment": "空头阵营",
         "kol_color": "bear",
         "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "avg_confidence": 63,
-        "avg_power": 58,
-        "battle_text": "0多 vs 1空 vs 2中性"
+        "bear_count": 2,
+        "neutral_count": 1,
+        "avg_confidence": 78,
+        "avg_power": 62,
+        "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
+        {
+          "title": "习近平时代最诡异的一幕：5件互相打架的事竟同时发生！年轻人失业、延迟退休、催生又用AI抢饭碗，背后藏着什么？#鵬觀天下 08.16.2026",
+          "original_title": "习近平时代最诡异的一幕：5件互相打架的事竟同时发生！年轻人失业、延迟退休、催生又用AI抢饭碗，背后藏着什么？#鵬觀天下 08.16.2026",
+          "link": "https://www.youtube.com/watch?v=SF0Qh1Id7O8",
+          "published": "2026-08-16T22:00:30+00:00",
+          "summary": "#習近平 #中國經濟 #青年失業 #延遲退休 #AI\n💥🔔訂閱《鵬觀天下》\nhttps://www.youtube.com/channel/UCrYc9TEMHjiHNrNl6WpqLbQ?sub_confirmation=1\n💥紅海參熱賣一週年八月感恩回饋「滿減送」活動正式開跑🏃藍莓優品全站滿$200立減$10，再加送紅海參養生膠1支！\n💥紅海參養生膠 https://lanmeiyoupin.us/collections/20260",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCrYc9TEMHjiHNrNl6WpqLbQ",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "空头",
+          "confidence": 80,
+          "power": 71,
+          "reason": "标题揭示青年失业、延迟退休、AI抢饭碗等多重矛盾，经济压力凸显，利空市场情绪",
+          "advice": "谨慎观望，关注政策应对",
+          "engine": "deepseek"
+        },
         {
           "title": "中國大幅降息的真正目的？地方債壓頂、銀行息差告急：幾億儲戶利息被砍，正在替政府化債買單？#鵬觀天下 08.15.2026",
           "original_title": "中國大幅降息的真正目的？地方債壓頂、銀行息差告急：幾億儲戶利息被砍，正在替政府化債買單？#鵬觀天下 08.15.2026",
@@ -3630,10 +3648,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 64,
-          "reason": "降息导致储户利息减少，地方债压力凸显，银行息差收窄，经济承压",
-          "advice": "关注银行股风险，谨慎配置存款",
+          "confidence": 85,
+          "power": 72,
+          "reason": "降息背后地方债压力、银行息差收窄，储户利息受损，经济风险上升",
+          "advice": "减少存款配置，关注债市风险",
           "engine": "deepseek"
         },
         {
@@ -3648,28 +3666,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 57,
-          "reason": "内容涉及跨国网络犯罪打击，与金融市场无直接关联，多空信号不明",
-          "advice": "观望为主，关注科技股动态",
-          "engine": "deepseek"
-        },
-        {
-          "title": "江泽民与朱镕基的十年暗战：鄧小平說朱鎔基只能做一把手，不能做二把手，氣壞了江澤民？从\"一百口棺材\"到\"4·25\"夜信，那一封信改變了中國；#鵬觀天下 08.13.2026",
-          "original_title": "江泽民与朱镕基的十年暗战：鄧小平說朱鎔基只能做一把手，不能做二把手，氣壞了江澤民？从\"一百口棺材\"到\"4·25\"夜信，那一封信改變了中國；#鵬觀天下 08.13.2026",
-          "link": "https://www.youtube.com/watch?v=Xe2EPmC3Igo",
-          "published": "2026-08-13T22:00:30+00:00",
-          "summary": "#最新新聞 #國際關係  #全球經濟 #金融 #理財 #習近平 #中國 #鵬觀天下 #秦鵬 \n💥朱鎔基去世：「100口棺材」震動中國，鐵腕總理留下了什麼？功與過一次說清；https://youtu.be/gRVxqaorFc8\n💥🔔訂閱《鵬觀天下》\nhttps://www.youtube.com/channel/UCrYc9TEMHjiHNrNl6WpqLbQ?sub_confirmation=1\n💥紅海參熱賣一週年八月感恩回饋「滿減送",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCrYc9TEMHjiHNrNl6WpqLbQ",
-          "is_mock": false,
-          "date_str": "08-13",
-          "sentiment": "中性",
-          "confidence": 55,
-          "power": 53,
-          "reason": "历史政治人物回顾，无直接财经影响，多空因素不明确",
-          "advice": "保持中性，关注后续政策",
+          "confidence": 70,
+          "power": 44,
+          "reason": "内容聚焦中美网络战与跨国犯罪打击，非直接经济信号，多空影响有限",
+          "advice": "维持现状，关注地缘风险",
           "engine": "deepseek"
         }
       ]
@@ -3695,7 +3695,7 @@
         "bear_count": 2,
         "neutral_count": 1,
         "avg_confidence": 75,
-        "avg_power": 61,
+        "avg_power": 60,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
@@ -3712,9 +3712,9 @@
           "date_str": "08-11",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 48,
-          "reason": "内容聚焦技术演进与市场结构变化，未明确多空倾向，属客观分析。",
-          "advice": "关注技术升级带来的结构性机会",
+          "power": 44,
+          "reason": "内容客观分析技术迭代与市场融合，无明确多空倾向，属中性叙述。",
+          "advice": "关注技术变革带来的长期机会",
           "engine": "deepseek"
         },
         {
@@ -3730,9 +3730,9 @@
           "date_str": "08-06",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 65,
-          "reason": "资本开支惩罚与容忍度降低，暗示对激进投资的公司估值承压。",
-          "advice": "规避高资本开支个股，关注现金流",
+          "power": 71,
+          "reason": "强调资本支出惩罚与马斯克系市值波动风险，市场容忍度降低，偏空信号。",
+          "advice": "谨慎对待高资本开支个股，控制仓位",
           "engine": "deepseek"
         },
         {
@@ -3748,9 +3748,9 @@
           "date_str": "07-29",
           "sentiment": "空头",
           "confidence": 80,
-          "power": 70,
-          "reason": "自由现金流转负叠加AI应用未爆发，引发资本开支无底洞风险重估。",
-          "advice": "减持科技股，等待盈利验证",
+          "power": 66,
+          "reason": "自由现金流转负引发资本开支无底洞担忧，AI应用未爆发，风险重估偏空。",
+          "advice": "减持高投入科技股，关注现金流质量",
           "engine": "deepseek"
         }
       ]
@@ -3775,8 +3775,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 57,
+        "avg_confidence": 66,
+        "avg_power": 54,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -3792,9 +3792,9 @@
           "is_mock": false,
           "date_str": "08-16",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 73,
-          "reason": "非农爆冷、通胀降温，降息预期升温，AI半导体报复性反弹，市场情绪偏多",
+          "confidence": 78,
+          "power": 67,
+          "reason": "非农爆冷、通胀降温，降息预期升温，带动股市和半导体强劲反弹，利多明显",
           "advice": "关注反弹持续性，可适度参与",
           "engine": "deepseek"
         },
@@ -3811,9 +3811,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 56,
-          "reason": "标题提及PCB技术趋势，但内容摘要未明确多空信号，仅强调关注度",
-          "advice": "观望为主，等待明确信号",
+          "power": 42,
+          "reason": "内容聚焦PCB技术趋势，未明确多空信号，属行业分析",
+          "advice": "关注技术发展，等待明确信号",
           "engine": "deepseek"
         },
         {
@@ -3829,9 +3829,9 @@
           "date_str": "08-11",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 44,
-          "reason": "内容聚焦AI供应链压力点解析，未给出明确多空判断，偏向客观分析",
-          "advice": "谨慎操作，关注压力位",
+          "power": 54,
+          "reason": "内容为AI供应链压力点解析，未给出明确方向，属客观分析",
+          "advice": "关注供应链动态，谨慎操作",
           "engine": "deepseek"
         }
       ]
@@ -3856,14 +3856,14 @@
         "bull_count": 0,
         "bear_count": 3,
         "neutral_count": 0,
-        "avg_confidence": 72,
-        "avg_power": 66,
+        "avg_confidence": 75,
+        "avg_power": 68,
         "battle_text": "0多 vs 3空 vs 0中性"
       },
       "items": [
         {
-          "title": "中國統一台灣會怎樣？民選官員遭死刑、公務員大清洗、數百萬民眾洗腦「再教育」！《經濟學人》痛批國民黨擋軍購...",
-          "original_title": "中國統一台灣會怎樣？民選官員遭死刑、公務員大清洗、數百萬民眾洗腦「再教育」！《經濟學人》痛批國民黨擋軍購...",
+          "title": "和平統一的真相！台灣官員判死刑、公務員大清洗、數百萬人「再教育」！《經濟學人》為何痛批國民黨？",
+          "original_title": "和平統一的真相！台灣官員判死刑、公務員大清洗、數百萬人「再教育」！《經濟學人》為何痛批國民黨？",
           "link": "https://www.youtube.com/watch?v=u8ILciKt2B0",
           "published": "2026-08-16T06:24:49+00:00",
           "summary": "中國#統一 台灣會怎樣？#民進黨 領袖恐遭死刑、公務員大清洗、數百萬人被「再教育」！《經濟學人》痛批#國民黨 綁架#台灣 ！公子時評2693 \n\n公子沈是誰：\n\n從時政媒體記者，到YouTube最具影響力的中文時政頻道之一，\n用新聞專業素養，為你深度解讀新聞時事、國際關係與東亞政治\n\n📚 畢業於多倫多大學Munk全球事務學院、香港中文大學東亞研究中心\n🎥 過去五年，自媒體影響力全網累計破百萬追蹤者\n📰 專訪過各地異見領袖、政府官員與智庫",
@@ -3873,10 +3873,10 @@
           "is_mock": false,
           "date_str": "08-16",
           "sentiment": "空头",
-          "confidence": 75,
-          "power": 68,
-          "reason": "内容涉及政治负面预期，如死刑、清洗等，风险情绪浓厚",
-          "advice": "规避相关风险，观望为主",
+          "confidence": 80,
+          "power": 71,
+          "reason": "内容渲染统一后的负面后果，如死刑、清洗等，政治风险高企",
+          "advice": "规避政治敏感资产，观望为主",
           "engine": "deepseek"
         },
         {
@@ -3891,10 +3891,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "空头",
-          "confidence": 70,
-          "power": 65,
-          "reason": "改革时代终结暗示政策不确定性，市场信心受挫",
-          "advice": "谨慎持仓，关注政策动向",
+          "confidence": 75,
+          "power": 72,
+          "reason": "提及改革时代终结，经济政策不确定性增加，利空市场情绪",
+          "advice": "关注政策动向，谨慎投资",
           "engine": "deepseek"
         },
         {
@@ -3909,10 +3909,10 @@
           "is_mock": false,
           "date_str": "08-12",
           "sentiment": "空头",
-          "confidence": 72,
-          "power": 66,
-          "reason": "社会矛盾揭露，负面情绪蔓延，影响投资环境",
-          "advice": "降低仓位，等待情绪修复",
+          "confidence": 70,
+          "power": 62,
+          "reason": "描述社会矛盾与执法冲突，暗示社会不稳定，影响经济预期",
+          "advice": "减少风险敞口，保持现金",
           "engine": "deepseek"
         }
       ]
@@ -3932,16 +3932,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "空头阵营",
+        "kol_sentiment": "轻度偏空",
         "kol_color": "bear",
         "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 1,
-        "avg_confidence": 75,
-        "avg_power": 65,
-        "battle_text": "0多 vs 2空 vs 1中性"
+        "bear_count": 1,
+        "neutral_count": 2,
+        "avg_confidence": 71,
+        "avg_power": 59,
+        "battle_text": "0多 vs 1空 vs 2中性"
       },
       "items": [
+        {
+          "title": "重評「能臣」朱鎔基：中央財政一年翻身，另一筆帳去哪兒了？【文昭談古論今1741期】",
+          "original_title": "重評「能臣」朱鎔基：中央財政一年翻身，另一筆帳去哪兒了？【文昭談古論今1741期】",
+          "link": "https://www.youtube.com/watch?v=YXj60RAYmrA",
+          "published": "2026-08-16T23:30:10+00:00",
+          "summary": "👉🛒多項文昭精選商品，請訪問文昭網店，點擊鏈接：https://wenzhao.shop/  或YouTube視頻下方的商品櫥窗",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCtAIPjABiQD3qjlEl1T5VpA",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 56,
+          "reason": "内容为历史经济政策复盘，多空信号不明确，侧重分析而非预测",
+          "advice": "关注政策细节，观望为主",
+          "engine": "deepseek"
+        },
         {
           "title": "數千萬人下崗，真的無法避免？朱鎔基「抓大放小」四個字，究竟藏住了什麼？（文昭談古論今1740期）",
           "original_title": "數千萬人下崗，真的無法避免？朱鎔基「抓大放小」四個字，究竟藏住了什麼？（文昭談古論今1740期）",
@@ -3955,9 +3973,9 @@
           "date_str": "08-14",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 71,
-          "reason": "提及大规模下岗，反映经济转型阵痛与就业压力，利空消费与内需。",
-          "advice": "关注就业数据，规避相关板块",
+          "power": 64,
+          "reason": "提及大规模下岗，隐含经济转型阵痛与负面社会影响",
+          "advice": "警惕政策风险，谨慎投资",
           "engine": "deepseek"
         },
         {
@@ -3973,27 +3991,9 @@
           "date_str": "08-13",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 50,
-          "reason": "回顾历史人物与政策，多空因素交织，缺乏明确市场方向。",
-          "advice": "观望为主，等待明确信号",
-          "engine": "deepseek"
-        },
-        {
-          "title": "中共一旦封鎖台灣，自己最先撐不住的是什麼？一場被忽略的反封鎖推演（文昭談古論今1738期）",
-          "original_title": "中共一旦封鎖台灣，自己最先撐不住的是什麼？一場被忽略的反封鎖推演（文昭談古論今1738期）",
-          "link": "https://www.youtube.com/watch?v=Q2_OjCgnNVY",
-          "published": "2026-08-11T00:00:25+00:00",
-          "summary": "歡迎大家加入《文昭談古論今》YouTube會員——談古論今諮議局！每週開議 😄🌹👏。\nhttps://www.youtube.com/channel/UCtAIPjABiQD3qjlEl1T5VpA/join",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCtAIPjABiQD3qjlEl1T5VpA",
-          "is_mock": false,
-          "date_str": "08-11",
-          "sentiment": "空头",
-          "confidence": 80,
-          "power": 76,
-          "reason": "涉及地缘冲突与封锁推演，增加不确定性，利空风险资产。",
-          "advice": "降低仓位，配置避险资产",
+          "power": 57,
+          "reason": "标题涉及历史人物评价，多空因素混杂，无明确市场指向",
+          "advice": "保持中性，等待明确信号",
           "engine": "deepseek"
         }
       ]
@@ -4018,63 +4018,63 @@
         "bull_count": 0,
         "bear_count": 2,
         "neutral_count": 1,
-        "avg_confidence": 73,
-        "avg_power": 64,
+        "avg_confidence": 65,
+        "avg_power": 60,
         "battle_text": "0多 vs 2空 vs 1中性"
       },
       "items": [
         {
-          "title": "20260816直播：日本到底该怎样道歉你们才会满意？伊朗：外交已死，海湾国家愤怒，困在坑里的川普；一个更黑暗时代的开始，很多‘摸不得’红歌’都曾是反动歌曲。（20260816第2232期）",
-          "original_title": "20260816直播：日本到底该怎样道歉你们才会满意？伊朗：外交已死，海湾国家愤怒，困在坑里的川普；一个更黑暗时代的开始，很多‘摸不得’红歌’都曾是反动歌曲。（20260816第2232期）",
-          "link": "https://www.youtube.com/watch?v=LQdEBabBJg0",
-          "published": "2026-08-16T03:45:11+00:00",
+          "title": "20260817直播：乌克兰超大规模攻击俄罗斯；格林：政府讨论对伊朗动用核弹；伊朗悬赏捉拿美军，经济狮吼大概长这样；江泽民一件事深刻改变了中国。（20260817第2233期）",
+          "original_title": "20260817直播：乌克兰超大规模攻击俄罗斯；格林：政府讨论对伊朗动用核弹；伊朗悬赏捉拿美军，经济狮吼大概长这样；江泽民一件事深刻改变了中国。（20260817第2233期）",
+          "link": "https://www.youtube.com/watch?v=QHVqrkAkaog",
+          "published": "2026-08-17T01:58:44+00:00",
+          "summary": "加入会员频道链接：https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg/join\nPayPal账户：haikuotiankongnz@hotmail.com\n联系信箱：dakangyouhuashuo@gmail.com\n大康有话说频道网址： https://www.youtube.com/c/大康有话说",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 58,
+          "reason": "内容涉及地缘政治冲突与历史事件，未直接关联金融市场，多空信号不明确。",
+          "advice": "关注地缘风险，暂观望",
+          "engine": "deepseek"
+        },
+        {
+          "title": "一个更黑暗时代的开始，很多‘摸不得’红歌’都曾是反动歌曲/直播精选",
+          "original_title": "一个更黑暗时代的开始，很多‘摸不得’红歌’都曾是反动歌曲/直播精选",
+          "link": "https://www.youtube.com/watch?v=AMS3_Z3tO6Y",
+          "published": "2026-08-16T22:00:24+00:00",
           "summary": "加入会员频道链接：https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg/join\nPayPal账户：haikuotiankongnz@hotmail.com\n联系信箱：dakangyouhuashuo@gmail.com\n大康有话说频道网址： https://www.youtube.com/c/大康有话说",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
           "is_mock": false,
           "date_str": "08-16",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 48,
-          "reason": "内容涉及国际政治与历史反思，未直接提及财经市场多空因素，故判中性。",
-          "advice": "关注地缘风险，暂观望",
+          "sentiment": "空头",
+          "confidence": 65,
+          "power": 54,
+          "reason": "标题暗示社会动荡与历史反思，可能引发市场避险情绪，利空风险资产。",
+          "advice": "谨慎持仓，规避不确定性",
           "engine": "deepseek"
         },
         {
-          "title": "中国商业地产大限将至；戒贷款全民集体去杠杆/直播精选",
-          "original_title": "中国商业地产大限将至；戒贷款全民集体去杠杆/直播精选",
-          "link": "https://www.youtube.com/watch?v=Lgj2fpH5MI8",
-          "published": "2026-08-15T21:00:31+00:00",
+          "title": "伊朗：外交已死，海湾国家愤怒，困在坑里的川普/直播精选",
+          "original_title": "伊朗：外交已死，海湾国家愤怒，困在坑里的川普/直播精选",
+          "link": "https://www.youtube.com/watch?v=5we3koE5y6g",
+          "published": "2026-08-16T21:00:07+00:00",
           "summary": "加入会员频道链接：https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg/join\nPayPal账户：haikuotiankongnz@hotmail.com\n联系信箱：dakangyouhuashuo@gmail.com\n大康有话说频道网址： https://www.youtube.com/c/大康有话说",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
           "is_mock": false,
-          "date_str": "08-15",
+          "date_str": "08-16",
           "sentiment": "空头",
-          "confidence": 85,
-          "power": 74,
-          "reason": "标题警示商业地产风险与集体去杠杆，暗示信贷收缩与资产价格下行压力。",
-          "advice": "规避地产板块，减杠杆",
-          "engine": "deepseek"
-        },
-        {
-          "title": "美国改打经济狮吼：耗垮伊朗！前所未有制裁加海上封锁，比美伊人民谁先扛不住/直播精选",
-          "original_title": "美国改打经济狮吼：耗垮伊朗！前所未有制裁加海上封锁，比美伊人民谁先扛不住/直播精选",
-          "link": "https://www.youtube.com/watch?v=BBea4QyJlMU",
-          "published": "2026-08-15T20:00:38+00:00",
-          "summary": "加入会员频道链接：https://www.youtube.com/channel/UCG6ADYIl4GxaQib1HKIsRNg/join\nPayPal账户：haikuotiankongnz@hotmail.com\n联系信箱：dakangyouhuashuo@gmail.com\n大康有话说频道网址： https://www.youtube.com/c/大康有话说",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
-          "is_mock": false,
-          "date_str": "08-15",
-          "sentiment": "空头",
-          "confidence": 75,
-          "power": 71,
-          "reason": "美国对伊朗制裁与封锁加剧地缘紧张，可能推升油价并冲击全球风险偏好。",
-          "advice": "关注能源波动，控制仓位",
+          "confidence": 70,
+          "power": 68,
+          "reason": "外交僵局与海湾紧张局势升级，地缘风险加剧，利空能源及全球市场。",
+          "advice": "减仓避险，关注原油走势",
           "engine": "deepseek"
         }
       ]
@@ -4094,16 +4094,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "空头阵营",
-        "kol_color": "bear",
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
         "bull_count": 1,
-        "bear_count": 2,
-        "neutral_count": 0,
-        "avg_confidence": 75,
-        "avg_power": 63,
-        "battle_text": "1多 vs 2空 vs 0中性"
+        "bear_count": 1,
+        "neutral_count": 1,
+        "avg_confidence": 72,
+        "avg_power": 58,
+        "battle_text": "1多 vs 1空 vs 1中性"
       },
       "items": [
+        {
+          "title": "2026/8/17(一)指數創高 回檔等加碼?美課100%關稅 無人機大戰開打!【早晨財經速解讀】",
+          "original_title": "2026/8/17(一)指數創高 回檔等加碼?美課100%關稅 無人機大戰開打!【早晨財經速解讀】",
+          "link": "https://www.youtube.com/watch?v=OJ5vxmwQrE0",
+          "published": "2026-08-17T01:08:17+00:00",
+          "summary": "開盤前30分鐘，08:30 - 09:00 讓我們一起解讀財經時事  。\n參加財經皓角總經訂閱：\n新友會員 https://jackalopelin.com \n老友會員 https://yutinghao.finance \n我的粉絲專頁 https://reurl.cc/n563rd\n網站參加會員手冊 https://reurl.cc/rvvqAr\n如有疑問，歡迎來信 jackieyutw@gmail.com\n\"\"\"\"\" ♥️ 打賞網址",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UC0lbAQVpenvfA2QqzsRtL_g",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 44,
+          "reason": "标题提及指数创新高但回档等加码，同时有美国关税和无人机大战等风险，多空因素并存",
+          "advice": "观望为主，等待回档企稳",
+          "engine": "deepseek"
+        },
         {
           "title": "2026/8/14(五)AI股不再雞犬升天 債市開始算帳!AI帳單 誰會來買單?【早晨財經速解讀】",
           "original_title": "2026/8/14(五)AI股不再雞犬升天 債市開始算帳!AI帳單 誰會來買單?【早晨財經速解讀】",
@@ -4117,9 +4135,9 @@
           "date_str": "08-14",
           "sentiment": "空头",
           "confidence": 75,
-          "power": 63,
-          "reason": "标题暗示AI股涨势分化，债市开始清算，担忧AI成本无人买单，风险偏好下降",
-          "advice": "减持高位AI股，关注债市信号",
+          "power": 67,
+          "reason": "AI股不再普涨，债市开始算账，暗示AI投资回报存疑，市场情绪转弱",
+          "advice": "减持AI高位股，关注债市",
           "engine": "deepseek"
         },
         {
@@ -4134,28 +4152,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "多头",
-          "confidence": 70,
-          "power": 59,
-          "reason": "通膨降温，股市可能上涨，情绪转好，杠杆资金回流，利好风险资产",
-          "advice": "适度加仓，跟踪资金动向",
-          "engine": "deepseek"
-        },
-        {
-          "title": "2026/8/12(三)GPU金融化狂潮 2008正在重演？兆元商機還是下一場危機？【早晨財經速解讀】",
-          "original_title": "2026/8/12(三)GPU金融化狂潮 2008正在重演？兆元商機還是下一場危機？【早晨財經速解讀】",
-          "link": "https://www.youtube.com/watch?v=ApykW90PQ58",
-          "published": "2026-08-12T01:06:03+00:00",
-          "summary": "開盤前30分鐘，08:30 - 09:00 讓我們一起解讀財經時事  。\n參加財經皓角總經訂閱：\n新友會員 https://jackalopelin.com \n老友會員 https://yutinghao.finance \n我的粉絲專頁 https://reurl.cc/n563rd\n網站參加會員手冊 https://reurl.cc/rvvqAr\n如有疑問，歡迎來信 jackieyutw@gmail.com\n\"\"\"\"\" ♥️ 打賞網址",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UC0lbAQVpenvfA2QqzsRtL_g",
-          "is_mock": false,
-          "date_str": "08-12",
-          "sentiment": "空头",
-          "confidence": 80,
-          "power": 68,
-          "reason": "将GPU金融化类比2008危机，警示泡沫风险，可能引发系统性风险",
-          "advice": "规避相关资产，控制风险",
+          "confidence": 72,
+          "power": 63,
+          "reason": "通膨放缓，股市可能上涨，杠杆资金回流，情绪转好利于反弹",
+          "advice": "适度加仓，关注量能变化",
           "engine": "deepseek"
         }
       ]
@@ -4175,14 +4175,14 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "轻度偏多",
+        "kol_sentiment": "多头阵营",
         "kol_color": "bull",
-        "bull_count": 1,
+        "bull_count": 2,
         "bear_count": 0,
-        "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 55,
-        "battle_text": "1多 vs 0空 vs 2中性"
+        "neutral_count": 1,
+        "avg_confidence": 69,
+        "avg_power": 62,
+        "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
         {
@@ -4198,9 +4198,9 @@
           "date_str": "08-11",
           "sentiment": "多头",
           "confidence": 72,
-          "power": 64,
-          "reason": "ETF上半年含息总报酬成长2-3成，市场表现强劲，且预售屋优惠方案提供资金弹性，整体偏多。",
-          "advice": "可关注ETF与预售屋方案，分批布局",
+          "power": 70,
+          "reason": "ETF上半年普遍增长2-3成，市场情绪乐观，且新方案提供资金弹性，利于投资。",
+          "advice": "关注优质ETF，利用低资金方案布局。",
           "engine": "deepseek"
         },
         {
@@ -4216,9 +4216,9 @@
           "date_str": "08-05",
           "sentiment": "中性",
           "confidence": 65,
-          "power": 53,
-          "reason": "内容为ETF绩效与配息比较，客观呈现数据，多空信号不明显，属于信息整理。",
-          "advice": "参考榜单，理性配置ETF",
+          "power": 51,
+          "reason": "内容为ETF绩效与配息对比，客观数据展示，无明确多空倾向。",
+          "advice": "参考榜单，均衡配置资产。",
           "engine": "deepseek"
         },
         {
@@ -4232,11 +4232,11 @@
           "source_channel_id": "UC45i13dEfEVac2IEJT_Nr5Q",
           "is_mock": false,
           "date_str": "07-22",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 48,
-          "reason": "主要讨论ETF费用率排行，无明确多空倾向，属于客观分析。",
-          "advice": "关注费用率，选择低成本ETF",
+          "sentiment": "多头",
+          "confidence": 70,
+          "power": 67,
+          "reason": "0050表现强劲，费用率低，显示市场龙头ETF优势，利于长期投资。",
+          "advice": "可考虑增持低成本ETF。",
           "engine": "deepseek"
         }
       ]
@@ -4256,68 +4256,68 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "空头阵营",
-        "kol_color": "bear",
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
         "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 1,
-        "avg_confidence": 68,
-        "avg_power": 59,
-        "battle_text": "0多 vs 2空 vs 1中性"
+        "bear_count": 0,
+        "neutral_count": 3,
+        "avg_confidence": 60,
+        "avg_power": 52,
+        "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
         {
-          "title": "美日聯手救得了日圓？陳鳳馨曝長期趨勢：看空日圓勢力仍高 #時事 #新聞 #美國 #日本 #財經",
-          "original_title": "美日聯手救得了日圓？陳鳳馨曝長期趨勢：看空日圓勢力仍高 #時事 #新聞 #美國 #日本 #財經",
-          "link": "https://www.youtube.com/shorts/hYqI3XPUk9c",
-          "published": "2026-08-16T11:30:30+00:00",
+          "title": "軍事恐嚇無效..中共另類助選?總統直選30年的台灣民主路! #下班瀚你聊 #黃暐瀚 #明居正 #中共",
+          "original_title": "軍事恐嚇無效..中共另類助選?總統直選30年的台灣民主路! #下班瀚你聊 #黃暐瀚 #明居正 #中共",
+          "link": "https://www.youtube.com/shorts/Ma5-VNOH0jw",
+          "published": "2026-08-17T01:30:11+00:00",
           "summary": "📢加入Youtube專屬會員👉https://www.youtube.com/channel/UCwWXGnvVmi-6Sfx2wf8S8tQ/join\n👉下班喝一杯啤酒 每月$75\n👉下班喝一杯清酒 每月$150\n👉下班喝一杯紅酒 每月$300\n\n✓ 加入《風傳媒》Line 好友（ID：@dyp8323m）　http://bit.ly/2hETgWE\n✓ 訂閱《風傳媒》YouTube 頻道　http://bit.ly/2grkAJ6\n",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCwWXGnvVmi-6Sfx2wf8S8tQ",
           "is_mock": false,
-          "date_str": "08-16",
-          "sentiment": "空头",
-          "confidence": 75,
-          "power": 65,
-          "reason": "标题明确看空日圆，提及空头势力仍高，暗示汇率弱势延续",
-          "advice": "规避日圆资产，可考虑做空",
-          "engine": "deepseek"
-        },
-        {
-          "title": "寶特瓶底部為何常做成「凹凸5隻腳」？真正原因公開！ #時事 #新聞 #生活 #寶特瓶",
-          "original_title": "寶特瓶底部為何常做成「凹凸5隻腳」？真正原因公開！ #時事 #新聞 #生活 #寶特瓶",
-          "link": "https://www.youtube.com/shorts/vZfH9wWu_Zc",
-          "published": "2026-08-16T02:00:12+00:00",
-          "summary": "📢加入Youtube專屬會員👉https://www.youtube.com/channel/UCwWXGnvVmi-6Sfx2wf8S8tQ/join\n👉下班喝一杯啤酒 每月$75\n👉下班喝一杯清酒 每月$150\n👉下班喝一杯紅酒 每月$300\n\n✓ 加入《風傳媒》Line 好友（ID：@dyp8323m）　http://bit.ly/2hETgWE\n✓ 訂閱《風傳媒》YouTube 頻道　http://bit.ly/2grkAJ6\n",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCwWXGnvVmi-6Sfx2wf8S8tQ",
-          "is_mock": false,
-          "date_str": "08-16",
+          "date_str": "08-17",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 52,
-          "reason": "内容为生活科普，与财经无关，无多空信号",
-          "advice": "不适用，观望",
+          "power": 55,
+          "reason": "内容为台湾政治评论，涉及中共军事威慑与选举，无直接财经多空信号",
+          "advice": "关注地缘政治风险，保持观望",
           "engine": "deepseek"
         },
         {
-          "title": "600萬台灣人算低薪勞工？主計處點名兩大族群　他揭平均薪資、科技業「底下慘況」#時事 #勞工 #財經 #科技業 #低薪",
-          "original_title": "600萬台灣人算低薪勞工？主計處點名兩大族群　他揭平均薪資、科技業「底下慘況」#時事 #勞工 #財經 #科技業 #低薪",
-          "link": "https://www.youtube.com/shorts/RlqoXO-Qsgo",
-          "published": "2026-08-16T01:00:21+00:00",
+          "title": "滲透統戰並行!2026大選倒數...明居正:黑道.里長是新破口!#下班瀚你聊 #黃暐瀚 #明居正 #中共",
+          "original_title": "滲透統戰並行!2026大選倒數...明居正:黑道.里長是新破口!#下班瀚你聊 #黃暐瀚 #明居正 #中共",
+          "link": "https://www.youtube.com/shorts/NHJO2ZI0Sr8",
+          "published": "2026-08-17T01:15:24+00:00",
           "summary": "📢加入Youtube專屬會員👉https://www.youtube.com/channel/UCwWXGnvVmi-6Sfx2wf8S8tQ/join\n👉下班喝一杯啤酒 每月$75\n👉下班喝一杯清酒 每月$150\n👉下班喝一杯紅酒 每月$300\n\n✓ 加入《風傳媒》Line 好友（ID：@dyp8323m）　http://bit.ly/2hETgWE\n✓ 訂閱《風傳媒》YouTube 頻道　http://bit.ly/2grkAJ6\n",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCwWXGnvVmi-6Sfx2wf8S8tQ",
           "is_mock": false,
-          "date_str": "08-16",
-          "sentiment": "空头",
-          "confidence": 70,
-          "power": 61,
-          "reason": "揭示低薪劳工问题，点出科技业底层惨况，反映经济结构风险",
-          "advice": "关注消费疲弱，谨慎投资",
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 53,
+          "reason": "讨论渗透统战与选举，属政治议题，未涉及经济数据或市场指标",
+          "advice": "留意政策动向，暂不操作",
+          "engine": "deepseek"
+        },
+        {
+          "title": "北戴河會議僅僅是中南海暑休?北京密令對台介選?!  #下班瀚你聊 #黃暐瀚 #明居正 #中共",
+          "original_title": "北戴河會議僅僅是中南海暑休?北京密令對台介選?!  #下班瀚你聊 #黃暐瀚 #明居正 #中共",
+          "link": "https://www.youtube.com/shorts/mzx0UBI3ROk",
+          "published": "2026-08-17T01:10:21+00:00",
+          "summary": "📢加入Youtube專屬會員👉https://www.youtube.com/channel/UCwWXGnvVmi-6Sfx2wf8S8tQ/join\n👉下班喝一杯啤酒 每月$75\n👉下班喝一杯清酒 每月$150\n👉下班喝一杯紅酒 每月$300\n\n✓ 加入《風傳媒》Line 好友（ID：@dyp8323m）　http://bit.ly/2hETgWE\n✓ 訂閱《風傳媒》YouTube 頻道　http://bit.ly/2grkAJ6\n",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCwWXGnvVmi-6Sfx2wf8S8tQ",
+          "is_mock": false,
+          "date_str": "08-17",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 49,
+          "reason": "北戴河会议与对台介选话题，政治性内容，无财经多空指向",
+          "advice": "维持中性仓位，等待明确信号",
           "engine": "deepseek"
         }
       ]
@@ -4342,8 +4342,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 65,
-        "avg_power": 57,
+        "avg_confidence": 66,
+        "avg_power": 59,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -4360,8 +4360,8 @@
           "date_str": "08-16",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 47,
-          "reason": "标题询问是否全押0050正2，提及两倍跌幅，多空信号不明确，需看内容判断。",
+          "power": 57,
+          "reason": "标题询问是否全压0050正2，提及两倍跌幅，多空信号不明确，需看内容判断",
           "advice": "观望为主，等待明确信号",
           "engine": "deepseek"
         },
@@ -4377,9 +4377,9 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 55,
-          "reason": "标题探讨被动元件涨跌分化，未明确多空，属于客观分析。",
+          "confidence": 65,
+          "power": 53,
+          "reason": "标题探讨被动元件涨跌分化，提及信昌电、国巨，未明确多空，属客观分析",
           "advice": "关注个股分化，精选标的",
           "engine": "deepseek"
         },
@@ -4396,9 +4396,9 @@
           "date_str": "08-14",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 69,
-          "reason": "标题提及ABF营收大爆发，外資高盛关注，利好信号明显。",
-          "advice": "可关注相关标的，逢低布局",
+          "power": 67,
+          "reason": "标题称ABF营收大爆发，提及南电、高盛，营收增长利好，多头信号明显",
+          "advice": "可关注ABF板块，逢低布局",
           "engine": "deepseek"
         }
       ]
@@ -4423,8 +4423,8 @@
         "bull_count": 0,
         "bear_count": 0,
         "neutral_count": 3,
-        "avg_confidence": 68,
-        "avg_power": 45,
+        "avg_confidence": 58,
+        "avg_power": 48,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -4440,10 +4440,10 @@
           "is_mock": false,
           "date_str": "08-15",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 42,
-          "reason": "内容为理财比例规划，无明确多空信号，属客观建议",
-          "advice": "按比例配置资产，稳健为主",
+          "confidence": 60,
+          "power": 46,
+          "reason": "内容为通用理财规划，无明确多空信号，属中性教育类",
+          "advice": "按自身情况参考执行",
           "engine": "deepseek"
         },
         {
@@ -4458,10 +4458,10 @@
           "is_mock": false,
           "date_str": "08-14",
           "sentiment": "中性",
-          "confidence": 70,
-          "power": 45,
-          "reason": "提供简单理财规划，无市场方向判断，属教育内容",
-          "advice": "参考规划，分散投资",
+          "confidence": 60,
+          "power": 49,
+          "reason": "内容为通用理财规划，无明确多空信号，属中性教育类",
+          "advice": "按自身情况参考执行",
           "engine": "deepseek"
         },
         {
@@ -4476,10 +4476,10 @@
           "is_mock": false,
           "date_str": "08-13",
           "sentiment": "中性",
-          "confidence": 65,
-          "power": 48,
-          "reason": "信用卡产品介绍，无市场多空倾向，属消费资讯",
-          "advice": "按需选择，注意优惠条件",
+          "confidence": 55,
+          "power": 51,
+          "reason": "信用卡推荐属消费金融资讯，无市场多空指向",
+          "advice": "根据需求选择信用卡",
           "engine": "deepseek"
         }
       ]
@@ -4504,16 +4504,16 @@
         "bull_count": 3,
         "bear_count": 0,
         "neutral_count": 0,
-        "avg_confidence": 75,
-        "avg_power": 69,
+        "avg_confidence": 76,
+        "avg_power": 70,
         "battle_text": "3多 vs 0空 vs 0中性"
       },
       "items": [
         {
-          "title": "【財經宜&民視財經週日趴】台股展V轉企圖心?!Q3直攻歷史最高點?記憶體滿地是黃金?玻纖布.CCL.PTFE迎漲價潮?!光學股.電子紙迎旺季!一場醫療意外!讓冒牌生從月光族懂得投資重要性!",
-          "original_title": "【財經宜&民視財經週日趴】台股展V轉企圖心?!Q3直攻歷史最高點?記憶體滿地是黃金?玻纖布.CCL.PTFE迎漲價潮?!光學股.電子紙迎旺季!一場醫療意外!讓冒牌生從月光族懂得投資重要性!",
-          "link": "https://www.youtube.com/watch?v=LECXzx_Oo5w",
-          "published": "2026-08-16T08:00:06+00:00",
+          "title": "【財經宜&民視財經週日趴】從吃喝玩樂+合約負債，選出下半年營收大船入港好股！振曜電子標籤迎拉貨潮，三大獲利引擎加速前進！ft.陳建全",
+          "original_title": "【財經宜&民視財經週日趴】從吃喝玩樂+合約負債，選出下半年營收大船入港好股！振曜電子標籤迎拉貨潮，三大獲利引擎加速前進！ft.陳建全",
+          "link": "https://www.youtube.com/watch?v=JBTLCDya40E",
+          "published": "2026-08-16T13:00:06+00:00",
           "summary": "🏆 全台最超值的主力籌碼戰法班                                                                           🚨 決戰封關，不只是上一堂課，而是一路陪你到年底！\n👇 立即報名，和林友銘老師一起掌握年底行情！\n📅 8/16 開始陪跑！https://dreamfly.me/q/83930t\n\n從策略音頻、主題直播到盤後解盤，\n陪你一步一步建立主力籌碼觀念，\n看懂法人布局",
           "lang": "中文",
           "source": "youtube_rss",
@@ -4521,36 +4521,18 @@
           "is_mock": false,
           "date_str": "08-16",
           "sentiment": "多头",
-          "confidence": 75,
-          "power": 65,
-          "reason": "标题提及台股V转、Q3攻历史高点、涨价潮与旺季，多头信号明确",
-          "advice": "关注电子与材料板块，逢低布局",
+          "confidence": 72,
+          "power": 71,
+          "reason": "标题强调下半年营收增长、拉货潮与三大获利引擎，多头信号明确",
+          "advice": "关注电子标签相关个股，逢低布局",
           "engine": "deepseek"
         },
         {
-          "title": "【財經宜&民視財經週日趴】不只降息！美CPI、PPI雙喜臨門，背後隱藏的「資金大轉移」訊號？",
-          "original_title": "【財經宜&民視財經週日趴】不只降息！美CPI、PPI雙喜臨門，背後隱藏的「資金大轉移」訊號？",
-          "link": "https://www.youtube.com/watch?v=XRXNHVCDl1A",
-          "published": "2026-08-16T06:00:10+00:00",
-          "summary": "🏆 全台最超值的主力籌碼戰法班                                                                           🚨 決戰封關，不只是上一堂課，而是一路陪你到年底！\n👇 立即報名，和林友銘老師一起掌握年底行情！\n📅 8/16 開始陪跑！https://dreamfly.me/q/83930t\n\n從策略音頻、主題直播到盤後解盤，\n陪你一步一步建立主力籌碼觀念，\n看懂法人布局",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCe7BLtnYfxTXVTRISlfupSw",
-          "is_mock": false,
-          "date_str": "08-16",
-          "sentiment": "多头",
-          "confidence": 70,
-          "power": 66,
-          "reason": "降息预期与CPI、PPI双降，资金转移信号利好市场流动性",
-          "advice": "适度加仓，留意资金流向",
-          "engine": "deepseek"
-        },
-        {
-          "title": "【財經宜&民視財經週日趴】AI伺服器搶料暴動!南亞塑膠CCL再漲20%！從日系兩大巨頭股價暴漲，看懂CCL銅箔基板的關鍵價值！崇越電橫跨玻纖布.CCL.PTFE.散熱，成AI材料關鍵贏家Ft.蘇威元",
-          "original_title": "【財經宜&民視財經週日趴】AI伺服器搶料暴動!南亞塑膠CCL再漲20%！從日系兩大巨頭股價暴漲，看懂CCL銅箔基板的關鍵價值！崇越電橫跨玻纖布.CCL.PTFE.散熱，成AI材料關鍵贏家Ft.蘇威元",
-          "link": "https://www.youtube.com/watch?v=ddNGAzB8to4",
-          "published": "2026-08-16T05:26:01+00:00",
-          "summary": "🏆 全台最超值的主力籌碼戰法班                                                                           🚨 決戰封關，不只是上一堂課，而是一路陪你到年底！\n👇 立即報名，和林友銘老師一起掌握年底行情！\n📅 8/16 開始陪跑！https://dreamfly.me/q/83930t\n\n從策略音頻、主題直播到盤後解盤，\n陪你一步一步建立主力籌碼觀念，\n看懂法人布局",
+          "title": "【財經宜&民視財經週日趴】台股Q3就會創歷史新高！記憶體滿地是黃金，明年股價翻倍！先進光迎兩道光，蘋果手機+AI PC鏡頭！業績可期！ft.鄭廳宜",
+          "original_title": "【財經宜&民視財經週日趴】台股Q3就會創歷史新高！記憶體滿地是黃金，明年股價翻倍！先進光迎兩道光，蘋果手機+AI PC鏡頭！業績可期！ft.鄭廳宜",
+          "link": "https://www.youtube.com/watch?v=JDNJojOUDis",
+          "published": "2026-08-16T13:00:06+00:00",
+          "summary": "",
           "lang": "中文",
           "source": "youtube_rss",
           "source_channel_id": "UCe7BLtnYfxTXVTRISlfupSw",
@@ -4558,9 +4540,27 @@
           "date_str": "08-16",
           "sentiment": "多头",
           "confidence": 80,
-          "power": 76,
-          "reason": "AI服务器需求带动CCL涨价，相关材料股受益明显，多头动能强",
-          "advice": "重点配置AI材料龙头，持有为主",
+          "power": 73,
+          "reason": "预测台股Q3创新高，记忆体与先进光业绩可期，多头氛围浓厚",
+          "advice": "可适度加仓相关板块，注意风险",
+          "engine": "deepseek"
+        },
+        {
+          "title": "【財經宜&民視財經週日趴】AI伺服器搶料暴動!南亞塑膠CCL再漲20%！從日系兩大巨頭股價暴漲，看懂CCL銅箔基板的關鍵價值！崇越電橫跨玻纖布.CCL.PTFE.散熱，成AI材料關鍵贏家Ft.蘇威元",
+          "original_title": "【財經宜&民視財經週日趴】AI伺服器搶料暴動!南亞塑膠CCL再漲20%！從日系兩大巨頭股價暴漲，看懂CCL銅箔基板的關鍵價值！崇越電橫跨玻纖布.CCL.PTFE.散熱，成AI材料關鍵贏家Ft.蘇威元",
+          "link": "https://www.youtube.com/watch?v=ddNGAzB8to4",
+          "published": "2026-08-16T13:00:06+00:00",
+          "summary": "🏆 全台最超值的主力籌碼戰法班                                                                           🚨 決戰封關，不只是上一堂課，而是一路陪你到年底！\n👇 立即報名，和林友銘老師一起掌握年底行情！\n📅 8/16 開始陪跑！https://dreamfly.me/q/83930t\n\n從策略音頻、主題直播到盤後解盤，\n陪你一步一步建立主力籌碼觀念，\n看懂法人布局",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCe7BLtnYfxTXVTRISlfupSw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "多头",
+          "confidence": 76,
+          "power": 66,
+          "reason": "AI伺服器需求带动CCL涨价，相关材料股受益，多头信号明显",
+          "advice": "关注CCL及AI材料概念股，择机介入",
           "engine": "deepseek"
         }
       ]
@@ -4580,14 +4580,14 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "轻度偏空",
-        "kol_color": "bear",
+        "kol_sentiment": "均衡拉锯",
+        "kol_color": "neutral",
         "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
+        "bear_count": 0,
+        "neutral_count": 3,
         "avg_confidence": 61,
         "avg_power": 52,
-        "battle_text": "0多 vs 1空 vs 2中性"
+        "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
         {
@@ -4603,9 +4603,9 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 43,
+          "power": 56,
           "reason": "内容为个人理财课程推广，标题强调财富韧性，但未明确多空信号，偏向教育性质。",
-          "advice": "关注课程内容，理性评估投资方法。",
+          "advice": "关注课程内容，理性评估自身需求。",
           "engine": "deepseek"
         },
         {
@@ -4619,11 +4619,11 @@
           "source_channel_id": "UChjHWpmNm-3HbLFkQ3TPXaA",
           "is_mock": false,
           "date_str": "08-05",
-          "sentiment": "空头",
+          "sentiment": "中性",
           "confidence": 65,
-          "power": 61,
-          "reason": "标题警示投资错误导致出局，隐含风险意识，但未直接看空市场，偏风险教育。",
-          "advice": "学习风险控制，避免常见错误。",
+          "power": 43,
+          "reason": "标题警示投资错误，属于风险教育，但未直接指向市场方向，多空因素不明确。",
+          "advice": "学习风险控制，避免常见投资陷阱。",
           "engine": "deepseek"
         },
         {
@@ -4639,9 +4639,9 @@
           "date_str": "07-29",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 52,
-          "reason": "讨论花钱艺术与金钱观，非市场多空判断，属于理财观念教育。",
-          "advice": "优化消费习惯，提升财务素养。",
+          "power": 57,
+          "reason": "内容探讨消费观念，强调财富增值，但未涉及具体市场多空，属于理财教育范畴。",
+          "advice": "优化消费习惯，提升财务规划能力。",
           "engine": "deepseek"
         }
       ]
@@ -4666,8 +4666,8 @@
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 2,
-        "avg_confidence": 61,
-        "avg_power": 54,
+        "avg_confidence": 71,
+        "avg_power": 56,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -4683,10 +4683,10 @@
           "is_mock": false,
           "date_str": "06-25",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 49,
-          "reason": "内容为宏观投资教学与开户推广，无明确多空信号，偏向教育性质",
-          "advice": "关注宏观指标，理性配置",
+          "confidence": 70,
+          "power": 55,
+          "reason": "内容为宏观投资教学，未涉及具体多空观点，仅提供学习资源与开户指引",
+          "advice": "关注教学，理性配置资产",
           "engine": "deepseek"
         },
         {
@@ -4701,10 +4701,10 @@
           "is_mock": false,
           "date_str": "05-28",
           "sentiment": "中性",
-          "confidence": 60,
-          "power": 57,
-          "reason": "讨论资产配置比例，未给出具体方向，属于客观教学，多空因素均衡",
-          "advice": "按风险偏好分散投资",
+          "confidence": 70,
+          "power": 47,
+          "reason": "讨论资产配置比例，无明确多空信号，属于策略分享而非市场判断",
+          "advice": "参考配置建议，分散投资",
           "engine": "deepseek"
         },
         {
@@ -4719,10 +4719,10 @@
           "is_mock": false,
           "date_str": "05-07",
           "sentiment": "多头",
-          "confidence": 65,
-          "power": 56,
-          "reason": "强调投资带来的积极变化，隐含长期增值预期，鼓励参与市场",
-          "advice": "坚持定投，长期持有",
+          "confidence": 75,
+          "power": 66,
+          "reason": "标题强调投资带来人生积极变化，隐含对投资增值的正面预期",
+          "advice": "保持定投，长期持有",
           "engine": "deepseek"
         }
       ]
@@ -4748,7 +4748,7 @@
         "bear_count": 0,
         "neutral_count": 2,
         "avg_confidence": 62,
-        "avg_power": 61,
+        "avg_power": 54,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -4765,9 +4765,9 @@
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 56,
-          "reason": "标题提及ETF不如预期，但内容为直播预告，未明确多空方向，仅客观陈述",
-          "advice": "观望为主，等待明确信号",
+          "power": 42,
+          "reason": "内容为直播预告，未涉及明确多空观点，仅讨论ETF不如预期及能否购买，多空信号不明。",
+          "advice": "观望，等待明确信号",
           "engine": "deepseek"
         },
         {
@@ -4783,9 +4783,9 @@
           "date_str": "08-14",
           "sentiment": "多头",
           "confidence": 72,
-          "power": 70,
-          "reason": "强调长期思维胜过通膨，隐含看好长期投资价值，鼓励买入策略",
-          "advice": "坚持长期定投，忽略短期波动",
+          "power": 64,
+          "reason": "强调长期思维胜过通膨，隐含看好长期投资价值，建议买入策略，偏多信号。",
+          "advice": "长期持有，分批买入",
           "engine": "deepseek"
         },
         {
@@ -4801,9 +4801,9 @@
           "date_str": "08-14",
           "sentiment": "中性",
           "confidence": 55,
-          "power": 57,
-          "reason": "内容为功能复盘直播预告，无实质多空观点，仅涉及工具介绍",
-          "advice": "关注复盘内容，暂不操作",
+          "power": 58,
+          "reason": "内容为功能复盘直播预告，未提及市场方向或具体多空因素，属客观介绍。",
+          "advice": "关注直播内容，暂不操作",
           "engine": "deepseek"
         }
       ]
@@ -4829,7 +4829,7 @@
         "bear_count": 0,
         "neutral_count": 3,
         "avg_confidence": 60,
-        "avg_power": 51,
+        "avg_power": 50,
         "battle_text": "0多 vs 0空 vs 3中性"
       },
       "items": [
@@ -4846,8 +4846,8 @@
           "date_str": "08-15",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 53,
-          "reason": "内容为行李箱广告，无财经信息，不涉及多空因子",
+          "power": 54,
+          "reason": "内容为行李箱广告，无财经多空信号",
           "advice": "无操作建议",
           "engine": "deepseek"
         },
@@ -4864,8 +4864,8 @@
           "date_str": "08-12",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 44,
-          "reason": "内容为月饼广告，无财经信息，不涉及多空因子",
+          "power": 46,
+          "reason": "内容为中秋礼盒广告，无财经多空信号",
           "advice": "无操作建议",
           "engine": "deepseek"
         },
@@ -4882,8 +4882,8 @@
           "date_str": "08-08",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 58,
-          "reason": "内容为eSIM广告，无财经信息，不涉及多空因子",
+          "power": 51,
+          "reason": "内容为eSIM广告，无财经多空信号",
           "advice": "无操作建议",
           "engine": "deepseek"
         }
@@ -4910,7 +4910,7 @@
         "bear_count": 0,
         "neutral_count": 1,
         "avg_confidence": 71,
-        "avg_power": 65,
+        "avg_power": 64,
         "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
@@ -4927,9 +4927,9 @@
           "date_str": "08-10",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 63,
-          "reason": "AI趋势带动台湾科技产业，ETF打包龙头股，配息吸引资金，成长前景看好。",
-          "advice": "可关注00881，逢低布局参与AI行情",
+          "power": 73,
+          "reason": "AI趋势利好台湾科技龙头，ETF打包AI股，配息吸引资金，成长前景明确",
+          "advice": "可关注00881，参与AI行情",
           "engine": "deepseek"
         },
         {
@@ -4945,9 +4945,9 @@
           "date_str": "08-03",
           "sentiment": "中性",
           "confidence": 60,
-          "power": 58,
-          "reason": "内容为ETF比较与导购推广，客观罗列选项，无明确多空倾向。",
-          "advice": "按需选择，注意分散风险",
+          "power": 50,
+          "reason": "内容为ETF比较与导购推广，多空信息混杂，无明确方向性信号",
+          "advice": "理性比较，按需选择",
           "engine": "deepseek"
         },
         {
@@ -4963,9 +4963,9 @@
           "date_str": "07-27",
           "sentiment": "多头",
           "confidence": 80,
-          "power": 75,
-          "reason": "存千万0050退休案例显示长期复利增长，月月提领仍资产增加，凸显稳健多头收益。",
-          "advice": "长期持有优质指数，坚持定投",
+          "power": 71,
+          "reason": "长期持有0050可实现财务自由，复利效应显著，市场增长预期乐观",
+          "advice": "长期定投，耐心持有",
           "engine": "deepseek"
         }
       ]
@@ -4996,6 +4996,24 @@
       },
       "items": [
         {
+          "title": "EP328. SPCX Grok 4.6、谷歌 Gemini 3.7 Flash、Anthropic 上市估值 | M觀點",
+          "original_title": "EP328. SPCX Grok 4.6、谷歌 Gemini 3.7 Flash、Anthropic 上市估值 | M觀點",
+          "link": "https://www.youtube.com/watch?v=zYFWPnXnlKo",
+          "published": "2026-08-16T15:28:28+00:00",
+          "summary": "「NordVPN X M觀點」: https://nordvpn.com/miula\n專屬優惠碼「miula」\n透過專屬優惠連結購買兩年方案加贈4個月好禮，還有30天內退款保證，完全零風險！\n#NordVPN\n---\nEP328. SPCX Grok 4.6、谷歌 Gemini 3.7 Flash、Anthropic 上市估值 | M觀點\n---\nM觀點資訊 \n---\n科技巨頭解碼: https://bit.ly/3koflbU\nM觀點",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCT3uWFvKLVpRnEealmRwvrw",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 60,
+          "power": 53,
+          "reason": "内容为科技产品与公司估值讨论，无明确多空信号，属客观信息分享。",
+          "advice": "关注科技股动态，暂观望",
+          "engine": "deepseek"
+        },
+        {
           "title": "EP327. 谷歌會放棄模型嗎、我低估了 SPCX、美股來到歷史新高 | M觀點",
           "original_title": "EP327. 谷歌會放棄模型嗎、我低估了 SPCX、美股來到歷史新高 | M觀點",
           "link": "https://www.youtube.com/watch?v=3tAUC5Zg8rw",
@@ -5008,9 +5026,9 @@
           "date_str": "08-10",
           "sentiment": "多头",
           "confidence": 72,
-          "power": 70,
-          "reason": "美股创历史新高，市场情绪积极，科技股表现强劲，整体偏多。",
-          "advice": "关注科技股，顺势而为",
+          "power": 65,
+          "reason": "提及美股历史新高，显示市场强势，但内容含广告，信号强度中等。",
+          "advice": "可适度参与，注意风险",
           "engine": "deepseek"
         },
         {
@@ -5026,27 +5044,9 @@
           "date_str": "08-06",
           "sentiment": "多头",
           "confidence": 75,
-          "power": 69,
-          "reason": "PLTR财报超预期，SPCX前景看好，谷歌AI调整带来增长预期，偏多。",
-          "advice": "关注财报利好，逢低布局",
-          "engine": "deepseek"
-        },
-        {
-          "title": "EP325. GPT Luna 大降價、特斯拉中國會賣嗎、梁文鋒的流出談話 | M觀點",
-          "original_title": "EP325. GPT Luna 大降價、特斯拉中國會賣嗎、梁文鋒的流出談話 | M觀點",
-          "link": "https://www.youtube.com/watch?v=zfxZ_CfcrNE",
-          "published": "2026-08-03T05:56:44+00:00",
-          "summary": "「NordVPN X M觀點」: https://nordvpn.com/miula\n專屬優惠碼「miula」\n透過專屬優惠連結購買兩年方案加贈4個月好禮，還有30天內退款保證，完全零風險！\n#NordVPN\n---\nEP325. GPT Luna 大降價、特斯拉中國會賣嗎、梁文鋒的流出談話 | M觀點\n---\n(00:00) EP325 預告\n(02:31) 業配時間：NordVPN\n(05:40) 第一個話題：GPT Luna 大降",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCT3uWFvKLVpRnEealmRwvrw",
-          "is_mock": false,
-          "date_str": "08-03",
-          "sentiment": "中性",
-          "confidence": 60,
-          "power": 52,
-          "reason": "GPT降价可能影响利润，特斯拉中国销售不确定，多空因素交织。",
-          "advice": "观望为主，等待明确信号",
+          "power": 72,
+          "reason": "PLTR怪物级财报与AI组织调整，业绩超预期利好，市场情绪积极。",
+          "advice": "关注财报股，逢低布局",
           "engine": "deepseek"
         }
       ]
@@ -5072,7 +5072,7 @@
         "bear_count": 0,
         "neutral_count": 2,
         "avg_confidence": 70,
-        "avg_power": 53,
+        "avg_power": 52,
         "battle_text": "1多 vs 0空 vs 2中性"
       },
       "items": [
@@ -5089,9 +5089,9 @@
           "date_str": "07-22",
           "sentiment": "中性",
           "confidence": 70,
-          "power": 52,
-          "reason": "内容为投资教育，提及市场波动但未明确看多或看空，主要推广模拟交易平台",
-          "advice": "可学习模拟交易，暂缓实盘",
+          "power": 53,
+          "reason": "内容为投资教育，提及市场波动但未明确看多或看空，主要推广模拟交易工具。",
+          "advice": "可学习模拟盘，暂不操作",
           "engine": "deepseek"
         },
         {
@@ -5107,9 +5107,9 @@
           "date_str": "01-31",
           "sentiment": "中性",
           "confidence": 75,
-          "power": 44,
-          "reason": "内容为加密货币安全教学，强调风险管理和冷钱包使用，无明确多空倾向",
-          "advice": "关注资产安全，配置冷钱包",
+          "power": 42,
+          "reason": "内容为加密货币安全教学，强调风险管理和冷钱包使用，无明确多空倾向。",
+          "advice": "关注资产安全，谨慎配置",
           "engine": "deepseek"
         },
         {
@@ -5125,9 +5125,9 @@
           "date_str": "12-26",
           "sentiment": "多头",
           "confidence": 65,
-          "power": 63,
-          "reason": "标题提及股票大涨逻辑，内容偏向教学判断上涨因素，隐含乐观情绪",
-          "advice": "学习景气循环，关注国际时事",
+          "power": 62,
+          "reason": "标题提及股票大涨，内容讲解判断逻辑和景气循环，隐含看多情绪。",
+          "advice": "可关注景气复苏机会",
           "engine": "deepseek"
         }
       ]
@@ -5147,16 +5147,34 @@
         "active": true
       },
       "aggregate": {
-        "kol_sentiment": "均衡拉锯",
-        "kol_color": "neutral",
-        "bull_count": 0,
+        "kol_sentiment": "多头阵营",
+        "kol_color": "bull",
+        "bull_count": 2,
         "bear_count": 0,
-        "neutral_count": 3,
+        "neutral_count": 1,
         "avg_confidence": 72,
-        "avg_power": 50,
-        "battle_text": "0多 vs 0空 vs 3中性"
+        "avg_power": 62,
+        "battle_text": "2多 vs 0空 vs 1中性"
       },
       "items": [
+        {
+          "title": "《睿涵說財經》風險控管從小開始 \"12字箴言\"避坑攻略【理財最錢線】【胡睿涵、周行一】20260816｜第752集｜",
+          "original_title": "《睿涵說財經》風險控管從小開始 \"12字箴言\"避坑攻略【理財最錢線】【胡睿涵、周行一】20260816｜第752集｜",
+          "link": "https://www.youtube.com/watch?v=KW_lPxEgUdQ",
+          "published": "2026-08-16T13:00:28+00:00",
+          "summary": "◎《睿涵說財經》風險控管從小開始 用\"12字箴言\"避坑!\n◎別讓市場行情影響情緒! 做好規劃不盯盤過快樂人生\n◎12字箴言怎麼做? 先做人生理財規劃讓複利發威\n◎父母必看! 專家教你引導孩子建立正確觀念腳踏實地\n◎看懂AI財報自由現金流!不猜產業靠市值型卡位長線\n◎年輕人優先投資台股! 避開匯率風險再布局全球\n\n主持人 元大投顧董事長 胡睿涵/證券分析師\n來賓 政大財務管理系名譽教授 周行一\n\n【本公司與節目中列舉分析之個別有價證券無不",
+          "lang": "中文",
+          "source": "youtube_rss",
+          "source_channel_id": "UCS1bMmw249R7R0wDjAmE6CA",
+          "is_mock": false,
+          "date_str": "08-16",
+          "sentiment": "中性",
+          "confidence": 70,
+          "power": 50,
+          "reason": "内容侧重风险控管与理财教育，提及AI财报与台股布局，多空信号不明确",
+          "advice": "关注长期规划，均衡配置",
+          "engine": "deepseek"
+        },
         {
           "title": "《盤勢話中話》從「千金股」檔數 掌握台股多空關鍵!?",
           "original_title": "《盤勢話中話》從「千金股」檔數 掌握台股多空關鍵!?",
@@ -5168,11 +5186,11 @@
           "source_channel_id": "UCS1bMmw249R7R0wDjAmE6CA",
           "is_mock": false,
           "date_str": "08-16",
-          "sentiment": "中性",
-          "confidence": 70,
-          "power": 44,
-          "reason": "标题提及千金股档数判断多空，外销创新高及GDP上修属利好，但股汇不同调提示风险，多空因素交织",
-          "advice": "关注千金股数量变化，谨慎操作",
+          "sentiment": "多头",
+          "confidence": 75,
+          "power": 69,
+          "reason": "外销创新高、GDP上修，千金股档数显示多头动能，台股有望续强",
+          "advice": "持股续抱，留意股汇变化",
           "engine": "deepseek"
         },
         {
@@ -5186,29 +5204,11 @@
           "source_channel_id": "UCS1bMmw249R7R0wDjAmE6CA",
           "is_mock": false,
           "date_str": "08-15",
-          "sentiment": "中性",
-          "confidence": 75,
-          "power": 56,
-          "reason": "内容为融资大减后抢反弹的历史回测，属于客观数据统计，未明确看多或看空，提供策略参考",
-          "advice": "参考回测数据，等待明确信号",
-          "engine": "deepseek"
-        },
-        {
-          "title": "⁠熱錢湧入誰受惠？亞洲升息風吹向台股！外資急回補 台股跌210點免驚？加班工時創47年高 誰受惠？ 《20260814元大看盤室》【記得開啟CC字幕】",
-          "original_title": "⁠熱錢湧入誰受惠？亞洲升息風吹向台股！外資急回補 台股跌210點免驚？加班工時創47年高 誰受惠？ 《20260814元大看盤室》【記得開啟CC字幕】",
-          "link": "https://www.youtube.com/watch?v=_C_Mt5jeKwY",
-          "published": "2026-08-14T09:36:16+00:00",
-          "summary": "台股開高走低跌210點!週漲1585連2紅!升息風吹向亞洲 熱錢也湧入!AI需求強勁 6月加班工時創47年同期新高!從中找出長線趨勢股?《20260814元大看盤室》【記得開啟CC字幕】\n\n台股跌210點 \n跌0.46% 收45811點\n盤後量1.1兆(逾1週高) \n週漲1585 連2紅\n\n\n#台股夯話題\n外資買435億元，5買 \n投信買71億元，賣轉買 \n自營商賣16億元，4買轉賣 \n＜理財最錢線＞為您站在第一線！\n\n\n主持人 元大投",
-          "lang": "中文",
-          "source": "youtube_rss",
-          "source_channel_id": "UCS1bMmw249R7R0wDjAmE6CA",
-          "is_mock": false,
-          "date_str": "08-14",
-          "sentiment": "中性",
+          "sentiment": "多头",
           "confidence": 72,
-          "power": 51,
-          "reason": "台股下跌但外资回补，升息与热钱流入并存，AI需求强劲利好，多空因素混杂，整体中性",
-          "advice": "关注外资动向，精选长线趋势股",
+          "power": 67,
+          "reason": "融资大减后抢反弹有历史回测支撑，短线止跌回稳概率较高",
+          "advice": "可轻仓试单，严设止损",
           "engine": "deepseek"
         }
       ]
