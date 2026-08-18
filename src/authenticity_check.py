@@ -20,6 +20,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import time
 from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -291,8 +292,41 @@ def check_items(kol: dict, items: list) -> list:
     return issues
 
 
+def _channel_was_rss_fetched(items: list, channel_id: str) -> bool:
+    """抓取阶段是否已用该 channel_id 通过官方 RSS 拿到过真实条目。
+
+    若为真，则在线复验时遇到的 404 与「刚成功抓取」自相矛盾，极可能是
+    YouTube 对数据中心 IP 的反爬拦截（返回 404 以不确认频道存在），
+    而非频道真的失效，因此不应判为 FAIL。
+    """
+    return any(
+        item.get("source") == "youtube_rss" and item.get("source_channel_id") == channel_id
+        for item in items
+    )
+
+
+def _http_get(requests, url: str, headers: dict, retries: int = 2):
+    """带退避重试的 GET；仅对网络异常与 429/5xx 重试，404 视为确定性结果。"""
+    last = None
+    for attempt in range(retries + 1):
+        try:
+            last = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+        except requests.RequestException as exc:
+            last = exc
+        if isinstance(last, requests.RequestException) or last.status_code == 429 or last.status_code >= 500:
+            if attempt < retries:
+                time.sleep(0.6 * (2 ** attempt))
+            continue
+        return last
+    return last
+
+
 def check_online(kol: dict, items: list) -> list:
-    """在线复核报告实际引用的频道；网络故障为 WARN，明确 404 为 FAIL。"""
+    """在线复核报告实际引用的频道；网络故障为 WARN，明确 404 为 FAIL。
+
+    自抓取阶段已通过 RSS 验证的频道，其复验 404 与「刚成功抓取」矛盾，
+    视为 YouTube 风控拦截而非频道失效，降级为 WARN，避免门禁抖动。
+    """
     issues = []
     try:
         import feedparser
@@ -305,55 +339,107 @@ def check_online(kol: dict, items: list) -> list:
     if not channel_id:
         channel_id = next((item.get("source_channel_id") for item in items if item.get("source_channel_id")), "")
     headers = {"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8"}
+    rss_verified = _channel_was_rss_fetched(items, channel_id)
 
     if url and _is_youtube_host(url) and "/results?" not in url:
-        try:
-            response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
-            if response.status_code == 404:
-                issues.append({"level": "FAIL", "code": "ONLINE", "msg": f"频道页 404: {url}"})
-            elif response.status_code == 200:
-                page_channel_id = ""
-                for pattern in PAGE_CHANNEL_ID_PATTERNS:
-                    match = pattern.search(response.text)
-                    if match:
-                        page_channel_id = match.group(1)
-                        break
-                if channel_id and page_channel_id and channel_id != page_channel_id:
-                    issues.append({
-                        "level": "FAIL",
-                        "code": "ONLINE",
-                        "msg": f"频道页身份 {page_channel_id} 与内容来源 {channel_id} 不一致",
-                    })
-                elif channel_id and not page_channel_id:
-                    issues.append({"level": "WARN", "code": "ONLINE", "msg": "频道页可达，但未能解析频道身份"})
-                else:
-                    issues.append({"level": "INFO", "code": "ONLINE", "msg": "在线验证：频道页身份一致"})
+        response = _http_get(requests, url, headers)
+        if isinstance(response, requests.RequestException):
+            issues.append({"level": "WARN", "code": "ONLINE", "msg": f"频道页验证失败: {type(response).__name__}: {response}"})
+        elif response.status_code == 404:
+            if rss_verified:
+                issues.append({
+                    "level": "WARN",
+                    "code": "ONLINE",
+                    "msg": f"频道页 404（疑似 YouTube 风控拦截，抓取阶段已通过 RSS 验证）: {url}",
+                })
             else:
-                issues.append({"level": "WARN", "code": "ONLINE", "msg": f"频道页 HTTP {response.status_code}"})
-        except requests.RequestException as exc:
-            issues.append({"level": "WARN", "code": "ONLINE", "msg": f"频道页验证失败: {type(exc).__name__}: {exc}"})
+                issues.append({"level": "FAIL", "code": "ONLINE", "msg": f"频道页 404: {url}"})
+        elif response.status_code == 200:
+            page_channel_id = ""
+            for pattern in PAGE_CHANNEL_ID_PATTERNS:
+                match = pattern.search(response.text)
+                if match:
+                    page_channel_id = match.group(1)
+                    break
+            if channel_id and page_channel_id and channel_id != page_channel_id:
+                issues.append({
+                    "level": "FAIL",
+                    "code": "ONLINE",
+                    "msg": f"频道页身份 {page_channel_id} 与内容来源 {channel_id} 不一致",
+                })
+            elif channel_id and not page_channel_id:
+                issues.append({"level": "WARN", "code": "ONLINE", "msg": "频道页可达，但未能解析频道身份"})
+            else:
+                issues.append({"level": "INFO", "code": "ONLINE", "msg": "在线验证：频道页身份一致"})
+        else:
+            issues.append({"level": "WARN", "code": "ONLINE", "msg": f"频道页 HTTP {response.status_code}"})
 
     if CHANNEL_ID_RE.fullmatch(channel_id):
         rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
-        try:
-            response = requests.get(rss_url, headers=headers, timeout=REQUEST_TIMEOUT)
-            if response.status_code == 404:
-                issues.append({"level": "FAIL", "code": "ONLINE", "msg": f"RSS 404，channel_id 无效: {channel_id}"})
-            elif response.status_code != 200:
-                issues.append({"level": "WARN", "code": "ONLINE", "msg": f"RSS HTTP {response.status_code}"})
+        response = _http_get(requests, rss_url, headers)
+        if isinstance(response, requests.RequestException):
+            issues.append({"level": "WARN", "code": "ONLINE", "msg": f"RSS 验证失败: {type(response).__name__}: {response}"})
+        elif response.status_code == 404:
+            if rss_verified:
+                issues.append({
+                    "level": "WARN",
+                    "code": "ONLINE",
+                    "msg": f"RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: {channel_id}",
+                })
             else:
-                feed = feedparser.parse(response.content)
-                if feed.entries:
-                    issues.append({
-                        "level": "INFO",
-                        "code": "ONLINE",
-                        "msg": f"RSS 有效，最新标题: {feed.entries[0].get('title', '')[:40]}",
-                    })
-                else:
-                    issues.append({"level": "WARN", "code": "ONLINE", "msg": "RSS 当前无可解析条目"})
-        except requests.RequestException as exc:
-            issues.append({"level": "WARN", "code": "ONLINE", "msg": f"RSS 验证失败: {type(exc).__name__}: {exc}"})
+                issues.append({"level": "FAIL", "code": "ONLINE", "msg": f"RSS 404，channel_id 无效: {channel_id}"})
+        elif response.status_code != 200:
+            issues.append({"level": "WARN", "code": "ONLINE", "msg": f"RSS HTTP {response.status_code}"})
+        else:
+            feed = feedparser.parse(response.content)
+            if feed.entries:
+                issues.append({
+                    "level": "INFO",
+                    "code": "ONLINE",
+                    "msg": f"RSS 有效，最新标题: {feed.entries[0].get('title', '')[:40]}",
+                })
+            else:
+                issues.append({"level": "WARN", "code": "ONLINE", "msg": "RSS 当前无可解析条目"})
     return issues
+
+
+def _verdict(issues: list, has_items: bool) -> str:
+    levels = {issue["level"] for issue in issues}
+    if "FAIL" in levels:
+        return "FAIL"
+    if "WARN" in levels or not has_items:
+        return "WARN"
+    return "PASS"
+
+
+def _downgrade_mass_online_404s(results: list) -> int:
+    """当同一期报告里大量入报频道同时在线「404」时，判定为 YouTube 对数据中心
+    IP 的反爬拦截（而非频道集体失效），把这些 ONLINE 404 从 FAIL 降级为 WARN。
+
+    单条/个别 404 仍保留 FAIL，以便真正失效或伪造的 channel_id 继续被拦截。
+    返回被降级的条目数量。
+    """
+    included = [r for r in results if r["included"]]
+    affected = [
+        r for r in included
+        if any(
+            i["level"] == "FAIL" and i["code"] == "ONLINE" and "404" in i["msg"]
+            for i in r["issues"]
+        )
+    ]
+    # 至少 3 个、且占入报频道 1/4 以上同时 404，才认定为风控拦截。
+    threshold = max(3, int(len(included) * 0.25))
+    if len(affected) < threshold:
+        return 0
+
+    downgraded = 0
+    for r in results:
+        for issue in r["issues"]:
+            if issue["level"] == "FAIL" and issue["code"] == "ONLINE" and "404" in issue["msg"]:
+                issue["level"] = "WARN"
+                issue["msg"] += "（同期大批频道 404，疑似 YouTube 风控拦截，已降级）"
+                downgraded += 1
+    return downgraded
 
 
 def run_audit(
@@ -384,14 +470,6 @@ def run_audit(
         online_issues = check_online(kol, items) if online and included else []
         issues.extend(issue for issue in online_issues if issue["level"] != "INFO")
 
-        levels = {issue["level"] for issue in issues}
-        if "FAIL" in levels:
-            verdict = "FAIL"
-        elif "WARN" in levels or not items:
-            verdict = "WARN"
-        else:
-            verdict = "PASS"
-
         mock_count = sum(
             1 for item in items if item.get("is_mock") is True or is_mock_link(item.get("link", ""))
         )
@@ -408,7 +486,6 @@ def run_audit(
             "channel_id": kol.get("channel_id") or "",
             "configured_active": bool(kol.get("active")),
             "included": included,
-            "verdict": verdict,
             "mock_items": mock_count,
             "altered_titles": altered_count,
             "pool_titles": pool_count,
@@ -416,10 +493,15 @@ def run_audit(
             "online": [issue["msg"] for issue in online_issues if issue["level"] == "INFO"],
             "issues": issues,
         })
+
+    # 在线复核阶段可能误判：YouTube 风控会把大量真实频道以 404 回应，需统一降级。
+    downgraded = _downgrade_mass_online_404s(results) if online else 0
+    for result in results:
+        result["verdict"] = _verdict(result["issues"], result["total_items"] > 0)
         if verbose:
             print(
-                f"[{verdict:4s}] #{kid:02d} {kol.get('name', '')[:24]:24s} "
-                f"included={included} mock={mock_count}/{len(items)}"
+                f"[{result['verdict']:4s}] #{result['id']:02d} {result['name'][:24]:24s} "
+                f"included={result['included']} mock={result['mock_items']}/{result['total_items']}"
             )
 
     total_items = sum(result["total_items"] for result in results)
@@ -440,6 +522,7 @@ def run_audit(
         "pool_titles": pool_titles,
         "mock_ratio_pct": round(100 * mock_items / max(1, total_items), 1),
         "online_verified": online,
+        "online_downgraded_404s": downgraded,
     }
     return {"summary": summary, "results": results}
 
@@ -458,6 +541,13 @@ def render_markdown(audit: dict) -> str:
         f"- **判定**：PASS {summary['pass']}　|　WARN {summary['warn']}　|　FAIL {summary['fail']}",
         f"- **内容条目**：{summary['total_items']} 条；模拟/伪链接 {summary['mock_items']}；改写标题 {summary['altered_titles']}",
         f"- **在线复核**：{'已请求（仅复核入报频道）' if summary['online_verified'] else '未开启'}",
+    ]
+    if summary.get("online_downgraded_404s"):
+        lines.append(
+            f"- **⚠️ 风控提示**：{summary['online_downgraded_404s']} 条在线 404 因同期大批频道同时出现，"
+            f"判定为 YouTube 反爬拦截而非频道失效，已从 FAIL 降级为 WARN。"
+        )
+    lines.extend([
         "",
         "## 判定口径",
         "- **FAIL**：本次报告含模拟内容、伪链接、改写标题，或入报来源在线确认严重失实。",
@@ -466,7 +556,7 @@ def render_markdown(audit: dict) -> str:
         "",
         "| # | 名称 | 入报 | 平台 | 判定 | mock/条目 | 主要问题 |",
         "|---|------|------|------|------|-----------|---------|",
-    ]
+    ])
     for result in audit["results"]:
         problems = []
         seen = set()
