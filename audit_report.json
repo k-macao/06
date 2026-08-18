@@ -1,6 +1,6 @@
 {
   "summary": {
-    "audited_at": "2026-08-17T03:07:01.097388+00:00",
+    "audited_at": "2026-08-18T16:27:19.932170+00:00",
     "total_kols": 97,
     "included_kols": 64,
     "quarantined_kols": 33,
@@ -12,7 +12,8 @@
     "altered_titles": 0,
     "pool_titles": 0,
     "mock_ratio_pct": 0.0,
-    "online_verified": true
+    "online_verified": true,
+    "online_downgraded_404s": 0
   },
   "results": [
     {
@@ -23,16 +24,16 @@
       "channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: How Justin Waller Has A 6-Pack 🤣"
+        "RSS 有效，最新标题: Caleb Hammer's WORST Guest"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 2,
@@ -42,7 +43,6 @@
       "channel_id": "UCGy7SkBjcIAgTiwkXEtPnYg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -51,7 +51,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: Russia Is Preparing for a Digital Econom"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 3,
@@ -61,16 +62,16 @@
       "channel_id": "UCFBpVaKCC0ajGps1vf0AgBg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Average 401k Balances by Age Range in 20"
+        "RSS 有效，最新标题: Your First $100K is Comprised of.... Sav"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 4,
@@ -80,7 +81,6 @@
       "channel_id": "UCFCEuCsyWP0YkP3CZ3Mr01Q",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -89,7 +89,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: Canada's Condo Conundrum"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 5,
@@ -99,7 +100,6 @@
       "channel_id": "UCASM0cgfkJxQ1ICmRilfHLw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -108,7 +108,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: The Insane US-Japan Currency Bailout"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 6,
@@ -118,16 +119,16 @@
       "channel_id": "UCUvvj5lwue7PspotMDjk5UA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Why this AI Software Stock is an EASY 3x"
+        "RSS 有效，最新标题: Avoid Sandisk Stock UNTIL you Understand"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 7,
@@ -137,7 +138,6 @@
       "channel_id": "UCbta0n8i6Rljh0obO7HzG9A",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -146,7 +146,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 9 Stocks That Could Make You Rich"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 8,
@@ -156,16 +157,16 @@
       "channel_id": "UCrTTBSUr0zhPU56UQljag5A",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Young Investors Should Take More Risk?"
+        "RSS 有效，最新标题: Uber Stock is a Strong Buy + Ackman's To"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 9,
@@ -175,7 +176,6 @@
       "channel_id": "UCxgAuX3XZROujMmGphN_scA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -184,7 +184,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: USA vs UK: Gas Prices"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 10,
@@ -194,7 +195,6 @@
       "channel_id": "UCnMn36GT_H0X-w5_ckLtlgQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -203,7 +203,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: Top 4 Stocks to Buy UNDER $30 each‼️"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 11,
@@ -213,7 +214,6 @@
       "channel_id": "UCDXTQ8nWmx_EhZ2v-kp7QxA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -222,7 +222,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: When Compounding Works Against You"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 12,
@@ -232,7 +233,6 @@
       "channel_id": "UCoSw1rKMkCbwzKpkC0OjRKA",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -247,7 +247,8 @@
           "code": "META",
           "msg": "handle 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 13,
@@ -257,16 +258,16 @@
       "channel_id": "UCgbXT2QuTj4SYxaWCs3vuAw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Presented by @Walmart"
+        "RSS 有效，最新标题: $100 for every card I have?? Say less! 👀"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 14,
@@ -276,16 +277,16 @@
       "channel_id": "UCT3EznhW_CNFcfOlyDNTLLw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: The Money Mindset That Builds Real Wealt"
+        "RSS 有效，最新标题: Why The Wealthy Think About Money Comple"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 15,
@@ -295,7 +296,6 @@
       "channel_id": "UCIbslwukNCyVp-XMz_2-gmw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -304,7 +304,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: You don't lose money. You only gain thin"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 16,
@@ -314,16 +315,16 @@
       "channel_id": "UCigUBIf-zt_DA6xyOQtq2WA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Inflation Fell to 3.4%... But There's a "
+        "RSS 有效，最新标题: Japan's Yen Crisis is Becoming America's"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 17,
@@ -333,16 +334,16 @@
       "channel_id": "UChBVf9YnourrEDTsbbwJPRA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: This Is A Historic Buying Opportunity (9"
+        "RSS 有效，最新标题: Every Stock Super Investors Are Buying R"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 18,
@@ -352,7 +353,6 @@
       "channel_id": "UCvSXMi2LebwJEM1s4bz5IBA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -361,7 +361,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: ‘Big Short’ Investor: The AI Narrative i"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 19,
@@ -371,7 +372,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -388,7 +388,8 @@
           "code": "META",
           "msg": "channel_url 与 handle 不一致: https://www.youtube.com/@FinancialEducation vs @FinancialEducationJeremy（未进入本次报告，已隔离）"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 20,
@@ -398,7 +399,6 @@
       "channel_id": "UCs60_Z83HU76uygzHRQl0kA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -407,7 +407,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: CRWD vs PANW: Which cybersecurity leader"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 21,
@@ -417,16 +418,16 @@
       "channel_id": "UCVomjkM_t0EcctTWSE1Jvxg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 下周大事提前看...！一好一坏两条主线正在同步上演。。。"
+        "RSS 有效，最新标题: 全球顶级机构：寻找“新的AI赢家”！美银重磅报告：“AI生死局”！！！"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 22,
@@ -436,16 +437,16 @@
       "channel_id": "UC2I5em6UyBpQiO-8ZW0nV3w",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 美股：机构最新13F调仓，伯克希尔亮出底牌，空头做空的股能不能买。【2026-0"
+        "RSS 有效，最新标题: 没想到黄仁勋重仓了这只股票。【2026-08-17】"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 23,
@@ -455,16 +456,16 @@
       "channel_id": "UCOhck8oLoIwSJzmwYMXsSnQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 🔴【每日要聞】中國信貸崩了，史上最差！美國制裁中國無人機！美股再創新高，軟件揚眉"
+        "RSS 有效，最新标题: 🔴【每日要聞】風險提示：港卡炒美股正嚴查資金來源！谷歌供應鏈撤出中國，幣安向俄羅"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 24,
@@ -474,7 +475,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -491,7 +491,8 @@
           "code": "META",
           "msg": "handle 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 25,
@@ -501,7 +502,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -513,7 +513,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 26,
@@ -523,7 +524,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -535,7 +535,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 27,
@@ -545,7 +546,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -557,7 +557,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 28,
@@ -567,7 +568,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -579,7 +579,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 29,
@@ -589,7 +590,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -601,7 +601,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 30,
@@ -611,7 +612,6 @@
       "channel_id": "UC1Lk6WO-eKuYc6GHYbKVY2g",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -620,7 +620,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 為什麼中美競爭將拖垮中國？根源竟是低劣的中國文化！對外競爭加速中國內耗，系統性崩"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 31,
@@ -630,7 +631,6 @@
       "channel_id": "UCWyPo32TSKPr8Py7gb7NhYw",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -645,7 +645,8 @@
           "code": "META",
           "msg": "handle 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 32,
@@ -655,7 +656,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -667,7 +667,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 33,
@@ -677,7 +678,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -689,7 +689,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 34,
@@ -699,7 +700,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -711,7 +711,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 35,
@@ -721,7 +722,6 @@
       "channel_id": "UCJmaaSJX_PkfUmTuxWbrzLw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -730,7 +730,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: How I Beat The S&P 500 With Options (12 "
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 36,
@@ -740,13 +741,13 @@
       "channel_id": "UCAeAB8ABXGoGMbXuYPmiu2A",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [],
+      "verdict": "WARN"
     },
     {
       "id": 37,
@@ -756,13 +757,13 @@
       "channel_id": "UCLTdCY-fNXc1GqzIuflK-OQ",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [],
+      "verdict": "WARN"
     },
     {
       "id": 38,
@@ -772,7 +773,6 @@
       "channel_id": "UC9OIwUcx-Uss7xj7s1P5XGw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -781,7 +781,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: Passive Investing Is Changing: Here's Wh"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 39,
@@ -791,7 +792,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -808,7 +808,8 @@
           "code": "META",
           "msg": "handle 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 40,
@@ -818,7 +819,6 @@
       "channel_id": "UCSPYNpQ2fHv9HJ-q6MIMaPw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -827,7 +827,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: the influencer economy has gone off the "
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 41,
@@ -837,7 +838,6 @@
       "channel_id": "UCvk0KB4Ue0vfPqvDzjIAwiQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -846,7 +846,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: $1 Trillion Market Crash As New Fed Chai"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 42,
@@ -856,7 +857,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -868,7 +868,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 43,
@@ -878,16 +879,16 @@
       "channel_id": "UCpJRuue8x5Qag2Wz6uAzyjw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Why the Market Could Be Nearing a Peak"
+        "RSS 有效，最新标题: Celsius (CELH) Buys Rockstar - Massive V"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 44,
@@ -897,7 +898,6 @@
       "channel_id": "UCJggpN5VY0PWKoOyBBT0R8A",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -906,7 +906,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 14 Growth Stocks With PEG Ratios Less Th"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 45,
@@ -916,7 +917,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -928,7 +928,8 @@
           "code": "META",
           "msg": "channel_id 缺失；运行时必须从真实频道页解析，失败则隔离"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 46,
@@ -938,13 +939,13 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [],
+      "verdict": "WARN"
     },
     {
       "id": 47,
@@ -954,7 +955,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -966,7 +966,8 @@
           "code": "META",
           "msg": "channel_url 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 48,
@@ -976,7 +977,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -988,7 +988,8 @@
           "code": "META",
           "msg": "channel_url 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 49,
@@ -998,7 +999,6 @@
       "channel_id": "",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1015,7 +1015,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 50,
@@ -1025,13 +1026,13 @@
       "channel_id": "UC1CVw2YKIunKc_Mp-VZbFmA",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [],
+      "verdict": "WARN"
     },
     {
       "id": 51,
@@ -1041,16 +1042,16 @@
       "channel_id": "UC8gZZWIWmBuCb_gzC8DUrvw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 「小摩&大摩」20260814：政治局会议后未见起色，7月官方贷款数据续创历史新"
+        "RSS 有效，最新标题: 「小摩」20260812：中国的失衡经济与重商主义之路｜低人权优势｜贸易战｜供强"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 52,
@@ -1060,16 +1061,16 @@
       "channel_id": "UCz1GOaZF_qcROUFCzR-_2iQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【開市Talk】嘉賓：曾啟邦（17/8/2026）"
+        "RSS 有效，最新标题: 【星級輪證】博港交所業績帶動股價抽升"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 53,
@@ -1079,16 +1080,16 @@
       "channel_id": "UCCeMdcZw1LJsAGKeoYXZw6A",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【0812 付鹏最新分享】散户血亏80％，AI概念回调只是开始，真正的财富洗牌在"
+        "RSS 有效，最新标题: 体制内专家炸裂演讲，听完后脊背发凉，真的太像了！非常值得一听！ ｜商鞅｜秦制｜御"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 54,
@@ -1098,14 +1099,13 @@
       "channel_id": "UClRaYVzu5DIh3kRZkXIX9WA",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 月入2萬變7萬 財務焦慮難消退｜信報田大武專欄｜取之有道｜財務焦慮｜打工仔｜月薪"
+        "RSS 有效，最新标题: 謝國忠: 美國救不了圓滙 也難阻AI爆破｜財星語｜美日聯手｜日圓｜美債｜債息｜電"
       ],
       "issues": [
         {
@@ -1113,7 +1113,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 55,
@@ -1123,16 +1124,16 @@
       "channel_id": "UCzM2jQWmoeTvpEw63x5Rsdg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 香港陷六大結構性危機？前中策組邵善波罕有警告：不理或成國家包袱 逐步衰落是必然結"
+        "RSS 有效，最新标题: 一口氣了解《牛來》爆紅之謎！被批最爛動畫卻收逾千萬票房 兩母子手搓動畫成賣點？"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 56,
@@ -1142,16 +1143,16 @@
       "channel_id": "UCFgvtFvTFRjqhGC1XfIB02w",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 姚浩然Patrick直擊市況︱阿里小米放榜　大市續迎考驗？四日狂飆40%　San"
+        "RSS 有效，最新标题: 吳穎姍豹姐直擊市況︱三頭馬車全面失速　港股危危乎？吉利績後炒高　高層大換血更添動"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 57,
@@ -1161,7 +1162,6 @@
       "channel_id": "UCAwfc603xR0xXQN58x4uWeA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1170,7 +1170,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: BT專訪｜保誠「明日星級總監計劃」共贏密碼：兩位女性領袖的招才育才心法｜香港財經"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 58,
@@ -1180,16 +1181,16 @@
       "channel_id": "UCAUiU6pnaEaTjgTVp6KY0FQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【財智心戰室】#青心揀輪 2026-08-17 星期一｜魏美珍 胡孟青"
+        "RSS 有效，最新标题: 【繼續開市 - 師傅講港股】2026年8月18日 星期二｜恒指收市倒升17點 收"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 59,
@@ -1199,16 +1200,16 @@
       "channel_id": "UC-1F7DZmxTd1YZUJZUsA0nw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 《中国经济大讲堂》 20260816 “六张网”上的中国：新一代通信网 | 财经"
+        "RSS 有效，最新标题: 《央视财经评论》 20260818 活跃县域消费 供给如何全面发力？ |  财经"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 60,
@@ -1218,16 +1219,16 @@
       "channel_id": "UCFQsi7WaF5X41tcuOryDk8w",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 美股 机构二季度13 F，加减仓哪些！大空头Michael Burry最新操作，"
+        "RSS 有效，最新标题: 美股 对冲基金最新仓位，软件VS半导体！SOXX、IGV、QQQ！META、MS"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 61,
@@ -1237,7 +1238,6 @@
       "channel_id": "",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1249,7 +1249,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 62,
@@ -1259,7 +1260,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1281,7 +1281,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 63,
@@ -1291,16 +1292,16 @@
       "channel_id": "UCo2gxyermsLBSCxFHvJs0Zg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 华尔街大举买入和加仓的5支股票！我的看法及买入建议"
+        "RSS 有效，最新标题: 5支ETF！买入布局，长期稳定盈利"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 64,
@@ -1310,13 +1311,13 @@
       "channel_id": "UCWvjeM3d1GNj8pK7o_AN_yA",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 0,
       "online": [],
-      "issues": []
+      "issues": [],
+      "verdict": "WARN"
     },
     {
       "id": 65,
@@ -1326,7 +1327,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1348,7 +1348,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 66,
@@ -1358,7 +1359,6 @@
       "channel_id": "UCBUH38E0ngqvmTqdchWunwQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1367,7 +1367,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 早看早赚钱！掌握这套AI投资方法论，下半年安心抓机会，防风险！"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 67,
@@ -1377,16 +1378,16 @@
       "channel_id": "UCn9_KbNANeyYREePe8YA2DA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 华人女博主零元购视频刷爆全网！"
+        "RSS 有效，最新标题: 香港记者一个提问，毁了中共一代储君！"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 68,
@@ -1396,16 +1397,16 @@
       "channel_id": "UCrAC23izk57G7jCBPfdXGkg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【老蛮频道】岳飞为什么必须死——来自底层动员能力的诅咒"
+        "RSS 有效，最新标题: 【老蛮频道】美国正在积极纠错，中国正在加速逆行——2025上半年总结第一部"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 69,
@@ -1415,14 +1416,13 @@
       "channel_id": "UCrYc9TEMHjiHNrNl6WpqLbQ",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 习近平时代最诡异的一幕：5件互相打架的事竟同时发生！年轻人失业、延迟退休、催生又"
+        "RSS 有效，最新标题: 《牛來》越爛越火，為何突然不讓播了？從7000元票房到全民狂歡，「絆倒體」玩瘋股"
       ],
       "issues": [
         {
@@ -1430,7 +1430,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 70,
@@ -1440,7 +1441,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1462,7 +1462,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 71,
@@ -1472,7 +1473,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1489,7 +1489,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 72,
@@ -1499,7 +1500,6 @@
       "channel_id": "UCb_4xq1KgaYkGtxpjkoZrtQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1508,7 +1508,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 【鹏说】：全天候交易时代-一部技术改写金融规则的百年史 #付鹏的财经世界 #付鹏"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 73,
@@ -1518,7 +1519,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1540,7 +1540,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 74,
@@ -1550,16 +1551,16 @@
       "channel_id": "UC6LU7FUBvbFCh_cQasrHZ_Q",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 非農爆冷、通膨降溫，AI 半導體報復性反彈能走多遠？｜After Meeting"
+        "RSS 有效，最新标题: 股市反轉時候還沒到？從歷史經驗看漲價下的資金版塊移動"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 75,
@@ -1569,7 +1570,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1591,7 +1591,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 76,
@@ -1601,7 +1602,6 @@
       "channel_id": "",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1623,7 +1623,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 77,
@@ -1633,7 +1634,6 @@
       "channel_id": "UCrGSFNEBmCN0rqhATZels2Q",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1648,7 +1648,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 78,
@@ -1658,16 +1659,16 @@
       "channel_id": "UCtAIPjABiQD3qjlEl1T5VpA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 重評「能臣」朱鎔基：中央財政一年翻身，另一筆帳去哪兒了？【文昭談古論今1741期"
+        "RSS 有效，最新标题: 《牛來》爛到爆火，郭德綱卻因一句戲詞引來立案調查：兩件怪事，指向了同一個變化？（"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 79,
@@ -1677,7 +1678,6 @@
       "channel_id": "",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1689,7 +1689,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 80,
@@ -1699,16 +1700,16 @@
       "channel_id": "UCG6ADYIl4GxaQib1HKIsRNg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 20260817直播：乌克兰超大规模攻击俄罗斯；格林：政府讨论对伊朗动用核弹；伊"
+        "RSS 有效，最新标题: 20260818直播：备忘录彻底烂尾，伊朗给美国45天最后通牒，油债市告急；偷梁"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 81,
@@ -1718,16 +1719,16 @@
       "channel_id": "UC0lbAQVpenvfA2QqzsRtL_g",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 2026/8/17(一)指數創高 回檔等加碼?美課100%關稅 無人機大戰開打!"
+        "RSS 有效，最新标题: 2026/8/18(二)美股買盤停止追高 散戶等回檔?台灣游資氾濫 普發成常態?"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 82,
@@ -1737,7 +1738,6 @@
       "channel_id": "UC45i13dEfEVac2IEJT_Nr5Q",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1746,7 +1746,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 人氣與實力兼具的台股ETF是誰？ ETF存到房子頭期款後不想賣？竹北出現【3%定"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 83,
@@ -1756,16 +1757,16 @@
       "channel_id": "UCwWXGnvVmi-6Sfx2wf8S8tQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 軍事恐嚇無效..中共另類助選?總統直選30年的台灣民主路! #下班瀚你聊 #黃暐"
+        "RSS 有效，最新标题: 台股即將破5萬點？黃世聰在等「這3檔股票」發動：這個盤要挑戰歷史新高 #台股 #"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 84,
@@ -1775,14 +1776,13 @@
       "channel_id": "UCvnLmiWt_zIVIh0zUm_j4Hw",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 現在可以全壓0050正2嗎？【王老先聲】#0050 #0050正2 #兩倍跌幅"
+        "RSS 有效，最新标题: 記憶體漲價到頂？國巨反彈結束？2026/08/18【老王不只三分鐘】"
       ],
       "issues": [
         {
@@ -1790,7 +1790,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 85,
@@ -1800,16 +1801,16 @@
       "channel_id": "UCK-qc_POQZwWrMg-Pr-oYtg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 薪水5萬以上資產翻倍的理財比例"
+        "RSS 有效，最新标题: 從零學投資，我4年就財富自由 ft.V大｜SHIN LI 李勛"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 86,
@@ -1819,16 +1820,16 @@
       "channel_id": "UCe7BLtnYfxTXVTRISlfupSw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【財經宜&民視財經週日趴】從吃喝玩樂+合約負債，選出下半年營收大船入港好股！振曜"
+        "RSS 有效，最新标题: 億元教授堅信新應材會超車台積電"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 87,
@@ -1838,7 +1839,6 @@
       "channel_id": "UChjHWpmNm-3HbLFkQ3TPXaA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1847,7 +1847,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 為什麼你一次次存到錢，但人生總能把你打回原點？你缺的，可能是「不易碎財富」！"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 88,
@@ -1857,7 +1858,6 @@
       "channel_id": "UCVNqvJSKVl0bsdb15gKUZfg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1866,7 +1866,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 宏觀經濟（總經）看越多反而越混亂？｜慢活夫妻"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 89,
@@ -1876,14 +1877,13 @@
       "channel_id": "UC-b6b7CGlRsdcRS7bXDvTYQ",
       "configured_active": true,
       "included": true,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 00988A 不如預期怎麼辦？｜主動式 ETF 還能買嗎？【方舟運算 - 大俠武"
+        "RSS 有效，最新标题: 美股還要跌多久？8 月底三大關鍵日，低點可能就在這裡！【方舟運算 - 大俠武林】"
       ],
       "issues": [
         {
@@ -1891,7 +1891,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 90,
@@ -1901,7 +1902,6 @@
       "channel_id": "UCDDneQi63kJAdr3i5VCPzHg",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1913,7 +1913,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 91,
@@ -1923,7 +1924,6 @@
       "channel_id": "UC23rnlQU_qE3cec9x709peA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1932,7 +1932,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: EP688 | 🥽"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 92,
@@ -1942,7 +1943,6 @@
       "channel_id": "UC21AfB2CIbvpjFxrJfZNfeg",
       "configured_active": true,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1954,7 +1954,8 @@
           "code": "META",
           "msg": "handle 缺失"
         }
-      ]
+      ],
+      "verdict": "WARN"
     },
     {
       "id": 93,
@@ -1964,16 +1965,16 @@
       "channel_id": "UChYg2EINv5URVkebzlTGbFQ",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 台灣科技龍頭00881在紅什麼？ 一籃子台灣AI股組成有玄機！｜懶錢包LazyW"
+        "RSS 有效，最新标题: 這月買最賺！投資0050的30個冷知識　100萬all in「腰斬or翻倍」看運"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 94,
@@ -1983,7 +1984,6 @@
       "channel_id": "UCT3uWFvKLVpRnEealmRwvrw",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -1992,7 +1992,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: EP328. SPCX Grok 4.6、谷歌 Gemini 3.7 Flash"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 95,
@@ -2002,7 +2003,6 @@
       "channel_id": "UCGX-lnOzsVjbdzb1VJxmWSg",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -2011,7 +2011,8 @@
         "在线验证：频道页身份一致",
         "RSS 有效，最新标题: 台股暴跌不知道該怎麼辦？台股為什麼漲跌？練習先用五萬美金模擬投資吧！透過Mitr"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 96,
@@ -2021,16 +2022,16 @@
       "channel_id": "UCS1bMmw249R7R0wDjAmE6CA",
       "configured_active": true,
       "included": true,
-      "verdict": "PASS",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 《睿涵說財經》風險控管從小開始 \"12字箴言\"避坑攻略【理財最錢線】【胡睿涵、周"
+        "RSS 有效，最新标题: 資本支出vs.自由現金流 AI巨頭該如何取得平衡?【理財最錢線】【胡睿涵、顏承暉"
       ],
-      "issues": []
+      "issues": [],
+      "verdict": "PASS"
     },
     {
       "id": 97,
@@ -2040,7 +2041,6 @@
       "channel_id": "UCwxU6JWj0oOk6behq3XbOiQ",
       "configured_active": false,
       "included": false,
-      "verdict": "WARN",
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
@@ -2052,7 +2052,8 @@
           "code": "META",
           "msg": "fans 缺失/未填写"
         }
-      ]
+      ],
+      "verdict": "WARN"
     }
   ]
 }
