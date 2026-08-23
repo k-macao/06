@@ -1,8 +1,8 @@
 # 🔍 全频道真实性审计报告（不作伪检查模块）
 
-- **审计时间**：2026-08-22T03:00:45.433420+00:00
+- **审计时间**：2026-08-23T03:09:37.879210+00:00
 - **KOL 目录**：97（本次入报 64，隔离 33）
-- **判定**：PASS 51　|　WARN 46　|　FAIL 0
+- **判定**：PASS 57　|　WARN 40　|　FAIL 0
 - **内容条目**：192 条；模拟/伪链接 0；改写标题 0
 - **在线复核**：已请求（仅复核入报频道）
 
@@ -94,21 +94,21 @@
 | 79 | 雅虎财经（Yahoo Finance 台湾/香港 | 否 | 財經媒體 | **WARN** | 0/0 | fans 缺失/未填写 |
 | 80 | 大康有话说 | 是 | YouTube | **PASS** | 0/3 |  |
 | 81 | 游庭皓的財經皓角 | 是 | YouTube | **PASS** | 0/3 |  |
-| 82 | 柴鼠兄弟 ZRBros | 是 | YouTube | **WARN** | 0/3 | RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UC45i13dEfEVac2IEJT_Nr5Q |
+| 82 | 柴鼠兄弟 ZRBros | 是 | YouTube | **PASS** | 0/3 |  |
 | 83 | 风傳媒-下班经济學 | 是 | YouTube | **PASS** | 0/3 |  |
-| 84 | 老王愛說笑（老王/王倚隆） | 是 | YouTube | **WARN** | 0/3 | fans 缺失/未填写；RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UCvnLmiWt_zIVIh0zUm_j4Hw |
-| 85 | SHIN LI | 是 | YouTube | **WARN** | 0/3 | RSS HTTP 500 |
-| 86 | 自由女神邱沁宜 | 是 | YouTube | **WARN** | 0/3 | RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UCe7BLtnYfxTXVTRISlfupSw |
+| 84 | 老王愛說笑（老王/王倚隆） | 是 | YouTube | **WARN** | 0/3 | fans 缺失/未填写 |
+| 85 | SHIN LI | 是 | YouTube | **PASS** | 0/3 |  |
+| 86 | 自由女神邱沁宜 | 是 | YouTube | **PASS** | 0/3 |  |
 | 87 | Better Leaf 好葉 | 是 | YouTube | **PASS** | 0/3 |  |
-| 88 | 慢活夫妻 George & Dewi | 是 | YouTube | **WARN** | 0/3 | RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UCVNqvJSKVl0bsdb15gKUZfg |
-| 89 | 大俠武林 | 是 | YouTube | **WARN** | 0/3 | fans 缺失/未填写；RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UC-b6b7CGlRsdcRS7bXDvTYQ |
+| 88 | 慢活夫妻 George & Dewi | 是 | YouTube | **PASS** | 0/3 |  |
+| 89 | 大俠武林 | 是 | YouTube | **WARN** | 0/3 | fans 缺失/未填写 |
 | 90 | 股乾爹 KuKanTieh | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
 | 91 | Gooaye股癌 | 是 | YouTube | **PASS** | 0/3 |  |
 | 92 | 理財不能等（獅公李永年） | 否 | YouTube | **WARN** | 0/0 | handle 缺失 |
-| 93 | 懶錢包LazyWallet | 是 | YouTube | **WARN** | 0/3 | RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UChYg2EINv5URVkebzlTGbFQ |
+| 93 | 懶錢包LazyWallet | 是 | YouTube | **PASS** | 0/3 |  |
 | 94 | M觀點 | 是 | YouTube | **PASS** | 0/3 |  |
 | 95 | 蕾咪Rami | 是 | YouTube | **PASS** | 0/3 |  |
-| 96 | 元大投顧財金頻道-理財最錢線 | 是 | YouTube | **WARN** | 0/3 | RSS 复验 404（疑似 YouTube 风控拦截，抓取阶段已验证）: UCS1bMmw249R7R0wDjAmE6CA |
+| 96 | 元大投顧財金頻道-理財最錢線 | 是 | YouTube | **PASS** | 0/3 |  |
 | 97 | 股海老牛 | 否 | YouTube | **WARN** | 0/0 | fans 缺失/未填写 |
 
 ---
