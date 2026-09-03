@@ -1,13 +1,13 @@
 {
   "summary": {
-    "audited_at": "2026-09-02T07:03:10.170878+00:00",
+    "audited_at": "2026-09-03T07:04:02.779908+00:00",
     "total_kols": 97,
     "included_kols": 64,
     "quarantined_kols": 33,
     "pass": 57,
     "warn": 40,
     "fail": 0,
-    "total_items": 192,
+    "total_items": 190,
     "mock_items": 0,
     "altered_titles": 0,
     "pool_titles": 0,
@@ -49,7 +49,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Your Dollar Isn’t Worth What It Used to "
+        "RSS 有效，最新标题: Trump Will Cause The Next Financial Cris"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -68,7 +68,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 4 Things Id Do If I Was Starting Over Fi"
+        "RSS 有效，最新标题: How Much Rent Can You Really Afford?"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -122,10 +122,10 @@
       "mock_items": 0,
       "altered_titles": 0,
       "pool_titles": 0,
-      "total_items": 3,
+      "total_items": 1,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Dick’s Sporting Goods Stock DROPPED"
+        "RSS 有效，最新标题: AVOID the TRAP in these AI Stocks: The E"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -163,7 +163,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: When Better Buy? When Ugly or Great? Nik"
+        "RSS 有效，最新标题: Constellation Software Stock Crash is No"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -182,7 +182,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Would You HIRE or FIRE These People?"
+        "RSS 有效，最新标题: I Tried Every FREE Birthday Offer in NYC"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -201,7 +201,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 4 Stocks to Go ALL IN September 2026‼️"
+        "RSS 有效，最新标题: This Stock is the next Nvidia‼️"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -264,7 +264,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: You asked for it 🤷🏻‍♀️ #money #finance #"
+        "RSS 有效，最新标题: Listen or watch the latest episode of th"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -283,7 +283,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: The IRS Is Disappearing (And The Rich Kn"
+        "RSS 有效，最新标题: Exactly What I'd Do With $10,000 Right N"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -321,7 +321,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: The Fed Could Raise Interest Rates. This"
+        "RSS 有效，最新标题: Expect Social Security Benefit Cuts... I"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -424,7 +424,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 一觉醒来！美股晴天霹雳？"
+        "RSS 有效，最新标题: 今晚：又来“救市”了..."
       ],
       "issues": [],
       "verdict": "PASS"
@@ -443,7 +443,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 美股九月开门黑，疑似突破失败。【2026-09-01】"
+        "RSS 有效，最新标题: 美股：美光，闪迪和博通，还能下手吗？【2026-09-02】"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -462,7 +462,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 🔴【每日要聞】中國虧大了，被川普搶劫五座油田！美股最差9月來了！G20貝森特給美"
+        "RSS 有效，最新标题: 🔴【每日要聞】美股又虧麻了？別急，貝森特預言6個月後AI將徹底爆發！Dell財報"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -825,7 +825,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: Tired of Nepo Babies?"
+        "RSS 有效，最新标题: Does Investing Make You A Bad Person?"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1048,7 +1048,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 「观众投稿分享」20260901：IT行业、物流行业、白酒行业、商务KTV行业、"
+        "RSS 有效，最新标题: 「CF40」20260901：未来15年做好“不断加税”的准备｜分享观众投稿，分"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1067,7 +1067,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【多元資產Talk】嘉賓：胡毅弘Raphael (2/9/2026)"
+        "RSS 有效，最新标题: 【比比開市Talk】恆指波動區間下移｜建滔孖寶業績前景樂觀｜推介Global X"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1086,7 +1086,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 张维迎痛批语言腐败：中文已丧失交流功能，只剩下权利的游戏！真的太敢说了！"
+        "RSS 有效，最新标题: 孙宇晨彻底惹众怒？赵长鹏、胡锡进轮番开炮，孙宇晨一封信反杀胡锡进！景甜大瓜背后还"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1105,7 +1105,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 直擊東堤「靜過鬼」！租金回報高 仍難吸買家｜信報地產專題｜香港樓市｜長洲東堤小築"
+        "RSS 有效，最新标题: 基金經理爭奪戰 香港主動變被動？｜信報寧思雋專欄｜思家投資｜基金經理花紅免稅｜搶"
       ],
       "issues": [
         {
@@ -1130,7 +1130,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 中美貿易戰｜貝森特迫G20歸邊聯手圍堵中國 CNN爆料下場戰役係「血漿戰」？"
+        "RSS 有效，最新标题: 內地追稅再補刀 拎外國護照避稅失效！香港失富豪避風港功能？憂太近中國轉戰新加坡？"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1149,7 +1149,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 拆解評測行業商業邏輯，AI 難以替代，本土創作收獲海外業界青睞"
+        "RSS 有效，最新标题: 地產站LIVE｜恒地公布紅磡映匯首批單位售價 全程直擊"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1187,7 +1187,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 全球債息飆 股市宜打防守勿多手？｜港股｜美股｜恒指｜債息｜新股｜半新股｜費城半導"
+        "RSS 有效，最新标题: 港股高開低走 環球股市陷悶局等乜？｜港股｜美股｜恒指｜債息｜費城半導體指數｜商品"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1206,7 +1206,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 《央视财经评论》 20260901 消费扩容升级 带来多少商机？ |  财经风云"
+        "RSS 有效，最新标题: 《央视财经评论》 20260902 债市震荡 美国通胀全球买单？ |  财经风云"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1225,7 +1225,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 美股 QQQ、IWM、SOXX、SMH、风险位置！SPY、IGV相对安全！持仓计"
+        "RSS 有效，最新标题: 美股 NVDA黄仁勋“喊单”奏效！AVGO有惊无险，PANW放缓代价！褐皮书：物"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1384,7 +1384,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 为什么中国历史教科书，从不敢写这些内容？鲁迅说历史书都写着吃人……."
+        "RSS 有效，最新标题: 堂堂的自由世界艺人不做，非要去做习近平的狗！可悲"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1403,7 +1403,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【老蛮频道】50%对10%，请问谁跪了？——关于中美日内瓦会谈联合声明"
+        "RSS 有效，最新标题: 【老蛮频道】简评九三阅兵——俄罗斯寡头政治模式与朝鲜先军政治模式，即将在中国合体"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1422,7 +1422,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 孫宇晨、景甜案全面升級！公開信挑戰中共黨媒，胡錫進一句「等你回北京聊聊」究竟暗藏"
+        "RSS 有效，最新标题: 揭秘遠親王習遠平：攝政王？景甜、于朦朧都和他有關？習近平要傳位給他兒子？#鵬觀天"
       ],
       "issues": [
         {
@@ -1557,7 +1557,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 當 AI 算力證券化，會不會引發下一個次貸危機？｜MM 專題"
+        "RSS 有效，最新标题: 財政部美債回購不等於 QE？90 秒看懂誰在釋放流動性"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1665,7 +1665,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 西藏吉隆泥石流：GDP只有中國的1/400，尼泊爾救災為何反勝過中國？（文昭談古"
+        "RSS 有效，最新标题: 8個月，中國200多家銀行集體消失！為何叫「解散」，不稱破產？（文昭談古論今17"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1706,7 +1706,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 女排被打回亚洲羽协被连锅端，官办体育毁了体育产业/直播精选"
+        "RSS 有效，最新标题: 20260903直播：小泽宣布‘关闭’俄罗斯领空；美伊新一轮互殴告一段落，海峡和"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1725,7 +1725,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 2026/9/2(三)高利率炸彈 AI還能撐?亞洲AI行情 迎來大考驗?【早晨財"
+        "RSS 有效，最新标题: 2026/9/3(四)美國製造業 真的回來了？台灣央行 該升息了嗎?【早晨財經速"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1763,7 +1763,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 中秋變盤倒數？崩跌危機？專家示警1指標是關鍵！"
+        "RSS 有效，最新标题: 熱議！華爾街》輝達營收狂飆106%！AI沒泡沫，但三朵烏雲已逼近？｜美國鼓動人民"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1782,7 +1782,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 賺錢了怎麼辦？【王老先聲】第238封快遞"
+        "RSS 有效，最新标题: 探針三雄｜【浦男搜股】EP.374"
       ],
       "issues": [
         {
@@ -1807,7 +1807,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 買高股息絕對不能安心退休！"
+        "RSS 有效，最新标题: 台灣又有銀行，確定走入歷史｜SHIN LI 李勛"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1826,7 +1826,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 【自由女神邱沁宜】暴風雨前的寧靜？台股強攻之際，日美雙債猛漲殺機已至！？台股下波"
+        "RSS 有效，最新标题: 台股強攻之際，日美雙債猛漲殺機已至！？"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1930,7 +1930,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: EP692 | 🍺"
+        "RSS 有效，最新标题: EP693 | 🍖"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -1990,7 +1990,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: EP332. 聯準會九月升息嗎、Waymo 嗆聲特斯拉、OpenAI 斷供對手 "
+        "RSS 有效，最新标题: EP333. Fable 5.1 霸氣登場、全美掀反資料中心浪潮、Tim Coo"
       ],
       "issues": [],
       "verdict": "PASS"
@@ -2028,7 +2028,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 讓孩子贏在起跑點 用ETF理財滾出海外留學金!【理財最錢線】【胡睿涵、羅際夫、柳"
+        "RSS 有效，最新标题: 黃仁勳再三示警！AI算力升級先過這三關｜2026國際半導體展SEMICON Ta"
       ],
       "issues": [],
       "verdict": "PASS"
