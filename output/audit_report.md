@@ -1,9 +1,9 @@
 # 🔍 全频道真实性审计报告（不作伪检查模块）
 
-- **审计时间**：2026-09-03T07:04:02.779908+00:00
+- **审计时间**：2026-09-04T07:07:48.903764+00:00
 - **KOL 目录**：97（本次入报 64，隔离 33）
 - **判定**：PASS 57　|　WARN 40　|　FAIL 0
-- **内容条目**：190 条；模拟/伪链接 0；改写标题 0
+- **内容条目**：192 条；模拟/伪链接 0；改写标题 0
 - **在线复核**：已请求（仅复核入报频道）
 
 ## 判定口径
@@ -18,7 +18,7 @@
 |  3 | Humphrey Yang | 是 | TikTok/YT | **PASS** | 0/3 |  |
 |  4 | The Plain Bagel | 是 | YouTube | **PASS** | 0/3 |  |
 |  5 | Patrick Boyle | 是 | YouTube | **PASS** | 0/3 |  |
-|  6 | Meet Kevin | 是 | YouTube | **PASS** | 0/1 |  |
+|  6 | Meet Kevin | 是 | YouTube | **PASS** | 0/3 |  |
 |  7 | Joseph Carlson | 是 | YouTube | **PASS** | 0/3 |  |
 |  8 | Sven Carlin | 是 | YouTube | **PASS** | 0/3 |  |
 |  9 | Mark Tilbury | 是 | TikTok/YT | **PASS** | 0/3 |  |
