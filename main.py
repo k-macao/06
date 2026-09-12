@@ -13,6 +13,8 @@
   python main.py --no-push      # 仅生成，不推送
   python main.py --push-only    # 仅推送（复用上次 output/data.json，常用于补推/重推）
   python main.py --token XXX    # 完整流水线 + 推送（指定 token）
+  python main.py --topic oai.1  # 一对多：推给群组编码 oai.1 的全部订阅者（默认值）
+  python main.py --self-only    # 关闭一对多，只发给自己
 """
 import json
 import sys
@@ -23,13 +25,14 @@ from src.fetcher import scan_kols
 from src.analyzer import analyze_kol_items, global_battle_stats
 from src.deepseek_analyzer import analyze_with_deepseek_or_fallback, get_deepseek_key
 from src.report_generator import generate_report
-from src.pushplus import send_report, explain_code
+from src.pushplus import send_report, explain_code, resolve_topic
 from src.digest import build_digest
 from src.authenticity_check import run_audit
 from src.config import OUTPUT_DIR
 
 
-def run(push: bool = True, token: str = None, push_only: bool = False, strict_audit: bool = False):
+def run(push: bool = True, token: str = None, push_only: bool = False, strict_audit: bool = False,
+        topic: str = None, self_only: bool = False):
     print("=" * 60)
     print("🐙 章鱼 AI·全景分析 | 全球财经 KOL 多空战场 启动")
     print(f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -151,7 +154,9 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
     # 5. 推送
     if push:
         html_path = OUTPUT_DIR / "report.html"
-        print("\n[4/4] 📨 审计通过，推送 PushPlus（微信摘要版）...")
+        group = resolve_topic("" if self_only else topic)
+        audience = f"一对多·群组 {group}（群内订阅者都会收到）" if group else "单人·仅发给自己（未启用一对多）"
+        print(f"\n[4/4] 📨 审计通过，推送 PushPlus（微信摘要版）→ {audience}")
         title = f"🐙章鱼战场·KOL多空战报 {report_date} | 已验证{len(all_enriched)}/{len(all_enriched)+len(inactive_kols)} 主导:{stats['dominant']}"
         summary = f"真实来源{len(all_enriched)}家 · 🐂{stats['bull']} vs 🐻{stats['bear']} | {engine} | 平均战斗力{stats['avg_power']}"
 
@@ -161,7 +166,8 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
             inactive_kols=inactive_kols, engine=engine,
         )
         print(f"   📄 摘要版字符数: {len(digest_html):,}（上限: 100,000/会员）")
-        res = send_report(str(html_path), title, token=token, summary=summary, digest_html=digest_html)
+        res = send_report(str(html_path), title, token=token, summary=summary, digest_html=digest_html,
+                          topic=group)
         print(f"PushPlus 结果: {res}")
         code = res.get("code")
         # 将推送结果写回 data.json（随 Artifact 上传，便于 CI 留档核查）
@@ -170,6 +176,8 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
             d2.setdefault("meta", {})["push_result"] = {
                 "code": res.get("code"),
                 "msg": res.get("msg", ""),
+                "topic": group,
+                "mode": "一对多" if group else "单人",
                 "pushed_at": datetime.now().isoformat(),
             }
             json_path.write_text(json.dumps(d2, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -177,6 +185,8 @@ def run(push: bool = True, token: str = None, push_only: bool = False, strict_au
             print(f"[data] 推送结果写回失败: {e}")
         if code == 200:
             print("   📱 请检查微信『PushPlus』公众号的模板消息（需先关注 PushPlus 服务号并实名认证）")
+            if group:
+                print(f"   👥 一对多群组 {group}：成员须先在 pushplus.plus 扫码加入该群组并关注 PushPlus 公众号才会收到")
             return True
         else:
             print(f"   ❌ 推送失败: {explain_code(code)}")
@@ -200,7 +210,11 @@ if __name__ == "__main__":
     parser.add_argument("--push-only", action="store_true", help="仅推送（复用上次生成的 output/data.json）")
     parser.add_argument("--token", type=str, default=None, help="PushPlus token，覆盖环境变量")
     parser.add_argument("--strict-audit", action="store_true", help="不作伪检查门禁：存在伪造/失实内容（FAIL）即退出码非 0（CI 用）")
+    parser.add_argument("--topic", type=str, default=None,
+                        help="PushPlus 一对多群组编码，默认取 config.yaml 的 pushplus_topic（oai.1）")
+    parser.add_argument("--self-only", action="store_true", help="关闭一对多，仅推送给自己（不带 topic 参数）")
     args = parser.parse_args()
-    ok = run(push=not args.no_push, token=args.token, push_only=args.push_only, strict_audit=args.strict_audit)
+    ok = run(push=not args.no_push, token=args.token, push_only=args.push_only, strict_audit=args.strict_audit,
+             topic=args.topic, self_only=args.self_only)
     # 推送失败时退出码非 0，让 CI（GitHub Actions）能红起来而不是假绿
     sys.exit(0 if ok else 1)

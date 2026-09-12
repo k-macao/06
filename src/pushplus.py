@@ -1,7 +1,16 @@
 """
 PushPlus 推送模块
 文档：http://www.pushplus.plus/doc/
-支持：单人推送、一对多、html 模板
+支持：单人推送、一对多（群组 topic）、html 模板
+
+一对多（默认）：
+- 接口参数 `topic` = 群组编码；填了就把消息推给该群组内所有订阅者，不填仅发给自己。
+- 本项目默认群组编码 `oai.1`（群名 oai.1），可用 config.yaml `pushplus_topic`、
+  环境变量 `PUSHPLUS_TOPIC` 或 `python main.py --topic 群组编码` 覆盖；
+  `python main.py --self-only` 可临时关掉一对多、只发给自己。
+- 订阅方式：pushplus.plus →「发送消息 → 一对多消息」→ 群组 oai.1 → 生成二维码，
+  订阅者微信扫码加入后才会收到推送。
+- `channel=webhook` 时 `topic` 按官方文档无效，此时仍按单人/渠道配置发送。
 
 常见问题速查：
 - 2024-08 起未实名认证的用户无法发送（返回 905），请在 pushplus.plus 完成实名。
@@ -12,7 +21,7 @@ PushPlus 推送模块
 """
 import os
 import requests
-from .config import PUSHPLUS_URL, PUSHPLUS_TOKEN
+from .config import PUSHPLUS_URL, PUSHPLUS_TOKEN, PUSHPLUS_TOPIC
 
 # 内容长度上限（按字符数计，含 HTML 标签）
 CONTENT_LIMIT_FREE = 20_000    # 实名用户：2 万字
@@ -41,8 +50,20 @@ def explain_code(code) -> str:
     return CODE_MESSAGES.get(code, f"未知返回码 {code}（请查询 PushPlus 文档）")
 
 
+def resolve_topic(topic: str = None) -> str:
+    """归一化一对多群组编码（接口参数 topic）。
+
+    - `None`：用配置默认群组（config.yaml `pushplus_topic` / 环境变量 `PUSHPLUS_TOPIC`，默认 `oai.1`）
+    - `""` / `none` / `off` / `self` / `-`：明确关闭一对多，只发给自己
+    - 其他：使用该群组编码
+    """
+    raw = PUSHPLUS_TOPIC if topic is None else str(topic)
+    raw = raw.strip()
+    return "" if raw.lower() in ("", "none", "off", "self", "-") else raw
+
+
 def send_pushplus(token: str, title: str, content: str, template: str = "html",
-                  channel: str = "wechat") -> dict:
+                  channel: str = "wechat", topic: str = None) -> dict:
     """
     发送 PushPlus
     - token: 你的 PushPlus token
@@ -50,7 +71,8 @@ def send_pushplus(token: str, title: str, content: str, template: str = "html",
     - content: html 或 markdown 内容
     - template: html / markdown / json
     - channel: wechat / webhook / cp / mail
-    返回接口 JSON 字典。
+    - topic: 一对多群组编码；None 用配置默认群组（oai.1），传 "" 则退化为单人推送
+    返回接口 JSON 字典（附带 topic / mode 两个本地字段，便于日志与留档）。
     """
     token = token or PUSHPLUS_TOKEN or os.getenv("PUSHPLUS_TOKEN", "")
     if not token:
@@ -64,6 +86,8 @@ def send_pushplus(token: str, title: str, content: str, template: str = "html",
               f"请改用摘要版（src/digest.py）或精简内容。")
         return {"code": 998, "msg": f"content too long: {n}", "skipped": True}
 
+    group = resolve_topic(topic)
+    mode = f"一对多·群组 {group}" if group else "单人·仅发给自己"
     data = {
         "token": token,
         "title": title,
@@ -71,27 +95,39 @@ def send_pushplus(token: str, title: str, content: str, template: str = "html",
         "template": template,
         "channel": channel,
     }
-    print(f"[PushPlus] 发送中... title={title!r} content={n:,} 字符")
+    if group:
+        data["topic"] = group
+        if channel == "webhook":
+            print("[PushPlus] 提示：channel=webhook 时 topic（群组编码）按官方文档无效，实际只走 webhook 渠道")
+    print(f"[PushPlus] 发送中... {mode} | title={title!r} content={n:,} 字符")
     try:
         resp = requests.post(PUSHPLUS_URL, json=data, timeout=15)
         j = resp.json()
+        if not isinstance(j, dict):
+            j = {"code": 500, "msg": f"非法响应: {j!r}"}
         code = j.get("code")
+        j.setdefault("topic", group)
+        j.setdefault("mode", mode)
         if code == 200:
-            print(f"[PushPlus] ✅ 推送成功: {title}（异步送达，请查收微信）")
+            short_code = j.get("data") or ""
+            print(f"[PushPlus] ✅ 已受理: {title} | {mode}"
+                  f"{' | 流水号 ' + str(short_code) if short_code else ''}（异步送达，请查收微信）")
         else:
-            print(f"[PushPlus] ❌ 推送失败 code={code}: {explain_code(code)} | 原始返回: {j}")
+            print(f"[PushPlus] ❌ 推送失败 code={code}: {explain_code(code)} | {mode} | 原始返回: {j}")
         return j
     except Exception as ex:
         print(f"[PushPlus] 网络异常: {ex}")
-        return {"code": 500, "msg": str(ex)}
+        return {"code": 500, "msg": str(ex), "topic": group, "mode": mode}
+
 
 
 def send_report(html_path: str, title: str, token: str = None, summary: str = "",
-                digest_html: str = None, full_link: str = "") -> dict:
+                digest_html: str = None, full_link: str = "", topic: str = None) -> dict:
     """
     读取本地 html 报告并推送。
     - 若提供 digest_html（精简摘要版），直接推送摘要版（推荐，微信友好且不超限）
     - 否则推送完整 html；若完整 html 超过会员上限则拒绝并给出提示
+    - topic: 一对多群组编码；None 用配置默认群组（oai.1），传 "" 则只发给自己
     """
     try:
         with open(html_path, "r", encoding="utf-8") as f:
@@ -107,7 +143,7 @@ def send_report(html_path: str, title: str, token: str = None, summary: str = ""
             content = (f"<div style='background:#1a1a2e;color:#ffe066;padding:8px 10px;"
                        f"border:2px solid #fff;font-family:monospace;text-align:center;font-size:12px'>"
                        f"🐙 章鱼 AI·全景分析 | {summary}</div>" + content)
-        return send_pushplus(token or PUSHPLUS_TOKEN, title, content, template="html")
+        return send_pushplus(token or PUSHPLUS_TOKEN, title, content, template="html", topic=topic)
 
     # 无摘要版时推送完整 html
     n = len(html)
@@ -116,31 +152,36 @@ def send_report(html_path: str, title: str, token: str = None, summary: str = ""
         return {"code": 998, "msg": f"report too long: {n}", "skipped": True}
     injected = (f"<div style='background:#1a1a2e;color:#ffe066;padding:12px;border:3px solid #fff;"
                 f"font-family:monospace;text-align:center'>🐙 章鱼 AI·全景分析 | {summary}</div>" + html) if summary else html
-    return send_pushplus(token or PUSHPLUS_TOKEN, title, injected, template="html")
+    return send_pushplus(token or PUSHPLUS_TOKEN, title, injected, template="html", topic=topic)
 
 
-def send_test_message(token: str = None) -> dict:
-    """发送一条测试消息，快速验证 token / 实名 / 关注是否正常。"""
+def send_test_message(token: str = None, topic: str = None) -> dict:
+    """发送一条测试消息，快速验证 token / 实名 / 关注 / 一对多群组是否正常。"""
     from datetime import datetime
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     token = token or PUSHPLUS_TOKEN or os.getenv("PUSHPLUS_TOKEN", "")
     if not token:
-        print("[PushPlus] 未提供 token。用法: python -m src.pushplus --test <token>")
+        print("[PushPlus] 未提供 token。用法: python -m src.pushplus --test <token> [群组编码]")
         return {"code": 997, "msg": "no token", "skipped": True}
+    group = resolve_topic(topic)
+    audience = f"群组 {group}（一对多，群内订阅者都会收到）" if group else "仅发给你自己（未启用一对多）"
     content = (
         "<div style='font-family:sans-serif;padding:12px;border:3px solid #333;background:#fff'>"
         f"<div style='font-size:18px;font-weight:bold'>✅ PushPlus 链路测试成功</div>"
         f"<div style='margin-top:8px;font-size:13px'>时间：{now}</div>"
-        f"<div style='font-size:13px'>若您收到本条消息，说明 token / 实名 / 公众号关注均正常，"
+        f"<div style='margin-top:4px;font-size:13px'>接收范围：{audience}</div>"
+        f"<div style='margin-top:8px;font-size:13px'>若您收到本条消息，说明 token / 实名 / 公众号关注均正常，"
         f"战报推送可正常送达。</div>"
         "</div>")
-    return send_pushplus(token, f"🐙 测试消息 {now}", content, template="html")
+    return send_pushplus(token, f"🐙 测试消息 {now}", content, template="html", topic=group)
 
 
 if __name__ == "__main__":
     import sys
     if len(sys.argv) >= 3 and sys.argv[1] == "--test":
-        res = send_test_message(sys.argv[2])
+        # 第 3 个参数可选：一对多群组编码；传 "" / self 表示只发给自己
+        res = send_test_message(sys.argv[2], sys.argv[3] if len(sys.argv) >= 4 else None)
         sys.exit(0 if res.get("code") == 200 else 1)
     print("用法：")
-    print("  python -m src.pushplus --test <token>   # 发送一条测试消息验证链路")
+    print("  python -m src.pushplus --test <token> [群组编码]   # 发送一条测试消息验证链路")
+    print("  群组编码留空则用 config.yaml 的 pushplus_topic（默认 oai.1，一对多）；传 self 只发给自己")
