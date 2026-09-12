@@ -243,9 +243,14 @@ python -m http.server --directory output 8000 --bind 0.0.0.0
 
 # 2. 配置推送后一键全链路
 export PUSHPLUS_TOKEN=xxxx
-bash push_demo.sh test $PUSHPLUS_TOKEN   # 先测链路
-python main.py                            # 再正式推送
+bash push_demo.sh test $PUSHPLUS_TOKEN   # 先测链路（默认发到一对多群组 oai.1）
+python main.py                            # 再正式推送（同样默认一对多）
+python main.py --self-only                # 只想发给自己时
+python main.py --topic 其他群组编码        # 临时换群组
 ```
+
+> 推送默认走**一对多**：群组编码取自 `config.yaml` 的 `pushplus_topic`（`oai.1`）。
+> 详见下文 [👥 一对多（群组 oai.1）](#-一对多群组-oai1)。
 
 ---
 
