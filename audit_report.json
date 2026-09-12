@@ -1,6 +1,6 @@
 {
   "summary": {
-    "audited_at": "2026-09-12T07:15:07.211800+00:00",
+    "audited_at": "2026-09-12T07:38:26.972321+00:00",
     "total_kols": 97,
     "included_kols": 64,
     "quarantined_kols": 33,
@@ -1930,7 +1930,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: EP695 | 🍊"
+        "RSS 有效，最新标题: EP696 | 🎖️"
       ],
       "issues": [],
       "verdict": "PASS"
