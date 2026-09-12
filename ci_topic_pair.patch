@@ -1,0 +1,16 @@
+diff --git a/.github/workflows/daily.yml b/.github/workflows/daily.yml
+index 54691bf..a6bf4f5 100644
+--- a/.github/workflows/daily.yml
++++ b/.github/workflows/daily.yml
+@@ -54,8 +54,11 @@ jobs:
+         if: ${{ success() }}
+         env:
+           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
++          # 一对多群组编码：Secret 未配置时留空，代码回落到 config.yaml 的 pushplus_topic（oai.1）
++          PUSHPLUS_TOPIC: ${{ secrets.PUSHPLUS_TOPIC }}
+         run: |
+           if [ -n "$PUSHPLUS_TOKEN" ]; then
++            echo "👥 一对多群组编码: ${PUSHPLUS_TOPIC:-（未设置，使用 config.yaml 的 oai.1）}"
+             python main.py --push-only
+           else
+             echo "⚠️ 未配置 PUSHPLUS_TOKEN，跳过推送"
