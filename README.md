@@ -261,7 +261,10 @@ python main.py                            # 再正式推送
 ```
 
 在 GitHub 仓库 `Settings → Secrets → Actions` 添加 `PUSHPLUS_TOKEN` 即可；
-`PUSHPLUS_TOPIC` 可选 —— 不配置时 CI 会回落到 `config.yaml` 的 `pushplus_topic`（群组 `oai.1`，一对多）。
+`PUSHPLUS_TOPIC` 可选 —— 不配置时 CI 会回落到 `config.yaml` 的 `pushplus_topic`（群组 `oai.1`，一对多），
+所以**不加这个 Secret，定时任务也默认走一对多**。
+> ⚠️ 当前仓库里已提交的 `daily.yml` 尚未透传 `PUSHPLUS_TOPIC`（GitHub App 无 `workflows` 权限，改动被远端拒绝）；
+> 该 3 行改动已留在工作区 `.github/workflows/daily.yml`，需由有 `workflows` 权限的账号提交。功能上不影响一对多默认生效。
 > 💡 建议：可将 CI 拆为「生成（`python main.py --no-push`）+ 推送（`python main.py --push-only`）」，
 > 缺 token 时明确报错。改进版 `daily.yml` 见工作区 `.github/workflows/`（需有 `workflows` 权限的账号提交）。
 
