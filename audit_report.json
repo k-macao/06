@@ -1,6 +1,6 @@
 {
   "summary": {
-    "audited_at": "2026-10-08T08:38:16.183083+00:00",
+    "audited_at": "2026-10-08T09:05:08.512170+00:00",
     "total_kols": 97,
     "included_kols": 63,
     "quarantined_kols": 34,
@@ -1381,7 +1381,7 @@
       "total_items": 3,
       "online": [
         "在线验证：频道页身份一致",
-        "RSS 有效，最新标题: 习近平或借俄鼠疫，策划更大规模封域！"
+        "RSS 有效，最新标题: 习近平或借俄鼠疫，策划更大规模封城！"
       ],
       "issues": [],
       "verdict": "PASS"
